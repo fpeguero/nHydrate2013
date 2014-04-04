@@ -28,6 +28,7 @@ using System.Linq;
 using System.Collections;
 using System.IO;
 using EnvDTE;
+using Microsoft.VisualStudio.Shell;
 using VSLangProj;
 using nHydrate.Generator.Common.GeneratorFramework;
 using nHydrate.Generator.Common.Logging;
@@ -680,6 +681,10 @@ namespace nHydrate.Generator.Common.Util
 			}
 		}
 
+
+
+       
+
 		public void SelectProjectItem(ProjectItem pi)
 		{
 			ActivateSolutionHierarchy();
@@ -1305,5 +1310,131 @@ namespace nHydrate.Generator.Common.Util
 			get { return _applicationObject.Version; }
 		}
 
+
+
+
+
+        private EnvDTE.DTE dTE;
+        public EnvDTE.DTE DTE
+        {
+            get
+            {
+                if (this.dTE == null)
+                {
+                    this.dTE = ServiceProvider.GlobalProvider.GetService(typeof(EnvDTE.DTE)) as EnvDTE.DTE;
+                }
+                return this.dTE;
+            }
+        }
+
+
+        //private bool IsReferenceExist(VSProject visualStudioProject, EnvDTE.Project project)
+        //{
+        //    foreach (Reference reference in visualStudioProject.References)
+        //    {
+        //        if (reference.SourceProject == project)
+        //        {
+        //            return true;
+        //        }
+        //    }
+        //    return false;
+        //}
+
+        public Dictionary<string, string> GetReferencesCurrentProject()
+        {
+
+            var projectItem = (ProjectItem)this.GetSelectedItem();
+
+            var project = projectItem.ContainingProject;
+
+            // var project = nHydrate.Generator.Common.Util.EnvDTEHelper.Instance.GetProject(projectName);
+
+            // var project2 = project as VSLangProj.VSProject;
+
+            var vsProject = CastToVSProject(project);
+
+
+            var listType = new Dictionary<string, string>();
+            if (project != null)
+                foreach (Reference reference in vsProject.References)
+                {
+                    listType.Add(reference.Name, reference.Path);
+                }
+
+            return listType;
+        }
+
+
+        public IEnumerable<EnvDTE.Project> GetAllProjects()
+        {
+            List<EnvDTE.Project> projects = new List<EnvDTE.Project>();
+            foreach (EnvDTE.Project project in this.DTE.Solution.Projects)
+            {
+                this.ProcessProject(project, projects);
+            }
+            return projects;
+        }
+
+        public object GetSelectedItem()
+        {
+            if ((this.DTE.SelectedItems == null) || (this.DTE.SelectedItems.Count <= 0))
+            {
+                return null;
+            }
+            if (1 != this.DTE.SelectedItems.Count)
+            {
+                return this.DTE.SelectedItems;
+            }
+            SelectedItem item = this.DTE.SelectedItems.Item(1);
+            if (item.Project != null)
+            {
+                return item.Project;
+            }
+            if (item.ProjectItem != null)
+            {
+                return item.ProjectItem;
+            }
+            if (this.DTE.Solution.Properties.Item("Name").Value.Equals(item.Name))
+            {
+                return this.DTE.Solution;
+            }
+            return item;
+        }
+
+        public EnvDTE.Project GetSelectedProject()
+        {
+            foreach (object obj2 in (object[])this.DTE.ActiveSolutionProjects)
+            {
+                if (obj2 is EnvDTE.Project)
+                {
+                    return (obj2 as EnvDTE.Project);
+                }
+            }
+            return null;
+        }
+
+        private void ProcessProject(EnvDTE.Project project, List<EnvDTE.Project> projects)
+        {
+            if (project.Kind == "{66A26720-8FB5-11D2-AA7E-00C04F688DDE}")
+            {
+                this.ProcessSolutionFolder(project, projects);
+            }
+            else
+            {
+                projects.Add(project);
+            }
+        }
+
+        private void ProcessSolutionFolder(EnvDTE.Project proj, List<EnvDTE.Project> projects)
+        {
+            foreach (EnvDTE.ProjectItem item in proj.ProjectItems)
+            {
+                EnvDTE.Project project = item.Object as EnvDTE.Project;
+                if (project != null)
+                {
+                    this.ProcessProject(project, projects);
+                }
+            }
+        }
 }
 }

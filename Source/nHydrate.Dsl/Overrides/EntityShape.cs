@@ -25,8 +25,11 @@
 #endregion
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
+using nHydrate.Dsl.Editor;
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
@@ -60,6 +63,9 @@ namespace nHydrate.Dsl
 
 		//private GhostCache cache = new GhostCache();
 		private static Dictionary<string, System.Drawing.Bitmap> _images = new Dictionary<string, System.Drawing.Bitmap>();
+
+
+        private readonly System.Drawing.Color TABLE_COLOR_COMPLEXT_TYPE = System.Drawing.Color.FromArgb(204, 207, 197);
 
 		#region Constructor
 
@@ -259,6 +265,16 @@ namespace nHydrate.Dsl
 					        " " + (field.Nullable ? "Null" : "Not Null");
 				return text;
 			}
+            else if (mel is nHydrate.Dsl.Methods)
+            {
+                var method = mel as nHydrate.Dsl.Methods;
+                return method.Name;
+            }
+            else if (mel is nHydrate.Dsl.UIView)
+            {
+                var view = mel as nHydrate.Dsl.UIView;
+                return view.Name;
+            }
 			else
 			{
 				return string.Empty;
@@ -288,12 +304,29 @@ namespace nHydrate.Dsl
 				var image = field.CachedImage;
 				if (image == null)
 				{
-					if (field.IsCalculated)
-						image = _images["fieldcalculated"];
-					else
-						image = _images["field"];
+				    if (field.IsCalculated)
+				    {
+				        image = _images["fieldcalculated"];
+				    }
+				    else if (field.IsTrackingColumn)
+				    {
+				        try
+				        {
+                            image = (Bitmap)ImageLibrary.GetImage(ImageLibraryIndex.CodeFluentInstance);
+				        }
+				        catch (Exception ex)
+				        {
 
-					//Foreign Key
+				            MessageBox.Show(ex.Message + " \n" + ex.InnerException.ToString());
+				        }
+				        
+				    }
+				    else
+				    {
+                        image = (Bitmap)ImageLibrary.GetImage(ImageLibraryIndex.CodeFluentProperty);
+				    }
+
+				    //Foreign Key
 					var relationList = field.Entity.nHydrateModel.GetRelationsWhereChild(field.Entity, true).ToList();
 					if (relationList.Count(x => x.FieldMapList().Count(q => q.GetTargetField(x) == field) > 0) > 0)
 					{
@@ -302,7 +335,8 @@ namespace nHydrate.Dsl
 
 					//Primary Key
 					if (field.IsPrimaryKey)
-						image = _images["key"];
+                        image = (Bitmap)ImageLibrary.GetImage(ImageLibraryIndex.CodeFluentPropertyKey);
+						//image = _images["key"];
 
 					field.CachedImage = image;
 				}
@@ -312,6 +346,14 @@ namespace nHydrate.Dsl
 			{
 				return _images["composite"];
 			}
+            else if (mel is nHydrate.Dsl.Methods)
+            {
+                return ImageLibrary.GetImage(ImageLibraryIndex.CodeFluentMethod);
+            }
+            else if (mel is nHydrate.Dsl.UIView)
+            {
+                return ImageLibrary.GetImage(ImageLibraryIndex.CodeFluentUIColumn);
+            }
 			else
 			{
 				return null;
@@ -386,6 +428,11 @@ namespace nHydrate.Dsl
 				newColor = TABLE_COLOR_ASS_TABLE_HEADER;
 				textColor = TABLE_COLOR_ASS_TEXT;
 			}
+            else if (entity.IsComplexType)
+            {
+                newColor = TABLE_COLOR_COMPLEXT_TYPE;
+                textColor = TABLE_COLOR_ASS_TEXT;
+            }
 
 			var timer = new System.Diagnostics.Stopwatch();
 			timer.Start();

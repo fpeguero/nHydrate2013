@@ -99,3 +99,4 @@ C:\Users\f.peguero\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\nHydr
 C:\Users\f.peguero\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\nHydrate.org\nHydrate ORM Modeler\5.2.0.126\\nHydrate.Generator.Common.pdb
 C:\Users\f.peguero\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\nHydrate.org\nHydrate ORM Modeler\5.2.0.126\\nHydrate.Generator.Resources.pdb
 C:\Users\f.peguero\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\nHydrate.org\nHydrate ORM Modeler\5.2.0.126\\nHydrate.Generator.pdb
+C:\Users\f.peguero\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\nHydrate.org\nHydrate ORM Modeler\5.2.0.126\\CodeFluent.Runtime.dll

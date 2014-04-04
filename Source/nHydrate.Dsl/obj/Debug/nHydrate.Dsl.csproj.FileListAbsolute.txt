@@ -21,3 +21,6 @@ C:\nHydrate2013\trunk\Source\nHydrate.Dsl\obj\Debug\nHydrate.Dsl.Design.Forms.SQ
 C:\nHydrate2013\trunk\Source\nHydrate.Dsl\obj\Debug\nHydrate.Dsl.csproj.GenerateResource.Cache
 C:\nHydrate2013\trunk\Source\nHydrate.Dsl\obj\Debug\nHydrate.Dsl.dll
 C:\nHydrate2013\trunk\Source\nHydrate.Dsl\obj\Debug\nHydrate.Dsl.pdb
+C:\nHydrate2013\trunk\Source\nHydrate.Dsl\obj\Debug\nHydrate.Dsl.Resources.Strings.resources
+C:\nHydrate2013\trunk\Source\nHydrate.Dsl\bin\Debug\CodeFluent.Runtime.dll
+C:\nHydrate2013\trunk\Source\nHydrate.Dsl\bin\Debug\CodeFluent.Runtime.pdb

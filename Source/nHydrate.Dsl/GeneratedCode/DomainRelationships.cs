@@ -8647,3 +8647,499 @@ namespace nHydrate.Dsl
 		#endregion
 	}
 }
+namespace nHydrate.Dsl
+{
+	/// <summary>
+	/// DomainRelationship EntityHasMethod
+	/// Description for nHydrate.Dsl.EntityHasMethod
+	/// </summary>
+	[DslDesign::DisplayNameResource("nHydrate.Dsl.EntityHasMethod.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("nHydrate.Dsl.EntityHasMethod.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::nHydrate.Dsl.nHydrateDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("fd2c2901-9209-4512-8d70-0957a09b846f")]
+	public partial class EntityHasMethod : DslModeling::ElementLink, System.ComponentModel.INotifyPropertyChanged
+	{
+		#region INotifyPropertyChanged
+		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+		protected virtual void OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs e)
+		{
+			if (this.PropertyChanged != null)
+				this.PropertyChanged(this, e);
+		}
+		#endregion
+	
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// EntityHasMethod domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xfd2c2901, 0x9209, 0x4512, 0x8d, 0x70, 0x09, 0x57, 0xa0, 0x9b, 0x84, 0x6f);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a EntityHasMethod link in the same Partition as the given Entity
+		/// </summary>
+		/// <param name="source">Entity to use as the source of the relationship.</param>
+		/// <param name="target">Methods to use as the target of the relationship.</param>
+		public EntityHasMethod(Entity source, Methods target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(EntityHasMethod.EntityDomainRoleId, source), new DslModeling::RoleAssignment(EntityHasMethod.MethodsDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public EntityHasMethod(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public EntityHasMethod(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public EntityHasMethod(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public EntityHasMethod(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Entity domain role code
+		
+		/// <summary>
+		/// Entity domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid EntityDomainRoleId = new global::System.Guid(0xbc920dfa, 0xcfee, 0x4699, 0x85, 0xa4, 0x0b, 0x14, 0xd8, 0x32, 0x71, 0x07);
+		
+		/// <summary>
+		/// DomainRole Entity
+		/// Description for nHydrate.Dsl.EntityHasMethod.Entity
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.EntityHasMethod/Entity.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.EntityHasMethod/Entity.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Method", PropertyDisplayNameKey="nHydrate.Dsl.EntityHasMethod/Entity.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("bc920dfa-cfee-4699-85a4-0b14d8327107")]
+		public virtual Entity Entity
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Entity)DslModeling::DomainRoleInfo.GetRolePlayer(this, EntityDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, EntityDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Entity of a Methods
+		/// <summary>
+		/// Gets Entity.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Entity GetEntity(Methods element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, MethodsDomainRoleId) as Entity;
+		}
+		
+		/// <summary>
+		/// Sets Entity.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetEntity(Methods element, Entity newEntity)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, MethodsDomainRoleId, newEntity);
+		}
+		#endregion
+		#region Methods domain role code
+		
+		/// <summary>
+		/// Methods domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid MethodsDomainRoleId = new global::System.Guid(0x4460ac74, 0x4a36, 0x4bde, 0x9d, 0xa8, 0x56, 0xca, 0x9a, 0x90, 0x83, 0x0c);
+		
+		/// <summary>
+		/// DomainRole Methods
+		/// Description for nHydrate.Dsl.EntityHasMethod.Methods
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.EntityHasMethod/Methods.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.EntityHasMethod/Methods.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Entity", PropertyDisplayNameKey="nHydrate.Dsl.EntityHasMethod/Methods.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("4460ac74-4a36-4bde-9da8-56ca9a90830c")]
+		public virtual Methods Methods
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Methods)DslModeling::DomainRoleInfo.GetRolePlayer(this, MethodsDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, MethodsDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Method of a Entity
+		/// <summary>
+		/// Gets a list of Method.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Methods> GetMethod(Entity element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Methods>, Methods>(element, EntityDomainRoleId);
+		}
+		#endregion
+		#region Entity link accessor
+		/// <summary>
+		/// Get the list of EntityHasMethod links to a Entity.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::nHydrate.Dsl.EntityHasMethod> GetLinksToMethod ( global::nHydrate.Dsl.Entity entityInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::nHydrate.Dsl.EntityHasMethod>(entityInstance, global::nHydrate.Dsl.EntityHasMethod.EntityDomainRoleId);
+		}
+		#endregion
+		#region Methods link accessor
+		/// <summary>
+		/// Get the EntityHasMethod link to a Methods.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::nHydrate.Dsl.EntityHasMethod GetLinkToEntity (global::nHydrate.Dsl.Methods methodsInstance)
+		{
+			global::System.Collections.Generic.IList<global::nHydrate.Dsl.EntityHasMethod> links = DslModeling::DomainRoleInfo.GetElementLinks<global::nHydrate.Dsl.EntityHasMethod>(methodsInstance, global::nHydrate.Dsl.EntityHasMethod.MethodsDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Methods not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region EntityHasMethod instance accessors
+		
+		/// <summary>
+		/// Get any EntityHasMethod links between a given Entity and a Methods.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::nHydrate.Dsl.EntityHasMethod> GetLinks( global::nHydrate.Dsl.Entity source, global::nHydrate.Dsl.Methods target )
+		{
+			global::System.Collections.Generic.List<global::nHydrate.Dsl.EntityHasMethod> outLinks = new global::System.Collections.Generic.List<global::nHydrate.Dsl.EntityHasMethod>();
+			global::System.Collections.Generic.IList<global::nHydrate.Dsl.EntityHasMethod> links = DslModeling::DomainRoleInfo.GetElementLinks<global::nHydrate.Dsl.EntityHasMethod>(source, global::nHydrate.Dsl.EntityHasMethod.EntityDomainRoleId);
+			foreach ( global::nHydrate.Dsl.EntityHasMethod link in links )
+			{
+				if ( target.Equals(link.Methods) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one EntityHasMethod link between a given Entityand a Methods.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::nHydrate.Dsl.EntityHasMethod GetLink( global::nHydrate.Dsl.Entity source, global::nHydrate.Dsl.Methods target )
+		{
+			global::System.Collections.Generic.IList<global::nHydrate.Dsl.EntityHasMethod> links = DslModeling::DomainRoleInfo.GetElementLinks<global::nHydrate.Dsl.EntityHasMethod>(source, global::nHydrate.Dsl.EntityHasMethod.EntityDomainRoleId);
+			foreach ( global::nHydrate.Dsl.EntityHasMethod link in links )
+			{
+				if ( target.Equals(link.Methods) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace nHydrate.Dsl
+{
+	/// <summary>
+	/// DomainRelationship EntityHasUIView
+	/// Description for nHydrate.Dsl.EntityHasUIView
+	/// </summary>
+	[DslDesign::DisplayNameResource("nHydrate.Dsl.EntityHasUIView.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("nHydrate.Dsl.EntityHasUIView.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::nHydrate.Dsl.nHydrateDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("f32db288-1c34-4d0b-968b-b59b0047d235")]
+	public partial class EntityHasUIView : DslModeling::ElementLink, System.ComponentModel.INotifyPropertyChanged
+	{
+		#region INotifyPropertyChanged
+		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+		protected virtual void OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs e)
+		{
+			if (this.PropertyChanged != null)
+				this.PropertyChanged(this, e);
+		}
+		#endregion
+	
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// EntityHasUIView domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xf32db288, 0x1c34, 0x4d0b, 0x96, 0x8b, 0xb5, 0x9b, 0x00, 0x47, 0xd2, 0x35);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a EntityHasUIView link in the same Partition as the given Entity
+		/// </summary>
+		/// <param name="source">Entity to use as the source of the relationship.</param>
+		/// <param name="target">UIView to use as the target of the relationship.</param>
+		public EntityHasUIView(Entity source, UIView target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(EntityHasUIView.EntityDomainRoleId, source), new DslModeling::RoleAssignment(EntityHasUIView.UIViewDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public EntityHasUIView(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public EntityHasUIView(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public EntityHasUIView(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public EntityHasUIView(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Entity domain role code
+		
+		/// <summary>
+		/// Entity domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid EntityDomainRoleId = new global::System.Guid(0x157804b5, 0x6c1f, 0x4d49, 0x81, 0xc9, 0x78, 0xba, 0xbc, 0x2d, 0x41, 0x23);
+		
+		/// <summary>
+		/// DomainRole Entity
+		/// Description for nHydrate.Dsl.EntityHasUIView.Entity
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.EntityHasUIView/Entity.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.EntityHasUIView/Entity.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "UIView", PropertyDisplayNameKey="nHydrate.Dsl.EntityHasUIView/Entity.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("157804b5-6c1f-4d49-81c9-78babc2d4123")]
+		public virtual Entity Entity
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Entity)DslModeling::DomainRoleInfo.GetRolePlayer(this, EntityDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, EntityDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Entity of a UIView
+		/// <summary>
+		/// Gets Entity.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Entity GetEntity(UIView element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, UIViewDomainRoleId) as Entity;
+		}
+		
+		/// <summary>
+		/// Sets Entity.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetEntity(UIView element, Entity newEntity)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, UIViewDomainRoleId, newEntity);
+		}
+		#endregion
+		#region UIView domain role code
+		
+		/// <summary>
+		/// UIView domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid UIViewDomainRoleId = new global::System.Guid(0x416b4b7a, 0x3600, 0x4d84, 0x8d, 0xa7, 0x52, 0x67, 0x87, 0x3e, 0x76, 0xb1);
+		
+		/// <summary>
+		/// DomainRole UIView
+		/// Description for nHydrate.Dsl.EntityHasUIView.UIView
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.EntityHasUIView/UIView.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.EntityHasUIView/UIView.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Entity", PropertyDisplayNameKey="nHydrate.Dsl.EntityHasUIView/UIView.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("416b4b7a-3600-4d84-8da7-5267873e76b1")]
+		public virtual UIView UIView
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (UIView)DslModeling::DomainRoleInfo.GetRolePlayer(this, UIViewDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, UIViewDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access UIView of a Entity
+		/// <summary>
+		/// Gets a list of UIView.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<UIView> GetUIView(Entity element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<UIView>, UIView>(element, EntityDomainRoleId);
+		}
+		#endregion
+		#region Entity link accessor
+		/// <summary>
+		/// Get the list of EntityHasUIView links to a Entity.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::nHydrate.Dsl.EntityHasUIView> GetLinksToUIView ( global::nHydrate.Dsl.Entity entityInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::nHydrate.Dsl.EntityHasUIView>(entityInstance, global::nHydrate.Dsl.EntityHasUIView.EntityDomainRoleId);
+		}
+		#endregion
+		#region UIView link accessor
+		/// <summary>
+		/// Get the EntityHasUIView link to a UIView.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::nHydrate.Dsl.EntityHasUIView GetLinkToEntity (global::nHydrate.Dsl.UIView uIViewInstance)
+		{
+			global::System.Collections.Generic.IList<global::nHydrate.Dsl.EntityHasUIView> links = DslModeling::DomainRoleInfo.GetElementLinks<global::nHydrate.Dsl.EntityHasUIView>(uIViewInstance, global::nHydrate.Dsl.EntityHasUIView.UIViewDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of UIView not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region EntityHasUIView instance accessors
+		
+		/// <summary>
+		/// Get any EntityHasUIView links between a given Entity and a UIView.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::nHydrate.Dsl.EntityHasUIView> GetLinks( global::nHydrate.Dsl.Entity source, global::nHydrate.Dsl.UIView target )
+		{
+			global::System.Collections.Generic.List<global::nHydrate.Dsl.EntityHasUIView> outLinks = new global::System.Collections.Generic.List<global::nHydrate.Dsl.EntityHasUIView>();
+			global::System.Collections.Generic.IList<global::nHydrate.Dsl.EntityHasUIView> links = DslModeling::DomainRoleInfo.GetElementLinks<global::nHydrate.Dsl.EntityHasUIView>(source, global::nHydrate.Dsl.EntityHasUIView.EntityDomainRoleId);
+			foreach ( global::nHydrate.Dsl.EntityHasUIView link in links )
+			{
+				if ( target.Equals(link.UIView) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one EntityHasUIView link between a given Entityand a UIView.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::nHydrate.Dsl.EntityHasUIView GetLink( global::nHydrate.Dsl.Entity source, global::nHydrate.Dsl.UIView target )
+		{
+			global::System.Collections.Generic.IList<global::nHydrate.Dsl.EntityHasUIView> links = DslModeling::DomainRoleInfo.GetElementLinks<global::nHydrate.Dsl.EntityHasUIView>(source, global::nHydrate.Dsl.EntityHasUIView.EntityDomainRoleId);
+			foreach ( global::nHydrate.Dsl.EntityHasUIView link in links )
+			{
+				if ( target.Equals(link.UIView) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}

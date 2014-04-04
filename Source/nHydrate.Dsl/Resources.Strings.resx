@@ -1,0 +1,1380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="fromTableNotFound" xml:space="preserve">
+    <value>CF0248: From clause '{0}' in method '{1}' of entity '{2}' does not match an existing table or view.</value>
+  </data>
+  <data name="missingRendererDescriptorCategory" xml:space="preserve">
+    <value>CF0363: Missing 'category' attribute for renderer descriptor. Xml is '{0}'.</value>
+  </data>
+  <data name="invalidColumnCount" xml:space="preserve">
+    <value>CF0045: Invalid column count.</value>
+  </data>
+  <data name="missingMasterWindowName" xml:space="preserve">
+    <value>CF0126: Missing 'masterWindowName' attribute. Xml is '{0}'.</value>
+  </data>
+  <data name="missingAttributeName" xml:space="preserve">
+    <value>CF0107: Missing 'name' attribute on Attribute node. Xml is '{0}'.</value>
+  </data>
+  <data name="constraintAlreadyDefined" xml:space="preserve">
+    <value>CF0174: Constraint '{0}' is defined more than once in the project.</value>
+  </data>
+  <data name="notEnumerable" xml:space="preserve">
+    <value>CF0062: Object '{0}' is not enumerable or invalid.</value>
+  </data>
+  <data name="PatternsPropertyTab" xml:space="preserve">
+    <value>Aspects and Producers Properties</value>
+  </data>
+  <data name="missingDerivedPropertyName" xml:space="preserve">
+    <value>CF0310: Derived property must have a name.</value>
+  </data>
+  <data name="propertyViewNotARelation" xml:space="preserve">
+    <value>CF0247: Property '{0}' is not a relation and cannot be used in view '{1}' data binding of entity '{2}'.</value>
+  </data>
+  <data name="entityWithoutKeys" xml:space="preserve">
+    <value>CF0298: Entity '{0}' has no key property defined and cannot therefore have instances.</value>
+  </data>
+  <data name="propertyNotPersistent" xml:space="preserve">
+    <value>CF0087: Property '{0}' is declared as not persistent and cannot be used in load methods.</value>
+  </data>
+  <data name="invalidInstallationPath" xml:space="preserve">
+    <value>CF0332: Invalid CodeFluent installation path. Reinstall CodeFluent Entities.</value>
+  </data>
+  <data name="cyclicProjectReference" xml:space="preserve">
+    <value>CF0211: A cyclic reference was detected trying to load external CodeFluent model '{0}'.</value>
+  </data>
+  <data name="bodySnippetTransformNamesViewNotPersistent" xml:space="preserve">
+    <value>CF0266: Body snippet '{0}' has an invalid name transformation expression '{1}'. View '{3}' of entity '{2}' is not persistent.</value>
+  </data>
+  <data name="fileError" xml:space="preserve">
+    <value>CF0142: An error has occured trying to load CodeFluent model file '{0}': {1}</value>
+  </data>
+  <data name="cannotFindSetRelationProperty" xml:space="preserve">
+    <value>CF0030: Cannot find relation property '{0}' in set's item entity '{1}'.</value>
+  </data>
+  <data name="limitedView1" xml:space="preserve">
+    <value>CF0344: Procedure '{0}' has constraints that cannot be resolved: {1}</value>
+  </data>
+  <data name="limitedView2" xml:space="preserve">
+    <value>CF0251: View '{0}' of entity '{1}' cannot be used for method '{3}' because it does not declare property '{2}'.</value>
+  </data>
+  <data name="statementWithoutParent" xml:space="preserve">
+    <value>CF0330: Statement '{0}' has not parent.</value>
+  </data>
+  <data name="invalidDataRowSetOfKeys" xml:space="preserve">
+    <value>CF0297: Invalid set of keys for entity '{0}'. DataRow is '{1}'.</value>
+  </data>
+  <data name="invalidPackagePart" xml:space="preserve">
+    <value>CF0157: Package '{0}' has an invalid or missing part '{1}', or the part is not a CodeFluent project part.</value>
+  </data>
+  <data name="wrongExistingType" xml:space="preserve">
+    <value>CF0357: Existing type '{0}' cannot be used as a base type for a project type.</value>
+  </data>
+  <data name="invalidUniqueConstraintProperty" xml:space="preserve">
+    <value>CF0204: Property '{0}' of entity '{1}' cannot be used as part of the '{2}' unique constraint because it has no associated columns in the persistence layer. Check the property is defined as persistent, directly or indirectly.</value>
+  </data>
+  <data name="invalidOutputPath" xml:space="preserve">
+    <value>CF0011: 'outputPath' attribute cannot be the same as file path '{0}'.</value>
+  </data>
+  <data name="invalidNodeType" xml:space="preserve">
+    <value>CF0060: Invalid node type '{0}'. Xml is '{1}'.</value>
+  </data>
+  <data name="keyCannotBeNullable" xml:space="preserve">
+    <value>CF0125: Property '{0}' of entity '{1}' is a key or a collection key and cannot be nullable.</value>
+  </data>
+  <data name="absentPartPath" xml:space="preserve">
+    <value>CF0147: Absent package part path '{0}'. Xml is '{1}'.</value>
+  </data>
+  <data name="noExistingProperty" xml:space="preserve">
+    <value>CF0282: Existing entity '{1}' does not have a public '{0}' property. Note the search is case sensitive.</value>
+  </data>
+  <data name="reservedUnitName" xml:space="preserve">
+    <value>CF0276: '{0}' is a reserved unit name. Xml is '{1}'.</value>
+  </data>
+  <data name="lightweightMustHaveProperties" xml:space="preserve">
+    <value>CF0285: Lightweight entity '{0}' must have at least one property declared.</value>
+  </data>
+  <data name="cannotAddChildNode" xml:space="preserve">
+    <value>CF0224: Cannot add a node of type '{0}' to a parent of type '{1}'.</value>
+  </data>
+  <data name="missingReferencedProjectPath" xml:space="preserve">
+    <value>CF0208: Missing reference 'path' attribute. Xml is '{0}'.</value>
+  </data>
+  <data name="invalidMethodParameters" xml:space="preserve">
+    <value>CF0155: Method '{0}' of entity '{1}' cannot be used in this context. It must have only one parameter of type '{2}'.</value>
+  </data>
+  <data name="directoryPropertyNotPersistent" xml:space="preserve">
+    <value>CF0184: Property '{1}' of Directory entity '{0}' is not persistent.</value>
+  </data>
+  <data name="parameterInvalidInViewExpression" xml:space="preserve">
+    <value>CF0236: View '{0}' of entity '{1}' defines a parameter reference which is not allowed here.</value>
+  </data>
+  <data name="invalidIdentifier" xml:space="preserve">
+    <value>CF0400: '{0}' is not a valid identifier for a '{1}'.</value>
+  </data>
+  <data name="missingRuleTypeName" xml:space="preserve">
+    <value>CF0111: Missing rule typeName. Xml is '{0}'.</value>
+  </data>
+  <data name="unusableLWProperty" xml:space="preserve">
+    <value>CF0334: Existing property '{0}' of entity '{1}' cannot be used as a CodeFluent entity.</value>
+  </data>
+  <data name="noMatchingColumnsForRelation2" xml:space="preserve">
+    <value>CF0398: Table '{0}' has no matching column for relation '{1}'.</value>
+  </data>
+  <data name="propertyCannotBeNullable" xml:space="preserve">
+    <value>CF0190: Property '{0}' of entity '{1}' cannot be nullable.</value>
+  </data>
+  <data name="invalidPartName" xml:space="preserve">
+    <value>CF0342: Part with name '{0}' cannot be found in the package.</value>
+  </data>
+  <data name="invalidPartPath" xml:space="preserve">
+    <value>CF0146: Invalid package part path '{0}'.</value>
+  </data>
+  <data name="limitedView" xml:space="preserve">
+    <value>CF0250: View '{0}' of entity '{1}' cannot be used for method '{3}' because it does not declare relation '{2}'.</value>
+  </data>
+  <data name="oledbProviderNotInstalled" xml:space="preserve">
+    <value>CF0305: OleDb provider '{0}' cannot be loaded or was not found. Check inner exception details.</value>
+  </data>
+  <data name="subPropertyNotPersistent" xml:space="preserve">
+    <value>CF0295: Property '{0}' of entity '{1}' does not have any associated column.</value>
+  </data>
+  <data name="searchEngineNotStarted" xml:space="preserve">
+    <value>CF0356: Search engine is not started.</value>
+  </data>
+  <data name="invalidClassName" xml:space="preserve">
+    <value>CF0203: Invalid type name '{0}'.</value>
+  </data>
+  <data name="entityPersistenceRedefined2" xml:space="preserve">
+    <value>CF0317: Entity '{0}' persistenceName '{1}' in schema '{2}', is defined more than once. This happens for example if you declare two entities with the same name and schema in different namespaces.</value>
+  </data>
+  <data name="invalidCollectionKey1" xml:space="preserve">
+    <value>CF0122: Invalid collection key '{0}'.</value>
+  </data>
+  <data name="missingSettingName" xml:space="preserve">
+    <value>CF0094: Missing setting name. Xml is '{0}'.</value>
+  </data>
+  <data name="pureEntityUniqueConstraint" xml:space="preserve">
+    <value>CF0158: Entity '{0}' has an invalid constraint name '{1}'.</value>
+  </data>
+  <data name="directoryUserEmailNotUnique" xml:space="preserve">
+    <value>CF0185: Property '{1}' of Directory entity '{0}' must have a unique constraint because requiresUniqueEmail is set to true for the Directory user entity.</value>
+  </data>
+  <data name="setRelationPropertyInvalidType" xml:space="preserve">
+    <value>CF0031: Property '{0}' for entity '{1}' declares a relation property '{2}' in set's item entity '{3}' with an invalid type '{4}'. Expecting '{5}'.</value>
+  </data>
+  <data name="typeNameFunctionInvalid" xml:space="preserve">
+    <value>CF0152: Procedure function '$column.typename' can only be used on an entity with descendants. Procedure is '{0}'. Table is '{1}'. Final body is '{2}'.</value>
+  </data>
+  <data name="invalidDisplayProperty1" xml:space="preserve">
+    <value>CF0123: Invalid display property '{0}'. The display property cannot be a set.</value>
+  </data>
+  <data name="tabNotFound" xml:space="preserve">
+    <value>CF0164: Tab '{0}' was not found or is invalid.</value>
+  </data>
+  <data name="unmappedKeyEntityProperty" xml:space="preserve">
+    <value>CF0133: Missing key property '{0}' mapping for instance of entity '{1}'. Xml is '{2}'.</value>
+  </data>
+  <data name="invalidDerivedProcedurePersistenceName" xml:space="preserve">
+    <value>CF0124: Invalid derived procedure persistence name '{0}' for method '{1}' of entity '{2}'. Persistence name must contain at least parameter {{0}} or method must be marked as not inheritable.</value>
+  </data>
+  <data name="columnWasNotFound2" xml:space="preserve">
+    <value>CF0195: Property '{0}' is associated with '{1}' columns.</value>
+  </data>
+  <data name="setCollectionCannotBeModified" xml:space="preserve">
+    <value>CF0232: Set collection cannot be modified directly. Use the Entities collection instead.</value>
+  </data>
+  <data name="relatedPropertySameTypeAsParent" xml:space="preserve">
+    <value>CF0025: Related property '{0}' is of the same type as parent property '{1}' entity '{2}'.</value>
+  </data>
+  <data name="packageCannotBeConverted1" xml:space="preserve">
+    <value>Target directory is invalid. A package cannot be converted in the same or child directory.</value>
+  </data>
+  <data name="invalidMultiPartExtension" xml:space="preserve">
+    <value>CF0302: A multi part package cannot be saved to an unique model file, such as '{0}'.</value>
+  </data>
+  <data name="methodParameterNotFound" xml:space="preserve">
+    <value>CF0105: Parameter '{0}' for method '{1}' with body '{2}' is invalid.</value>
+  </data>
+  <data name="cannotFindRelationProperty" xml:space="preserve">
+    <value>CF0026: Cannot find relation property '{0}' in entity '{1}'.</value>
+  </data>
+  <data name="viewPropertyNotFound" xml:space="preserve">
+    <value>CF0361: View property '{0}' referenced in method '{1}' of entity '{2}' is unknown.</value>
+  </data>
+  <data name="invalidSelfOneToOneRelation" xml:space="preserve">
+    <value>CF0287: Entity '{0}' can not declare a self one to one relation on property '{1}'.</value>
+  </data>
+  <data name="enumerationValueNotFound" xml:space="preserve">
+    <value>CF0114: Enumeration value '{0}' of enumeration '{1}' was not found.</value>
+  </data>
+  <data name="cannotAddTableLessColumn" xml:space="preserve">
+    <value>CF0259: Cannot add column '{0}' to constraint because it is not associated with a table.</value>
+  </data>
+  <data name="procedureCannotBeCreated" xml:space="preserve">
+    <value>CF0386: Procedure '{0}' cannot be inferred. Check other errors to determine the root cause of this issue.</value>
+  </data>
+  <data name="invalidPropertyName" xml:space="preserve">
+    <value>CF0052: Invalid property name '{0}'. Xml is '{1}'.</value>
+  </data>
+  <data name="fromTableNoColumns" xml:space="preserve">
+    <value>CF0249: Table or view '{0}' of entity '{1}' cannot be used in a From clause because it does not have any non-system column.</value>
+  </data>
+  <data name="entityNotPersistent" xml:space="preserve">
+    <value>CF0167: Entity '{0}' is declared as not persistent and cannot be used in load methods such as method '{1}' of entity '{2}'.</value>
+  </data>
+  <data name="explainEnableLockout" xml:space="preserve">
+    <value> This property is required because enableLockout is set to true for the Directory user entity.</value>
+  </data>
+  <data name="invalidEntityOperation" xml:space="preserve">
+    <value>CF0076: Invalid entity '{0}' operation '{1}' in method '{3}'. Normalized method is defined as '{2}'.</value>
+  </data>
+  <data name="invalidProducerType" xml:space="preserve">
+    <value>CF0021: Type '{0}' does not implement the IProducer interface.</value>
+  </data>
+  <data name="invalidViewOrderBy" xml:space="preserve">
+    <value>CF0277: View '{0}' of entity '{1}' defines an invalid '{2}' order by clause.</value>
+  </data>
+  <data name="parserLexicalError" xml:space="preserve">
+    <value>CF0069: Parser lexical error at line number '{0}', text '{1}'.</value>
+  </data>
+  <data name="missingUnitName" xml:space="preserve">
+    <value>CF0274: Missing unit name. Xml is '{0}'.</value>
+  </data>
+  <data name="undefinedMasterWindow" xml:space="preserve">
+    <value>CF0127: Undefined master window '{0}'.</value>
+  </data>
+  <data name="nullBody" xml:space="preserve">
+    <value>CF0173: Method '{0}' of entity '{1}' has an empty body. Xml is '{2}'.</value>
+  </data>
+  <data name="propertyNotARelation" xml:space="preserve">
+    <value>CF0089: Property '{0}' is not a relation and cannot be used in load method '{1}' data binding.</value>
+  </data>
+  <data name="existingEnumTypeNoValue" xml:space="preserve">
+    <value>CF0355: Enumeration type '{0}' is mapped to an existing type. It cannot redefine values such as '{1}'.</value>
+  </data>
+  <data name="fileError2" xml:space="preserve">
+    <value>CF0143: An error has occured trying to load CodeFluent import model file '{0}': {1}</value>
+  </data>
+  <data name="cannotAddJoin" xml:space="preserve">
+    <value>CF0382: Join statement '{0}' cannot be added to parent statement '{1}'.</value>
+  </data>
+  <data name="missingTableRef" xml:space="preserve">
+    <value>CF0383: Procedure or View '{0}' is missing a reference to table '{1}'.</value>
+  </data>
+  <data name="tooManyZones" xml:space="preserve">
+    <value>CF0371: Zone '{0}' has two many child zones. A zone can contain a maximum of two child zones.</value>
+  </data>
+  <data name="xmlError4" xml:space="preserve">
+    <value>CF0131: The XML model resulting from a template run has an incorrect syntax: '{0}'.</value>
+  </data>
+  <data name="xmlError5" xml:space="preserve">
+    <value>CF0290: The XML model resulting from template file '{1}' has an incorrect syntax: '{0}'. It has been saved to file '{2}' for analysis.</value>
+  </data>
+  <data name="xmlError2" xml:space="preserve">
+    <value>CF0129: The XML model in file '{1}' has an incorrect syntax: '{0}'.</value>
+  </data>
+  <data name="xmlError3" xml:space="preserve">
+    <value>CF0130: The XML model resulting from template file '{1}' has an incorrect syntax: '{0}'.</value>
+  </data>
+  <data name="recursiveKeyRelations" xml:space="preserve">
+    <value>CF0119: Recursive key relations detected on relation '{0}'.</value>
+  </data>
+  <data name="crossStoreRelationNotAllowed" xml:space="preserve">
+    <value>CF0175: Cross store relation '{0}' between stores '{1}' and '{2}' is not allowed. Use the 'allowCrossStoreRelations' attribute on the project node if you need this.</value>
+  </data>
+  <data name="explainEnablePasswordReset" xml:space="preserve">
+    <value> This property is required because enablePasswordReset is set to true for the Directory user entity.</value>
+  </data>
+  <data name="constraintDuplicateColumn" xml:space="preserve">
+    <value>CF0315: Column '{0}' is referenced more than once in constraint '{1}' (short name:'{2}').</value>
+  </data>
+  <data name="unknownStringComparer" xml:space="preserve">
+    <value>CF0189: Unknown '{0}' StringComparer.</value>
+  </data>
+  <data name="bodySnippetTransformNamesViewPropertyNotPersistent" xml:space="preserve">
+    <value>CF0268: Body snippet '{0}' has an invalid name transformation expression '{1}'. View property '{4}' of view '{3}' of entity '{2}' is not persistent.</value>
+  </data>
+  <data name="explainRequiresQuestionAndAnswer" xml:space="preserve">
+    <value> This property is required because requiresQuestionAndAnswer is set to true for the Directory user entity.</value>
+  </data>
+  <data name="noForeignKey2" xml:space="preserve">
+    <value>CF0257: There must be a foreign key between the table '{0}' and the table '{1}' to establish '{0}' as the root table for view '{2}' of entity '{3}'.</value>
+  </data>
+  <data name="patternAlreadyDeclared" xml:space="preserve">
+    <value>CF0319: Aspect with namespace Uri '{0}' is already declared in the project.</value>
+  </data>
+  <data name="missingCategoryPathAttribute" xml:space="preserve">
+    <value>CF0063: Missing 'categoryPath' attribute on category element. Xml is '{0}'.</value>
+  </data>
+  <data name="missingParameterName2" xml:space="preserve">
+    <value>CF0245: Missing parameter name. Xml is '{0}'.</value>
+  </data>
+  <data name="unknownCellName" xml:space="preserve">
+    <value>CF0323: Table '{0}' does not have a column named '{1}'.</value>
+  </data>
+  <data name="directoryRoleCollectionKey" xml:space="preserve">
+    <value>CF0187: Directory role entity '{0}' must have a collection key, and its type must be 'string'.</value>
+  </data>
+  <data name="invalidKeyValue" xml:space="preserve">
+    <value>CF0304: Invalid key value for property '{0}' mapping for instance of entity '{1}'. Xml is '{2}'.</value>
+  </data>
+  <data name="unboundInstanceValue" xml:space="preserve">
+    <value>CF0359: Instance value must be bound to a property. Make sure it has a valid name that matches one of the entity property.</value>
+  </data>
+  <data name="missingItemFullName" xml:space="preserve">
+    <value>CF0041: Set '{0}' must have the 'itemFullName' attribute defined.</value>
+  </data>
+  <data name="noForeignKey" xml:space="preserve">
+    <value>CF0255: There must be a foreign key between the table '{0}' and the table '{1}' to establish '{0}' as the source table for view '{2}' of entity '{3}'.</value>
+  </data>
+  <data name="unknownInstanceValueName" xml:space="preserve">
+    <value>CF0132: Instance value named '{0}' does not match with one of entity '{1}' properties.</value>
+  </data>
+  <data name="UnspecifiedPropertyTab" xml:space="preserve">
+    <value>Debug Properties</value>
+  </data>
+  <data name="NormalPropertyTab" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="wrongExistingEnumType" xml:space="preserve">
+    <value>CF0354: Existing type '{0}' is not a System.Enum type and cannot be mapped to a project enumeration type.</value>
+  </data>
+  <data name="relationPropertyUnknown" xml:space="preserve">
+    <value>CF0029: Property '{0}' for entity '{1}' declares a relation property '{2}' in entity '{3}' that is not a project entity or set. Its type is '{4}'.</value>
+  </data>
+  <data name="embeddedEntityWasNotFound" xml:space="preserve">
+    <value>CF0206: Embedded entity '{0}' was not found. Xml is '{1}'.</value>
+  </data>
+  <data name="relatedPropertyDefinitionConflict" xml:space="preserve">
+    <value>CF0097: Related property definition '{0}' conflicts with existing property definition '{1}'.</value>
+  </data>
+  <data name="missingInstanceValueName" xml:space="preserve">
+    <value>CF0093: Missing instance value name. Xml is '{0}'.</value>
+  </data>
+  <data name="invalidEntityOperation2" xml:space="preserve">
+    <value>CF0237: Invalid entity '{0}' operation '{1}' in view '{3}'. Normalized body is defined as '{2}'.</value>
+  </data>
+  <data name="baseTypeCollectionCannotBeModified" xml:space="preserve">
+    <value>CF0233: BaseType collection cannot be modified directly. Use the Entities or Enumerations collection instead.</value>
+  </data>
+  <data name="baseNotComplete" xml:space="preserve">
+    <value>CF0335: Base entity '{0}' of entity '{1}' is not complete.</value>
+  </data>
+  <data name="parameterPropertyInvalid" xml:space="preserve">
+    <value>CF0193: Parameter '{0}' with implicit type cannot be related to the '{2}' property wich is a set. You should specify its type. Node body is '{1}'. Procedure is '{3}'.</value>
+  </data>
+  <data name="nullSnippetBody" xml:space="preserve">
+    <value>CF0139: Snippet has an empty body. Xml is '{0}'.</value>
+  </data>
+  <data name="invalidDerivedProperty" xml:space="preserve">
+    <value>CF0112: Type mismatch between property '{0}' of entity '{1}' ({2}) and property '{3}' of entity '{4}' ({5}).</value>
+  </data>
+  <data name="lightweightNoBlob" xml:space="preserve">
+    <value>CF0283: Lightweight entity '{0}' cannot have Binary Large Object properties.</value>
+  </data>
+  <data name="invalidNamingConventionType" xml:space="preserve">
+    <value>CF0022: Type '{0}' does not implement the INamingConvention interface.</value>
+  </data>
+  <data name="viewBodyRedefined" xml:space="preserve">
+    <value>CF0243: View '{0}' of entity '{1}' defines more than one body for the language '{2}'.</value>
+  </data>
+  <data name="cannotDetermineNewKey" xml:space="preserve">
+    <value>CF0407: Cannot determine a new automatic key value for entity '{0}'.</value>
+  </data>
+  <data name="undefinedEnumerationValue" xml:space="preserve">
+    <value>CF0196: Enumeration type '{0}' has no value named '{1}' defined.</value>
+  </data>
+  <data name="controlTypeNameMissing" xml:space="preserve">
+    <value>CF0106: Control in the CodeFluent namespace '{0}' must define a 'typeName' attribute. Xml is '{1}'.</value>
+  </data>
+  <data name="undefinedDefaultNamespace" xml:space="preserve">
+    <value>CF0057: Undefined or empty 'defaultNamespace' project attribute. This model may be a library model. Part path is '{0}'. Xml is '{1}'.</value>
+  </data>
+  <data name="invalidObjectValidate" xml:space="preserve">
+    <value>CF0217: Invalid object validate rule. Containing property '{0}' is not of project set type nor project entity type. Xml is '{1}'.</value>
+  </data>
+  <data name="invalidTypeName" xml:space="preserve">
+    <value>CF0191: Type name '{0}' is invalid.</value>
+  </data>
+  <data name="methodRedefined" xml:space="preserve">
+    <value>CF0054: Method '{0}' of entity '{1}' is defined more than once with the same parameters.</value>
+  </data>
+  <data name="explainDirectoryRoles" xml:space="preserve">
+    <value> This property is required because entity '{0}' is declared as the Directory role entity in the project.</value>
+  </data>
+  <data name="propertyPersistenceNameRedefined" xml:space="preserve">
+    <value>CF0144: PersistenceName '{0}' for property '{1}' of entity '{2}' is defined more than once.</value>
+  </data>
+  <data name="nestedTransaction" xml:space="preserve">
+    <value>CF0324: The designer transaction '{0}' cannot be committed or canceled because nested transaction '{1}' is still active.  Commit or cancel the nested transaction first.</value>
+  </data>
+  <data name="undefinedXml" xml:space="preserve">
+    <value>undefined</value>
+  </data>
+  <data name="explainDirectoryUsers" xml:space="preserve">
+    <value> This property is required because entity '{0}' is declared as the Directory user entity in the project.</value>
+  </data>
+  <data name="missingRendererDescriptorName" xml:space="preserve">
+    <value>CF0362: Missing 'name' attribute for renderer descriptor. Xml is '{0}'.</value>
+  </data>
+  <data name="missingRendererName" xml:space="preserve">
+    <value>CF0081: Missing renderer name.</value>
+  </data>
+  <data name="entityRedefined" xml:space="preserve">
+    <value>CF0014: Entity '{0}' is defined more than once in the same part.</value>
+  </data>
+  <data name="partNotAProjectPart" xml:space="preserve">
+    <value>CF0227: Part '{0}' is not a project part, and cannot be added to the collection of Parts.</value>
+  </data>
+  <data name="patternScanError" xml:space="preserve">
+    <value>CF0392: Pattern '{0}' cannot be loaded. Check inner exception details.</value>
+  </data>
+  <data name="splitZoneHasOnlyZones" xml:space="preserve">
+    <value>CF0372: Zone '{0}' has a split. It can contain only child zones.</value>
+  </data>
+  <data name="baseTypeRedefinition" xml:space="preserve">
+    <value>CF0016: {0} '{1}' is already defined as {2} {3}.</value>
+  </data>
+  <data name="zoneRedefined" xml:space="preserve">
+    <value>CF0369: Zone '{0}' is defined more than once.</value>
+  </data>
+  <data name="absoluteImportPathNotSupported" xml:space="preserve">
+    <value>CF0218: Absolute import path is not supported. Xml is '{0}'.</value>
+  </data>
+  <data name="setRelationPropertyUnknown" xml:space="preserve">
+    <value>CF0033: Property '{0}' for entity '{1}' declares a relation property '{2}' in set's item entity '{3}' that is not a project entity, set, or valid key type. Its type is '{4}'.</value>
+  </data>
+  <data name="invalidConstraintType" xml:space="preserve">
+    <value>CF0044: Invalid constraint type at index '{0}'.</value>
+  </data>
+  <data name="missingKeys" xml:space="preserve">
+    <value>CF0019: Entity '{0}' does not have a valid set of persistent key properties defined.</value>
+  </data>
+  <data name="propertyCannotBeKey" xml:space="preserve">
+    <value>CF0078: Property '{0}' of entity '{1}' cannot be a key. Type name '{2}' of UI type '{3}' is unsupported.</value>
+  </data>
+  <data name="unknownApplication" xml:space="preserve">
+    <value>CF0084: Application '{0}' was not found in the project. Xml is '{1}'.</value>
+  </data>
+  <data name="recursiveRelationKey" xml:space="preserve">
+    <value>CF0118: Recursive relation key detected on property '{0}' of entity '{1}'.</value>
+  </data>
+  <data name="inconsistentRelations" xml:space="preserve">
+    <value>CF0047: Inconsistent relations '{0}' and '{1}'.</value>
+  </data>
+  <data name="propertyRedefined" xml:space="preserve">
+    <value>CF0018: Property '{0}' of entity '{1}' is defined more than once.</value>
+  </data>
+  <data name="missingEntityAttribute" xml:space="preserve">
+    <value>CF0065: Missing the 'entity' attribute.</value>
+  </data>
+  <data name="entityNotFound" xml:space="preserve">
+    <value>CF0064: Entity '{0}' was not found or is invalid.</value>
+  </data>
+  <data name="codeFluentParserException" xml:space="preserve">
+    <value>CF0068: CodeFluent parser exception.</value>
+  </data>
+  <data name="stylesheetRedefined" xml:space="preserve">
+    <value>CF0079: Stylesheet '{0}' of application '{1}' is defined more than once.</value>
+  </data>
+  <data name="noSplitNoZone" xml:space="preserve">
+    <value>CF0370: Zone '{0}' has no a split. It cannot contain child zones.</value>
+  </data>
+  <data name="cannotFindResource" xml:space="preserve">
+    <value>CF0005: Cannot find '{0}' resource in assembly '{1}'.</value>
+  </data>
+  <data name="relatedPropertyRedefinition" xml:space="preserve">
+    <value>CF0098: Related property '{0}' is already defined as a property '{1}'.</value>
+  </data>
+  <data name="missingOperandNameAttribute" xml:space="preserve">
+    <value>CF0067: Missing operand 'name' attribute.</value>
+  </data>
+  <data name="icpParseServerError" xml:space="preserve">
+    <value>CF0375: Communication with the background parser failed.</value>
+  </data>
+  <data name="parserSyntaxError" xml:space="preserve">
+    <value>CF0070: CFQL parser syntax error at line number '{0}', line position '{1}' for text '{2}', expecting '{3}'.</value>
+  </data>
+  <data name="missingUserTypeName" xml:space="preserve">
+    <value>CF0042: UserType must have the 'name' attribute defined. Xml is '{0}'.</value>
+  </data>
+  <data name="invalidEntityExpression" xml:space="preserve">
+    <value>CF0399: Invalid entity expression on entity '{0}'.</value>
+  </data>
+  <data name="missingRuntimeTypeName" xml:space="preserve">
+    <value>CF0216: Missing 'runtimeTypeName' attribute for custom typed object validation rule. Xml is '{0}'.</value>
+  </data>
+  <data name="entityKeyNotSpecified" xml:space="preserve">
+    <value>CF0201: Entity key of instance value is not specified for property '{0}' of entity '{1}'. Xml is '{2}'.</value>
+  </data>
+  <data name="unknownRuleProperty" xml:space="preserve">
+    <value>CF0199: Rule type '{0}' does not have a writable property named '{1}'.</value>
+  </data>
+  <data name="invalidPropertyBindingPath" xml:space="preserve">
+    <value>CF0306: Expression path '{0}' is invalid. '{1}' is not a property of entity '{2}'.</value>
+  </data>
+  <data name="cannotParseInMemory" xml:space="preserve">
+    <value>CF0325: Background compilation failed. Check inner exception details.</value>
+  </data>
+  <data name="invalidPatternPart3" xml:space="preserve">
+    <value>CF0322: Description aspect at '{0}' is missing 'namespaceUri' attribute. Xml is '{1}'.</value>
+  </data>
+  <data name="invalidPatternPart2" xml:space="preserve">
+    <value>CF0321: Aspect part at '{0}' must contain exactly one description aspect Xml element.</value>
+  </data>
+  <data name="invalidPatternPart5" xml:space="preserve">
+    <value>CF0333: Description aspect is invalid.</value>
+  </data>
+  <data name="invalidPatternPart4" xml:space="preserve">
+    <value>CF0331: Description aspect is missing 'namespaceUri' attribute. Xml is '{0}'.</value>
+  </data>
+  <data name="unknownRuleType" xml:space="preserve">
+    <value>CF0197: Rule type '{0}' is unknown for {1} nodes, or the 'typeName' attribute is missing an external assembly specification, or the assembly cannot be loaded. Check inner exception details.</value>
+  </data>
+  <data name="tabHasOnlyOneZone" xml:space="preserve">
+    <value>CF0373: Tab '{0}' defines more than one zone. A tab can contain only one zone.</value>
+  </data>
+  <data name="bodySnippetTransformNamesEnumerationValueNotFound" xml:space="preserve">
+    <value>CF0313: Body snippet '{0}' has an invalid name transformation expression '{1}'. Enumeration value '{2}' cannot be found.</value>
+  </data>
+  <data name="missingSurfaceSelectorName" xml:space="preserve">
+    <value>CF0364: Missing surface selector name. Xml is '{0}'.</value>
+  </data>
+  <data name="invalidMethodType" xml:space="preserve">
+    <value>CF0056: Method type '{0}' is invalid for method '{1}' of entity '{2}'. Make sure the body is not empty.</value>
+  </data>
+  <data name="defaultKeyInstanceValue" xml:space="preserve">
+    <value>CF0134: Instance value for key property '{0}' of entity '{1}' cannot be equal to the key property default value '{2}' of type '{3}'. Xml is '{4}'.</value>
+  </data>
+  <data name="unknownDerivedPropertyBaseProperty" xml:space="preserve">
+    <value>CF0312: Derived property '{0}' for entity '{1}' is invalid. There is no properties with this name in the ascendency.</value>
+  </data>
+  <data name="missingSubProducerTypeNameAttribute" xml:space="preserve">
+    <value>CF0346: Missing 'typeName' attribute for sub producer '{0}'.</value>
+  </data>
+  <data name="missingProcedureJoin" xml:space="preserve">
+    <value>CF0381: Procedure code '{0}' is invalid, missing required join to table '{1}': '{2}'</value>
+  </data>
+  <data name="invalidFunctionName" xml:space="preserve">
+    <value>CF0329: Function '{2}' cannot be used in this context. Procedure is '{0}'. Final body is '{1}'.</value>
+  </data>
+  <data name="packageInvalid" xml:space="preserve">
+    <value>The file does not seem to be a valid package.</value>
+  </data>
+  <data name="methodParameterNotFound2" xml:space="preserve">
+    <value>CF0258: Parameter '{0}' for method '{1}' with body '{2}' is invalid. Final body is '{3}' and was augmented using ambient parameters.</value>
+  </data>
+  <data name="directoryUserOneSimpleKey" xml:space="preserve">
+    <value>CF0178: Directory user entity '{0}' must have only one key property of simple type (string, guid, or number).</value>
+  </data>
+  <data name="directoryPropertyNotValid" xml:space="preserve">
+    <value>CF0188: Property '{1}' of Directory entity '{0}' is not valid.</value>
+  </data>
+  <data name="invalidConstraintTable" xml:space="preserve">
+    <value>CF0046: Invalid constraint table '{0}' at index '{1}'.</value>
+  </data>
+  <data name="CFV.Entity.InvalidName" xml:space="preserve">
+    <value>CF1801: Invalid name '{0}' for entity.</value>
+  </data>
+  <data name="unhandledDefaultValueType" xml:space="preserve">
+    <value>CF0050: Unhandled default value '{0}' type for property '{1}'.</value>
+  </data>
+  <data name="unmappedEntityProperty" xml:space="preserve">
+    <value>CF0136: Missing non nullable property '{0}' mapping for instance of entity '{1}'. Xml is '{2}'.</value>
+  </data>
+  <data name="constraintWithoutColumns" xml:space="preserve">
+    <value>CF0314: Constraint of type '{0}' has no defined columns. Table is '{1}'. Referenced table is '{2}'.</value>
+  </data>
+  <data name="snippetCheckError" xml:space="preserve">
+    <value>CF0091: An attempt to create a persistence snippet '{0}' has been detected in procedure '{2}'. Make sure all identifiers declared in the body are valid in the context. If you really want to create a snippet, you should change the project, method or view 'checkLevel' attribute, currently set to '{1}'.</value>
+  </data>
+  <data name="setRedefined" xml:space="preserve">
+    <value>CF0012: Set '{0}' is defined more than once.</value>
+  </data>
+  <data name="existingEntityInvalidManyToManyRelation" xml:space="preserve">
+    <value>CF0280: Existing entity '{0}' cannot have many to many relations.</value>
+  </data>
+  <data name="procedureRedefined" xml:space="preserve">
+    <value>CF0075: Procedure '{0}' for method '{1}({3})' with body '{2}' already exists. Try to change method name or method persistenceName.</value>
+  </data>
+  <data name="derivedKey" xml:space="preserve">
+    <value>CF0104: Keys cannot be defined for derived entity '{0}'.</value>
+  </data>
+  <data name="commandRedefined" xml:space="preserve">
+    <value>CF0367: Command '{0}' is defined more than once.</value>
+  </data>
+  <data name="invalidParent" xml:space="preserve">
+    <value>CF0338: A node of type {0} cannot be added as a child of a node of type {1}.</value>
+  </data>
+  <data name="bodySnippetTransformNamesEntityNotFound" xml:space="preserve">
+    <value>CF0261: Body snippet '{0}' has an invalid name transformation expression '{1}'. Entity '{2}' cannot be found. You may try to specify its CLR full type name.</value>
+  </data>
+  <data name="dotExeError" xml:space="preserve">
+    <value>CF0289: Graphviz dot.exe has returned error '{0}' trying to generate '{1}' image file.</value>
+  </data>
+  <data name="missingAutoPropertyTypeNameHintTypeName" xml:space="preserve">
+    <value>CF0120: AutoPropertyTypeName hint needs a 'typeName' attribute declared. Xml is '{0}'.</value>
+  </data>
+  <data name="invalidProjectTemplateType" xml:space="preserve">
+    <value>CF0388: Invalid project template type '{0}'.</value>
+  </data>
+  <data name="invalidMethodParameters2" xml:space="preserve">
+    <value>CF0169: Method '{0}' of entity '{1}' cannot be used in this context. It must not have any parameter.</value>
+  </data>
+  <data name="notBaseRule" xml:space="preserve">
+    <value>CF0198: Rule type '{0}' does not derive from BaseRule or constructor parameters are invalid. Parent type is '{1}'.</value>
+  </data>
+  <data name="entityCannotHaveTypeUniqueConstraints" xml:space="preserve">
+    <value>CF0150: Entity '{0}' cannot have 'typeUnique' constraints because it is not the hierarchy root entity.</value>
+  </data>
+  <data name="propertyCannotBeKey2" xml:space="preserve">
+    <value>CF0402: Property '{0}' of type '{1}' cannot be a key property.</value>
+  </data>
+  <data name="relationIndexNotFound" xml:space="preserve">
+    <value>CF0040: Relation with index '{2}' on property '{0}' of Entity '{1}' was not found.</value>
+  </data>
+  <data name="cannotHaveSpecificPart" xml:space="preserve">
+    <value>CF0303: A node of '{0}' type cannot be put in a specific model part other than its parent node part. Xml is '{1}'. Parent Xml is '{2}'</value>
+  </data>
+  <data name="nullValue" xml:space="preserve">
+    <value>'{0}' must not be empty or null.</value>
+  </data>
+  <data name="cyclicCascadeDelete" xml:space="preserve">
+    <value>CF0293: Cannot create stored procedure '{0}'. A cyclic cascade delete has been detected in table graph: {1}.</value>
+  </data>
+  <data name="viewParsingError2" xml:space="preserve">
+    <value>CF0235: Body syntax is invalid for view '{0}' of entity '{1}'. body: '{2}' is not a where clause.</value>
+  </data>
+  <data name="viewParsingError3" xml:space="preserve">
+    <value>CF0240: Body syntax is invalid for view '{0}' of entity '{1}'. body: '{2}' is not raw.</value>
+  </data>
+  <data name="invalidPropertySortIndex" xml:space="preserve">
+    <value>CF0214: Property '{0}' of entity '{1}' has an invalid sort index: {2}. Maximum is: {3}.</value>
+  </data>
+  <data name="cultureRedefined" xml:space="preserve">
+    <value>CF0058: Culture '{0}' of application '{1}' is defined more than once.</value>
+  </data>
+  <data name="obsolete_nestedRelationKey" xml:space="preserve">
+    <value>CF0117: Nested relation key detected on property '{0}' of entity '{1}'.</value>
+  </data>
+  <data name="invalidDefaultMaxLength" xml:space="preserve">
+    <value>CF0004: defaultMaxLength is invalid.</value>
+  </data>
+  <data name="directoryUserUserNameNotCollectionKeyProperty" xml:space="preserve">
+    <value>CF0177: Directory user entity '{0}' must have a property of UI type 'UserName", and that property must be the entity's collection key.</value>
+  </data>
+  <data name="embeddedEntityInvalidTypeName" xml:space="preserve">
+    <value>CF0207: Embedded entity type name '{0}' is invalid. Xml is '{1}'.</value>
+  </data>
+  <data name="ambientParsingError" xml:space="preserve">
+    <value>CF0253: Error parsing ambient expression '{0}' for entity '{1}'.</value>
+  </data>
+  <data name="existingEntityInvalidToManyRelation" xml:space="preserve">
+    <value>CF0281: Existing entity '{0}' cannot have 'to many' relations.</value>
+  </data>
+  <data name="existingKeys" xml:space="preserve">
+    <value>CF0020: Derived entity '{0}' must not have a persistent key property defined.</value>
+  </data>
+  <data name="cannotLoadAssemblyFromAssemblyPaths" xml:space="preserve">
+    <value>CF0226: Cannot load referenced assembly '{0}' from the Global Assembly Cache or path. If the assembly exists in the Global Assembly Cache, you need to use the full name.</value>
+  </data>
+  <data name="methodParameterRedefined1" xml:space="preserve">
+    <value>CF0349: Ambient parameter '{0}' of entity '{1}' is defined more than once.</value>
+  </data>
+  <data name="methodParameterRedefined3" xml:space="preserve">
+    <value>CF0351: Method parameter '{0}' is defined more than once.</value>
+  </data>
+  <data name="methodParameterRedefined2" xml:space="preserve">
+    <value>CF0350: Method parameter '{0}' of method '{1}' is defined more than once.</value>
+  </data>
+  <data name="explainRequiresPasswordSalt" xml:space="preserve">
+    <value> This property is required because requiresPasswordSalt is set to true for the Directory user entity.</value>
+  </data>
+  <data name="invalidPackagePart2" xml:space="preserve">
+    <value>CF0212: Package '{0}' has an invalid or missing part '{1}'.</value>
+  </data>
+  <data name="tableHasNoPrimaryKey" xml:space="preserve">
+    <value>CF0391: Table '{0}' cannot be inferred because it has no primary key.</value>
+  </data>
+  <data name="invalidEnumTypeException" xml:space="preserve">
+    <value>CF0230: Invalid enumeration type '{0}'.</value>
+  </data>
+  <data name="unmappedInstanceRowValue" xml:space="preserve">
+    <value>CF0296: Missing key property '{0}' mapping for column '{1}' of entity '{2}'. DataRow is '{3}'.</value>
+  </data>
+  <data name="columnWasNotFound" xml:space="preserve">
+    <value>CF0194: Column was not found for property '{0}'.</value>
+  </data>
+  <data name="missingImporterDefaultNamespace" xml:space="preserve">
+    <value>CF0348: DefaultNamespace parameter must be set.</value>
+  </data>
+  <data name="enumerationValueRedefined" xml:space="preserve">
+    <value>CF0113: Enumeration value '{0}' for enumeration '{1}' is already defined.</value>
+  </data>
+  <data name="clrTypeAlreadyExists" xml:space="preserve">
+    <value>CF0278: The CLR type '{0}' is already declared in the project.</value>
+  </data>
+  <data name="relationTypeInvalid" xml:space="preserve">
+    <value>CF0028: RelationType '{0}' is invalid for property '{1}' for entity '{2}' that declares a relation property '{3}' in entity '{4}'. Expecting '{5}'.</value>
+  </data>
+  <data name="noKey" xml:space="preserve">
+    <value>CF0242: An item of type '{0}' must have a key to be added to the collection.</value>
+  </data>
+  <data name="messageRedefined" xml:space="preserve">
+    <value>CF0061: Message '{0}' for culture '{1}' is defined more than once within the application.</value>
+  </data>
+  <data name="enumerationRedefined" xml:space="preserve">
+    <value>CF0013: Enumeration '{0}' is defined more than once.</value>
+  </data>
+  <data name="viewPropertyWithoutExpression" xml:space="preserve">
+    <value>CF0238: Unbound view property '{0}' of view '{1}' of entity '{2}' must define a valid 'expression' or 'persistenceExpression' attribute. A persistent view property must either match an entity persistent property or define one of these attributes.</value>
+  </data>
+  <data name="invalidImporterType" xml:space="preserve">
+    <value>CF0109: Type '{0}' is not an Importer type.</value>
+  </data>
+  <data name="functionParamInvalid" xml:space="preserve">
+    <value>CF0161: Procedure '{0}' has an invalid function parameter '{1}'.</value>
+  </data>
+  <data name="buildPathNotFound" xml:space="preserve">
+    <value>CF0343: CodeFluent.Build.exe path cannot be determined for {0} platform.</value>
+  </data>
+  <data name="cannotAddNodeToNotModelPart" xml:space="preserve">
+    <value>CF0228: Part '{0}' is not a model part, and cannot contain Nodes.</value>
+  </data>
+  <data name="missingCommandName" xml:space="preserve">
+    <value>CF0365: Missing command name. Xml is '{0}'.</value>
+  </data>
+  <data name="cantOverrideSystemMethod" xml:space="preserve">
+    <value>CF0252: Method '{0}' of entity '{1}' cannot be redefined. If you want to do this, please set the 'allowDefaultMethodsOverride' project, entity or method attribute to true.</value>
+  </data>
+  <data name="missingEntityParameterName" xml:space="preserve">
+    <value>CF0244: Missing ambient parameter name for entity '{0}'.</value>
+  </data>
+  <data name="AdvancedPropertyTab" xml:space="preserve">
+    <value>Advanced Properties</value>
+  </data>
+  <data name="invalidPackage" xml:space="preserve">
+    <value>CF0156: Package '{0}' is invalid or does not contain any model part.</value>
+  </data>
+  <data name="projectNotCreatedNotOpened" xml:space="preserve">
+    <value>CF0165: Project is not initialized.</value>
+  </data>
+  <data name="missingProjectElement" xml:space="preserve">
+    <value>CF0017: No 'project' element in '{0}' namespace found in CodeFluent.Model definition.</value>
+  </data>
+  <data name="cannotAddInvalidNode" xml:space="preserve">
+    <value>CF0230: Cannot add an invalid node of type '{0}' to a collection.</value>
+  </data>
+  <data name="missingCultureName" xml:space="preserve">
+    <value>CF0059: Missing culture name in application '{0}'. Xml is '{1}'.</value>
+  </data>
+  <data name="windowNeedsATitle" xml:space="preserve">
+    <value>CF0145: Window needs a 'title' attribute. Xml is '{0}'.</value>
+  </data>
+  <data name="graphvizNotInstalled" xml:space="preserve">
+    <value>CF0288: Graphviz is not installed but is required for visualization of the model graph. See http://www.graphviz.org/ for installation instructions.</value>
+  </data>
+  <data name="missingInterfaceName" xml:space="preserve">
+    <value>CF0166: Missing 'name' attribute for interface. Xml is '{0}'.</value>
+  </data>
+  <data name="viewParsingError" xml:space="preserve">
+    <value>CF0234: Error parsing body for view '{0}' of entity '{1}'. body: '{2}'.</value>
+  </data>
+  <data name="setItemUnknown" xml:space="preserve">
+    <value>CF0043: Item entity '{0}' for set '{1}' was not found in project.</value>
+  </data>
+  <data name="bodySnippetTransformNamesViewPropertyNotFound" xml:space="preserve">
+    <value>CF0265: Body snippet '{0}' has an invalid name transformation expression '{1}'. View '{3}' of entity '{2}' has no '{4}' property.</value>
+  </data>
+  <data name="missingXpathOrName" xml:space="preserve">
+    <value>CF0010: 'parameter' element of 'import' directive must include at least the 'xpath' or 'name' attribute.</value>
+  </data>
+  <data name="viewNotFound" xml:space="preserve">
+    <value>CF0360: View '{0}' on entity '{1}' was not found.</value>
+  </data>
+  <data name="relationPropertyInvalidType" xml:space="preserve">
+    <value>CF0027: Property '{0}' for entity '{1}' declares a relation property '{2}' in entity '{3}' with an invalid type '{4}'. Expecting '{5}'.</value>
+  </data>
+  <data name="heavyCannotDeriveFromLight" xml:space="preserve">
+    <value>CF0403: Standard entity '{0}' cannot derive from Lightweight {1} entity.</value>
+  </data>
+  <data name="bodyBindingError" xml:space="preserve">
+    <value>CF0260: Body '{0}' has a model binding error.</value>
+  </data>
+  <data name="incompatibleBodiesParameters" xml:space="preserve">
+    <value>CF0171: Method '{0}' of entity '{1}' has more than one body and their parameters are incompatible, or there is a mismatch between the body parameters and the declared parameters.</value>
+  </data>
+  <data name="controlAlreadyDeclared" xml:space="preserve">
+    <value>CF0085: Control type '{0}' has already been declared. Xml is '{1}'. Declaration Xml is '{2}'.</value>
+  </data>
+  <data name="lightCannotDeriveFromHeavy" xml:space="preserve">
+    <value>CF0284: Lightweight entity '{0}' cannot derive from standard {1} entity.</value>
+  </data>
+  <data name="directoryUserNotDefined" xml:space="preserve">
+    <value>CF0395: Entity that will server as Membership User is not defined.</value>
+  </data>
+  <data name="relationPropertyNotFound" xml:space="preserve">
+    <value>CF0038: Relation property is not found for property '{0}' of Entity '{1}'. Relation type: {2}.</value>
+  </data>
+  <data name="explainHasProfile" xml:space="preserve">
+    <value> This property is required because the Directory user entity also handles profiles.</value>
+  </data>
+  <data name="directoryUserRoleInvalid" xml:space="preserve">
+    <value>CF0308: Directory entity User and Role do not use the same Directory UserRole entity.</value>
+  </data>
+  <data name="resetMenuItem" xml:space="preserve">
+    <value>&amp;Reset to '{0}'</value>
+  </data>
+  <data name="noMatchingColumnsForRelation" xml:space="preserve">
+    <value>CF0397: Cannot find any matching key column for relation '{1}'.</value>
+  </data>
+  <data name="invalidDefaultValue" xml:space="preserve">
+    <value>CF0049: Invalid default value '{0}' for property '{1}'.</value>
+  </data>
+  <data name="invalidOutputPath2" xml:space="preserve">
+    <value>CF0168: Invalid output file path '{0}'.</value>
+  </data>
+  <data name="missingViewPropertyName" xml:space="preserve">
+    <value>CF0100: Missing view property name. Xml is '{0}'.</value>
+  </data>
+  <data name="missingMethodName" xml:space="preserve">
+    <value>CF0073: Missing method name. Xml is '{0}'.</value>
+  </data>
+  <data name="directoryUserRoleRoleNotDefined" xml:space="preserve">
+    <value>CF0405: The 'Users' property type name of Role security entity is invalid.</value>
+  </data>
+  <data name="invalidProjectTemplateType2" xml:space="preserve">
+    <value>CF0390: Cannot resolve project template type '{0}'.</value>
+  </data>
+  <data name="missingZoneName" xml:space="preserve">
+    <value>CF0368: Missing zone name. Xml is '{0}'.</value>
+  </data>
+  <data name="invalidColumnSortIndex" xml:space="preserve">
+    <value>CF0213: Column '{0}' of table '{1}' has an invalid sort index: {2}. Maximum is: {3}.</value>
+  </data>
+  <data name="missingParameterName" xml:space="preserve">
+    <value>CF0074: Missing parameter name for method '{0}' of entity '{1}'.</value>
+  </data>
+  <data name="nameCannotBeVoid" xml:space="preserve">
+    <value>CF0384: Name cannot be set to null nor empty.</value>
+  </data>
+  <data name="missingReferenceName" xml:space="preserve">
+    <value>CF0223: Missing reference name. Xml is '{0}'.</value>
+  </data>
+  <data name="entityRelationTypeInvalid" xml:space="preserve">
+    <value>CF0035: Invalid relation type '{0}' for relation '{1}'. Property '{2}' is not an entity.</value>
+  </data>
+  <data name="invalidNamingConventionType2" xml:space="preserve">
+    <value>CF0220: Type '{0}' is invalid.</value>
+  </data>
+  <data name="notNotAttached" xml:space="preserve">
+    <value>CF0336: Current node of type '{0}' must be attached to a node of type '{1}' first.</value>
+  </data>
+  <data name="wrongTableRef" xml:space="preserve">
+    <value>CF0358: Invalid table reference '{0}' for column '{1}'.</value>
+  </data>
+  <data name="relatedPropertyRedefined" xml:space="preserve">
+    <value>CF0024: Related property '{0}' of entity '{1}' is defined more than once.</value>
+  </data>
+  <data name="asymmetricRelationPersistenceNames" xml:space="preserve">
+    <value>CF0149: Symmetric relations '{0}' and '{1}' are declared with different persistence names '{2}' and '{3}'.</value>
+  </data>
+  <data name="missingPropertyName" xml:space="preserve">
+    <value>CF0083: Missing or empty 'name' attribute on a property control element. Xml is '{0}'.</value>
+  </data>
+  <data name="confirmTitle" xml:space="preserve">
+    <value>{0} - Confirmation</value>
+  </data>
+  <data name="collectionKeyPartOfCompositeKey" xml:space="preserve">
+    <value>CF0116: Collection key '{0}' is part of a composite key.</value>
+  </data>
+  <data name="invalidFunction" xml:space="preserve">
+    <value>CF0151: Invalid procedure function '${0}' in method '{1}'.</value>
+  </data>
+  <data name="missingAutoPropertyTypeNameHintExpression" xml:space="preserve">
+    <value>CF0121: AutoPropertyTypeName hint needs a 'expression' attribute declared. Xml is '{0}'.</value>
+  </data>
+  <data name="missingFormName" xml:space="preserve">
+    <value>CF0162: Missing form name. Xml is '{0}'.</value>
+  </data>
+  <data name="relationNotFound" xml:space="preserve">
+    <value>CF0159: Relation on Entity '{0}' with full name or display name '{1}' was not found.</value>
+  </data>
+  <data name="relationPropertyNotFound2" xml:space="preserve">
+    <value>CF0039: Relation property '{0}' is not found on Entity '{1}'.</value>
+  </data>
+  <data name="directoryPropertyNotFound1" xml:space="preserve">
+    <value>CF0179: Property '{1}' of Directory entity '{0}' was not found.</value>
+  </data>
+  <data name="directoryPropertyNotFound2" xml:space="preserve">
+    <value>CF0180: Property '{1}' of Directory entity '{0},' of UI type '{3}' was not found.</value>
+  </data>
+  <data name="directoryPropertyNotFound3" xml:space="preserve">
+    <value>CF0181: Property '{1}' of Directory entity '{0}', of type '{2}' was not found.</value>
+  </data>
+  <data name="directoryPropertyNotFound4" xml:space="preserve">
+    <value>CF0182: Property '{1}' of Directory entity '{0}', of type '{2}' and UI type '{3}' was not found.</value>
+  </data>
+  <data name="directoryPropertyNotFound5" xml:space="preserve">
+    <value>CF0183: Directory entity '{0}' does not have a '{1}' property defined.</value>
+  </data>
+  <data name="directoryPropertyNotFound6" xml:space="preserve">
+    <value>CF0307: Directory entity '{0}' does not have a '{1}' property or collection type defined.</value>
+  </data>
+  <data name="bodySnippetTransformNamesEntityNoTable2" xml:space="preserve">
+    <value>CF0300: Body snippet '{0}' has an invalid name transformation expression '{1}'. Entity '{2}' has no associated table.</value>
+  </data>
+  <data name="noViewPropertyMatch" xml:space="preserve">
+    <value>CF0339: Property '{0}' of view '{1}' of entity '{2}' cannot be matched with known columns.</value>
+  </data>
+  <data name="bodySnippetTransformNamesViewNotFound" xml:space="preserve">
+    <value>CF0263: Body snippet '{0}' has an invalid name transformation expression '{1}'. Entity '{2}' has no '{3}' view.</value>
+  </data>
+  <data name="parserCommentError" xml:space="preserve">
+    <value>CF0071: Parser comment error. Unexpected end of file.</value>
+  </data>
+  <data name="bodySnippetTransformNamesViewNoPersistenceView" xml:space="preserve">
+    <value>CF0301: Body snippet '{0}' has an invalid name transformation expression '{1}'. View '{3}' of Entity '{2}' has no associated persistence view.</value>
+  </data>
+  <data name="notASubProperty" xml:space="preserve">
+    <value>CF0294: Lightweight entity '{0}' does not have a property named '{1}'.</value>
+  </data>
+  <data name="CFV.Surface.InvalidName" xml:space="preserve">
+    <value>CF1802: Invalid name '{0}' for surface.</value>
+  </data>
+  <data name="invalidPropertyName2" xml:space="preserve">
+    <value>CF0053: Invalid property name '{0}' for entity '{1}'. Member names cannot be the same as their enclosing type. Xml is '{2}'.</value>
+  </data>
+  <data name="invalidPropertyName3" xml:space="preserve">
+    <value>CF0205: Invalid property name '{0}' for entity '{1}'.</value>
+  </data>
+  <data name="bodySnippetTransformNamesPropertyNotFound" xml:space="preserve">
+    <value>CF0264: Body snippet '{0}' has an invalid name transformation expression '{1}'. Entity '{2}' has no '{3}' property.</value>
+  </data>
+  <data name="setRelationTypeInvalid2" xml:space="preserve">
+    <value>CF0032: RelationType '{0}' is invalid for property '{1}' for entity '{2}' that declares a relation property '{3}' in set's item entity '{4}'. Expecting '{5}'.</value>
+  </data>
+  <data name="noMatchingColumnsForProperty" xml:space="preserve">
+    <value>CF0396: Table '{0}' has no matching column for property '{1}' of entity '{2}'.</value>
+  </data>
+  <data name="metadataFileCorrupted" xml:space="preserve">
+    <value>CF0141: Metadata file '{0}' is corrupted. Check it or delete it.</value>
+  </data>
+  <data name="cannotConvertStringValue" xml:space="preserve">
+    <value>CF0140: Cannot convert '{0}' string value to type {1}.</value>
+  </data>
+  <data name="invalidDefaultNamespace" xml:space="preserve">
+    <value>CF0135: The project default namespace '{0}' is invalid.</value>
+  </data>
+  <data name="bodySnippetTransformNamesEntityNoTable" xml:space="preserve">
+    <value>CF0262: Body snippet '{0}' has an invalid name transformation expression '{1}'. Entity '{2}' has no associated table.</value>
+  </data>
+  <data name="cyclicEnum" xml:space="preserve">
+    <value>CF0393: Enumeration '{0}' declares a cyclic set of named values.</value>
+  </data>
+  <data name="invalidEnumName" xml:space="preserve">
+    <value>CF0394: Enumeration '{0}' has an invalid named value '{1}'.</value>
+  </data>
+  <data name="methodNotFound" xml:space="preserve">
+    <value>CF0153: Method '{0}' was not found for entity '{1}'.</value>
+  </data>
+  <data name="missingDescriptorName" xml:space="preserve">
+    <value>CF0318: Missing 'name' attribute for descriptor. Xml is '{0}'.</value>
+  </data>
+  <data name="invalidParameterName" xml:space="preserve">
+    <value>CF0279: Invalid parameter name '{0}' for entity '{1}'.</value>
+  </data>
+  <data name="typeAlreadyExist" xml:space="preserve">
+    <value>CF0404: Type '{0}' already exist in the project.</value>
+  </data>
+  <data name="bodySnippetTransformNamesPropertyNotPersistent" xml:space="preserve">
+    <value>CF0267: Body snippet '{0}' has an invalid name transformation expression '{1}'. Property '{3}' of entity '{2}' is not persistent.</value>
+  </data>
+  <data name="invalidApplicationGeneratorType" xml:space="preserve">
+    <value>CF0077: Type '{0}' does not implement the IApplicationGenerator interface.</value>
+  </data>
+  <data name="propertyCannotBeKeyProperty" xml:space="preserve">
+    <value>CF0385: Property '{0}' or entity '{1}' cannot be a key property.</value>
+  </data>
+  <data name="lightweightMethodMustBeRaw" xml:space="preserve">
+    <value>CF0286: Lightweight entity '{0}' can only declare methods with raw bodies. Method '{1}' has an invalid body.</value>
+  </data>
+  <data name="derivationLoop" xml:space="preserve">
+    <value>CF0269: Recursive derivation detected between entities {0}.</value>
+  </data>
+  <data name="documentNotLoaded" xml:space="preserve">
+    <value>CF0086: Document has not been initialized. You must call the Open or CreateNew method on the project Package.</value>
+  </data>
+  <data name="tabRedefined" xml:space="preserve">
+    <value>CF0366: Tab '{0}' is defined more than once.</value>
+  </data>
+  <data name="notAnEntity2" xml:space="preserve">
+    <value>CF0037: Type for property '{0}' of entity '{1}' must be a project entity if 'relationType' attribute is not specified or set to None.</value>
+  </data>
+  <data name="defaultInstanceValueNull" xml:space="preserve">
+    <value>CF0138: Instance value for property '{0}' of entity '{1}' cannot be equal to the property default value '{2}'. Xml is '{3}'.</value>
+  </data>
+  <data name="packageNotFound" xml:space="preserve">
+    <value>Package file cannot be found.</value>
+  </data>
+  <data name="defaultInstanceValue" xml:space="preserve">
+    <value>CF0137: Instance value for property '{0}' of entity '{1}' cannot be equal to the property default value '{2}' of type '{3}' because the 'usePersistenceDefaultValue' attribute is set to 'true' for this property, explicitely or implicitely. Xml is '{4}'.</value>
+  </data>
+  <data name="methodParameterRedefined" xml:space="preserve">
+    <value>CF0055: Method parameter '{0}' of method '{1}' is defined more than once.</value>
+  </data>
+  <data name="directoryUserCollectionKey" xml:space="preserve">
+    <value>CF0176: Directory user entity '{0}' must have a collection key, and its type must be 'string'.</value>
+  </data>
+  <data name="cantAddViewConstraint" xml:space="preserve">
+    <value>CF0379: Constraint '{0}' cannot be added to view '{1}' statement '{2}' being inferred.</value>
+  </data>
+  <data name="noDisplayProperty" xml:space="preserve">
+    <value>CF0115: No display property is defined for entity '{0}'.</value>
+  </data>
+  <data name="typeNameFunctionInvalid2" xml:space="preserve">
+    <value>CF0256: Procedure function '$column.typename' can only be used on an entity with descendants. Procedure is '{0}'. View is '{1}'. Final body is '{2}'.</value>
+  </data>
+  <data name="directoryUserPasswordProps" xml:space="preserve">
+    <value>CF0186: PasswordQuestion or PasswordAnswer properties of Directory entity '{0}' must exist both or must not exist both.</value>
+  </data>
+  <data name="storeNotFound" xml:space="preserve">
+    <value>CF0008: Store '{0}' defined in entity '{1}' is not defined.</value>
+  </data>
+  <data name="cantAddProcedureConstraint" xml:space="preserve">
+    <value>CF0379: Constraint '{0}' cannot be added to procedure '{1}' statement '{2}' being inferred.</value>
+  </data>
+  <data name="moreThanOneRelation" xml:space="preserve">
+    <value>CF0082: Property '{0}' of entity '{1}' has more than one relation: '{2}' and '{3}'. Use 'relationPropertyName' or 'relationType' attributes to disambiguate.</value>
+  </data>
+  <data name="missingTabName" xml:space="preserve">
+    <value>CF0163: Missing tab name. Xml is '{0}'.</value>
+  </data>
+  <data name="xmlError" xml:space="preserve">
+    <value>CF0128: The XML model has an incorrect syntax: '{0}'.</value>
+  </data>
+  <data name="reservedName" xml:space="preserve">
+    <value>CF0102: Name '{0}' is reserved. You cannot use it.</value>
+  </data>
+  <data name="invalidDerivedPropertyParent" xml:space="preserve">
+    <value>CF0311: Derived property has an invalid parent. A derived property can only have a parent of Entity type.</value>
+  </data>
+  <data name="parentNotAttached" xml:space="preserve">
+    <value>CF0222: Node of type '{0}' can only be attached to an attached parent node. Unattached parent node type is '{1}'.</value>
+  </data>
+  <data name="functionCurrentInvalid" xml:space="preserve">
+    <value>CF0202: Procedure '{0}' has an invalid function current parameter '{1}'.</value>
+  </data>
+  <data name="setRelationTypeInvalid" xml:space="preserve">
+    <value>CF0034: Invalid relation type '{0}' for relation '{1}'. Property '{2}' is not a collection.</value>
+  </data>
+  <data name="invalidMethodType2" xml:space="preserve">
+    <value>CF0316: Method type '{0}' is invalid for method '{1}'.</value>
+  </data>
+  <data name="propertyIsASet" xml:space="preserve">
+    <value>CF0088: Property '{0}' is a set and cannot be used directly in load methods operations.</value>
+  </data>
+  <data name="invalidMethodReturnTypeName" xml:space="preserve">
+    <value>CF0154: Method '{0}' of entity '{1}' has an invalid return type name '{2}'. Expecting '{3}'.</value>
+  </data>
+  <data name="missingViewName" xml:space="preserve">
+    <value>CF0099: Missing view name. Xml is '{0}'.</value>
+  </data>
+  <data name="missingViewJoin" xml:space="preserve">
+    <value>CF0380: View code '{0}' is invalid, missing required join to table '{1}': '{2}'</value>
+  </data>
+  <data name="missingProducerTypeNameAttribute" xml:space="preserve">
+    <value>CF0023: Missing 'typeName' attribute for producer '{0}'.</value>
+  </data>
+  <data name="duplicateRelationPersistenceName" xml:space="preserve">
+    <value>CF0148: Relation persistenceName '{0}' is declared more than once.</value>
+  </data>
+  <data name="explainUpdateLastActivity" xml:space="preserve">
+    <value> This property is required because updateLastActivity is set to true for the Directory user entity.</value>
+  </data>
+  <data name="missingAttributeArgumentName" xml:space="preserve">
+    <value>CF0108: Missing 'name' attribute on Attribut argument. Xml is '{0}'.</value>
+  </data>
+  <data name="invalidPatternPart" xml:space="preserve">
+    <value>CF0320: Aspect path '{0}' is invalid. Check inner exception details.</value>
+  </data>
+  <data name="incompatibleBodies" xml:space="preserve">
+    <value>CF0170: Method '{0}' of entity '{1}' has more than one body and they are incompatible.</value>
+  </data>
+  <data name="propertyViewNotPersistent" xml:space="preserve">
+    <value>CF0246: Property '{0}' is declared as not persistent and cannot be used in view '{1}' expression of entity '{2}'.</value>
+  </data>
+  <data name="nodeNotFound" xml:space="preserve">
+    <value>CF0110: Node with permanent model id '{0}' cannot be found in project.</value>
+  </data>
+  <data name="missingPatternNamespaceUri" xml:space="preserve">
+    <value>CF0299: Missing aspect namespaceUri. Xml is '{0}'.</value>
+  </data>
+  <data name="validationMandatoryPropertyValue" xml:space="preserve">
+    <value>CF0337: Property '{0}' must not be empty or null.</value>
+  </data>
+  <data name="V.Property.InvalidName" xml:space="preserve">
+    <value>CF0219: Property name '{0}' is invalid.</value>
+  </data>
+  <data name="rulePropertySet" xml:space="preserve">
+    <value>CF0200: Cannot set rule type '{0}' property to value '{1}'.</value>
+  </data>
+  <data name="cannotAddTheSameSubProducerTwice" xml:space="preserve">
+    <value>CF0389: There is already a sub producer of type '{0}'.</value>
+  </data>
+  <data name="snippetCheckError4" xml:space="preserve">
+    <value>CF0291: An attempt to create a persistence order by column snippet '{0}' has been detected in procedure '{2}'. Make sure order by column identifiers declared in the body are valid in the context. If you really want to create a snippet, you should change the project, method or view 'checkLevel' attribute, currently set to '{1}'.</value>
+  </data>
+  <data name="snippetCheckError2" xml:space="preserve">
+    <value>CF0092: An attempt to create a persistence snippet '{0}' has been detected in method '{1}' of entity '{2}'. Source view or table is '{4}'. Make sure all identifiers declared in the body are valid in the context. If you really want to create a snippet, you should change the project, method or view 'checkLevel' attribute, currently set to '{3}'. If you are trying to establish a join on a many to many relation, make sure you define the 'relationPropertyName' attribute on the method.</value>
+  </data>
+  <data name="snippetCheckError3" xml:space="preserve">
+    <value>CF0254: An attempt to create a persistence snippet '{0}' has been detected in method '{1}' of entity '{2}'. Source view or table is '{5}'. Final body is '{4}' and was augmented using ambient parameters. Make sure all identifiers declared in the body are valid in the context. If you really want to create a snippet, you should change the project, method or view 'checkLevel' attribute, currently set to '{3}'. If you are trying to establish a join on a many to many relation, make sure you define the 'relationPropertyName' attribute on the method.</value>
+  </data>
+  <data name="invalidEditorFormType" xml:space="preserve">
+    <value>CF0374: Type '{0}' does not implement the IEditorForm interface.</value>
+  </data>
+  <data name="abstractWithoutDescendants" xml:space="preserve">
+    <value>CF0229: Abstract entity '{0}' has no descendants.</value>
+  </data>
+  <data name="onlyOneThisSupported" xml:space="preserve">
+    <value>CF0095: Mode than one 'this' or 'me' is declared in method '{0}'.</value>
+  </data>
+  <data name="alreadyAdded" xml:space="preserve">
+    <value>CF0051: Key '{0}' was already added to the collection.</value>
+  </data>
+  <data name="schemaValidationFailed" xml:space="preserve">
+    <value>CF0006: CodeFluent schema validation error: {0}.</value>
+  </data>
+  <data name="derivedProperties" xml:space="preserve">
+    <value>CF0202: Property '{0}' of entity '{1}' is already defined in base entity '{2}'.</value>
+  </data>
+  <data name="alreadyExist" xml:space="preserve">
+    <value>CF0401: There is already a {1} named '{0}'.</value>
+  </data>
+  <data name="recursiveImport" xml:space="preserve">
+    <value>CF0009: Recursive import detected in file '{0}'.</value>
+  </data>
+  <data name="codeFluentSnippetException" xml:space="preserve">
+    <value>CF0239: Snippet exception.</value>
+  </data>
+  <data name="missingImplementsInterfaceTypeName" xml:space="preserve">
+    <value>CF0241: Missing implements rule 'interfaceTypeName' attribute. Xml is '{0}'.</value>
+  </data>
+  <data name="notAnEntity" xml:space="preserve">
+    <value>CF0036: Type for property '{0}' of entity '{1}' must be a project entity if 'relationPropertyName' attribute is specified.</value>
+  </data>
+  <data name="missingStylesheetName" xml:space="preserve">
+    <value>CF0080: Missing stylesheet name.</value>
+  </data>
+  <data name="validationError" xml:space="preserve">
+    <value>Validation Error</value>
+  </data>
+  <data name="invalidSubProducerType" xml:space="preserve">
+    <value>CF0347: Type '{0}' does not implement the ISubProducer interface.</value>
+  </data>
+  <data name="missingPatternName" xml:space="preserve">
+    <value>CF0275: Missing aspect name. Xml is '{0}'.</value>
+  </data>
+  <data name="notRootTable" xml:space="preserve">
+    <value>CF0377: Entity {0} has not root table defined.</value>
+  </data>
+  <data name="propertyNameSameAsPrivateMember" xml:space="preserve">
+    <value>CF0221: Property name '{0}' for entity '{1}' is the same as an existing property name private member.</value>
+  </data>
+  <data name="directoryUserRoleUserNotDefined" xml:space="preserve">
+    <value>CF0406: The 'Roles' property type name of User security entity is invalid.</value>
+  </data>
+  <data name="notBaseRule2" xml:space="preserve">
+    <value>CF0231: Rule type '{0}' does not derive from BaseRule or constructor parameters are invalid. Parent type is '{1}'.</value>
+  </data>
+  <data name="invalidSaveOptions" xml:space="preserve">
+    <value>CF0215: Save options '{0}' cannot be used if the project was loaded with load options '{1}'.</value>
+  </data>
+  <data name="mismatchConstraintError" xml:space="preserve">
+    <value>CF0376: {0}.</value>
+  </data>
+  <data name="cannotDetermineReferenceAssemblyName" xml:space="preserve">
+    <value>CF0387: Cannot determine assembly name from the reference.</value>
+  </data>
+  <data name="duplicatePropertyName" xml:space="preserve">
+    <value>CF0242: Property '{0}' of entity '{1}' is defined more than once.</value>
+  </data>
+  <data name="propertyNotFound" xml:space="preserve">
+    <value>CF0066: Property '{0}' referenced in method '{1}' of entity '{2}' is unknown.</value>
+  </data>
+  <data name="collectionKeyNotDefined" xml:space="preserve">
+    <value>CF0103: Collection key must be defined for entity '{0}' because it defines more than one key, or set type for entity must be set to List.</value>
+  </data>
+  <data name="entityPersistenceRedefined" xml:space="preserve">
+    <value>CF0015: Entity '{0}' persistenceName '{1}', is defined more than once. This happens for example if you declare two entities with the same name in different namespaces, without a schema.</value>
+  </data>
+  <data name="referencedProjectError" xml:space="preserve">
+    <value>CF0210: An error has occured trying to load external CodeFluent model '{0}'. Check inner exception details.</value>
+  </data>
+  <data name="missingSurfaceName" xml:space="preserve">
+    <value>CF0209: Missing surface name. Xml is '{0}'.</value>
+  </data>
+  <data name="cyclicInheritanceTree" xml:space="preserve">
+    <value>CF0048: Cyclic inheritance tree detected around entities '{0}' and '{1}'.</value>
+  </data>
+  <data name="pathAttributeNotFound" xml:space="preserve">
+    <value>CF0007: 'path' attribute was not found on 'import' directive.</value>
+  </data>
+  <data name="viewPropertyRedefined" xml:space="preserve">
+    <value>CF0101: View property '{0}' is defined more than once.</value>
+  </data>
+  <data name="cannotRenameDefaultStore" xml:space="preserve">
+    <value>CF0353: Cannot rename the default store.</value>
+  </data>
+  <data name="derivedPropertiesDisallowed" xml:space="preserve">
+    <value>CF0345: Property '{0}' of entity '{1}' cannot be redefined. If you want to do this, please set the 'allowDerivedProperties' project or entity attribute to true.</value>
+  </data>
+  <data name="typeCheckError3" xml:space="preserve">
+    <value>CF0270: An attempt to use an operation of type '{0}' between column '{1}' and column '{2}' which are of different types ('{4}' and '{5}' respectively) has been detected in procedure '{6}. If this was the intent, you should change the project's 'defaultCheckLevel' attribute, currently set to '{3}'.</value>
+  </data>
+  <data name="typeCheckError2" xml:space="preserve">
+    <value>CF0160: An attempt to use an operation of type '{0}' between column '{1}' and parameter '{2}' which are of different types ('{4}' and '{5}' respectively) has been detected in procedure '{6}. If this was the intent, you should change the project's 'defaultCheckLevel' attribute, currently set to '{3}'.</value>
+  </data>
+  <data name="typeCheckError1" xml:space="preserve">
+    <value>CF0090: An attempt to use an operation of type '{0}' between column '{1}' and parameter '{2}' which are of different types ('{4}' and '{5}/{6}' respectively) has been detected in procedure '{7}. If this is the intent, you should change the project defaultCheckLevel attribute, currently set to '{3}'.</value>
+  </data>
+  <data name="typeCheckError6" xml:space="preserve">
+    <value>CF0273: An attempt to use an operation of type '{0}' between column '{1}' and parameter '{2}' which are of different types ('{4}' and '{5}' respectively) has been detected in view '{6}. If this was the intent, you should change the project's 'defaultCheckLevel' attribute, currently set to '{3}'.</value>
+  </data>
+  <data name="typeCheckError5" xml:space="preserve">
+    <value>CF0272: An attempt to use an operation of type '{0}' between column '{1}' and parameter '{2}' which are of different types ('{4}' and '{5}/{6}' respectively) has been detected in view '{7}. If this is the intent, you should change the project defaultCheckLevel attribute, currently set to '{3}'.</value>
+  </data>
+  <data name="typeCheckError4" xml:space="preserve">
+    <value>CF0271: An attempt to use an operation of type '{0}' between column '{1}' and column '{2}' which are of different types ('{4}' and '{5}' respectively) has been detected in view '{6}. If this was the intent, you should change the project's 'defaultCheckLevel' attribute, currently set to '{3}'.</value>
+  </data>
+  <data name="cannotAddDerivedProperty" xml:space="preserve">
+    <value>CF0309: Cannot add a derived property to an entity that is not a derived entity.</value>
+  </data>
+  <data name="bodyRedefined" xml:space="preserve">
+    <value>CF0172: Method '{0}' of entity '{1}' defines more than one body for the language '{2}'.</value>
+  </data>
+  <data name="methodParsingError" xml:space="preserve">
+    <value>CF0072: Error parsing method '{0}' of entity '{1}'. body: '{2}'.</value>
+  </data>
+  <data name="parameterPropertyNotPersistent" xml:space="preserve">
+    <value>CF0192: Parameter '{0}' with implicit type is related to a non persistent property. You should specify its type. Node body is '{1}'.</value>
+  </data>
+</root>

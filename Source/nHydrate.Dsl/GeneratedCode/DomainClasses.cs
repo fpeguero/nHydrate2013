@@ -2895,6 +2895,280 @@ namespace nHydrate.Dsl
 		}
 		
 		#endregion
+		#region Namespace domain property code
+		
+		/// <summary>
+		/// Namespace domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NamespaceDomainPropertyId = new global::System.Guid(0xfa161ea7, 0x4cc1, 0x4b3f, 0xa9, 0xd5, 0x8c, 0x9d, 0xe1, 0x12, 0x83, 0x40);
+		
+		/// <summary>
+		/// Storage for Namespace
+		/// </summary>
+		private global::System.String namespacePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Namespace domain property.
+		/// Indica el Namespace a Generar para todos los objetos en este modelo.
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.nHydrateModel/Namespace.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.nHydrateModel/Namespace.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.nHydrateModel/Namespace.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("fa161ea7-4cc1-4b3f-a9d5-8c9de1128340")]
+		public virtual global::System.String Namespace
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return namespacePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NamespacePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the nHydrateModel.Namespace domain property.
+		/// </summary>
+		internal sealed partial class NamespacePropertyHandler : DslModeling::DomainPropertyValueHandler<nHydrateModelBase, global::System.String>
+		{
+			private NamespacePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the nHydrateModel.Namespace domain property value handler.
+			/// </summary>
+			public static readonly NamespacePropertyHandler Instance = new NamespacePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the nHydrateModel.Namespace domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NamespaceDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(nHydrateModelBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.Namespace;
+				//return element.GetValue<global::System.String>("Namespace", element.namespacePropertyStorage);
+				//return element.namespacePropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(nHydrateModelBase element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.namespacePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("nHydrateModel"));
+				}
+			}
+		}
+		
+		#endregion
+		#region DetermineTrackinColumns domain property code
+		
+		/// <summary>
+		/// DetermineTrackinColumns domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid DetermineTrackinColumnsDomainPropertyId = new global::System.Guid(0x7b25b5b5, 0x4142, 0x4202, 0xbd, 0x39, 0x07, 0x46, 0x80, 0x23, 0xbe, 0x51);
+		
+		/// <summary>
+		/// Storage for DetermineTrackinColumns
+		/// </summary>
+		private global::System.Boolean determineTrackinColumnsPropertyStorage = true;
+		
+		/// <summary>
+		/// Gets or sets the value of DetermineTrackinColumns domain property.
+		/// Indica al Modelo que determine las columnas predeterminadas de autitorias, para
+		/// que no la use al editar.
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.nHydrateModel/DetermineTrackinColumns.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.nHydrateModel/DetermineTrackinColumns.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.nHydrateModel/DetermineTrackinColumns.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.DefaultValue(true)]
+		[DslModeling::DomainObjectId("7b25b5b5-4142-4202-bd39-07468023be51")]
+		public virtual global::System.Boolean DetermineTrackinColumns
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return determineTrackinColumnsPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DetermineTrackinColumnsPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the nHydrateModel.DetermineTrackinColumns domain property.
+		/// </summary>
+		internal sealed partial class DetermineTrackinColumnsPropertyHandler : DslModeling::DomainPropertyValueHandler<nHydrateModelBase, global::System.Boolean>
+		{
+			private DetermineTrackinColumnsPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the nHydrateModel.DetermineTrackinColumns domain property value handler.
+			/// </summary>
+			public static readonly DetermineTrackinColumnsPropertyHandler Instance = new DetermineTrackinColumnsPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the nHydrateModel.DetermineTrackinColumns domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return DetermineTrackinColumnsDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Boolean GetValue(nHydrateModelBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.DetermineTrackinColumns;
+				//return element.GetValue<global::System.Boolean>("DetermineTrackinColumns", element.determineTrackinColumnsPropertyStorage);
+				//return element.determineTrackinColumnsPropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(nHydrateModelBase element, global::System.Boolean newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Boolean oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.determineTrackinColumnsPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("nHydrateModel"));
+				}
+			}
+		}
+		
+		#endregion
+		#region AuditColumns domain property code
+		
+		/// <summary>
+		/// AuditColumns domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid AuditColumnsDomainPropertyId = new global::System.Guid(0x9f8619a8, 0xde04, 0x4bfe, 0x82, 0x3b, 0x3a, 0x78, 0x2c, 0x11, 0xb7, 0xe0);
+		
+		/// <summary>
+		/// Gets or sets the value of AuditColumns domain property.
+		/// Indica las Columnas de Auditorias
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.nHydrateModel/AuditColumns.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.nHydrateModel/AuditColumns.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.nHydrateModel/AuditColumns.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.CustomStorage)]
+		[DslModeling::DomainObjectId("9f8619a8-de04-4bfe-823b-3a782c11b7e0")]
+		public virtual global::System.Collections.Generic.List<nHydrate.Dsl.MyCustomCode.AuditColumns> AuditColumns
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return AuditColumnsPropertyHandler.Instance.GetValue(this);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				AuditColumnsPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the nHydrateModel.AuditColumns domain property.
+		/// </summary>
+		internal sealed partial class AuditColumnsPropertyHandler : DslModeling::DomainPropertyValueHandler<nHydrateModelBase, global::System.Collections.Generic.List<nHydrate.Dsl.MyCustomCode.AuditColumns>>
+		{
+			private AuditColumnsPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the nHydrateModel.AuditColumns domain property value handler.
+			/// </summary>
+			public static readonly AuditColumnsPropertyHandler Instance = new AuditColumnsPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the nHydrateModel.AuditColumns domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return AuditColumnsDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Collections.Generic.List<nHydrate.Dsl.MyCustomCode.AuditColumns> GetValue(nHydrateModelBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				// There is no storage for AuditColumns because its Kind is
+				// set to CustomStorage. Please provide the GetAuditColumnsValue()
+				// method on the domain class.
+				return element.GetAuditColumnsValue();
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(nHydrateModelBase element, global::System.Collections.Generic.List<nHydrate.Dsl.MyCustomCode.AuditColumns> newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Collections.Generic.List<nHydrate.Dsl.MyCustomCode.AuditColumns> oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					// There is no storage for AuditColumns because its Kind is
+					// set to CustomStorage. Please provide the SetAuditColumnsValue()
+					// method on the domain class.
+					element.SetAuditColumnsValue(newValue);
+					ValueChanged(element, oldValue, GetValue(element));
+				}
+			}
+		}
+		
+		#endregion
 		#region Entities opposite domain role accessor
 		
 		/// <summary>
@@ -4797,6 +5071,373 @@ namespace nHydrate.Dsl
 		}
 		
 		#endregion
+		#region Generate domain property code
+		
+		/// <summary>
+		/// Generate domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid GenerateDomainPropertyId = new global::System.Guid(0xa4a7f36d, 0x5bc4, 0x4443, 0x8f, 0x05, 0xaf, 0xed, 0x6e, 0x62, 0x22, 0xf8);
+		
+		/// <summary>
+		/// Storage for Generate
+		/// </summary>
+		private global::System.Boolean generatePropertyStorage = true;
+		
+		/// <summary>
+		/// Gets or sets the value of Generate domain property.
+		/// Indica si esta Entidad se generara
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Entity/Generate.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Entity/Generate.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Entity/Generate.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.DefaultValue(true)]
+		[DslModeling::DomainObjectId("a4a7f36d-5bc4-4443-8f05-afed6e6222f8")]
+		public virtual global::System.Boolean Generate
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return generatePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				GeneratePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Entity.Generate domain property.
+		/// </summary>
+		internal sealed partial class GeneratePropertyHandler : DslModeling::DomainPropertyValueHandler<EntityBase, global::System.Boolean>
+		{
+			private GeneratePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Entity.Generate domain property value handler.
+			/// </summary>
+			public static readonly GeneratePropertyHandler Instance = new GeneratePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Entity.Generate domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return GenerateDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Boolean GetValue(EntityBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.Generate;
+				//return element.GetValue<global::System.Boolean>("Generate", element.generatePropertyStorage);
+				//return element.generatePropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(EntityBase element, global::System.Boolean newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Boolean oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.generatePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Entity"));
+				}
+			}
+		}
+		
+		#endregion
+		#region AddValidators domain property code
+		
+		/// <summary>
+		/// AddValidators domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid AddValidatorsDomainPropertyId = new global::System.Guid(0x1fbbe959, 0xb698, 0x40d3, 0xa5, 0x22, 0x53, 0x75, 0x3e, 0x6b, 0x45, 0xba);
+		
+		/// <summary>
+		/// Storage for AddValidators
+		/// </summary>
+		private global::System.Boolean addValidatorsPropertyStorage = true;
+		
+		/// <summary>
+		/// Gets or sets the value of AddValidators domain property.
+		/// Indica si se creara una clase para validar esta entidad - FluentValidator
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Entity/AddValidators.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Entity/AddValidators.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Entity/AddValidators.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.DefaultValue(true)]
+		[DslModeling::DomainObjectId("1fbbe959-b698-40d3-a522-53753e6b45ba")]
+		public virtual global::System.Boolean AddValidators
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return addValidatorsPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				AddValidatorsPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Entity.AddValidators domain property.
+		/// </summary>
+		internal sealed partial class AddValidatorsPropertyHandler : DslModeling::DomainPropertyValueHandler<EntityBase, global::System.Boolean>
+		{
+			private AddValidatorsPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Entity.AddValidators domain property value handler.
+			/// </summary>
+			public static readonly AddValidatorsPropertyHandler Instance = new AddValidatorsPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Entity.AddValidators domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return AddValidatorsDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Boolean GetValue(EntityBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.AddValidators;
+				//return element.GetValue<global::System.Boolean>("AddValidators", element.addValidatorsPropertyStorage);
+				//return element.addValidatorsPropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(EntityBase element, global::System.Boolean newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Boolean oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.addValidatorsPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Entity"));
+				}
+			}
+		}
+		
+		#endregion
+		#region IsComplexType domain property code
+		
+		/// <summary>
+		/// IsComplexType domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid IsComplexTypeDomainPropertyId = new global::System.Guid(0xd0c481cf, 0x3014, 0x47d7, 0xa4, 0x5b, 0x7c, 0x8f, 0x97, 0x10, 0xdc, 0xed);
+		
+		/// <summary>
+		/// Storage for IsComplexType
+		/// </summary>
+		private global::System.Boolean isComplexTypePropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of IsComplexType domain property.
+		/// Indica si es un LightEntity, y no se hacen operacione Crear y actualizar ni
+		/// borrar
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Entity/IsComplexType.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Entity/IsComplexType.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Entity/IsComplexType.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("d0c481cf-3014-47d7-a45b-7c8f9710dced")]
+		public virtual global::System.Boolean IsComplexType
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return isComplexTypePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				IsComplexTypePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Entity.IsComplexType domain property.
+		/// </summary>
+		internal sealed partial class IsComplexTypePropertyHandler : DslModeling::DomainPropertyValueHandler<EntityBase, global::System.Boolean>
+		{
+			private IsComplexTypePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Entity.IsComplexType domain property value handler.
+			/// </summary>
+			public static readonly IsComplexTypePropertyHandler Instance = new IsComplexTypePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Entity.IsComplexType domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return IsComplexTypeDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Boolean GetValue(EntityBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.IsComplexType;
+				//return element.GetValue<global::System.Boolean>("IsComplexType", element.isComplexTypePropertyStorage);
+				//return element.isComplexTypePropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(EntityBase element, global::System.Boolean newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Boolean oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.isComplexTypePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Entity"));
+				}
+			}
+		}
+		
+		#endregion
+		#region StoreCodeFluent domain property code
+		
+		/// <summary>
+		/// StoreCodeFluent domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid StoreCodeFluentDomainPropertyId = new global::System.Guid(0x348d397a, 0x9943, 0x4871, 0xba, 0x42, 0x6a, 0xb9, 0x1c, 0xa5, 0x8a, 0x15);
+		
+		/// <summary>
+		/// Storage for StoreCodeFluent
+		/// </summary>
+		private global::System.String storeCodeFluentPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of StoreCodeFluent domain property.
+		/// Indica el Store en la generacion de CodeFluent
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Entity/StoreCodeFluent.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Entity/StoreCodeFluent.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Entity/StoreCodeFluent.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("348d397a-9943-4871-ba42-6ab91ca58a15")]
+		public virtual global::System.String StoreCodeFluent
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return storeCodeFluentPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				StoreCodeFluentPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Entity.StoreCodeFluent domain property.
+		/// </summary>
+		internal sealed partial class StoreCodeFluentPropertyHandler : DslModeling::DomainPropertyValueHandler<EntityBase, global::System.String>
+		{
+			private StoreCodeFluentPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Entity.StoreCodeFluent domain property value handler.
+			/// </summary>
+			public static readonly StoreCodeFluentPropertyHandler Instance = new StoreCodeFluentPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Entity.StoreCodeFluent domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return StoreCodeFluentDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(EntityBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.StoreCodeFluent;
+				//return element.GetValue<global::System.String>("StoreCodeFluent", element.storeCodeFluentPropertyStorage);
+				//return element.storeCodeFluentPropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(EntityBase element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.storeCodeFluentPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Entity"));
+				}
+			}
+		}
+		
+		#endregion
 		#region nHydrateModel opposite domain role accessor
 		/// <summary>
 		/// Gets or sets nHydrateModel.
@@ -4974,6 +5615,36 @@ namespace nHydrate.Dsl
 			}
 		}
 		#endregion
+		#region Method opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of Method.
+		/// Description for nHydrate.Dsl.EntityHasMethod.Entity
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Methods> Method
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Methods>, Methods>(global::nHydrate.Dsl.EntityHasMethod.EntityDomainRoleId);
+			}
+		}
+		#endregion
+		#region UIView opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of UIView.
+		/// Description for nHydrate.Dsl.EntityHasUIView.Entity
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<UIView> UIView
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<UIView>, UIView>(global::nHydrate.Dsl.EntityHasUIView.EntityDomainRoleId);
+			}
+		}
+		#endregion
 		#region ElementGroupPrototype Merge methods
 		/// <summary>
 		/// Returns a value indicating whether the source element represented by the
@@ -5017,6 +5688,16 @@ namespace nHydrate.Dsl
 				}
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::nHydrate.Dsl.Index.DomainClassId)) 
+				{
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::nHydrate.Dsl.Methods.DomainClassId)) 
+				{
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::nHydrate.Dsl.UIView.DomainClassId)) 
 				{
 					return true;
 				}
@@ -5086,6 +5767,24 @@ namespace nHydrate.Dsl
 			{
 				// Create link for path EntityHasIndexes.Indexes
 				this.Indexes.Add(sourceIndex5);
+
+				return;
+			}
+				
+			global::nHydrate.Dsl.Methods sourceMethods6 = sourceElement as global::nHydrate.Dsl.Methods;
+			if (sourceMethods6 != null)
+			{
+				// Create link for path EntityHasMethod.Method
+				this.Method.Add(sourceMethods6);
+
+				return;
+			}
+				
+			global::nHydrate.Dsl.UIView sourceUIView7 = sourceElement as global::nHydrate.Dsl.UIView;
+			if (sourceUIView7 != null)
+			{
+				// Create link for path EntityHasUIView.UIView
+				this.UIView.Add(sourceUIView7);
 
 				return;
 			}
@@ -5177,6 +5876,34 @@ namespace nHydrate.Dsl
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
 					link.Delete(global::nHydrate.Dsl.EntityHasIndexes.EntityDomainRoleId, global::nHydrate.Dsl.EntityHasIndexes.IndexDomainRoleId);
+				}
+
+				return;
+			}
+				
+			global::nHydrate.Dsl.Methods sourceMethods6 = sourceElement as global::nHydrate.Dsl.Methods;
+			if (sourceMethods6 != null)
+			{
+				// Delete link for path EntityHasMethod.Method
+				
+				foreach (DslModeling::ElementLink link in global::nHydrate.Dsl.EntityHasMethod.GetLinks((global::nHydrate.Dsl.Entity)this, sourceMethods6))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::nHydrate.Dsl.EntityHasMethod.EntityDomainRoleId, global::nHydrate.Dsl.EntityHasMethod.MethodsDomainRoleId);
+				}
+
+				return;
+			}
+				
+			global::nHydrate.Dsl.UIView sourceUIView7 = sourceElement as global::nHydrate.Dsl.UIView;
+			if (sourceUIView7 != null)
+			{
+				// Delete link for path EntityHasUIView.UIView
+				
+				foreach (DslModeling::ElementLink link in global::nHydrate.Dsl.EntityHasUIView.GetLinks((global::nHydrate.Dsl.Entity)this, sourceUIView7))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::nHydrate.Dsl.EntityHasUIView.EntityDomainRoleId, global::nHydrate.Dsl.EntityHasUIView.UIViewDomainRoleId);
 				}
 
 				return;
@@ -7824,6 +8551,1930 @@ namespace nHydrate.Dsl
 		}
 		
 		#endregion
+		#region IsTrackingColumn domain property code
+		
+		/// <summary>
+		/// IsTrackingColumn domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid IsTrackingColumnDomainPropertyId = new global::System.Guid(0x7d3557e0, 0x2b8f, 0x405e, 0x94, 0x32, 0x61, 0xa5, 0xff, 0x6f, 0x5d, 0xef);
+		
+		/// <summary>
+		/// Storage for IsTrackingColumn
+		/// </summary>
+		private global::System.Boolean isTrackingColumnPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of IsTrackingColumn domain property.
+		/// Indica que la columna es de auditoria
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Field/IsTrackingColumn.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Field/IsTrackingColumn.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Field/IsTrackingColumn.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("7d3557e0-2b8f-405e-9432-61a5ff6f5def")]
+		public virtual global::System.Boolean IsTrackingColumn
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return isTrackingColumnPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				IsTrackingColumnPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Field.IsTrackingColumn domain property.
+		/// </summary>
+		internal sealed partial class IsTrackingColumnPropertyHandler : DslModeling::DomainPropertyValueHandler<FieldBase, global::System.Boolean>
+		{
+			private IsTrackingColumnPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Field.IsTrackingColumn domain property value handler.
+			/// </summary>
+			public static readonly IsTrackingColumnPropertyHandler Instance = new IsTrackingColumnPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Field.IsTrackingColumn domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return IsTrackingColumnDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Boolean GetValue(FieldBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.IsTrackingColumn;
+				//return element.GetValue<global::System.Boolean>("IsTrackingColumn", element.isTrackingColumnPropertyStorage);
+				//return element.isTrackingColumnPropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(FieldBase element, global::System.Boolean newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Boolean oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.isTrackingColumnPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Field"));
+				}
+			}
+		}
+		
+		#endregion
+		#region IsRequired domain property code
+		
+		/// <summary>
+		/// IsRequired domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid IsRequiredDomainPropertyId = new global::System.Guid(0xf3c44229, 0x8c01, 0x4066, 0x9f, 0xd9, 0xa7, 0xc3, 0xca, 0x51, 0xb6, 0xc2);
+		
+		/// <summary>
+		/// Storage for IsRequired
+		/// </summary>
+		private global::System.Boolean isRequiredPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of IsRequired domain property.
+		/// Ensures that the specified property is not null. 
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Field/IsRequired.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Field/IsRequired.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Field/IsRequired.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("f3c44229-8c01-4066-9fd9-a7c3ca51b6c2")]
+		public virtual global::System.Boolean IsRequired
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return isRequiredPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				IsRequiredPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Field.IsRequired domain property.
+		/// </summary>
+		internal sealed partial class IsRequiredPropertyHandler : DslModeling::DomainPropertyValueHandler<FieldBase, global::System.Boolean>
+		{
+			private IsRequiredPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Field.IsRequired domain property value handler.
+			/// </summary>
+			public static readonly IsRequiredPropertyHandler Instance = new IsRequiredPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Field.IsRequired domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return IsRequiredDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Boolean GetValue(FieldBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.IsRequired;
+				//return element.GetValue<global::System.Boolean>("IsRequired", element.isRequiredPropertyStorage);
+				//return element.isRequiredPropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(FieldBase element, global::System.Boolean newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Boolean oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.isRequiredPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Field"));
+				}
+			}
+		}
+		
+		#endregion
+		#region IsNotEqual domain property code
+		
+		/// <summary>
+		/// IsNotEqual domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid IsNotEqualDomainPropertyId = new global::System.Guid(0x1cc22159, 0x83e3, 0x4c4f, 0x92, 0x1e, 0x54, 0xc0, 0xbf, 0xb0, 0xc7, 0x72);
+		
+		/// <summary>
+		/// Storage for IsNotEqual
+		/// </summary>
+		private global::System.Boolean isNotEqualPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of IsNotEqual domain property.
+		/// Ensures that the value of the specified property is not equal to a particular
+		/// value
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Field/IsNotEqual.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Field/IsNotEqual.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Field/IsNotEqual.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("1cc22159-83e3-4c4f-921e-54c0bfb0c772")]
+		public virtual global::System.Boolean IsNotEqual
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return isNotEqualPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				IsNotEqualPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Field.IsNotEqual domain property.
+		/// </summary>
+		internal sealed partial class IsNotEqualPropertyHandler : DslModeling::DomainPropertyValueHandler<FieldBase, global::System.Boolean>
+		{
+			private IsNotEqualPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Field.IsNotEqual domain property value handler.
+			/// </summary>
+			public static readonly IsNotEqualPropertyHandler Instance = new IsNotEqualPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Field.IsNotEqual domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return IsNotEqualDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Boolean GetValue(FieldBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.IsNotEqual;
+				//return element.GetValue<global::System.Boolean>("IsNotEqual", element.isNotEqualPropertyStorage);
+				//return element.isNotEqualPropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(FieldBase element, global::System.Boolean newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Boolean oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.isNotEqualPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Field"));
+				}
+			}
+		}
+		
+		#endregion
+		#region IsNotEqualName domain property code
+		
+		/// <summary>
+		/// IsNotEqualName domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid IsNotEqualNameDomainPropertyId = new global::System.Guid(0xd705abac, 0x189a, 0x49e5, 0x89, 0x55, 0x97, 0xc8, 0xc7, 0xf7, 0x0c, 0xd5);
+		
+		/// <summary>
+		/// Storage for IsNotEqualName
+		/// </summary>
+		private global::System.String isNotEqualNamePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of IsNotEqualName domain property.
+		/// Field to Compare Value
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Field/IsNotEqualName.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Field/IsNotEqualName.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Field/IsNotEqualName.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("d705abac-189a-49e5-8955-97c8c7f70cd5")]
+		public virtual global::System.String IsNotEqualName
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return isNotEqualNamePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				IsNotEqualNamePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Field.IsNotEqualName domain property.
+		/// </summary>
+		internal sealed partial class IsNotEqualNamePropertyHandler : DslModeling::DomainPropertyValueHandler<FieldBase, global::System.String>
+		{
+			private IsNotEqualNamePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Field.IsNotEqualName domain property value handler.
+			/// </summary>
+			public static readonly IsNotEqualNamePropertyHandler Instance = new IsNotEqualNamePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Field.IsNotEqualName domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return IsNotEqualNameDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(FieldBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.IsNotEqualName;
+				//return element.GetValue<global::System.String>("IsNotEqualName", element.isNotEqualNamePropertyStorage);
+				//return element.isNotEqualNamePropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(FieldBase element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.isNotEqualNamePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Field"));
+				}
+			}
+		}
+		
+		#endregion
+		#region IsEqual domain property code
+		
+		/// <summary>
+		/// IsEqual domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid IsEqualDomainPropertyId = new global::System.Guid(0x5283e7d7, 0x979f, 0x4181, 0xae, 0xb9, 0x8b, 0xa8, 0x64, 0x0c, 0xf0, 0x03);
+		
+		/// <summary>
+		/// Storage for IsEqual
+		/// </summary>
+		private global::System.Boolean isEqualPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of IsEqual domain property.
+		/// Ensures that the value of the specified property is equal to a particular value
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Field/IsEqual.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Field/IsEqual.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Field/IsEqual.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("5283e7d7-979f-4181-aeb9-8ba8640cf003")]
+		public virtual global::System.Boolean IsEqual
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return isEqualPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				IsEqualPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Field.IsEqual domain property.
+		/// </summary>
+		internal sealed partial class IsEqualPropertyHandler : DslModeling::DomainPropertyValueHandler<FieldBase, global::System.Boolean>
+		{
+			private IsEqualPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Field.IsEqual domain property value handler.
+			/// </summary>
+			public static readonly IsEqualPropertyHandler Instance = new IsEqualPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Field.IsEqual domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return IsEqualDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Boolean GetValue(FieldBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.IsEqual;
+				//return element.GetValue<global::System.Boolean>("IsEqual", element.isEqualPropertyStorage);
+				//return element.isEqualPropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(FieldBase element, global::System.Boolean newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Boolean oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.isEqualPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Field"));
+				}
+			}
+		}
+		
+		#endregion
+		#region IsEqualName domain property code
+		
+		/// <summary>
+		/// IsEqualName domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid IsEqualNameDomainPropertyId = new global::System.Guid(0x2f1cfd6d, 0xd362, 0x4da3, 0x86, 0x89, 0x1f, 0x3e, 0xf4, 0xba, 0x9a, 0xf6);
+		
+		/// <summary>
+		/// Storage for IsEqualName
+		/// </summary>
+		private global::System.String isEqualNamePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of IsEqualName domain property.
+		/// Field to Compare Value
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Field/IsEqualName.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Field/IsEqualName.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Field/IsEqualName.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("2f1cfd6d-d362-4da3-8689-1f3ef4ba9af6")]
+		public virtual global::System.String IsEqualName
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return isEqualNamePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				IsEqualNamePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Field.IsEqualName domain property.
+		/// </summary>
+		internal sealed partial class IsEqualNamePropertyHandler : DslModeling::DomainPropertyValueHandler<FieldBase, global::System.String>
+		{
+			private IsEqualNamePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Field.IsEqualName domain property value handler.
+			/// </summary>
+			public static readonly IsEqualNamePropertyHandler Instance = new IsEqualNamePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Field.IsEqualName domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return IsEqualNameDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(FieldBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.IsEqualName;
+				//return element.GetValue<global::System.String>("IsEqualName", element.isEqualNamePropertyStorage);
+				//return element.isEqualNamePropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(FieldBase element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.isEqualNamePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Field"));
+				}
+			}
+		}
+		
+		#endregion
+		#region IsLengthValue domain property code
+		
+		/// <summary>
+		/// IsLengthValue domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid IsLengthValueDomainPropertyId = new global::System.Guid(0x3ec0a987, 0xc966, 0x47cb, 0xa1, 0xbc, 0x98, 0x9a, 0x79, 0x97, 0x91, 0xd3);
+		
+		/// <summary>
+		/// Storage for IsLengthValue
+		/// </summary>
+		private global::System.String isLengthValuePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of IsLengthValue domain property.
+		/// Ensures that the length of a particular string property is within the specified
+		/// range
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Field/IsLengthValue.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Field/IsLengthValue.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Field/IsLengthValue.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("3ec0a987-c966-47cb-a1bc-989a799791d3")]
+		public virtual global::System.String IsLengthValue
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return isLengthValuePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				IsLengthValuePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Field.IsLengthValue domain property.
+		/// </summary>
+		internal sealed partial class IsLengthValuePropertyHandler : DslModeling::DomainPropertyValueHandler<FieldBase, global::System.String>
+		{
+			private IsLengthValuePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Field.IsLengthValue domain property value handler.
+			/// </summary>
+			public static readonly IsLengthValuePropertyHandler Instance = new IsLengthValuePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Field.IsLengthValue domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return IsLengthValueDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(FieldBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.IsLengthValue;
+				//return element.GetValue<global::System.String>("IsLengthValue", element.isLengthValuePropertyStorage);
+				//return element.isLengthValuePropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(FieldBase element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.isLengthValuePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Field"));
+				}
+			}
+		}
+		
+		#endregion
+		#region IsLessThan domain property code
+		
+		/// <summary>
+		/// IsLessThan domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid IsLessThanDomainPropertyId = new global::System.Guid(0x712db7dd, 0xb8bd, 0x4cf5, 0x9f, 0xa6, 0x8e, 0x20, 0x9b, 0x0e, 0x61, 0x3a);
+		
+		/// <summary>
+		/// Storage for IsLessThan
+		/// </summary>
+		private global::System.Boolean isLessThanPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of IsLessThan domain property.
+		/// Ensures that the value of the specified property is less than a particular value
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Field/IsLessThan.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Field/IsLessThan.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Field/IsLessThan.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("712db7dd-b8bd-4cf5-9fa6-8e209b0e613a")]
+		public virtual global::System.Boolean IsLessThan
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return isLessThanPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				IsLessThanPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Field.IsLessThan domain property.
+		/// </summary>
+		internal sealed partial class IsLessThanPropertyHandler : DslModeling::DomainPropertyValueHandler<FieldBase, global::System.Boolean>
+		{
+			private IsLessThanPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Field.IsLessThan domain property value handler.
+			/// </summary>
+			public static readonly IsLessThanPropertyHandler Instance = new IsLessThanPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Field.IsLessThan domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return IsLessThanDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Boolean GetValue(FieldBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.IsLessThan;
+				//return element.GetValue<global::System.Boolean>("IsLessThan", element.isLessThanPropertyStorage);
+				//return element.isLessThanPropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(FieldBase element, global::System.Boolean newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Boolean oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.isLessThanPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Field"));
+				}
+			}
+		}
+		
+		#endregion
+		#region IsLessThanValueField domain property code
+		
+		/// <summary>
+		/// IsLessThanValueField domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid IsLessThanValueFieldDomainPropertyId = new global::System.Guid(0xd75dfe6e, 0x2a03, 0x4659, 0xb0, 0x20, 0x35, 0xfc, 0x8d, 0x25, 0x5d, 0x06);
+		
+		/// <summary>
+		/// Storage for IsLessThanValueField
+		/// </summary>
+		private global::System.String isLessThanValueFieldPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of IsLessThanValueField domain property.
+		/// Ensures that the value of the specified property is less than a particular value
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Field/IsLessThanValueField.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Field/IsLessThanValueField.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Field/IsLessThanValueField.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("d75dfe6e-2a03-4659-b020-35fc8d255d06")]
+		public virtual global::System.String IsLessThanValueField
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return isLessThanValueFieldPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				IsLessThanValueFieldPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Field.IsLessThanValueField domain property.
+		/// </summary>
+		internal sealed partial class IsLessThanValueFieldPropertyHandler : DslModeling::DomainPropertyValueHandler<FieldBase, global::System.String>
+		{
+			private IsLessThanValueFieldPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Field.IsLessThanValueField domain property value handler.
+			/// </summary>
+			public static readonly IsLessThanValueFieldPropertyHandler Instance = new IsLessThanValueFieldPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Field.IsLessThanValueField domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return IsLessThanValueFieldDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(FieldBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.IsLessThanValueField;
+				//return element.GetValue<global::System.String>("IsLessThanValueField", element.isLessThanValueFieldPropertyStorage);
+				//return element.isLessThanValueFieldPropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(FieldBase element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.isLessThanValueFieldPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Field"));
+				}
+			}
+		}
+		
+		#endregion
+		#region IsLessThanOrEqual domain property code
+		
+		/// <summary>
+		/// IsLessThanOrEqual domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid IsLessThanOrEqualDomainPropertyId = new global::System.Guid(0x14249e34, 0x3f2e, 0x45d9, 0xa6, 0xca, 0x32, 0x4d, 0x93, 0x0f, 0xf6, 0x16);
+		
+		/// <summary>
+		/// Storage for IsLessThanOrEqual
+		/// </summary>
+		private global::System.Boolean isLessThanOrEqualPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of IsLessThanOrEqual domain property.
+		/// Ensures that the value of the specified property is less than or equal to a
+		/// particular value (or less than or equal to the value of another property) 
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Field/IsLessThanOrEqual.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Field/IsLessThanOrEqual.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Field/IsLessThanOrEqual.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("14249e34-3f2e-45d9-a6ca-324d930ff616")]
+		public virtual global::System.Boolean IsLessThanOrEqual
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return isLessThanOrEqualPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				IsLessThanOrEqualPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Field.IsLessThanOrEqual domain property.
+		/// </summary>
+		internal sealed partial class IsLessThanOrEqualPropertyHandler : DslModeling::DomainPropertyValueHandler<FieldBase, global::System.Boolean>
+		{
+			private IsLessThanOrEqualPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Field.IsLessThanOrEqual domain property value handler.
+			/// </summary>
+			public static readonly IsLessThanOrEqualPropertyHandler Instance = new IsLessThanOrEqualPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Field.IsLessThanOrEqual domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return IsLessThanOrEqualDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Boolean GetValue(FieldBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.IsLessThanOrEqual;
+				//return element.GetValue<global::System.Boolean>("IsLessThanOrEqual", element.isLessThanOrEqualPropertyStorage);
+				//return element.isLessThanOrEqualPropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(FieldBase element, global::System.Boolean newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Boolean oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.isLessThanOrEqualPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Field"));
+				}
+			}
+		}
+		
+		#endregion
+		#region IsLessThanOrEqualValue domain property code
+		
+		/// <summary>
+		/// IsLessThanOrEqualValue domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid IsLessThanOrEqualValueDomainPropertyId = new global::System.Guid(0x8ba86c7d, 0x269f, 0x4aa1, 0xb0, 0xab, 0xdf, 0x1a, 0x2c, 0x04, 0x2e, 0xf9);
+		
+		/// <summary>
+		/// Storage for IsLessThanOrEqualValue
+		/// </summary>
+		private global::System.String isLessThanOrEqualValuePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of IsLessThanOrEqualValue domain property.
+		/// Ensures that the value of the specified property is less than a particular value
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Field/IsLessThanOrEqualValue.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Field/IsLessThanOrEqualValue.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Field/IsLessThanOrEqualValue.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("8ba86c7d-269f-4aa1-b0ab-df1a2c042ef9")]
+		public virtual global::System.String IsLessThanOrEqualValue
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return isLessThanOrEqualValuePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				IsLessThanOrEqualValuePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Field.IsLessThanOrEqualValue domain property.
+		/// </summary>
+		internal sealed partial class IsLessThanOrEqualValuePropertyHandler : DslModeling::DomainPropertyValueHandler<FieldBase, global::System.String>
+		{
+			private IsLessThanOrEqualValuePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Field.IsLessThanOrEqualValue domain property value handler.
+			/// </summary>
+			public static readonly IsLessThanOrEqualValuePropertyHandler Instance = new IsLessThanOrEqualValuePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Field.IsLessThanOrEqualValue domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return IsLessThanOrEqualValueDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(FieldBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.IsLessThanOrEqualValue;
+				//return element.GetValue<global::System.String>("IsLessThanOrEqualValue", element.isLessThanOrEqualValuePropertyStorage);
+				//return element.isLessThanOrEqualValuePropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(FieldBase element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.isLessThanOrEqualValuePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Field"));
+				}
+			}
+		}
+		
+		#endregion
+		#region IsGreaterThan domain property code
+		
+		/// <summary>
+		/// IsGreaterThan domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid IsGreaterThanDomainPropertyId = new global::System.Guid(0xe796fdf5, 0xc793, 0x4f56, 0xbf, 0xfe, 0xa5, 0x45, 0x64, 0xfe, 0xe7, 0x6c);
+		
+		/// <summary>
+		/// Storage for IsGreaterThan
+		/// </summary>
+		private global::System.Boolean isGreaterThanPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of IsGreaterThan domain property.
+		/// Ensures that the value of the specified property is greater than a particular
+		/// value (or greater than the value of another property) 
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Field/IsGreaterThan.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Field/IsGreaterThan.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Field/IsGreaterThan.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("e796fdf5-c793-4f56-bffe-a54564fee76c")]
+		public virtual global::System.Boolean IsGreaterThan
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return isGreaterThanPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				IsGreaterThanPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Field.IsGreaterThan domain property.
+		/// </summary>
+		internal sealed partial class IsGreaterThanPropertyHandler : DslModeling::DomainPropertyValueHandler<FieldBase, global::System.Boolean>
+		{
+			private IsGreaterThanPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Field.IsGreaterThan domain property value handler.
+			/// </summary>
+			public static readonly IsGreaterThanPropertyHandler Instance = new IsGreaterThanPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Field.IsGreaterThan domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return IsGreaterThanDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Boolean GetValue(FieldBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.IsGreaterThan;
+				//return element.GetValue<global::System.Boolean>("IsGreaterThan", element.isGreaterThanPropertyStorage);
+				//return element.isGreaterThanPropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(FieldBase element, global::System.Boolean newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Boolean oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.isGreaterThanPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Field"));
+				}
+			}
+		}
+		
+		#endregion
+		#region IsGreaterThanValue domain property code
+		
+		/// <summary>
+		/// IsGreaterThanValue domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid IsGreaterThanValueDomainPropertyId = new global::System.Guid(0xcf6a5010, 0xf0fd, 0x4890, 0xaa, 0x98, 0x19, 0x16, 0x41, 0x2d, 0xb8, 0xeb);
+		
+		/// <summary>
+		/// Storage for IsGreaterThanValue
+		/// </summary>
+		private global::System.String isGreaterThanValuePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of IsGreaterThanValue domain property.
+		/// Ensures that the value of the specified property is greater than a particular
+		/// value (or greater than the value of another property) 
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Field/IsGreaterThanValue.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Field/IsGreaterThanValue.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Field/IsGreaterThanValue.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("cf6a5010-f0fd-4890-aa98-1916412db8eb")]
+		public virtual global::System.String IsGreaterThanValue
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return isGreaterThanValuePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				IsGreaterThanValuePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Field.IsGreaterThanValue domain property.
+		/// </summary>
+		internal sealed partial class IsGreaterThanValuePropertyHandler : DslModeling::DomainPropertyValueHandler<FieldBase, global::System.String>
+		{
+			private IsGreaterThanValuePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Field.IsGreaterThanValue domain property value handler.
+			/// </summary>
+			public static readonly IsGreaterThanValuePropertyHandler Instance = new IsGreaterThanValuePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Field.IsGreaterThanValue domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return IsGreaterThanValueDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(FieldBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.IsGreaterThanValue;
+				//return element.GetValue<global::System.String>("IsGreaterThanValue", element.isGreaterThanValuePropertyStorage);
+				//return element.isGreaterThanValuePropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(FieldBase element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.isGreaterThanValuePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Field"));
+				}
+			}
+		}
+		
+		#endregion
+		#region IsGreaterThanOrEqual domain property code
+		
+		/// <summary>
+		/// IsGreaterThanOrEqual domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid IsGreaterThanOrEqualDomainPropertyId = new global::System.Guid(0xae57a301, 0xe3ca, 0x47f9, 0x89, 0x40, 0xa4, 0x21, 0x6a, 0x3f, 0x61, 0xab);
+		
+		/// <summary>
+		/// Storage for IsGreaterThanOrEqual
+		/// </summary>
+		private global::System.Boolean isGreaterThanOrEqualPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of IsGreaterThanOrEqual domain property.
+		/// Ensures that the value of the specified property is greater than or equal to a
+		/// particular value (or greater than or equal to the value of another property) 
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Field/IsGreaterThanOrEqual.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Field/IsGreaterThanOrEqual.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Field/IsGreaterThanOrEqual.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("ae57a301-e3ca-47f9-8940-a4216a3f61ab")]
+		public virtual global::System.Boolean IsGreaterThanOrEqual
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return isGreaterThanOrEqualPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				IsGreaterThanOrEqualPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Field.IsGreaterThanOrEqual domain property.
+		/// </summary>
+		internal sealed partial class IsGreaterThanOrEqualPropertyHandler : DslModeling::DomainPropertyValueHandler<FieldBase, global::System.Boolean>
+		{
+			private IsGreaterThanOrEqualPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Field.IsGreaterThanOrEqual domain property value handler.
+			/// </summary>
+			public static readonly IsGreaterThanOrEqualPropertyHandler Instance = new IsGreaterThanOrEqualPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Field.IsGreaterThanOrEqual domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return IsGreaterThanOrEqualDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Boolean GetValue(FieldBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.IsGreaterThanOrEqual;
+				//return element.GetValue<global::System.Boolean>("IsGreaterThanOrEqual", element.isGreaterThanOrEqualPropertyStorage);
+				//return element.isGreaterThanOrEqualPropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(FieldBase element, global::System.Boolean newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Boolean oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.isGreaterThanOrEqualPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Field"));
+				}
+			}
+		}
+		
+		#endregion
+		#region IsGreaterThanOrEqualValue domain property code
+		
+		/// <summary>
+		/// IsGreaterThanOrEqualValue domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid IsGreaterThanOrEqualValueDomainPropertyId = new global::System.Guid(0xff33ff0c, 0xb4d4, 0x491a, 0xa2, 0x72, 0xac, 0x04, 0x7f, 0xfa, 0x5c, 0xe0);
+		
+		/// <summary>
+		/// Storage for IsGreaterThanOrEqualValue
+		/// </summary>
+		private global::System.String isGreaterThanOrEqualValuePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of IsGreaterThanOrEqualValue domain property.
+		/// Ensures that the value of the specified property is greater than or equal to a
+		/// particular value (or greater than or equal to the value of another property) 
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Field/IsGreaterThanOrEqualValue.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Field/IsGreaterThanOrEqualValue.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Field/IsGreaterThanOrEqualValue.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("ff33ff0c-b4d4-491a-a272-ac047ffa5ce0")]
+		public virtual global::System.String IsGreaterThanOrEqualValue
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return isGreaterThanOrEqualValuePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				IsGreaterThanOrEqualValuePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Field.IsGreaterThanOrEqualValue domain property.
+		/// </summary>
+		internal sealed partial class IsGreaterThanOrEqualValuePropertyHandler : DslModeling::DomainPropertyValueHandler<FieldBase, global::System.String>
+		{
+			private IsGreaterThanOrEqualValuePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Field.IsGreaterThanOrEqualValue domain property value handler.
+			/// </summary>
+			public static readonly IsGreaterThanOrEqualValuePropertyHandler Instance = new IsGreaterThanOrEqualValuePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Field.IsGreaterThanOrEqualValue domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return IsGreaterThanOrEqualValueDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(FieldBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.IsGreaterThanOrEqualValue;
+				//return element.GetValue<global::System.String>("IsGreaterThanOrEqualValue", element.isGreaterThanOrEqualValuePropertyStorage);
+				//return element.isGreaterThanOrEqualValuePropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(FieldBase element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.isGreaterThanOrEqualValuePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Field"));
+				}
+			}
+		}
+		
+		#endregion
+		#region IsRegularExpressionValidator domain property code
+		
+		/// <summary>
+		/// IsRegularExpressionValidator domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid IsRegularExpressionValidatorDomainPropertyId = new global::System.Guid(0x323efb9d, 0xdfe9, 0x4820, 0x8a, 0xf0, 0x39, 0xd4, 0x3a, 0x17, 0xc0, 0x87);
+		
+		/// <summary>
+		/// Storage for IsRegularExpressionValidator
+		/// </summary>
+		private global::System.Boolean isRegularExpressionValidatorPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of IsRegularExpressionValidator domain property.
+		/// Ensures that the value of the specified property matches the given regular
+		/// expression. 
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Field/IsRegularExpressionValidator.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Field/IsRegularExpressionValidator.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Field/IsRegularExpressionValidator.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("323efb9d-dfe9-4820-8af0-39d43a17c087")]
+		public virtual global::System.Boolean IsRegularExpressionValidator
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return isRegularExpressionValidatorPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				IsRegularExpressionValidatorPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Field.IsRegularExpressionValidator domain property.
+		/// </summary>
+		internal sealed partial class IsRegularExpressionValidatorPropertyHandler : DslModeling::DomainPropertyValueHandler<FieldBase, global::System.Boolean>
+		{
+			private IsRegularExpressionValidatorPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Field.IsRegularExpressionValidator domain property value handler.
+			/// </summary>
+			public static readonly IsRegularExpressionValidatorPropertyHandler Instance = new IsRegularExpressionValidatorPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Field.IsRegularExpressionValidator domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return IsRegularExpressionValidatorDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Boolean GetValue(FieldBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.IsRegularExpressionValidator;
+				//return element.GetValue<global::System.Boolean>("IsRegularExpressionValidator", element.isRegularExpressionValidatorPropertyStorage);
+				//return element.isRegularExpressionValidatorPropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(FieldBase element, global::System.Boolean newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Boolean oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.isRegularExpressionValidatorPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Field"));
+				}
+			}
+		}
+		
+		#endregion
+		#region IsRegularExpressionValidatorValue domain property code
+		
+		/// <summary>
+		/// IsRegularExpressionValidatorValue domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid IsRegularExpressionValidatorValueDomainPropertyId = new global::System.Guid(0x3aaac37d, 0x6ac1, 0x40ac, 0xad, 0xfc, 0x54, 0xe9, 0xc0, 0x3b, 0xaa, 0x9d);
+		
+		/// <summary>
+		/// Storage for IsRegularExpressionValidatorValue
+		/// </summary>
+		private global::System.String isRegularExpressionValidatorValuePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of IsRegularExpressionValidatorValue domain property.
+		/// Ensures that the value of the specified property matches the given regular
+		/// expression. 
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Field/IsRegularExpressionValidatorValue.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Field/IsRegularExpressionValidatorValue.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Field/IsRegularExpressionValidatorValue.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("3aaac37d-6ac1-40ac-adfc-54e9c03baa9d")]
+		public virtual global::System.String IsRegularExpressionValidatorValue
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return isRegularExpressionValidatorValuePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				IsRegularExpressionValidatorValuePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Field.IsRegularExpressionValidatorValue domain property.
+		/// </summary>
+		internal sealed partial class IsRegularExpressionValidatorValuePropertyHandler : DslModeling::DomainPropertyValueHandler<FieldBase, global::System.String>
+		{
+			private IsRegularExpressionValidatorValuePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Field.IsRegularExpressionValidatorValue domain property value handler.
+			/// </summary>
+			public static readonly IsRegularExpressionValidatorValuePropertyHandler Instance = new IsRegularExpressionValidatorValuePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Field.IsRegularExpressionValidatorValue domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return IsRegularExpressionValidatorValueDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(FieldBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.IsRegularExpressionValidatorValue;
+				//return element.GetValue<global::System.String>("IsRegularExpressionValidatorValue", element.isRegularExpressionValidatorValuePropertyStorage);
+				//return element.isRegularExpressionValidatorValuePropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(FieldBase element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.isRegularExpressionValidatorValuePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Field"));
+				}
+			}
+		}
+		
+		#endregion
+		#region IsEmailValidator domain property code
+		
+		/// <summary>
+		/// IsEmailValidator domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid IsEmailValidatorDomainPropertyId = new global::System.Guid(0xed5a306f, 0x4f15, 0x4718, 0x8d, 0x76, 0xcb, 0x8b, 0xf7, 0x9b, 0x90, 0xb7);
+		
+		/// <summary>
+		/// Storage for IsEmailValidator
+		/// </summary>
+		private global::System.Boolean isEmailValidatorPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of IsEmailValidator domain property.
+		/// Ensures that the value of the specified property is a valid email address
+		/// format.
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Field/IsEmailValidator.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Field/IsEmailValidator.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Field/IsEmailValidator.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("ed5a306f-4f15-4718-8d76-cb8bf79b90b7")]
+		public virtual global::System.Boolean IsEmailValidator
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return isEmailValidatorPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				IsEmailValidatorPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Field.IsEmailValidator domain property.
+		/// </summary>
+		internal sealed partial class IsEmailValidatorPropertyHandler : DslModeling::DomainPropertyValueHandler<FieldBase, global::System.Boolean>
+		{
+			private IsEmailValidatorPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Field.IsEmailValidator domain property value handler.
+			/// </summary>
+			public static readonly IsEmailValidatorPropertyHandler Instance = new IsEmailValidatorPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Field.IsEmailValidator domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return IsEmailValidatorDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Boolean GetValue(FieldBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.IsEmailValidator;
+				//return element.GetValue<global::System.Boolean>("IsEmailValidator", element.isEmailValidatorPropertyStorage);
+				//return element.isEmailValidatorPropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(FieldBase element, global::System.Boolean newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Boolean oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.isEmailValidatorPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Field"));
+				}
+			}
+		}
+		
+		#endregion
+		#region IsUrlValidator domain property code
+		
+		/// <summary>
+		/// IsUrlValidator domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid IsUrlValidatorDomainPropertyId = new global::System.Guid(0x70e66f28, 0xddd7, 0x4169, 0x9a, 0x75, 0x71, 0x7d, 0xde, 0x09, 0x7d, 0x48);
+		
+		/// <summary>
+		/// Storage for IsUrlValidator
+		/// </summary>
+		private global::System.Boolean isUrlValidatorPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of IsUrlValidator domain property.
+		/// Ensures that the value of the specified property is a valid Url format.
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Field/IsUrlValidator.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Field/IsUrlValidator.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Field/IsUrlValidator.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("70e66f28-ddd7-4169-9a75-717dde097d48")]
+		public virtual global::System.Boolean IsUrlValidator
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return isUrlValidatorPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				IsUrlValidatorPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Field.IsUrlValidator domain property.
+		/// </summary>
+		internal sealed partial class IsUrlValidatorPropertyHandler : DslModeling::DomainPropertyValueHandler<FieldBase, global::System.Boolean>
+		{
+			private IsUrlValidatorPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Field.IsUrlValidator domain property value handler.
+			/// </summary>
+			public static readonly IsUrlValidatorPropertyHandler Instance = new IsUrlValidatorPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Field.IsUrlValidator domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return IsUrlValidatorDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Boolean GetValue(FieldBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.IsUrlValidator;
+				//return element.GetValue<global::System.Boolean>("IsUrlValidator", element.isUrlValidatorPropertyStorage);
+				//return element.isUrlValidatorPropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(FieldBase element, global::System.Boolean newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Boolean oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.isUrlValidatorPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Field"));
+				}
+			}
+		}
+		
+		#endregion
+		#region IsLength domain property code
+		
+		/// <summary>
+		/// IsLength domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid IsLengthDomainPropertyId = new global::System.Guid(0xb0155733, 0x1119, 0x44ff, 0xaf, 0x2b, 0x09, 0x35, 0x74, 0xc3, 0xe8, 0x97);
+		
+		/// <summary>
+		/// Storage for IsLength
+		/// </summary>
+		private global::System.Boolean isLengthPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of IsLength domain property.
+		/// Ensures that the length of a particular string property is within the specified
+		/// range
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Field/IsLength.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Field/IsLength.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Field/IsLength.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("b0155733-1119-44ff-af2b-093574c3e897")]
+		public virtual global::System.Boolean IsLength
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return isLengthPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				IsLengthPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Field.IsLength domain property.
+		/// </summary>
+		internal sealed partial class IsLengthPropertyHandler : DslModeling::DomainPropertyValueHandler<FieldBase, global::System.Boolean>
+		{
+			private IsLengthPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Field.IsLength domain property value handler.
+			/// </summary>
+			public static readonly IsLengthPropertyHandler Instance = new IsLengthPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Field.IsLength domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return IsLengthDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Boolean GetValue(FieldBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.IsLength;
+				//return element.GetValue<global::System.Boolean>("IsLength", element.isLengthPropertyStorage);
+				//return element.isLengthPropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(FieldBase element, global::System.Boolean newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Boolean oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.isLengthPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Field"));
+				}
+			}
+		}
+		
+		#endregion
+		#region Length1 domain property code
+		
+		/// <summary>
+		/// Length1 domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid Length1DomainPropertyId = new global::System.Guid(0xee175fd9, 0xe238, 0x4260, 0x97, 0x43, 0x2b, 0x75, 0xde, 0xbc, 0x38, 0xa4);
+		
+		/// <summary>
+		/// Storage for Length1
+		/// </summary>
+		private global::System.Int32 length1PropertyStorage = 50;
+		
+		/// <summary>
+		/// Gets or sets the value of Length1 domain property.
+		/// Determines the size of this column in bytes
+		/// </summary>
+		[System.ComponentModel.TypeConverter(typeof(nHydrate.Dsl.Design.Converters.TextLengthConverter))]
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Field/Length1.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Field/Length1.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Field/Length1.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.DefaultValue(50)]
+		[DslModeling::DomainObjectId("ee175fd9-e238-4260-9743-2b75debc38a4")]
+		public virtual global::System.Int32 Length1
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return length1PropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				Length1PropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Field.Length1 domain property.
+		/// </summary>
+		internal sealed partial class Length1PropertyHandler : DslModeling::DomainPropertyValueHandler<FieldBase, global::System.Int32>
+		{
+			private Length1PropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Field.Length1 domain property value handler.
+			/// </summary>
+			public static readonly Length1PropertyHandler Instance = new Length1PropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Field.Length1 domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return Length1DomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Int32 GetValue(FieldBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.Length1;
+				//return element.GetValue<global::System.Int32>("Length1", element.length1PropertyStorage);
+				//return element.length1PropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(FieldBase element, global::System.Int32 newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Int32 oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.length1PropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Field"));
+				}
+			}
+		}
+		
+		#endregion
 		#region Entity opposite domain role accessor
 		/// <summary>
 		/// Gets or sets Entity.
@@ -8952,6 +11603,97 @@ namespace nHydrate.Dsl
 				{
 					ValueChanging(element, oldValue, newValue);
 					element.precedenceOrderPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("StoredProcedure"));
+				}
+			}
+		}
+		
+		#endregion
+		#region ClassName domain property code
+		
+		/// <summary>
+		/// ClassName domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid ClassNameDomainPropertyId = new global::System.Guid(0xeb725392, 0x588d, 0x43c4, 0x96, 0xb9, 0x88, 0x71, 0xb0, 0x74, 0x34, 0x05);
+		
+		/// <summary>
+		/// Storage for ClassName
+		/// </summary>
+		private global::System.String classNamePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of ClassName domain property.
+		/// Indica el Nombre de la Clase a Generarse
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.StoredProcedure/ClassName.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.StoredProcedure/ClassName.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.StoredProcedure/ClassName.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("eb725392-588d-43c4-96b9-8871b0743405")]
+		public virtual global::System.String ClassName
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return classNamePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				ClassNamePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the StoredProcedure.ClassName domain property.
+		/// </summary>
+		internal sealed partial class ClassNamePropertyHandler : DslModeling::DomainPropertyValueHandler<StoredProcedureBase, global::System.String>
+		{
+			private ClassNamePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the StoredProcedure.ClassName domain property value handler.
+			/// </summary>
+			public static readonly ClassNamePropertyHandler Instance = new ClassNamePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the StoredProcedure.ClassName domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return ClassNameDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(StoredProcedureBase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.ClassName;
+				//return element.GetValue<global::System.String>("ClassName", element.classNamePropertyStorage);
+				//return element.classNamePropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(StoredProcedureBase element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.classNamePropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("StoredProcedure"));
 				}
@@ -21828,6 +24570,967 @@ namespace nHydrate.Dsl
 			set
 			{
 				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::nHydrate.Dsl.nHydrateModelHasIndexModules.IndexModuleDomainRoleId, value);
+			}
+		}
+		#endregion
+	}
+}
+namespace nHydrate.Dsl
+{
+	/// <summary>
+	/// DomainClass Methods
+	/// Description for nHydrate.Dsl.Methods
+	/// </summary>
+	[DslDesign::DisplayNameResource("nHydrate.Dsl.Methods.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("nHydrate.Dsl.Methods.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::nHydrate.Dsl.nHydrateDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[global::System.Diagnostics.DebuggerDisplay("{GetType().Name,nq} (Name = {namePropertyStorage})")]
+	[DslModeling::DomainObjectId("84e5b158-6146-4530-ac83-e6f96d82d087")]
+	public partial class Methods : DslModeling::ModelElement, System.ComponentModel.INotifyPropertyChanged
+	{
+		#region INotifyPropertyChanged
+		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+		protected virtual void OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs e)
+		{
+			if (this.PropertyChanged != null)
+				this.PropertyChanged(this, e);
+		}
+		#endregion
+	
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// Methods domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x84e5b158, 0x6146, 0x4530, 0xac, 0x83, 0xe6, 0xf9, 0x6d, 0x82, 0xd0, 0x87);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public Methods(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public Methods(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Name domain property code
+		
+		/// <summary>
+		/// Name domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NameDomainPropertyId = new global::System.Guid(0xc1f01b67, 0x9fd8, 0x45f4, 0x9e, 0x86, 0x6c, 0x8e, 0x49, 0x70, 0xa1, 0xe3);
+		
+		/// <summary>
+		/// Storage for Name
+		/// </summary>
+		private global::System.String namePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Name domain property.
+		/// Nombre del Metodo
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Methods/Name.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Methods/Name.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Methods/Name.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::ElementName]
+		[DslModeling::DomainObjectId("c1f01b67-9fd8-45f4-9e86-6c8e4970a1e3")]
+		public virtual global::System.String Name
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return namePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NamePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Methods.Name domain property.
+		/// </summary>
+		internal sealed partial class NamePropertyHandler : DslModeling::DomainPropertyValueHandler<Methods, global::System.String>
+		{
+			private NamePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Methods.Name domain property value handler.
+			/// </summary>
+			public static readonly NamePropertyHandler Instance = new NamePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Methods.Name domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NameDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Methods element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.Name;
+				//return element.GetValue<global::System.String>("Name", element.namePropertyStorage);
+				//return element.namePropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Methods element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.namePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Methods"));
+				}
+			}
+		}
+		
+		#endregion
+		#region ReturnType domain property code
+		
+		/// <summary>
+		/// ReturnType domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid ReturnTypeDomainPropertyId = new global::System.Guid(0xe95d9763, 0x7854, 0x4209, 0x99, 0xdf, 0x26, 0x75, 0xbc, 0xcb, 0xcc, 0x08);
+		
+		/// <summary>
+		/// Storage for ReturnType
+		/// </summary>
+		private global::System.String returnTypePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of ReturnType domain property.
+		/// Indica el tipo de dato a retornar
+		/// </summary>
+		[System.ComponentModel.Editor(typeof(Editor.TypeNameEditor), typeof(System.Drawing.Design.UITypeEditor))]
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Methods/ReturnType.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Methods/ReturnType.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Methods/ReturnType.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("e95d9763-7854-4209-99df-2675bccbcc08")]
+		public virtual global::System.String ReturnType
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return returnTypePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				ReturnTypePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Methods.ReturnType domain property.
+		/// </summary>
+		internal sealed partial class ReturnTypePropertyHandler : DslModeling::DomainPropertyValueHandler<Methods, global::System.String>
+		{
+			private ReturnTypePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Methods.ReturnType domain property value handler.
+			/// </summary>
+			public static readonly ReturnTypePropertyHandler Instance = new ReturnTypePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Methods.ReturnType domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return ReturnTypeDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Methods element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.ReturnType;
+				//return element.GetValue<global::System.String>("ReturnType", element.returnTypePropertyStorage);
+				//return element.returnTypePropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Methods element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.returnTypePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Methods"));
+				}
+			}
+		}
+		
+		#endregion
+		#region Parametros domain property code
+		
+		/// <summary>
+		/// Parametros domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid ParametrosDomainPropertyId = new global::System.Guid(0xd91ab49c, 0xe200, 0x49da, 0xa1, 0x9a, 0x25, 0xea, 0xad, 0x66, 0x40, 0xcd);
+		
+		/// <summary>
+		/// Gets or sets the value of Parametros domain property.
+		/// Indica los parametros que recibe el metodo
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Methods/Parametros.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Methods/Parametros.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Methods/Parametros.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.CustomStorage)]
+		[DslModeling::DomainObjectId("d91ab49c-e200-49da-a19a-25eaad6640cd")]
+		public virtual global::System.Collections.Generic.List<nHydrate.Dsl.MyCustomCode.MethodParameters> Parametros
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return ParametrosPropertyHandler.Instance.GetValue(this);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				ParametrosPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Methods.Parametros domain property.
+		/// </summary>
+		internal sealed partial class ParametrosPropertyHandler : DslModeling::DomainPropertyValueHandler<Methods, global::System.Collections.Generic.List<nHydrate.Dsl.MyCustomCode.MethodParameters>>
+		{
+			private ParametrosPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Methods.Parametros domain property value handler.
+			/// </summary>
+			public static readonly ParametrosPropertyHandler Instance = new ParametrosPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Methods.Parametros domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return ParametrosDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Collections.Generic.List<nHydrate.Dsl.MyCustomCode.MethodParameters> GetValue(Methods element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				// There is no storage for Parametros because its Kind is
+				// set to CustomStorage. Please provide the GetParametrosValue()
+				// method on the domain class.
+				return element.GetParametrosValue();
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Methods element, global::System.Collections.Generic.List<nHydrate.Dsl.MyCustomCode.MethodParameters> newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Collections.Generic.List<nHydrate.Dsl.MyCustomCode.MethodParameters> oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					// There is no storage for Parametros because its Kind is
+					// set to CustomStorage. Please provide the SetParametrosValue()
+					// method on the domain class.
+					element.SetParametrosValue(newValue);
+					ValueChanged(element, oldValue, GetValue(element));
+				}
+			}
+		}
+		
+		#endregion
+		#region StoredProcedure domain property code
+		
+		/// <summary>
+		/// StoredProcedure domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid StoredProcedureDomainPropertyId = new global::System.Guid(0xc0cfa119, 0x7340, 0x4467, 0xa8, 0xfd, 0x6f, 0x27, 0xae, 0x6d, 0x6f, 0xfb);
+		
+		/// <summary>
+		/// Storage for StoredProcedure
+		/// </summary>
+		private global::System.String storedProcedurePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of StoredProcedure domain property.
+		/// Nombre del StoredProcedure a Ejecutar en el DataLayer
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Methods/StoredProcedure.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Methods/StoredProcedure.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Methods/StoredProcedure.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("c0cfa119-7340-4467-a8fd-6f27ae6d6ffb")]
+		public virtual global::System.String StoredProcedure
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return storedProcedurePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				StoredProcedurePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Methods.StoredProcedure domain property.
+		/// </summary>
+		internal sealed partial class StoredProcedurePropertyHandler : DslModeling::DomainPropertyValueHandler<Methods, global::System.String>
+		{
+			private StoredProcedurePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Methods.StoredProcedure domain property value handler.
+			/// </summary>
+			public static readonly StoredProcedurePropertyHandler Instance = new StoredProcedurePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Methods.StoredProcedure domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return StoredProcedureDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Methods element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.StoredProcedure;
+				//return element.GetValue<global::System.String>("StoredProcedure", element.storedProcedurePropertyStorage);
+				//return element.storedProcedurePropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Methods element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.storedProcedurePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Methods"));
+				}
+			}
+		}
+		
+		#endregion
+		#region AddPaging domain property code
+		
+		/// <summary>
+		/// AddPaging domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid AddPagingDomainPropertyId = new global::System.Guid(0x6dd6c242, 0xf655, 0x41ab, 0x84, 0x5c, 0x4e, 0xec, 0x5a, 0x06, 0x8a, 0x91);
+		
+		/// <summary>
+		/// Storage for AddPaging
+		/// </summary>
+		private global::System.Boolean addPagingPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of AddPaging domain property.
+		/// Indica si se agregaran los objetos de paginacion
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Methods/AddPaging.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Methods/AddPaging.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Methods/AddPaging.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("6dd6c242-f655-41ab-845c-4eec5a068a91")]
+		public virtual global::System.Boolean AddPaging
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return addPagingPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				AddPagingPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Methods.AddPaging domain property.
+		/// </summary>
+		internal sealed partial class AddPagingPropertyHandler : DslModeling::DomainPropertyValueHandler<Methods, global::System.Boolean>
+		{
+			private AddPagingPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Methods.AddPaging domain property value handler.
+			/// </summary>
+			public static readonly AddPagingPropertyHandler Instance = new AddPagingPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Methods.AddPaging domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return AddPagingDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Boolean GetValue(Methods element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.AddPaging;
+				//return element.GetValue<global::System.Boolean>("AddPaging", element.addPagingPropertyStorage);
+				//return element.addPagingPropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Methods element, global::System.Boolean newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Boolean oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.addPagingPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Methods"));
+				}
+			}
+		}
+		
+		#endregion
+		#region MustReturnJson domain property code
+		
+		/// <summary>
+		/// MustReturnJson domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid MustReturnJsonDomainPropertyId = new global::System.Guid(0x99265c53, 0xb326, 0x4f3a, 0x8a, 0x65, 0x23, 0x22, 0x59, 0xc1, 0x4d, 0x21);
+		
+		/// <summary>
+		/// Storage for MustReturnJson
+		/// </summary>
+		private global::System.Boolean mustReturnJsonPropertyStorage = true;
+		
+		/// <summary>
+		/// Gets or sets the value of MustReturnJson domain property.
+		/// Indica si el metodo retornara los resultados en Json
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.Methods/MustReturnJson.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.Methods/MustReturnJson.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.Methods/MustReturnJson.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.DefaultValue(true)]
+		[DslModeling::DomainObjectId("99265c53-b326-4f3a-8a65-232259c14d21")]
+		public virtual global::System.Boolean MustReturnJson
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return mustReturnJsonPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				MustReturnJsonPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Methods.MustReturnJson domain property.
+		/// </summary>
+		internal sealed partial class MustReturnJsonPropertyHandler : DslModeling::DomainPropertyValueHandler<Methods, global::System.Boolean>
+		{
+			private MustReturnJsonPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Methods.MustReturnJson domain property value handler.
+			/// </summary>
+			public static readonly MustReturnJsonPropertyHandler Instance = new MustReturnJsonPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Methods.MustReturnJson domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return MustReturnJsonDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Boolean GetValue(Methods element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.MustReturnJson;
+				//return element.GetValue<global::System.Boolean>("MustReturnJson", element.mustReturnJsonPropertyStorage);
+				//return element.mustReturnJsonPropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Methods element, global::System.Boolean newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Boolean oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.mustReturnJsonPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("Methods"));
+				}
+			}
+		}
+		
+		#endregion
+		#region Entity opposite domain role accessor
+		/// <summary>
+		/// Gets or sets Entity.
+		/// Description for nHydrate.Dsl.EntityHasMethod.Methods
+		/// </summary>
+		public virtual Entity Entity
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::nHydrate.Dsl.EntityHasMethod.MethodsDomainRoleId) as Entity;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::nHydrate.Dsl.EntityHasMethod.MethodsDomainRoleId, value);
+			}
+		}
+		#endregion
+	}
+}
+namespace nHydrate.Dsl
+{
+	/// <summary>
+	/// DomainClass UIView
+	/// Description for nHydrate.Dsl.UIView
+	/// </summary>
+	[DslDesign::DisplayNameResource("nHydrate.Dsl.UIView.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("nHydrate.Dsl.UIView.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::nHydrate.Dsl.nHydrateDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[global::System.Diagnostics.DebuggerDisplay("{GetType().Name,nq} (Name = {namePropertyStorage})")]
+	[DslModeling::DomainObjectId("746fbba1-e907-49b3-bcbd-91e768c8666b")]
+	public partial class UIView : DslModeling::ModelElement, System.ComponentModel.INotifyPropertyChanged
+	{
+		#region INotifyPropertyChanged
+		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+		protected virtual void OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs e)
+		{
+			if (this.PropertyChanged != null)
+				this.PropertyChanged(this, e);
+		}
+		#endregion
+	
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// UIView domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x746fbba1, 0xe907, 0x49b3, 0xbc, 0xbd, 0x91, 0xe7, 0x68, 0xc8, 0x66, 0x6b);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public UIView(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public UIView(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Name domain property code
+		
+		/// <summary>
+		/// Name domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NameDomainPropertyId = new global::System.Guid(0x5436c53f, 0xaa9a, 0x4a1a, 0xa0, 0x52, 0x8d, 0x81, 0x04, 0x8f, 0x14, 0x68);
+		
+		/// <summary>
+		/// Storage for Name
+		/// </summary>
+		private global::System.String namePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Name domain property.
+		/// Nombre del view
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.UIView/Name.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.UIView/Name.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.UIView/Name.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::ElementName]
+		[DslModeling::DomainObjectId("5436c53f-aa9a-4a1a-a052-8d81048f1468")]
+		public virtual global::System.String Name
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return namePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NamePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the UIView.Name domain property.
+		/// </summary>
+		internal sealed partial class NamePropertyHandler : DslModeling::DomainPropertyValueHandler<UIView, global::System.String>
+		{
+			private NamePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the UIView.Name domain property value handler.
+			/// </summary>
+			public static readonly NamePropertyHandler Instance = new NamePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the UIView.Name domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NameDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(UIView element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.Name;
+				//return element.GetValue<global::System.String>("Name", element.namePropertyStorage);
+				//return element.namePropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(UIView element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.namePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("UIView"));
+				}
+			}
+		}
+		
+		#endregion
+		#region Fields domain property code
+		
+		/// <summary>
+		/// Fields domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid FieldsDomainPropertyId = new global::System.Guid(0x53fbd914, 0xc924, 0x4c25, 0x86, 0xfe, 0x50, 0xe0, 0xe2, 0x33, 0xa5, 0xf8);
+		
+		/// <summary>
+		/// Gets or sets the value of Fields domain property.
+		/// Lista de Campos en la Vista
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.UIView/Fields.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.UIView/Fields.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.UIView/Fields.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.CustomStorage)]
+		[DslModeling::DomainObjectId("53fbd914-c924-4c25-86fe-50e0e233a5f8")]
+		public virtual global::System.Collections.Generic.List<nHydrate.Dsl.MyCustomCode.UIField> Fields
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return FieldsPropertyHandler.Instance.GetValue(this);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				FieldsPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the UIView.Fields domain property.
+		/// </summary>
+		internal sealed partial class FieldsPropertyHandler : DslModeling::DomainPropertyValueHandler<UIView, global::System.Collections.Generic.List<nHydrate.Dsl.MyCustomCode.UIField>>
+		{
+			private FieldsPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the UIView.Fields domain property value handler.
+			/// </summary>
+			public static readonly FieldsPropertyHandler Instance = new FieldsPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the UIView.Fields domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return FieldsDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Collections.Generic.List<nHydrate.Dsl.MyCustomCode.UIField> GetValue(UIView element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				// There is no storage for Fields because its Kind is
+				// set to CustomStorage. Please provide the GetFieldsValue()
+				// method on the domain class.
+				return element.GetFieldsValue();
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(UIView element, global::System.Collections.Generic.List<nHydrate.Dsl.MyCustomCode.UIField> newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Collections.Generic.List<nHydrate.Dsl.MyCustomCode.UIField> oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					// There is no storage for Fields because its Kind is
+					// set to CustomStorage. Please provide the SetFieldsValue()
+					// method on the domain class.
+					element.SetFieldsValue(newValue);
+					ValueChanged(element, oldValue, GetValue(element));
+				}
+			}
+		}
+		
+		#endregion
+		#region ObjectDbDescription domain property code
+		
+		/// <summary>
+		/// ObjectDbDescription domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid ObjectDbDescriptionDomainPropertyId = new global::System.Guid(0x7d264911, 0x2880, 0x4a4e, 0xa6, 0x17, 0x1d, 0x00, 0x29, 0xc6, 0xdb, 0xf6);
+		
+		/// <summary>
+		/// Storage for ObjectDbDescription
+		/// </summary>
+		private global::System.String objectDbDescriptionPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of ObjectDbDescription domain property.
+		/// Indica el Nombre Con el Cual busca la descripciones de los campos en la DB.
+		/// </summary>
+		[DslDesign::DisplayNameResource("nHydrate.Dsl.UIView/ObjectDbDescription.DisplayName", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::CategoryResource("nHydrate.Dsl.UIView/ObjectDbDescription.Category", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("nHydrate.Dsl.UIView/ObjectDbDescription.Description", typeof(global::nHydrate.Dsl.nHydrateDomainModel), "nHydrate.Dsl.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("7d264911-2880-4a4e-a617-1d0029c6dbf6")]
+		public virtual global::System.String ObjectDbDescription
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return objectDbDescriptionPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				ObjectDbDescriptionPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the UIView.ObjectDbDescription domain property.
+		/// </summary>
+		internal sealed partial class ObjectDbDescriptionPropertyHandler : DslModeling::DomainPropertyValueHandler<UIView, global::System.String>
+		{
+			private ObjectDbDescriptionPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the UIView.ObjectDbDescription domain property value handler.
+			/// </summary>
+			public static readonly ObjectDbDescriptionPropertyHandler Instance = new ObjectDbDescriptionPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the UIView.ObjectDbDescription domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return ObjectDbDescriptionDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(UIView element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.ObjectDbDescription;
+				//return element.GetValue<global::System.String>("ObjectDbDescription", element.objectDbDescriptionPropertyStorage);
+				//return element.objectDbDescriptionPropertyStorage; //ORIGINAL CODE
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(UIView element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.objectDbDescriptionPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+					element.OnPropertyChanged(new System.ComponentModel.PropertyChangedEventArgs("UIView"));
+				}
+			}
+		}
+		
+		#endregion
+		#region Entity opposite domain role accessor
+		/// <summary>
+		/// Gets or sets Entity.
+		/// Description for nHydrate.Dsl.EntityHasUIView.UIView
+		/// </summary>
+		public virtual Entity Entity
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::nHydrate.Dsl.EntityHasUIView.UIViewDomainRoleId) as Entity;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::nHydrate.Dsl.EntityHasUIView.UIViewDomainRoleId, value);
 			}
 		}
 		#endregion

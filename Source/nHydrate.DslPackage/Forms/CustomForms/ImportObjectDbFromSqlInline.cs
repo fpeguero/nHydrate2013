@@ -96,7 +96,7 @@ namespace nHydrate.DslPackage.Forms
 
 		    var datos = this.txtText.Lines;
 
-            NewDatabase =  importDomain.Import(connectionString, datos,SqlServerObject.StoredProcedure);
+            NewDatabase =  importDomain.Import(connectionString, datos, SqlServerObject.StoredProcedure);
 
             foreach (var entity in this.NewDatabase.EntityList)
 		    {

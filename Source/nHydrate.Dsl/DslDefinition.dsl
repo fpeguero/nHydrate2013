@@ -194,6 +194,21 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
+        <DomainProperty Id="fa161ea7-4cc1-4b3f-a9d5-8c9de1128340" Description="Indica el Namespace a Generar para todos los objetos en este modelo." Name="Namespace" DisplayName="Namespace" Category="Definition">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="7b25b5b5-4142-4202-bd39-07468023be51" Description="Indica al Modelo que determine las columnas predeterminadas de autitorias, para que no la use al editar." Name="DetermineTrackinColumns" DisplayName="Determine Trackin Columns" DefaultValue="true" Category="Definition">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="9f8619a8-de04-4bfe-823b-3a782c11b7e0" Description="Indica las Columnas de Auditorias" Name="AuditColumns" DisplayName="Audit Columns" Kind="CustomStorage" Category="Definition">
+          <Type>
+            <ExternalTypeMoniker Name="/System.Collections.Generic/List&lt;nHydrate.Dsl.MyCustomCode.AuditColumns&gt;" />
+          </Type>
+        </DomainProperty>
       </Properties>
       <ElementMergeDirectives>
         <ElementMergeDirective>
@@ -355,6 +370,26 @@
             <ExternalTypeMoniker Name="/System/Boolean" />
           </Type>
         </DomainProperty>
+        <DomainProperty Id="a4a7f36d-5bc4-4443-8f05-afed6e6222f8" Description="Indica si esta Entidad se generara" Name="Generate" DisplayName="Generate" DefaultValue="true" Category="Generation">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="1fbbe959-b698-40d3-a522-53753e6b45ba" Description="Indica si se creara una clase para validar esta entidad - FluentValidator" Name="AddValidators" DisplayName="Add Validators" DefaultValue="true" Category="Generation">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="d0c481cf-3014-47d7-a45b-7c8f9710dced" Description="Indica si es un LightEntity, y no se hacen operacione Crear y actualizar ni borrar" Name="IsComplexType" DisplayName="Is Complex Type" DefaultValue="false" Category="Generation">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="348d397a-9943-4871-ba42-6ab91ca58a15" Description="Indica el Store en la generacion de CodeFluent" Name="StoreCodeFluent" DisplayName="Store Code Fluent" Category="Generation">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
       </Properties>
       <ElementMergeDirectives>
         <ElementMergeDirective>
@@ -395,6 +430,22 @@
           </Index>
           <LinkCreationPaths>
             <DomainPath>EntityHasIndexes.Indexes</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="Methods" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>EntityHasMethod.Method</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="UIView" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>EntityHasUIView.UIView</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
       </ElementMergeDirectives>
@@ -583,6 +634,118 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
+        <DomainProperty Id="7d3557e0-2b8f-405e-9432-61a5ff6f5def" Description="Indica que la columna es de auditoria" Name="IsTrackingColumn" DisplayName="Is Tracking Column" DefaultValue="false" Category="Definition">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="f3c44229-8c01-4066-9fd9-a7c3ca51b6c2" Description="Ensures that the specified property is not null. " Name="IsRequired" DisplayName="IsRequired" Category="FC_Validaciones">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="1cc22159-83e3-4c4f-921e-54c0bfb0c772" Description="Ensures that the value of the specified property is not equal to a particular value" Name="IsNotEqual" DisplayName="IsNotEqual" Category="FC_Validaciones">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="d705abac-189a-49e5-8955-97c8c7f70cd5" Description="Field to Compare Value" Name="IsNotEqualName" DisplayName="IsNotEqualName" Category="FC_Validaciones">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="5283e7d7-979f-4181-aeb9-8ba8640cf003" Description="Ensures that the value of the specified property is equal to a particular value" Name="IsEqual" DisplayName="IsEqual" Category="FC_Validaciones">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="2f1cfd6d-d362-4da3-8689-1f3ef4ba9af6" Description="Field to Compare Value" Name="IsEqualName" DisplayName="IsEqualName" Category="FC_Validaciones">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="3ec0a987-c966-47cb-a1bc-989a799791d3" Description="Ensures that the length of a particular string property is within the specified range" Name="IsLengthValue" DisplayName="IsLengthValue" Category="FC_Validaciones">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="712db7dd-b8bd-4cf5-9fa6-8e209b0e613a" Description="Ensures that the value of the specified property is less than a particular value" Name="IsLessThan" DisplayName="IsLessThan" Category="FC_Validaciones">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="d75dfe6e-2a03-4659-b020-35fc8d255d06" Description="Ensures that the value of the specified property is less than a particular value" Name="IsLessThanValueField" DisplayName="IsLessThanValueField" Category="FC_Validaciones">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="14249e34-3f2e-45d9-a6ca-324d930ff616" Description="Ensures that the value of the specified property is less than or equal to a particular value (or less than or equal to the value of another property) " Name="IsLessThanOrEqual" DisplayName="IsLessThanOrEqual" Category="FC_Validaciones">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="8ba86c7d-269f-4aa1-b0ab-df1a2c042ef9" Description="Ensures that the value of the specified property is less than a particular value" Name="IsLessThanOrEqualValue" DisplayName="IsLessThanOrEqualValue" Category="FC_Validaciones">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="e796fdf5-c793-4f56-bffe-a54564fee76c" Description="Ensures that the value of the specified property is greater than a particular value (or greater than the value of another property) " Name="IsGreaterThan" DisplayName="IsGreaterThan" Category="FC_Validaciones">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="cf6a5010-f0fd-4890-aa98-1916412db8eb" Description="Ensures that the value of the specified property is greater than a particular value (or greater than the value of another property) " Name="IsGreaterThanValue" DisplayName="IsGreaterThanValue" Category="FC_Validaciones">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="ae57a301-e3ca-47f9-8940-a4216a3f61ab" Description="Ensures that the value of the specified property is greater than or equal to a particular value (or greater than or equal to the value of another property) " Name="IsGreaterThanOrEqual" DisplayName="IsGreaterThanOrEqual" Category="FC_Validaciones">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="ff33ff0c-b4d4-491a-a272-ac047ffa5ce0" Description="Ensures that the value of the specified property is greater than or equal to a particular value (or greater than or equal to the value of another property) " Name="IsGreaterThanOrEqualValue" DisplayName="IsGreaterThanOrEqualValue" Category="FC_Validaciones">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="323efb9d-dfe9-4820-8af0-39d43a17c087" Description="Ensures that the value of the specified property matches the given regular expression. " Name="IsRegularExpressionValidator" DisplayName="IsRegularExpressionValidator" Category="FC_Validaciones">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="3aaac37d-6ac1-40ac-adfc-54e9c03baa9d" Description="Ensures that the value of the specified property matches the given regular expression. " Name="IsRegularExpressionValidatorValue" DisplayName="IsRegularExpressionValidatorValue" Category="FC_Validaciones">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="ed5a306f-4f15-4718-8d76-cb8bf79b90b7" Description="Ensures that the value of the specified property is a valid email address format." Name="IsEmailValidator" DisplayName="IsEmailValidator" Category="FC_Validaciones">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="70e66f28-ddd7-4169-9a75-717dde097d48" Description="Ensures that the value of the specified property is a valid Url format." Name="IsUrlValidator" DisplayName="IsUrlValidator" Category="FC_Validaciones">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="b0155733-1119-44ff-af2b-093574c3e897" Description="Ensures that the length of a particular string property is within the specified range" Name="IsLength" DisplayName="IsLength" Category="FC_Validaciones">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="ee175fd9-e238-4260-9743-2b75debc38a4" Description="Determines the size of this column in bytes" Name="Length1" DisplayName="Length1" DefaultValue="50" Category="Definition">
+          <Attributes>
+            <ClrAttribute Name="System.ComponentModel.TypeConverter">
+              <Parameters>
+                <AttributeParameter Value="typeof(nHydrate.Dsl.Design.Converters.TextLengthConverter)" />
+              </Parameters>
+            </ClrAttribute>
+          </Attributes>
+          <Type>
+            <ExternalTypeMoniker Name="/System/Int32" />
+          </Type>
+        </DomainProperty>
       </Properties>
       <ElementMergeDirectives>
         <ElementMergeDirective>
@@ -659,6 +822,11 @@
         <DomainProperty Id="5d5f712c-bc88-4720-895a-d550d32f5d61" Description="Determines the order generated scripts are run" Name="PrecedenceOrder" DisplayName="Precedence Order" DefaultValue="0" IsBrowsable="false">
           <Type>
             <ExternalTypeMoniker Name="/System/Int32" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="eb725392-588d-43c4-96b9-8871b0743405" Description="Indica el Nombre de la Clase a Generarse" Name="ClassName" DisplayName="Class Name" Category="Definition">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -1627,6 +1795,66 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
+    <DomainClass Id="84e5b158-6146-4530-ac83-e6f96d82d087" Description="Description for nHydrate.Dsl.Methods" Name="Methods" DisplayName="Methods" Namespace="nHydrate.Dsl">
+      <Properties>
+        <DomainProperty Id="c1f01b67-9fd8-45f4-9e86-6c8e4970a1e3" Description="Nombre del Metodo" Name="Name" DisplayName="Name" Category="Definition" IsElementName="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="e95d9763-7854-4209-99df-2675bccbcc08" Description="Indica el tipo de dato a retornar" Name="ReturnType" DisplayName="Return Type" Category="Definition">
+          <Attributes>
+            <ClrAttribute Name="System.ComponentModel.Editor">
+              <Parameters>
+                <AttributeParameter Value="typeof(Editor.TypeNameEditor), typeof(System.Drawing.Design.UITypeEditor)" />
+              </Parameters>
+            </ClrAttribute>
+          </Attributes>
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="d91ab49c-e200-49da-a19a-25eaad6640cd" Description="Indica los parametros que recibe el metodo" Name="Parametros" DisplayName="Parametros" Kind="CustomStorage" Category="Definition">
+          <Type>
+            <ExternalTypeMoniker Name="/System.Collections.Generic/List&lt;nHydrate.Dsl.MyCustomCode.MethodParameters&gt;" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="c0cfa119-7340-4467-a8fd-6f27ae6d6ffb" Description="Nombre del StoredProcedure a Ejecutar en el DataLayer" Name="StoredProcedure" DisplayName="Stored Procedure" Category="Definition">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="6dd6c242-f655-41ab-845c-4eec5a068a91" Description="Indica si se agregaran los objetos de paginacion" Name="AddPaging" DisplayName="Add Paging" DefaultValue="false" Category="Definition">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="99265c53-b326-4f3a-8a65-232259c14d21" Description="Indica si el metodo retornara los resultados en Json" Name="MustReturnJson" DisplayName="Must Return Json" DefaultValue="true" Category="Definition">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="746fbba1-e907-49b3-bcbd-91e768c8666b" Description="Description for nHydrate.Dsl.UIView" Name="UIView" DisplayName="UIView" Namespace="nHydrate.Dsl">
+      <Properties>
+        <DomainProperty Id="5436c53f-aa9a-4a1a-a052-8d81048f1468" Description="Nombre del view" Name="Name" DisplayName="Name" Category="Definition" IsElementName="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="53fbd914-c924-4c25-86fe-50e0e233a5f8" Description="Lista de Campos en la Vista" Name="Fields" DisplayName="Fields" Kind="CustomStorage" Category="Definition">
+          <Type>
+            <ExternalTypeMoniker Name="/System.Collections.Generic/List&lt;nHydrate.Dsl.MyCustomCode.UIField&gt;" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="7d264911-2880-4a4e-a617-1d0029c6dbf6" Description="Indica el Nombre Con el Cual busca la descripciones de los campos en la DB." Name="ObjectDbDescription" DisplayName="Object Db Description" Category="Definition">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
   </Classes>
   <Relationships>
     <DomainRelationship Id="cd23608d-a10a-4e2e-9ff7-0897d5701618" Description="" Name="nHydrateModelHasEntities" DisplayName="nHydrate Model Has Elements" Namespace="nHydrate.Dsl" IsEmbedding="true">
@@ -2212,6 +2440,38 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
+    <DomainRelationship Id="fd2c2901-9209-4512-8d70-0957a09b846f" Description="Description for nHydrate.Dsl.EntityHasMethod" Name="EntityHasMethod" DisplayName="Entity Has Method" Namespace="nHydrate.Dsl" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="bc920dfa-cfee-4699-85a4-0b14d8327107" Description="Description for nHydrate.Dsl.EntityHasMethod.Entity" Name="Entity" DisplayName="Entity" PropertyName="Method" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Method">
+          <RolePlayer>
+            <DomainClassMoniker Name="Entity" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="4460ac74-4a36-4bde-9da8-56ca9a90830c" Description="Description for nHydrate.Dsl.EntityHasMethod.Methods" Name="Methods" DisplayName="Methods" PropertyName="Entity" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Entity">
+          <RolePlayer>
+            <DomainClassMoniker Name="Methods" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="f32db288-1c34-4d0b-968b-b59b0047d235" Description="Description for nHydrate.Dsl.EntityHasUIView" Name="EntityHasUIView" DisplayName="Entity Has UIView" Namespace="nHydrate.Dsl" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="157804b5-6c1f-4d49-81c9-78babc2d4123" Description="Description for nHydrate.Dsl.EntityHasUIView.Entity" Name="Entity" DisplayName="Entity" PropertyName="UIView" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="UIView">
+          <RolePlayer>
+            <DomainClassMoniker Name="Entity" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="416b4b7a-3600-4d84-8da7-5267873e76b1" Description="Description for nHydrate.Dsl.EntityHasUIView.UIView" Name="UIView" DisplayName="UIView" PropertyName="Entity" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Entity">
+          <RolePlayer>
+            <DomainClassMoniker Name="UIView" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
   </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
@@ -2355,6 +2615,13 @@
         <EnumerationLiteral Description="" Name="ImageUrl" Value="13" />
       </Literals>
     </DomainEnumeration>
+    <ExternalType Name="List&lt;nHydrate.Dsl.MyCustomCode.MethodParameters&gt;" Namespace="System.Collections.Generic">
+      <Notes>Lista de Parametros</Notes>
+    </ExternalType>
+    <ExternalType Name="List&lt;nHydrate.Dsl.MyCustomCode.UIField&gt;" Namespace="System.Collections.Generic">
+      <Notes>Lista de UI Campos</Notes>
+    </ExternalType>
+    <ExternalType Name="List&lt;nHydrate.Dsl.MyCustomCode.AuditColumns&gt;" Namespace="System.Collections.Generic" />
   </Types>
   <Shapes>
     <CompartmentShape Id="88c528eb-f5e8-45fd-a37f-3f092cf148d8" Description="" Name="EntityShape" DisplayName="Entity Shape" Namespace="nHydrate.Dsl" HasCustomConstructor="true" GeneratesDoubleDerived="true" TooltipType="Variable" FixedTooltipText="Entity Shape" TextColor="White" ExposesTextColor="true" FillColor="0, 122, 204" OutlineColor="Gray" InitialWidth="2" InitialHeight="0.3" OutlineThickness="0.01" FillGradientMode="None" ExposesOutlineColorAsProperty="true" ExposesFillColorAsProperty="true" ExposesOutlineDashStyleAsProperty="true" Geometry="Rectangle">
@@ -2390,6 +2657,8 @@
         <IconDecorator Name="EntityIconDecorator" DisplayName="Entity Icon Decorator" DefaultIcon="Resources\Entity.png" />
       </ShapeHasDecorators>
       <Compartment FillColor="WhiteSmoke" TitleFillColor="Gainsboro" Name="EntityFieldCompartment" Title="Fields" />
+      <Compartment FillColor="WhiteSmoke" TitleFillColor="Gainsboro" Name="EntityMethodCompartment" Title="Methods" />
+      <Compartment FillColor="WhiteSmoke" TitleFillColor="Gainsboro" Name="EntityUIViewCompartment" Title="UIView" />
     </CompartmentShape>
     <CompartmentShape Id="07b75a7a-ef2b-4128-a9e3-7157cd97f6ed" Description="" Name="StoredProcedureShape" DisplayName="Stored Procedure Shape" Namespace="nHydrate.Dsl" HasCustomConstructor="true" GeneratesDoubleDerived="true" TooltipType="Variable" FixedTooltipText="Stored Procedure Shape" FillColor="255, 224, 192" OutlineColor="192, 255, 192" InitialWidth="2" InitialHeight="0.3" OutlineThickness="0.01" FillGradientMode="None" HasDefaultConnectionPoints="true" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.25" VerticalOffset="0">
@@ -2589,6 +2858,15 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="indexModules">
             <DomainRelationshipMoniker Name="nHydrateModelHasIndexModules" />
           </XmlRelationshipData>
+          <XmlPropertyData XmlName="namespace">
+            <DomainPropertyMoniker Name="nHydrateModel/Namespace" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="determineTrackinColumns">
+            <DomainPropertyMoniker Name="nHydrateModel/DetermineTrackinColumns" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="auditColumns">
+            <DomainPropertyMoniker Name="nHydrateModel/AuditColumns" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="Entity" MonikerAttributeName="name" SerializeId="true" MonikerElementName="entityMoniker" ElementName="entity" MonikerTypeName="EntityMoniker">
@@ -2666,6 +2944,24 @@
           <XmlPropertyData XmlName="isTenant">
             <DomainPropertyMoniker Name="Entity/IsTenant" />
           </XmlPropertyData>
+          <XmlPropertyData XmlName="generate">
+            <DomainPropertyMoniker Name="Entity/Generate" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="addValidators">
+            <DomainPropertyMoniker Name="Entity/AddValidators" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="isComplexType">
+            <DomainPropertyMoniker Name="Entity/IsComplexType" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="storeCodeFluent">
+            <DomainPropertyMoniker Name="Entity/StoreCodeFluent" />
+          </XmlPropertyData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="method">
+            <DomainRelationshipMoniker Name="EntityHasMethod" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="uIView">
+            <DomainRelationshipMoniker Name="EntityHasUIView" />
+          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="NHydrateModelHasEntities" MonikerAttributeName="" SerializeId="true" MonikerElementName="nHydrateModelHasEntitiesMoniker" ElementName="nHydrateModelHasEntities" MonikerTypeName="NHydrateModelHasEntitiesMoniker">
@@ -2801,6 +3097,69 @@
           <XmlPropertyData XmlName="importedDefaultName">
             <DomainPropertyMoniker Name="Field/ImportedDefaultName" />
           </XmlPropertyData>
+          <XmlPropertyData XmlName="isTrackingColumn">
+            <DomainPropertyMoniker Name="Field/IsTrackingColumn" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="isRequired">
+            <DomainPropertyMoniker Name="Field/IsRequired" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="isNotEqual">
+            <DomainPropertyMoniker Name="Field/IsNotEqual" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="isNotEqualName">
+            <DomainPropertyMoniker Name="Field/IsNotEqualName" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="isEqual">
+            <DomainPropertyMoniker Name="Field/IsEqual" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="isEqualName">
+            <DomainPropertyMoniker Name="Field/IsEqualName" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="isLengthValue">
+            <DomainPropertyMoniker Name="Field/IsLengthValue" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="isLessThan">
+            <DomainPropertyMoniker Name="Field/IsLessThan" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="isLessThanValueField">
+            <DomainPropertyMoniker Name="Field/IsLessThanValueField" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="isLessThanOrEqual">
+            <DomainPropertyMoniker Name="Field/IsLessThanOrEqual" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="isLessThanOrEqualValue">
+            <DomainPropertyMoniker Name="Field/IsLessThanOrEqualValue" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="isGreaterThan">
+            <DomainPropertyMoniker Name="Field/IsGreaterThan" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="isGreaterThanValue">
+            <DomainPropertyMoniker Name="Field/IsGreaterThanValue" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="isGreaterThanOrEqual">
+            <DomainPropertyMoniker Name="Field/IsGreaterThanOrEqual" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="isGreaterThanOrEqualValue">
+            <DomainPropertyMoniker Name="Field/IsGreaterThanOrEqualValue" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="isRegularExpressionValidator">
+            <DomainPropertyMoniker Name="Field/IsRegularExpressionValidator" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="isRegularExpressionValidatorValue">
+            <DomainPropertyMoniker Name="Field/IsRegularExpressionValidatorValue" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="isEmailValidator">
+            <DomainPropertyMoniker Name="Field/IsEmailValidator" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="isUrlValidator">
+            <DomainPropertyMoniker Name="Field/IsUrlValidator" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="isLength">
+            <DomainPropertyMoniker Name="Field/IsLength" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="length1">
+            <DomainPropertyMoniker Name="Field/Length1" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="EntityShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="entityShapeMoniker" ElementName="entityShape" MonikerTypeName="EntityShapeMoniker">
@@ -2864,6 +3223,9 @@
           </XmlPropertyData>
           <XmlPropertyData XmlName="precedenceOrder">
             <DomainPropertyMoniker Name="StoredProcedure/PrecedenceOrder" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="className">
+            <DomainPropertyMoniker Name="StoredProcedure/ClassName" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
@@ -3459,6 +3821,49 @@
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
+      <XmlClassData TypeName="Methods" MonikerAttributeName="" SerializeId="true" MonikerElementName="methodsMoniker" ElementName="methods" MonikerTypeName="MethodsMoniker">
+        <DomainClassMoniker Name="Methods" />
+        <ElementData>
+          <XmlPropertyData XmlName="name">
+            <DomainPropertyMoniker Name="Methods/Name" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="returnType">
+            <DomainPropertyMoniker Name="Methods/ReturnType" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="parametros">
+            <DomainPropertyMoniker Name="Methods/Parametros" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="storedProcedure">
+            <DomainPropertyMoniker Name="Methods/StoredProcedure" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="addPaging">
+            <DomainPropertyMoniker Name="Methods/AddPaging" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="mustReturnJson">
+            <DomainPropertyMoniker Name="Methods/MustReturnJson" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="UIView" MonikerAttributeName="" SerializeId="true" MonikerElementName="uIViewMoniker" ElementName="uIView" MonikerTypeName="UIViewMoniker">
+        <DomainClassMoniker Name="UIView" />
+        <ElementData>
+          <XmlPropertyData XmlName="name">
+            <DomainPropertyMoniker Name="UIView/Name" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="fields">
+            <DomainPropertyMoniker Name="UIView/Fields" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="objectDbDescription">
+            <DomainPropertyMoniker Name="UIView/ObjectDbDescription" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="EntityHasMethod" MonikerAttributeName="" SerializeId="true" MonikerElementName="entityHasMethodMoniker" ElementName="entityHasMethod" MonikerTypeName="EntityHasMethodMoniker">
+        <DomainRelationshipMoniker Name="EntityHasMethod" />
+      </XmlClassData>
+      <XmlClassData TypeName="EntityHasUIView" MonikerAttributeName="" SerializeId="true" MonikerElementName="entityHasUIViewMoniker" ElementName="entityHasUIView" MonikerTypeName="EntityHasUIViewMoniker">
+        <DomainRelationshipMoniker Name="EntityHasUIView" />
+      </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="nHydrateExplorer">
@@ -3771,6 +4176,28 @@
           <PropertyDisplayed>
             <PropertyPath>
               <DomainPropertyMoniker Name="Field/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </CompartmentMap>
+        <CompartmentMap>
+          <CompartmentMoniker Name="EntityShape/EntityMethodCompartment" />
+          <ElementsDisplayed>
+            <DomainPath>EntityHasMethod.Method/!Methods</DomainPath>
+          </ElementsDisplayed>
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Methods/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </CompartmentMap>
+        <CompartmentMap>
+          <CompartmentMoniker Name="EntityShape/EntityUIViewCompartment" />
+          <ElementsDisplayed>
+            <DomainPath>EntityHasUIView.UIView/!UIView</DomainPath>
+          </ElementsDisplayed>
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="UIView/Name" />
             </PropertyPath>
           </PropertyDisplayed>
         </CompartmentMap>

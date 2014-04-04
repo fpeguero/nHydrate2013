@@ -157,3 +157,5 @@ C:\nHydrate2013\trunk\Source\nHydrate.DslPackage\obj\Debug\nHydrate.DslPackage.p
 C:\nHydrate2013\trunk\Source\nHydrate.DslPackage\obj\Debug\nHydrate.DslPackage.latest.pkgdef
 C:\nHydrate2013\trunk\Source\nHydrate.DslPackage\obj\Debug\extension.vsixmanifest
 C:\nHydrate2013\trunk\Source\nHydrate.DslPackage\obj\Debug\nHydrate.DslPackage.Forms.ImportObjectDbFromSqlInline.resources
+C:\nHydrate2013\trunk\Source\nHydrate.DslPackage\bin\Debug\CodeFluent.Runtime.dll
+C:\nHydrate2013\trunk\Source\nHydrate.DslPackage\bin\Debug\CodeFluent.Runtime.pdb

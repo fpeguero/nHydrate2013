@@ -101,6 +101,9 @@
   </Target>
   -->
   <ItemGroup>
+    <Reference Include="CodeFluent.Runtime">
+      <HintPath>..\..\..\..\Desarrollos\@@Works\ModelLife\CodeFluent2\CodeFluent\CodeFluent.Runtime\bin\Debug\CodeFluent.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
@@ -130,6 +133,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.XML" />
     <Reference Include="WindowsBase">
@@ -178,6 +182,34 @@
     <Compile Include="Design\Forms\SQLForm.Designer.cs">
       <DependentUpon>SQLForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyCustomCode\AuditColumns.cs" />
+    <Compile Include="MyCustomCode\ClrTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyCustomCode\CollectionTypeConverter.cs" />
+    <Compile Include="MyCustomCode\DropDown\ActionReturnTypeEditor.cs" />
+    <Compile Include="MyCustomCode\DropDown\ActionTypeEditor.cs" />
+    <Compile Include="MyCustomCode\DropDown\CollectionTypeEditor.cs" />
+    <Compile Include="MyCustomCode\DropDown\ComboBoxDisplayAndValueEditor.cs" />
+    <Compile Include="MyCustomCode\DropDown\DropDownBase.cs" />
+    <Compile Include="MyCustomCode\DropDown\EditorTypeEditor.cs" />
+    <Compile Include="MyCustomCode\DropDown\FormatosEditor.cs" />
+    <Compile Include="MyCustomCode\DropDown\FormMethodTypeEditor.cs" />
+    <Compile Include="MyCustomCode\DropDown\ObjectDBNameEditor.cs" />
+    <Compile Include="MyCustomCode\DropDown\ParameterDefaultValueEditor.cs" />
+    <Compile Include="MyCustomCode\DropDown\UIFieldEditorsDefaultValueEditor.cs" />
+    <Compile Include="MyCustomCode\ImageLibrary.cs" />
+    <Compile Include="MyCustomCode\ImageLibraryIndex.cs" />
+    <Compile Include="MyCustomCode\ImagesList.cs" />
+    <Compile Include="MyCustomCode\MethodParameters.cs" />
+    <Compile Include="MyCustomCode\TypeNameControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyCustomCode\TypeNameControl.Designer.cs">
+      <DependentUpon>TypeNameControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyCustomCode\TypeNameEditor.cs" />
+    <Compile Include="MyCustomCode\UIField.cs" />
     <Compile Include="Objects\ModelerOptions.cs" />
     <Compile Include="Objects\PrecedenceUtil.cs" />
     <Compile Include="Objects\RefactorTableCombine.cs" />
@@ -196,8 +228,10 @@
     <Compile Include="Overrides\IContainerParent.cs" />
     <Compile Include="Overrides\EntityViewAssociationConnector.cs" />
     <Compile Include="Overrides\EntityHasViews.cs" />
+    <Compile Include="Overrides\Methods.cs" />
     <Compile Include="Overrides\nHydrateToolboxHelper.cs" />
     <Compile Include="Overrides\FunctionShape.cs" />
+    <Compile Include="Overrides\UIView.cs" />
     <Compile Include="Overrides\ViewSerializer.cs" />
     <Compile Include="Overrides\IndexColumn.cs" />
     <Compile Include="Overrides\Index.cs" />
@@ -284,6 +318,8 @@
     <Compile Include="Validation\nHydrateModel.cs" />
     <Compile Include="Validation\StoredProcedureValidation.cs" />
     <Compile Include="Validation\ValidationHelper.cs" />
+    <None Include="Custom\DslDefinition.dsl" />
+    <None Include="Custom\DslDefinition.dsl.diagram" />
     <None Include="GeneratedCode\nHydrateSchema.xsd">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -383,7 +419,9 @@
       <DependentUpon>DomainModelResx.tt</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources.Strings.resx" />
     <EmbeddedResource Include="Resources\fieldcalculated.png" />
+    <EmbeddedResource Include="Resources.CodeFluentImageLibrary.bmp" />
     <Content Include="Resources\function.bmp" />
     <Content Include="Resources\nhydrate32-boxed.ico" />
     <Content Include="Resources\storedproc.bmp" />

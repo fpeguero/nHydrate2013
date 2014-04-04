@@ -505,6 +505,42 @@
     <value>Database</value>
     <comment>Category for DomainProperty &apos;TenantColumnName&apos; on DomainClass &apos;nHydrateModel&apos;</comment>
   </data>
+  <data name="nHydrate.Dsl.nHydrateModel/Namespace.Description" xml:space="preserve">
+    <value>Indica el Namespace a Generar para todos los objetos en este modelo.</value>
+    <comment>Description for DomainProperty &apos;Namespace&apos; on DomainClass &apos;nHydrateModel&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.nHydrateModel/Namespace.DisplayName" xml:space="preserve">
+    <value>Namespace</value>
+    <comment>DisplayName for DomainProperty &apos;Namespace&apos; on DomainClass &apos;nHydrateModel&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.nHydrateModel/Namespace.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;Namespace&apos; on DomainClass &apos;nHydrateModel&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.nHydrateModel/DetermineTrackinColumns.Description" xml:space="preserve">
+    <value>Indica al Modelo que determine las columnas predeterminadas de autitorias, para que no la use al editar.</value>
+    <comment>Description for DomainProperty &apos;DetermineTrackinColumns&apos; on DomainClass &apos;nHydrateModel&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.nHydrateModel/DetermineTrackinColumns.DisplayName" xml:space="preserve">
+    <value>Determine Trackin Columns</value>
+    <comment>DisplayName for DomainProperty &apos;DetermineTrackinColumns&apos; on DomainClass &apos;nHydrateModel&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.nHydrateModel/DetermineTrackinColumns.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;DetermineTrackinColumns&apos; on DomainClass &apos;nHydrateModel&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.nHydrateModel/AuditColumns.Description" xml:space="preserve">
+    <value>Indica las Columnas de Auditorias</value>
+    <comment>Description for DomainProperty &apos;AuditColumns&apos; on DomainClass &apos;nHydrateModel&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.nHydrateModel/AuditColumns.DisplayName" xml:space="preserve">
+    <value>Audit Columns</value>
+    <comment>DisplayName for DomainProperty &apos;AuditColumns&apos; on DomainClass &apos;nHydrateModel&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.nHydrateModel/AuditColumns.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;AuditColumns&apos; on DomainClass &apos;nHydrateModel&apos;</comment>
+  </data>
   <data name="nHydrate.Dsl.Entity.Description" xml:space="preserve">
     <value>This object represents a database table</value>
     <comment>Description for DomainClass &apos;Entity&apos;</comment>
@@ -692,6 +728,54 @@
   <data name="nHydrate.Dsl.Entity/IsTenant.Category" xml:space="preserve">
     <value>Database</value>
     <comment>Category for DomainProperty &apos;IsTenant&apos; on DomainClass &apos;Entity&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Entity/Generate.Description" xml:space="preserve">
+    <value>Indica si esta Entidad se generara</value>
+    <comment>Description for DomainProperty &apos;Generate&apos; on DomainClass &apos;Entity&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Entity/Generate.DisplayName" xml:space="preserve">
+    <value>Generate</value>
+    <comment>DisplayName for DomainProperty &apos;Generate&apos; on DomainClass &apos;Entity&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Entity/Generate.Category" xml:space="preserve">
+    <value>Generation</value>
+    <comment>Category for DomainProperty &apos;Generate&apos; on DomainClass &apos;Entity&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Entity/AddValidators.Description" xml:space="preserve">
+    <value>Indica si se creara una clase para validar esta entidad - FluentValidator</value>
+    <comment>Description for DomainProperty &apos;AddValidators&apos; on DomainClass &apos;Entity&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Entity/AddValidators.DisplayName" xml:space="preserve">
+    <value>Add Validators</value>
+    <comment>DisplayName for DomainProperty &apos;AddValidators&apos; on DomainClass &apos;Entity&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Entity/AddValidators.Category" xml:space="preserve">
+    <value>Generation</value>
+    <comment>Category for DomainProperty &apos;AddValidators&apos; on DomainClass &apos;Entity&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Entity/IsComplexType.Description" xml:space="preserve">
+    <value>Indica si es un LightEntity, y no se hacen operacione Crear y actualizar ni borrar</value>
+    <comment>Description for DomainProperty &apos;IsComplexType&apos; on DomainClass &apos;Entity&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Entity/IsComplexType.DisplayName" xml:space="preserve">
+    <value>Is Complex Type</value>
+    <comment>DisplayName for DomainProperty &apos;IsComplexType&apos; on DomainClass &apos;Entity&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Entity/IsComplexType.Category" xml:space="preserve">
+    <value>Generation</value>
+    <comment>Category for DomainProperty &apos;IsComplexType&apos; on DomainClass &apos;Entity&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Entity/StoreCodeFluent.Description" xml:space="preserve">
+    <value>Indica el Store en la generacion de CodeFluent</value>
+    <comment>Description for DomainProperty &apos;StoreCodeFluent&apos; on DomainClass &apos;Entity&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Entity/StoreCodeFluent.DisplayName" xml:space="preserve">
+    <value>Store Code Fluent</value>
+    <comment>DisplayName for DomainProperty &apos;StoreCodeFluent&apos; on DomainClass &apos;Entity&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Entity/StoreCodeFluent.Category" xml:space="preserve">
+    <value>Generation</value>
+    <comment>Category for DomainProperty &apos;StoreCodeFluent&apos; on DomainClass &apos;Entity&apos;</comment>
   </data>
   <data name="nHydrate.Dsl.Field.Description" xml:space="preserve">
     <value>This is a field in a database table</value>
@@ -1029,6 +1113,258 @@
     <value>Imported Default Name</value>
     <comment>DisplayName for DomainProperty &apos;ImportedDefaultName&apos; on DomainClass &apos;Field&apos;</comment>
   </data>
+  <data name="nHydrate.Dsl.Field/IsTrackingColumn.Description" xml:space="preserve">
+    <value>Indica que la columna es de auditoria</value>
+    <comment>Description for DomainProperty &apos;IsTrackingColumn&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsTrackingColumn.DisplayName" xml:space="preserve">
+    <value>Is Tracking Column</value>
+    <comment>DisplayName for DomainProperty &apos;IsTrackingColumn&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsTrackingColumn.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;IsTrackingColumn&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsRequired.Description" xml:space="preserve">
+    <value>Ensures that the specified property is not null. </value>
+    <comment>Description for DomainProperty &apos;IsRequired&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsRequired.DisplayName" xml:space="preserve">
+    <value>IsRequired</value>
+    <comment>DisplayName for DomainProperty &apos;IsRequired&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsRequired.Category" xml:space="preserve">
+    <value>FC_Validaciones</value>
+    <comment>Category for DomainProperty &apos;IsRequired&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsNotEqual.Description" xml:space="preserve">
+    <value>Ensures that the value of the specified property is not equal to a particular value</value>
+    <comment>Description for DomainProperty &apos;IsNotEqual&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsNotEqual.DisplayName" xml:space="preserve">
+    <value>IsNotEqual</value>
+    <comment>DisplayName for DomainProperty &apos;IsNotEqual&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsNotEqual.Category" xml:space="preserve">
+    <value>FC_Validaciones</value>
+    <comment>Category for DomainProperty &apos;IsNotEqual&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsNotEqualName.Description" xml:space="preserve">
+    <value>Field to Compare Value</value>
+    <comment>Description for DomainProperty &apos;IsNotEqualName&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsNotEqualName.DisplayName" xml:space="preserve">
+    <value>IsNotEqualName</value>
+    <comment>DisplayName for DomainProperty &apos;IsNotEqualName&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsNotEqualName.Category" xml:space="preserve">
+    <value>FC_Validaciones</value>
+    <comment>Category for DomainProperty &apos;IsNotEqualName&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsEqual.Description" xml:space="preserve">
+    <value>Ensures that the value of the specified property is equal to a particular value</value>
+    <comment>Description for DomainProperty &apos;IsEqual&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsEqual.DisplayName" xml:space="preserve">
+    <value>IsEqual</value>
+    <comment>DisplayName for DomainProperty &apos;IsEqual&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsEqual.Category" xml:space="preserve">
+    <value>FC_Validaciones</value>
+    <comment>Category for DomainProperty &apos;IsEqual&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsEqualName.Description" xml:space="preserve">
+    <value>Field to Compare Value</value>
+    <comment>Description for DomainProperty &apos;IsEqualName&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsEqualName.DisplayName" xml:space="preserve">
+    <value>IsEqualName</value>
+    <comment>DisplayName for DomainProperty &apos;IsEqualName&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsEqualName.Category" xml:space="preserve">
+    <value>FC_Validaciones</value>
+    <comment>Category for DomainProperty &apos;IsEqualName&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsLengthValue.Description" xml:space="preserve">
+    <value>Ensures that the length of a particular string property is within the specified range</value>
+    <comment>Description for DomainProperty &apos;IsLengthValue&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsLengthValue.DisplayName" xml:space="preserve">
+    <value>IsLengthValue</value>
+    <comment>DisplayName for DomainProperty &apos;IsLengthValue&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsLengthValue.Category" xml:space="preserve">
+    <value>FC_Validaciones</value>
+    <comment>Category for DomainProperty &apos;IsLengthValue&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsLessThan.Description" xml:space="preserve">
+    <value>Ensures that the value of the specified property is less than a particular value</value>
+    <comment>Description for DomainProperty &apos;IsLessThan&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsLessThan.DisplayName" xml:space="preserve">
+    <value>IsLessThan</value>
+    <comment>DisplayName for DomainProperty &apos;IsLessThan&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsLessThan.Category" xml:space="preserve">
+    <value>FC_Validaciones</value>
+    <comment>Category for DomainProperty &apos;IsLessThan&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsLessThanValueField.Description" xml:space="preserve">
+    <value>Ensures that the value of the specified property is less than a particular value</value>
+    <comment>Description for DomainProperty &apos;IsLessThanValueField&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsLessThanValueField.DisplayName" xml:space="preserve">
+    <value>IsLessThanValueField</value>
+    <comment>DisplayName for DomainProperty &apos;IsLessThanValueField&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsLessThanValueField.Category" xml:space="preserve">
+    <value>FC_Validaciones</value>
+    <comment>Category for DomainProperty &apos;IsLessThanValueField&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsLessThanOrEqual.Description" xml:space="preserve">
+    <value>Ensures that the value of the specified property is less than or equal to a particular value (or less than or equal to the value of another property) </value>
+    <comment>Description for DomainProperty &apos;IsLessThanOrEqual&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsLessThanOrEqual.DisplayName" xml:space="preserve">
+    <value>IsLessThanOrEqual</value>
+    <comment>DisplayName for DomainProperty &apos;IsLessThanOrEqual&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsLessThanOrEqual.Category" xml:space="preserve">
+    <value>FC_Validaciones</value>
+    <comment>Category for DomainProperty &apos;IsLessThanOrEqual&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsLessThanOrEqualValue.Description" xml:space="preserve">
+    <value>Ensures that the value of the specified property is less than a particular value</value>
+    <comment>Description for DomainProperty &apos;IsLessThanOrEqualValue&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsLessThanOrEqualValue.DisplayName" xml:space="preserve">
+    <value>IsLessThanOrEqualValue</value>
+    <comment>DisplayName for DomainProperty &apos;IsLessThanOrEqualValue&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsLessThanOrEqualValue.Category" xml:space="preserve">
+    <value>FC_Validaciones</value>
+    <comment>Category for DomainProperty &apos;IsLessThanOrEqualValue&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsGreaterThan.Description" xml:space="preserve">
+    <value>Ensures that the value of the specified property is greater than a particular value (or greater than the value of another property) </value>
+    <comment>Description for DomainProperty &apos;IsGreaterThan&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsGreaterThan.DisplayName" xml:space="preserve">
+    <value>IsGreaterThan</value>
+    <comment>DisplayName for DomainProperty &apos;IsGreaterThan&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsGreaterThan.Category" xml:space="preserve">
+    <value>FC_Validaciones</value>
+    <comment>Category for DomainProperty &apos;IsGreaterThan&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsGreaterThanValue.Description" xml:space="preserve">
+    <value>Ensures that the value of the specified property is greater than a particular value (or greater than the value of another property) </value>
+    <comment>Description for DomainProperty &apos;IsGreaterThanValue&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsGreaterThanValue.DisplayName" xml:space="preserve">
+    <value>IsGreaterThanValue</value>
+    <comment>DisplayName for DomainProperty &apos;IsGreaterThanValue&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsGreaterThanValue.Category" xml:space="preserve">
+    <value>FC_Validaciones</value>
+    <comment>Category for DomainProperty &apos;IsGreaterThanValue&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsGreaterThanOrEqual.Description" xml:space="preserve">
+    <value>Ensures that the value of the specified property is greater than or equal to a particular value (or greater than or equal to the value of another property) </value>
+    <comment>Description for DomainProperty &apos;IsGreaterThanOrEqual&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsGreaterThanOrEqual.DisplayName" xml:space="preserve">
+    <value>IsGreaterThanOrEqual</value>
+    <comment>DisplayName for DomainProperty &apos;IsGreaterThanOrEqual&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsGreaterThanOrEqual.Category" xml:space="preserve">
+    <value>FC_Validaciones</value>
+    <comment>Category for DomainProperty &apos;IsGreaterThanOrEqual&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsGreaterThanOrEqualValue.Description" xml:space="preserve">
+    <value>Ensures that the value of the specified property is greater than or equal to a particular value (or greater than or equal to the value of another property) </value>
+    <comment>Description for DomainProperty &apos;IsGreaterThanOrEqualValue&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsGreaterThanOrEqualValue.DisplayName" xml:space="preserve">
+    <value>IsGreaterThanOrEqualValue</value>
+    <comment>DisplayName for DomainProperty &apos;IsGreaterThanOrEqualValue&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsGreaterThanOrEqualValue.Category" xml:space="preserve">
+    <value>FC_Validaciones</value>
+    <comment>Category for DomainProperty &apos;IsGreaterThanOrEqualValue&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsRegularExpressionValidator.Description" xml:space="preserve">
+    <value>Ensures that the value of the specified property matches the given regular expression. </value>
+    <comment>Description for DomainProperty &apos;IsRegularExpressionValidator&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsRegularExpressionValidator.DisplayName" xml:space="preserve">
+    <value>IsRegularExpressionValidator</value>
+    <comment>DisplayName for DomainProperty &apos;IsRegularExpressionValidator&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsRegularExpressionValidator.Category" xml:space="preserve">
+    <value>FC_Validaciones</value>
+    <comment>Category for DomainProperty &apos;IsRegularExpressionValidator&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsRegularExpressionValidatorValue.Description" xml:space="preserve">
+    <value>Ensures that the value of the specified property matches the given regular expression. </value>
+    <comment>Description for DomainProperty &apos;IsRegularExpressionValidatorValue&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsRegularExpressionValidatorValue.DisplayName" xml:space="preserve">
+    <value>IsRegularExpressionValidatorValue</value>
+    <comment>DisplayName for DomainProperty &apos;IsRegularExpressionValidatorValue&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsRegularExpressionValidatorValue.Category" xml:space="preserve">
+    <value>FC_Validaciones</value>
+    <comment>Category for DomainProperty &apos;IsRegularExpressionValidatorValue&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsEmailValidator.Description" xml:space="preserve">
+    <value>Ensures that the value of the specified property is a valid email address format.</value>
+    <comment>Description for DomainProperty &apos;IsEmailValidator&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsEmailValidator.DisplayName" xml:space="preserve">
+    <value>IsEmailValidator</value>
+    <comment>DisplayName for DomainProperty &apos;IsEmailValidator&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsEmailValidator.Category" xml:space="preserve">
+    <value>FC_Validaciones</value>
+    <comment>Category for DomainProperty &apos;IsEmailValidator&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsUrlValidator.Description" xml:space="preserve">
+    <value>Ensures that the value of the specified property is a valid Url format.</value>
+    <comment>Description for DomainProperty &apos;IsUrlValidator&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsUrlValidator.DisplayName" xml:space="preserve">
+    <value>IsUrlValidator</value>
+    <comment>DisplayName for DomainProperty &apos;IsUrlValidator&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsUrlValidator.Category" xml:space="preserve">
+    <value>FC_Validaciones</value>
+    <comment>Category for DomainProperty &apos;IsUrlValidator&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsLength.Description" xml:space="preserve">
+    <value>Ensures that the length of a particular string property is within the specified range</value>
+    <comment>Description for DomainProperty &apos;IsLength&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsLength.DisplayName" xml:space="preserve">
+    <value>IsLength</value>
+    <comment>DisplayName for DomainProperty &apos;IsLength&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/IsLength.Category" xml:space="preserve">
+    <value>FC_Validaciones</value>
+    <comment>Category for DomainProperty &apos;IsLength&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/Length1.Description" xml:space="preserve">
+    <value>Determines the size of this column in bytes</value>
+    <comment>Description for DomainProperty &apos;Length1&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/Length1.DisplayName" xml:space="preserve">
+    <value>Length1</value>
+    <comment>DisplayName for DomainProperty &apos;Length1&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Field/Length1.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;Length1&apos; on DomainClass &apos;Field&apos;</comment>
+  </data>
   <data name="nHydrate.Dsl.StoredProcedure.Description" xml:space="preserve">
     <value>This is a custom database stored procedure</value>
     <comment>Description for DomainClass &apos;StoredProcedure&apos;</comment>
@@ -1152,6 +1488,18 @@
   <data name="nHydrate.Dsl.StoredProcedure/PrecedenceOrder.DisplayName" xml:space="preserve">
     <value>Precedence Order</value>
     <comment>DisplayName for DomainProperty &apos;PrecedenceOrder&apos; on DomainClass &apos;StoredProcedure&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.StoredProcedure/ClassName.Description" xml:space="preserve">
+    <value>Indica el Nombre de la Clase a Generarse</value>
+    <comment>Description for DomainProperty &apos;ClassName&apos; on DomainClass &apos;StoredProcedure&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.StoredProcedure/ClassName.DisplayName" xml:space="preserve">
+    <value>Class Name</value>
+    <comment>DisplayName for DomainProperty &apos;ClassName&apos; on DomainClass &apos;StoredProcedure&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.StoredProcedure/ClassName.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;ClassName&apos; on DomainClass &apos;StoredProcedure&apos;</comment>
   </data>
   <data name="nHydrate.Dsl.StoredProcedureField.Description" xml:space="preserve">
     <value></value>
@@ -2573,6 +2921,130 @@
     <value>Module Id</value>
     <comment>DisplayName for DomainProperty &apos;ModuleId&apos; on DomainClass &apos;IndexModule&apos;</comment>
   </data>
+  <data name="nHydrate.Dsl.Methods.Description" xml:space="preserve">
+    <value>Description for nHydrate.Dsl.Methods</value>
+    <comment>Description for DomainClass &apos;Methods&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Methods.DisplayName" xml:space="preserve">
+    <value>Methods</value>
+    <comment>DisplayName for DomainClass &apos;Methods&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Methods/Name.Description" xml:space="preserve">
+    <value>Nombre del Metodo</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;Methods&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Methods/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;Methods&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Methods/Name.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;Name&apos; on DomainClass &apos;Methods&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Methods/ReturnType.Description" xml:space="preserve">
+    <value>Indica el tipo de dato a retornar</value>
+    <comment>Description for DomainProperty &apos;ReturnType&apos; on DomainClass &apos;Methods&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Methods/ReturnType.DisplayName" xml:space="preserve">
+    <value>Return Type</value>
+    <comment>DisplayName for DomainProperty &apos;ReturnType&apos; on DomainClass &apos;Methods&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Methods/ReturnType.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;ReturnType&apos; on DomainClass &apos;Methods&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Methods/Parametros.Description" xml:space="preserve">
+    <value>Indica los parametros que recibe el metodo</value>
+    <comment>Description for DomainProperty &apos;Parametros&apos; on DomainClass &apos;Methods&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Methods/Parametros.DisplayName" xml:space="preserve">
+    <value>Parametros</value>
+    <comment>DisplayName for DomainProperty &apos;Parametros&apos; on DomainClass &apos;Methods&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Methods/Parametros.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;Parametros&apos; on DomainClass &apos;Methods&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Methods/StoredProcedure.Description" xml:space="preserve">
+    <value>Nombre del StoredProcedure a Ejecutar en el DataLayer</value>
+    <comment>Description for DomainProperty &apos;StoredProcedure&apos; on DomainClass &apos;Methods&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Methods/StoredProcedure.DisplayName" xml:space="preserve">
+    <value>Stored Procedure</value>
+    <comment>DisplayName for DomainProperty &apos;StoredProcedure&apos; on DomainClass &apos;Methods&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Methods/StoredProcedure.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;StoredProcedure&apos; on DomainClass &apos;Methods&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Methods/AddPaging.Description" xml:space="preserve">
+    <value>Indica si se agregaran los objetos de paginacion</value>
+    <comment>Description for DomainProperty &apos;AddPaging&apos; on DomainClass &apos;Methods&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Methods/AddPaging.DisplayName" xml:space="preserve">
+    <value>Add Paging</value>
+    <comment>DisplayName for DomainProperty &apos;AddPaging&apos; on DomainClass &apos;Methods&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Methods/AddPaging.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;AddPaging&apos; on DomainClass &apos;Methods&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Methods/MustReturnJson.Description" xml:space="preserve">
+    <value>Indica si el metodo retornara los resultados en Json</value>
+    <comment>Description for DomainProperty &apos;MustReturnJson&apos; on DomainClass &apos;Methods&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Methods/MustReturnJson.DisplayName" xml:space="preserve">
+    <value>Must Return Json</value>
+    <comment>DisplayName for DomainProperty &apos;MustReturnJson&apos; on DomainClass &apos;Methods&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.Methods/MustReturnJson.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;MustReturnJson&apos; on DomainClass &apos;Methods&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.UIView.Description" xml:space="preserve">
+    <value>Description for nHydrate.Dsl.UIView</value>
+    <comment>Description for DomainClass &apos;UIView&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.UIView.DisplayName" xml:space="preserve">
+    <value>UIView</value>
+    <comment>DisplayName for DomainClass &apos;UIView&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.UIView/Name.Description" xml:space="preserve">
+    <value>Nombre del view</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;UIView&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.UIView/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;UIView&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.UIView/Name.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;Name&apos; on DomainClass &apos;UIView&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.UIView/Fields.Description" xml:space="preserve">
+    <value>Lista de Campos en la Vista</value>
+    <comment>Description for DomainProperty &apos;Fields&apos; on DomainClass &apos;UIView&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.UIView/Fields.DisplayName" xml:space="preserve">
+    <value>Fields</value>
+    <comment>DisplayName for DomainProperty &apos;Fields&apos; on DomainClass &apos;UIView&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.UIView/Fields.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;Fields&apos; on DomainClass &apos;UIView&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.UIView/ObjectDbDescription.Description" xml:space="preserve">
+    <value>Indica el Nombre Con el Cual busca la descripciones de los campos en la DB.</value>
+    <comment>Description for DomainProperty &apos;ObjectDbDescription&apos; on DomainClass &apos;UIView&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.UIView/ObjectDbDescription.DisplayName" xml:space="preserve">
+    <value>Object Db Description</value>
+    <comment>DisplayName for DomainProperty &apos;ObjectDbDescription&apos; on DomainClass &apos;UIView&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.UIView/ObjectDbDescription.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;ObjectDbDescription&apos; on DomainClass &apos;UIView&apos;</comment>
+  </data>
   <data name="nHydrate.Dsl.nHydrateModelHasEntities.Description" xml:space="preserve">
     <value></value>
     <comment>Description for DomainClass &apos;nHydrateModelHasEntities&apos;</comment>
@@ -3705,6 +4177,70 @@
     <value>NHydrate Model</value>
     <comment>PropertyDisplayName for DomainRole &apos;IndexModule&apos; on DomainRelationship &apos;nHydrateModelHasIndexModules&apos;</comment>
   </data>
+  <data name="nHydrate.Dsl.EntityHasMethod.Description" xml:space="preserve">
+    <value>Description for nHydrate.Dsl.EntityHasMethod</value>
+    <comment>Description for DomainClass &apos;EntityHasMethod&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.EntityHasMethod.DisplayName" xml:space="preserve">
+    <value>Entity Has Method</value>
+    <comment>DisplayName for DomainClass &apos;EntityHasMethod&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.EntityHasMethod/Entity.Description" xml:space="preserve">
+    <value>Description for nHydrate.Dsl.EntityHasMethod.Entity</value>
+    <comment>Description for DomainRole &apos;Entity&apos; on DomainRelationship &apos;EntityHasMethod&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.EntityHasMethod/Entity.DisplayName" xml:space="preserve">
+    <value>Entity</value>
+    <comment>DisplayName for DomainRole &apos;Entity&apos; on DomainRelationship &apos;EntityHasMethod&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.EntityHasMethod/Entity.PropertyDisplayName" xml:space="preserve">
+    <value>Method</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Entity&apos; on DomainRelationship &apos;EntityHasMethod&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.EntityHasMethod/Methods.Description" xml:space="preserve">
+    <value>Description for nHydrate.Dsl.EntityHasMethod.Methods</value>
+    <comment>Description for DomainRole &apos;Methods&apos; on DomainRelationship &apos;EntityHasMethod&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.EntityHasMethod/Methods.DisplayName" xml:space="preserve">
+    <value>Methods</value>
+    <comment>DisplayName for DomainRole &apos;Methods&apos; on DomainRelationship &apos;EntityHasMethod&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.EntityHasMethod/Methods.PropertyDisplayName" xml:space="preserve">
+    <value>Entity</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Methods&apos; on DomainRelationship &apos;EntityHasMethod&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.EntityHasUIView.Description" xml:space="preserve">
+    <value>Description for nHydrate.Dsl.EntityHasUIView</value>
+    <comment>Description for DomainClass &apos;EntityHasUIView&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.EntityHasUIView.DisplayName" xml:space="preserve">
+    <value>Entity Has UIView</value>
+    <comment>DisplayName for DomainClass &apos;EntityHasUIView&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.EntityHasUIView/Entity.Description" xml:space="preserve">
+    <value>Description for nHydrate.Dsl.EntityHasUIView.Entity</value>
+    <comment>Description for DomainRole &apos;Entity&apos; on DomainRelationship &apos;EntityHasUIView&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.EntityHasUIView/Entity.DisplayName" xml:space="preserve">
+    <value>Entity</value>
+    <comment>DisplayName for DomainRole &apos;Entity&apos; on DomainRelationship &apos;EntityHasUIView&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.EntityHasUIView/Entity.PropertyDisplayName" xml:space="preserve">
+    <value>UIView</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Entity&apos; on DomainRelationship &apos;EntityHasUIView&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.EntityHasUIView/UIView.Description" xml:space="preserve">
+    <value>Description for nHydrate.Dsl.EntityHasUIView.UIView</value>
+    <comment>Description for DomainRole &apos;UIView&apos; on DomainRelationship &apos;EntityHasUIView&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.EntityHasUIView/UIView.DisplayName" xml:space="preserve">
+    <value>UIView</value>
+    <comment>DisplayName for DomainRole &apos;UIView&apos; on DomainRelationship &apos;EntityHasUIView&apos;</comment>
+  </data>
+  <data name="nHydrate.Dsl.EntityHasUIView/UIView.PropertyDisplayName" xml:space="preserve">
+    <value>Entity</value>
+    <comment>PropertyDisplayName for DomainRole &apos;UIView&apos; on DomainRelationship &apos;EntityHasUIView&apos;</comment>
+  </data>
   <data name="nHydrate.Dsl.DataTypeConstants/BigInt.DisplayName" xml:space="preserve">
     <value>BigInt</value>
     <comment>Display name for EnumerationLiteral &apos;BigInt&apos; on DomainEnumeration &apos;DataTypeConstants&apos;</comment>
@@ -4331,6 +4867,14 @@
   </data>
   <data name="EntityShapeEntityFieldCompartmentTitle" xml:space="preserve">
     <value>Fields</value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="EntityShapeEntityMethodCompartmentTitle" xml:space="preserve">
+    <value>Methods</value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="EntityShapeEntityUIViewCompartmentTitle" xml:space="preserve">
+    <value>UIView</value>
     <comment>Compartment title</comment>
   </data>
   <data name="nHydrate.Dsl.StoredProcedureShape.Description" xml:space="preserve">

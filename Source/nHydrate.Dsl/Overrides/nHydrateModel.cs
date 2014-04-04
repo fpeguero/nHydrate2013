@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using nHydrate.Dsl.MyCustomCode;
 using nHydrate.Generator.Common.Util;
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
 
@@ -292,6 +293,21 @@ namespace nHydrate.Dsl
 			}
 		}
 #endif
+
+
+
+        List<AuditColumns> _listParameters = new List<AuditColumns>();
+
+        public List<AuditColumns> GetAuditColumnsValue()
+        {
+            return _listParameters;
+        }
+
+        public void SetAuditColumnsValue(List<AuditColumns> value)
+        {
+            if (value != null)
+                _listParameters = value;
+        }
 
 	}
 

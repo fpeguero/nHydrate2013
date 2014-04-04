@@ -1054,6 +1054,8 @@ namespace nHydrate.Dsl
 		/// Rule to update compartments when an item is added to the list
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.EntityHasFields), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.EntityHasMethod), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.EntityHasUIView), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.ViewHasFields), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.StoredProcedureHasFields), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.StoredProcedureHasParameters), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
@@ -1079,6 +1081,16 @@ namespace nHydrate.Dsl
 				{
 					global::System.Collections.IEnumerable elements = GetEntityForEntityShapeEntityFieldCompartmentFromLastLink((global::nHydrate.Dsl.EntityHasFields)e.ModelElement);
 					UpdateCompartments(elements, typeof(global::nHydrate.Dsl.EntityShape), "EntityFieldCompartment", repaintOnly);
+				}
+				if(e.ModelElement is global::nHydrate.Dsl.EntityHasMethod)
+				{
+					global::System.Collections.IEnumerable elements = GetEntityForEntityShapeEntityMethodCompartmentFromLastLink((global::nHydrate.Dsl.EntityHasMethod)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::nHydrate.Dsl.EntityShape), "EntityMethodCompartment", repaintOnly);
+				}
+				if(e.ModelElement is global::nHydrate.Dsl.EntityHasUIView)
+				{
+					global::System.Collections.IEnumerable elements = GetEntityForEntityShapeEntityUIViewCompartmentFromLastLink((global::nHydrate.Dsl.EntityHasUIView)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::nHydrate.Dsl.EntityShape), "EntityUIViewCompartment", repaintOnly);
 				}
 				if(e.ModelElement is global::nHydrate.Dsl.ViewHasFields)
 				{
@@ -1116,6 +1128,34 @@ namespace nHydrate.Dsl
 				return new DslModeling::ModelElement[] {result};
 			}
 			internal static global::System.Collections.ICollection GetEntityForEntityShapeEntityFieldCompartment(global::nHydrate.Dsl.Field root)
+			{
+				// Segments 1 and 0
+				global::nHydrate.Dsl.Entity result = root.Entity;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			internal static global::System.Collections.ICollection GetEntityForEntityShapeEntityMethodCompartmentFromLastLink(global::nHydrate.Dsl.EntityHasMethod root)
+			{
+				// Segment 0
+				global::nHydrate.Dsl.Entity result = root.Entity;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			internal static global::System.Collections.ICollection GetEntityForEntityShapeEntityMethodCompartment(global::nHydrate.Dsl.Methods root)
+			{
+				// Segments 1 and 0
+				global::nHydrate.Dsl.Entity result = root.Entity;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			internal static global::System.Collections.ICollection GetEntityForEntityShapeEntityUIViewCompartmentFromLastLink(global::nHydrate.Dsl.EntityHasUIView root)
+			{
+				// Segment 0
+				global::nHydrate.Dsl.Entity result = root.Entity;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			internal static global::System.Collections.ICollection GetEntityForEntityShapeEntityUIViewCompartment(global::nHydrate.Dsl.UIView root)
 			{
 				// Segments 1 and 0
 				global::nHydrate.Dsl.Entity result = root.Entity;
@@ -1238,6 +1278,8 @@ namespace nHydrate.Dsl
 		/// Rule to update compartments when an items is removed from the list
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.EntityHasFields), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.EntityHasMethod), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.EntityHasUIView), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.ViewHasFields), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.StoredProcedureHasFields), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.StoredProcedureHasParameters), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
@@ -1261,6 +1303,16 @@ namespace nHydrate.Dsl
 				{
 					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetEntityForEntityShapeEntityFieldCompartmentFromLastLink((global::nHydrate.Dsl.EntityHasFields)e.ModelElement);
 					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::nHydrate.Dsl.EntityShape), "EntityFieldCompartment", repaintOnly);
+				}
+				if(e.ModelElement is global::nHydrate.Dsl.EntityHasMethod)
+				{
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetEntityForEntityShapeEntityMethodCompartmentFromLastLink((global::nHydrate.Dsl.EntityHasMethod)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::nHydrate.Dsl.EntityShape), "EntityMethodCompartment", repaintOnly);
+				}
+				if(e.ModelElement is global::nHydrate.Dsl.EntityHasUIView)
+				{
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetEntityForEntityShapeEntityUIViewCompartmentFromLastLink((global::nHydrate.Dsl.EntityHasUIView)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::nHydrate.Dsl.EntityShape), "EntityUIViewCompartment", repaintOnly);
 				}
 				if(e.ModelElement is global::nHydrate.Dsl.ViewHasFields)
 				{
@@ -1294,6 +1346,8 @@ namespace nHydrate.Dsl
 		/// Rule to update compartments when the property on an item being displayed changes.
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.Field), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.Methods), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.UIView), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.ViewField), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.StoredProcedureField), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.StoredProcedureParameter), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
@@ -1317,6 +1371,16 @@ namespace nHydrate.Dsl
 				{
 					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetEntityForEntityShapeEntityFieldCompartment((global::nHydrate.Dsl.Field)e.ModelElement);
 					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::nHydrate.Dsl.EntityShape), "EntityFieldCompartment", repaintOnly);
+				}
+				if(e.ModelElement is global::nHydrate.Dsl.Methods && e.DomainProperty.Id == global::nHydrate.Dsl.Methods.NameDomainPropertyId)
+				{
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetEntityForEntityShapeEntityMethodCompartment((global::nHydrate.Dsl.Methods)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::nHydrate.Dsl.EntityShape), "EntityMethodCompartment", repaintOnly);
+				}
+				if(e.ModelElement is global::nHydrate.Dsl.UIView && e.DomainProperty.Id == global::nHydrate.Dsl.UIView.NameDomainPropertyId)
+				{
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetEntityForEntityShapeEntityUIViewCompartment((global::nHydrate.Dsl.UIView)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::nHydrate.Dsl.EntityShape), "EntityUIViewCompartment", repaintOnly);
 				}
 				if(e.ModelElement is global::nHydrate.Dsl.ViewField && e.DomainProperty.Id == global::nHydrate.Dsl.ViewField.NameDomainPropertyId)
 				{
@@ -1350,6 +1414,8 @@ namespace nHydrate.Dsl
 		/// Rule to update compartments when a roleplayer change happens
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.EntityHasFields), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.EntityHasMethod), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.EntityHasUIView), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.ViewHasFields), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.StoredProcedureHasFields), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.StoredProcedureHasParameters), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
@@ -1394,6 +1460,60 @@ namespace nHydrate.Dsl
 					{
 						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetEntityForEntityShapeEntityFieldCompartment((global::nHydrate.Dsl.Field)e.NewRolePlayer);
 						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::nHydrate.Dsl.EntityShape), "EntityFieldCompartment", repaintOnly);
+					}
+				}
+				if(typeof(global::nHydrate.Dsl.EntityHasMethod).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(e.DomainRole.IsSource)
+					{
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetEntityForEntityShapeEntityMethodCompartmentFromLastLink((global::nHydrate.Dsl.Methods)e.OldRolePlayer);
+						//foreach(DslModeling::ModelElement element in oldElements)
+						//{
+						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
+						//	foreach(DslDiagrams::PresentationElement pel in pels)
+						//	{
+						//		global::nHydrate.Dsl.EntityShape compartmentShape = pel as global::nHydrate.Dsl.EntityShape;
+						//		if(compartmentShape != null)
+						//		{
+						//			compartmentShape.GetCompartmentMappings()[1].InitializeCompartmentShape(compartmentShape);
+						//		}
+						//	}
+						//}
+						
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetEntityForEntityShapeEntityMethodCompartmentFromLastLink((global::nHydrate.Dsl.EntityHasMethod)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::nHydrate.Dsl.EntityShape), "EntityMethodCompartment", repaintOnly);
+					}
+					else 
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetEntityForEntityShapeEntityMethodCompartment((global::nHydrate.Dsl.Methods)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::nHydrate.Dsl.EntityShape), "EntityMethodCompartment", repaintOnly);
+					}
+				}
+				if(typeof(global::nHydrate.Dsl.EntityHasUIView).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(e.DomainRole.IsSource)
+					{
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetEntityForEntityShapeEntityUIViewCompartmentFromLastLink((global::nHydrate.Dsl.UIView)e.OldRolePlayer);
+						//foreach(DslModeling::ModelElement element in oldElements)
+						//{
+						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
+						//	foreach(DslDiagrams::PresentationElement pel in pels)
+						//	{
+						//		global::nHydrate.Dsl.EntityShape compartmentShape = pel as global::nHydrate.Dsl.EntityShape;
+						//		if(compartmentShape != null)
+						//		{
+						//			compartmentShape.GetCompartmentMappings()[2].InitializeCompartmentShape(compartmentShape);
+						//		}
+						//	}
+						//}
+						
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetEntityForEntityShapeEntityUIViewCompartmentFromLastLink((global::nHydrate.Dsl.EntityHasUIView)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::nHydrate.Dsl.EntityShape), "EntityUIViewCompartment", repaintOnly);
+					}
+					else 
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetEntityForEntityShapeEntityUIViewCompartment((global::nHydrate.Dsl.UIView)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::nHydrate.Dsl.EntityShape), "EntityUIViewCompartment", repaintOnly);
 					}
 				}
 				if(typeof(global::nHydrate.Dsl.ViewHasFields).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
@@ -1538,6 +1658,8 @@ namespace nHydrate.Dsl
 		/// Rule to update compartments when the order of items in the list changes.
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.EntityHasFields), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.EntityHasMethod), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.EntityHasUIView), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.ViewHasFields), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.StoredProcedureHasFields), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::nHydrate.Dsl.StoredProcedureHasParameters), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
@@ -1563,6 +1685,22 @@ namespace nHydrate.Dsl
 					{
 						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetEntityForEntityShapeEntityFieldCompartment((global::nHydrate.Dsl.Field)e.CounterpartRolePlayer);
 						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::nHydrate.Dsl.EntityShape), "EntityFieldCompartment", repaintOnly);
+					}
+				}
+				if(typeof(global::nHydrate.Dsl.EntityHasMethod).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(!e.CounterpartDomainRole.IsSource)
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetEntityForEntityShapeEntityMethodCompartment((global::nHydrate.Dsl.Methods)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::nHydrate.Dsl.EntityShape), "EntityMethodCompartment", repaintOnly);
+					}
+				}
+				if(typeof(global::nHydrate.Dsl.EntityHasUIView).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(!e.CounterpartDomainRole.IsSource)
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetEntityForEntityShapeEntityUIViewCompartment((global::nHydrate.Dsl.UIView)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::nHydrate.Dsl.EntityShape), "EntityUIViewCompartment", repaintOnly);
 					}
 				}
 				if(typeof(global::nHydrate.Dsl.ViewHasFields).IsAssignableFrom(e.DomainRelationship.ImplementationClass))

@@ -397,7 +397,7 @@ namespace nHydrate.Dsl
 				{
 					localCompartmentsOffset = baseCompartmentDescriptions.Length;
 				}
-				compartmentDescriptions = new DslDiagrams::ElementListCompartmentDescription[1+localCompartmentsOffset];
+				compartmentDescriptions = new DslDiagrams::ElementListCompartmentDescription[3+localCompartmentsOffset];
 				
 				if(baseCompartmentDescriptions!=null)
 				{
@@ -411,6 +411,24 @@ namespace nHydrate.Dsl
 						null, null,
 						false);
 					compartmentDescriptions[localCompartmentsOffset+0] = descriptor;
+				}
+				{
+					string title = global::nHydrate.Dsl.nHydrateDomainModel.SingletonResourceManager.GetString("EntityShapeEntityMethodCompartmentTitle");
+					DslDiagrams::ElementListCompartmentDescription descriptor = new DslDiagrams::ElementListCompartmentDescription("EntityMethodCompartment", title, 
+						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Gainsboro), false, 
+						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.WhiteSmoke), false,
+						null, null,
+						false);
+					compartmentDescriptions[localCompartmentsOffset+1] = descriptor;
+				}
+				{
+					string title = global::nHydrate.Dsl.nHydrateDomainModel.SingletonResourceManager.GetString("EntityShapeEntityUIViewCompartmentTitle");
+					DslDiagrams::ElementListCompartmentDescription descriptor = new DslDiagrams::ElementListCompartmentDescription("EntityUIViewCompartment", title, 
+						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Gainsboro), false, 
+						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.WhiteSmoke), false,
+						null, null,
+						false);
+					compartmentDescriptions[localCompartmentsOffset+2] = descriptor;
 				}
 			}
 			
@@ -444,7 +462,7 @@ namespace nHydrate.Dsl
 					{
 						localCompartmentMappingsOffset = baseMappings.Length;
 					}
-					DslDiagrams::CompartmentMapping[] mappings = new DslDiagrams::CompartmentMapping[1+localCompartmentMappingsOffset];
+					DslDiagrams::CompartmentMapping[] mappings = new DslDiagrams::CompartmentMapping[3+localCompartmentMappingsOffset];
 					
 					if(baseMappings!=null)
 					{
@@ -455,6 +473,22 @@ namespace nHydrate.Dsl
 																				global::nHydrate.Dsl.Field.NameDomainPropertyId, 
 																				global::nHydrate.Dsl.Field.DomainClassId, 
 																				GetElementsFromEntityForEntityFieldCompartment,
+																				null,
+																				null,
+																				null);
+					mappings[localCompartmentMappingsOffset+1] = new DslDiagrams::ElementListCompartmentMapping(
+																				"EntityMethodCompartment", 
+																				global::nHydrate.Dsl.Methods.NameDomainPropertyId, 
+																				global::nHydrate.Dsl.Methods.DomainClassId, 
+																				GetElementsFromEntityForEntityMethodCompartment,
+																				null,
+																				null,
+																				null);
+					mappings[localCompartmentMappingsOffset+2] = new DslDiagrams::ElementListCompartmentMapping(
+																				"EntityUIViewCompartment", 
+																				global::nHydrate.Dsl.UIView.NameDomainPropertyId, 
+																				global::nHydrate.Dsl.UIView.DomainClassId, 
+																				GetElementsFromEntityForEntityUIViewCompartment,
 																				null,
 																				null,
 																				null);
@@ -492,6 +526,20 @@ namespace nHydrate.Dsl
 				global::nHydrate.Dsl.Entity root = (global::nHydrate.Dsl.Entity)rootElement;
 					// Segments 0 and 1
 					DslModeling::LinkedElementCollection<global::nHydrate.Dsl.Field> result = root.Fields;
+				return result;
+			}
+			internal static global::System.Collections.IList GetElementsFromEntityForEntityMethodCompartment(DslModeling::ModelElement rootElement)
+			{
+				global::nHydrate.Dsl.Entity root = (global::nHydrate.Dsl.Entity)rootElement;
+					// Segments 0 and 1
+					DslModeling::LinkedElementCollection<global::nHydrate.Dsl.Methods> result = root.Method;
+				return result;
+			}
+			internal static global::System.Collections.IList GetElementsFromEntityForEntityUIViewCompartment(DslModeling::ModelElement rootElement)
+			{
+				global::nHydrate.Dsl.Entity root = (global::nHydrate.Dsl.Entity)rootElement;
+					// Segments 0 and 1
+					DslModeling::LinkedElementCollection<global::nHydrate.Dsl.UIView> result = root.UIView;
 				return result;
 			}
 			#endregion

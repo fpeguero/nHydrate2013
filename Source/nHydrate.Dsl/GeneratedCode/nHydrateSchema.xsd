@@ -348,6 +348,24 @@
             <xsd:documentation>Determines the name of the column to hold tenant information for tenant tables</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <!-- Property: Namespace -->
+        <xsd:attribute name="namespace" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Indica el Namespace a Generar para todos los objetos en este modelo.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: DetermineTrackinColumns -->
+        <xsd:attribute name="determineTrackinColumns" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Indica al Modelo que determine las columnas predeterminadas de autitorias, para que no la use al editar.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: AuditColumns -->
+        <xsd:attribute name="auditColumns" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Indica las Columnas de Auditorias</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -513,6 +531,36 @@
               </xsd:sequence>
             </xsd:complexType>
           </xsd:element>
+          <!-- Relationship: EntityHasMethod -->
+          <xsd:element name="method" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of EntityHasMethod</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="entityHasMethod" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of EntityHasMethod needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: EntityHasUIView -->
+          <xsd:element name="uIView" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of EntityHasUIView</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="entityHasUIView" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of EntityHasUIView needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
         </xsd:sequence>
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
@@ -608,6 +656,30 @@
         <xsd:attribute name="isTenant" type="xsd:boolean" >
           <xsd:annotation>
             <xsd:documentation>Determines if the table is tenant based</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Generate -->
+        <xsd:attribute name="generate" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Indica si esta Entidad se generara</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: AddValidators -->
+        <xsd:attribute name="addValidators" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Indica si se creara una clase para validar esta entidad - FluentValidator</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsComplexType -->
+        <xsd:attribute name="isComplexType" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Indica si es un LightEntity, y no se hacen operacione Crear y actualizar ni borrar</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: StoreCodeFluent -->
+        <xsd:attribute name="storeCodeFluent" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Indica el Store en la generacion de CodeFluent</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
       </xsd:extension>
@@ -845,6 +917,132 @@
             <xsd:documentation>The imported database default name</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <!-- Property: IsTrackingColumn -->
+        <xsd:attribute name="isTrackingColumn" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Indica que la columna es de auditoria</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsRequired -->
+        <xsd:attribute name="isRequired" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Ensures that the specified property is not null. </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsNotEqual -->
+        <xsd:attribute name="isNotEqual" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Ensures that the value of the specified property is not equal to a particular value</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsNotEqualName -->
+        <xsd:attribute name="isNotEqualName" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Field to Compare Value</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsEqual -->
+        <xsd:attribute name="isEqual" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Ensures that the value of the specified property is equal to a particular value</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsEqualName -->
+        <xsd:attribute name="isEqualName" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Field to Compare Value</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsLengthValue -->
+        <xsd:attribute name="isLengthValue" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Ensures that the length of a particular string property is within the specified range</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsLessThan -->
+        <xsd:attribute name="isLessThan" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Ensures that the value of the specified property is less than a particular value</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsLessThanValueField -->
+        <xsd:attribute name="isLessThanValueField" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Ensures that the value of the specified property is less than a particular value</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsLessThanOrEqual -->
+        <xsd:attribute name="isLessThanOrEqual" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Ensures that the value of the specified property is less than or equal to a particular value (or less than or equal to the value of another property) </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsLessThanOrEqualValue -->
+        <xsd:attribute name="isLessThanOrEqualValue" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Ensures that the value of the specified property is less than a particular value</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsGreaterThan -->
+        <xsd:attribute name="isGreaterThan" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Ensures that the value of the specified property is greater than a particular value (or greater than the value of another property) </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsGreaterThanValue -->
+        <xsd:attribute name="isGreaterThanValue" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Ensures that the value of the specified property is greater than a particular value (or greater than the value of another property) </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsGreaterThanOrEqual -->
+        <xsd:attribute name="isGreaterThanOrEqual" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Ensures that the value of the specified property is greater than or equal to a particular value (or greater than or equal to the value of another property) </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsGreaterThanOrEqualValue -->
+        <xsd:attribute name="isGreaterThanOrEqualValue" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Ensures that the value of the specified property is greater than or equal to a particular value (or greater than or equal to the value of another property) </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsRegularExpressionValidator -->
+        <xsd:attribute name="isRegularExpressionValidator" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Ensures that the value of the specified property matches the given regular expression. </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsRegularExpressionValidatorValue -->
+        <xsd:attribute name="isRegularExpressionValidatorValue" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Ensures that the value of the specified property matches the given regular expression. </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsEmailValidator -->
+        <xsd:attribute name="isEmailValidator" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Ensures that the value of the specified property is a valid email address format.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsUrlValidator -->
+        <xsd:attribute name="isUrlValidator" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Ensures that the value of the specified property is a valid Url format.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsLength -->
+        <xsd:attribute name="isLength" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Ensures that the length of a particular string property is within the specified range</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Length1 -->
+        <xsd:attribute name="length1" type="xsd:integer" >
+          <xsd:annotation>
+            <xsd:documentation>Determines the size of this column in bytes</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -985,6 +1183,12 @@
         <xsd:attribute name="precedenceOrder" type="xsd:integer" >
           <xsd:annotation>
             <xsd:documentation>Determines the order generated scripts are run</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ClassName -->
+        <xsd:attribute name="className" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Indica el Nombre de la Clase a Generarse</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
       </xsd:extension>
@@ -2395,6 +2599,124 @@
     </xsd:complexContent>
   </xsd:complexType>
   
+  <!-- Methods -->
+  <xsd:element name="methods" type="Methods" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="Methods">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Nombre del Metodo</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ReturnType -->
+        <xsd:attribute name="returnType" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Indica el tipo de dato a retornar</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Parametros -->
+        <xsd:attribute name="parametros" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Indica los parametros que recibe el metodo</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: StoredProcedure -->
+        <xsd:attribute name="storedProcedure" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Nombre del StoredProcedure a Ejecutar en el DataLayer</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: AddPaging -->
+        <xsd:attribute name="addPaging" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Indica si se agregaran los objetos de paginacion</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: MustReturnJson -->
+        <xsd:attribute name="mustReturnJson" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Indica si el metodo retornara los resultados en Json</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Methods Moniker -->
+  <xsd:element name="methodsMoniker" type="MethodsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="MethodsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Methods instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- UIView -->
+  <xsd:element name="uIView" type="UIView" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="UIView">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Nombre del view</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Fields -->
+        <xsd:attribute name="fields" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Lista de Campos en la Vista</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ObjectDbDescription -->
+        <xsd:attribute name="objectDbDescription" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Indica el Nombre Con el Cual busca la descripciones de los campos en la DB.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- UIView Moniker -->
+  <xsd:element name="uIViewMoniker" type="UIViewMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="UIViewMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for UIView instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
   <!-- nHydrateModelHasEntities -->
   <xsd:element name="nHydrateModelHasEntities" abstract="true" type="NHydrateModelHasEntities" substitutionGroup="core:modelElement" />
   <xsd:complexType name="NHydrateModelHasEntities" abstract="true" >
@@ -3701,6 +4023,86 @@
   <xsd:complexType name="NHydrateModelHasIndexModulesMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for nHydrateModelHasIndexModules instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- EntityHasMethod -->
+  <xsd:element name="entityHasMethod" type="EntityHasMethod" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="EntityHasMethod">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Methods -->
+          <xsd:element ref="methods" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- EntityHasMethod Moniker -->
+  <xsd:element name="entityHasMethodMoniker" type="EntityHasMethodMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="EntityHasMethodMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for EntityHasMethod instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- EntityHasUIView -->
+  <xsd:element name="entityHasUIView" type="EntityHasUIView" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="EntityHasUIView">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end UIView -->
+          <xsd:element ref="uIView" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- EntityHasUIView Moniker -->
+  <xsd:element name="entityHasUIViewMoniker" type="EntityHasUIViewMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="EntityHasUIViewMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for EntityHasUIView instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">

@@ -10,3 +10,4 @@ C:\nHydrate2013\trunk\Source\nHydrate.Generator.DataTransfer\bin\Debug\nHydrate.
 C:\nHydrate2013\trunk\Source\nHydrate.Generator.DataTransfer\bin\Debug\Microsoft.VisualStudio.Settings.xml
 C:\nHydrate2013\trunk\Source\nHydrate.Generator.DataTransfer\obj\Debug\nHydrate.Generator.DataTransfer.dll
 C:\nHydrate2013\trunk\Source\nHydrate.Generator.DataTransfer\obj\Debug\nHydrate.Generator.DataTransfer.pdb
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.DataTransfer\obj\Debug\nHydrate.Generator.DataTransfer.csprojResolveAssemblyReference.cache

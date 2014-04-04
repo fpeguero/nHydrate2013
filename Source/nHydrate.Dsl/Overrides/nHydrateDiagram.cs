@@ -158,21 +158,25 @@ namespace nHydrate.Dsl
 		private void FieldAdded(object sender, Microsoft.VisualStudio.Modeling.ElementAddedEventArgs e)
 		{
 			var field = e.ModelElement as Field;
-			if (field.Entity == null) return;
-			if (field.Entity.nHydrateModel == null) return;
+		    if ((field.Entity != null) && (field.Entity.nHydrateModel == null))
+		    {
+		        if (!field.Entity.nHydrateModel.IsLoading && field.SortOrder == 0)
+		        {
+		            var maxSortOrder = 1;
+		            if (field.Entity.Fields.Count > 0)
+		                maxSortOrder = field.Entity.Fields.Max(x => x.SortOrder);
 
-			if (!field.Entity.nHydrateModel.IsLoading && field.SortOrder == 0)
-			{
-				var maxSortOrder = 1;
-				if (field.Entity.Fields.Count > 0)
-					maxSortOrder = field.Entity.Fields.Max(x => x.SortOrder);
+		            using (var transaction = this.Store.TransactionManager.BeginTransaction(Guid.NewGuid().ToString()))
+		            {
+		                field.SortOrder = ++maxSortOrder;
+		                transaction.Commit();
+		            }
+		        }
+		    }
 
-				using (var transaction = this.Store.TransactionManager.BeginTransaction(Guid.NewGuid().ToString()))
-				{
-					field.SortOrder = ++maxSortOrder;
-					transaction.Commit();
-				}
-			}
+
+
+
 		}
 
 		private void IndexColumnAdded(object sender, Microsoft.VisualStudio.Modeling.ElementAddedEventArgs e)
