@@ -1,0 +1,8 @@
+C:\nHydrate2013\trunk\Source\WizardControl\bin\Debug\nHydrate.Wizard.dll
+C:\nHydrate2013\trunk\Source\WizardControl\bin\Debug\nHydrate.Wizard.pdb
+C:\nHydrate2013\trunk\Source\WizardControl\obj\Debug\WizardControl.csprojResolveAssemblyReference.cache
+C:\nHydrate2013\trunk\Source\WizardControl\obj\Debug\nHydrate.Wizard.Wizard.resources
+C:\nHydrate2013\trunk\Source\WizardControl\obj\Debug\nHydrate.Wizard.WizardPage.resources
+C:\nHydrate2013\trunk\Source\WizardControl\obj\Debug\WizardControl.csproj.GenerateResource.Cache
+C:\nHydrate2013\trunk\Source\WizardControl\obj\Debug\nHydrate.Wizard.dll
+C:\nHydrate2013\trunk\Source\WizardControl\obj\Debug\nHydrate.Wizard.pdb

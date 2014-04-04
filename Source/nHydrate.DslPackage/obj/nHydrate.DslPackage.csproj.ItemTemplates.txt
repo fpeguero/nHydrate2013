@@ -1,0 +1,2 @@
+c:\MyDatos\My Documentos\Visual Studio 2013\Templates\ItemTemplates\CSharp\1033\Language1.zip
+c:\MyDatos\My Documentos\Visual Studio 2013\Templates\ItemTemplates\VisualBasic\1033\Language1.zip

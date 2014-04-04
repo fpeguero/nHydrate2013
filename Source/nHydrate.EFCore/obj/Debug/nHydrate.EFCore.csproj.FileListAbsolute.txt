@@ -1,0 +1,5 @@
+C:\nHydrate2013\trunk\Source\nHydrate.EFCore\bin\Debug\nHydrate.EFCore.dll
+C:\nHydrate2013\trunk\Source\nHydrate.EFCore\bin\Debug\nHydrate.EFCore.pdb
+C:\nHydrate2013\trunk\Source\nHydrate.EFCore\obj\Debug\nHydrate.EFCore.csprojResolveAssemblyReference.cache
+C:\nHydrate2013\trunk\Source\nHydrate.EFCore\obj\Debug\nHydrate.EFCore.dll
+C:\nHydrate2013\trunk\Source\nHydrate.EFCore\obj\Debug\nHydrate.EFCore.pdb

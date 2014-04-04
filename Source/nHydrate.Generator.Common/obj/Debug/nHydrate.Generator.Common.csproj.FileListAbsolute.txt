@@ -1,0 +1,17 @@
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.Common\bin\Debug\nHydrate.Generator.Common.dll.config
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.Common\bin\Debug\nHydrate.Generator.Common.dll
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.Common\bin\Debug\nHydrate.Generator.Common.pdb
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.Common\bin\Debug\nHydrate.Generator.Common.dll.CodeAnalysisLog.xml
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.Common\bin\Debug\nHydrate.Generator.Common.dll.lastcodeanalysissucceeded
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.Common\obj\Debug\nHydrate.Generator.Common.Forms.CollectionEditorForm.resources
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.Common\obj\Debug\nHydrate.Generator.Common.Forms.ErrorForm.resources
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.Common\obj\Debug\nHydrate.Generator.Common.Exceptions.ThreadExceptionHandlerForm.resources
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.Common\obj\Debug\nHydrate.Generator.Common.Forms.SendErrorForm.resources
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.Common\obj\Debug\nHydrate.Generator.Common.Logging.DebugConsoleWrapper.resources
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.Common\obj\Debug\nHydrate.Generator.Common.Properties.Resources.resources
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.Common\obj\Debug\nHydrate.Generator.Common.csproj.GenerateResource.Cache
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.Common\obj\Debug\nHydrate.Generator.Common.dll
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.Common\obj\Debug\nHydrate.Generator.Common.pdb
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.Common\obj\Debug\nHydrate.Generator.Common.csprojResolveAssemblyReference.cache
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.Common\bin\Debug\Microsoft.VisualStudio.Settings.dll
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.Common\bin\Debug\Microsoft.VisualStudio.Settings.xml

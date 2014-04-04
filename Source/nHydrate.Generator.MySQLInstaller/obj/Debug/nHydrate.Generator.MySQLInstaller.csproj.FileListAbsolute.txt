@@ -1,0 +1,15 @@
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.MySQLInstaller\bin\Debug\nHydrate.Generator.MySQLInstaller.dll
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.MySQLInstaller\bin\Debug\nHydrate.Generator.MySQLInstaller.pdb
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.MySQLInstaller\bin\Debug\nHydrate.Core.SQLGeneration.dll
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.MySQLInstaller\bin\Debug\nHydrate.Generator.Common.dll
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.MySQLInstaller\bin\Debug\nHydrate.Generator.dll
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.MySQLInstaller\bin\Debug\nHydrate.Wizard.dll
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.MySQLInstaller\bin\Debug\Microsoft.VisualStudio.Settings.dll
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.MySQLInstaller\bin\Debug\nHydrate.Core.SQLGeneration.pdb
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.MySQLInstaller\bin\Debug\nHydrate.Generator.Common.pdb
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.MySQLInstaller\bin\Debug\nHydrate.Generator.pdb
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.MySQLInstaller\bin\Debug\nHydrate.Wizard.pdb
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.MySQLInstaller\bin\Debug\Microsoft.VisualStudio.Settings.xml
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.MySQLInstaller\obj\Debug\nHydrate.Generator.MySQLInstaller.csprojResolveAssemblyReference.cache
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.MySQLInstaller\obj\Debug\nHydrate.Generator.MySQLInstaller.dll
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.MySQLInstaller\obj\Debug\nHydrate.Generator.MySQLInstaller.pdb

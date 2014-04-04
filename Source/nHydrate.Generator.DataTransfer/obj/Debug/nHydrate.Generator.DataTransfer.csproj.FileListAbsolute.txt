@@ -1,0 +1,12 @@
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.DataTransfer\bin\Debug\nHydrate.Generator.DataTransfer.dll
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.DataTransfer\bin\Debug\nHydrate.Generator.DataTransfer.pdb
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.DataTransfer\bin\Debug\nHydrate.Generator.Common.dll
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.DataTransfer\bin\Debug\nHydrate.Generator.dll
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.DataTransfer\bin\Debug\nHydrate.Wizard.dll
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.DataTransfer\bin\Debug\Microsoft.VisualStudio.Settings.dll
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.DataTransfer\bin\Debug\nHydrate.Generator.pdb
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.DataTransfer\bin\Debug\nHydrate.Generator.Common.pdb
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.DataTransfer\bin\Debug\nHydrate.Wizard.pdb
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.DataTransfer\bin\Debug\Microsoft.VisualStudio.Settings.xml
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.DataTransfer\obj\Debug\nHydrate.Generator.DataTransfer.dll
+C:\nHydrate2013\trunk\Source\nHydrate.Generator.DataTransfer\obj\Debug\nHydrate.Generator.DataTransfer.pdb

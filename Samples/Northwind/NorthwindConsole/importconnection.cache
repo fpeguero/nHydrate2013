@@ -1,0 +1,10 @@
+<options>
+  <connectionstring />
+  <server>.</server>
+  <database>Northwind</database>
+  <uid />
+  <pwd />
+  <useconnectionstring>False</useconnectionstring>
+  <cachefolder />
+  <usewinauth>True</usewinauth>
+</options>
