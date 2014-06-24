@@ -1,0 +1,181 @@
+﻿<error errorId="314a4008-810c-4584-a853-b922a5cc924e" application="/LM/W3SVC/18/ROOT" host="OSISPC" type="System.ArgumentNullException" message="Value cannot be null.&#xD;&#xA;Parameter name: source" source="System.Core" detail="System.ArgumentNullException: Value cannot be null.&#xD;&#xA;Parameter name: source&#xD;&#xA;   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)&#xD;&#xA;   at ASP._Page_Views_Reportes_General_cshtml.Execute() in c:\nHydrate2013\trunk\Source\PEPPAM\OSIS.PEPPAM.Mvc\Views\Reportes\General.cshtml:line 47&#xD;&#xA;   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.WebPages.StartPage.RunPage()&#xD;&#xA;   at System.Web.WebPages.StartPage.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)&#xD;&#xA;   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)&#xD;&#xA;   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)&#xD;&#xA;   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass1e.&lt;&gt;c__DisplayClass28.&lt;BeginInvokeAction&gt;b__19()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass1e.&lt;BeginInvokeAction&gt;b__1b(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;BeginExecuteCore&gt;b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;BeginExecute&gt;b__15(IAsyncResult asyncResult, Controller controller)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;BeginProcessRequest&gt;b__4(IAsyncResult asyncResult, ProcessRequestState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="fpeguero@gmail.com" time="2014-06-19T17:46:52.8805403Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip,deflate,sdch&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.8,es;q=0.6&#xD;&#xA;HTTP_COOKIE:aejqtheme=ui-lightness; __atuvc=2%7C19; smartstore.customer=dd5bb85d-19ce-42c2-a684-02d67ee5318d; ASP.NET_SessionId=zktndizy00kkvy40c250izlo; __RequestVerificationToken_L1BFUFBBTQ2=z6HG6nmTiuzs59t2NrVTRryWZtrpLdLMHI4Aoi-y3NbPxWl8Wj96iqvPyZQejDNwSMnfU183GzgMYLI5lXCUDuOz9vFZmF2H0iGZ6-7Vxk01; __RequestVerificationToken=fabt5GTahb5edAnAkP2S6ZAYCuPmxu20ZsQGcBqZCU6kf-4cm4Y-1NfEB0rJEarFMFB9GfWla97MZsVDY-GlvK5BSl9Txh2qSl6z-A0VzZo1; peppam=25207ECB4011573FBD59242E926CF51C319D7C40AFE5AE39FA7CE52C9AA4013E0E37F1E5F272E4CED20B50129067600EE87A205628BB2B2064FC7A3AC149417E0065D6E39AB235F2E206689A6B27EDC1669DAF1012FE36384FFD49F84FBE01CF63EBF7FF84AFCB5E44B588B85079D1009345FD3CF33E433ABE337B14B5BBED1F7CE65DB111D3A40C757736A8773747AF880CBC6DAA11CCB38865441EEF26A93659CB3C5F388E878528BEC21090391D7F6762E06CD2F04CCBAB4100AE0561BFBF3065B4706CA2A04C3A7FB007BAE5C19CD61F77984075CF850A8407ADFCF86F1B3C901810AE9010272A464B532969695C1964C8FBE7670346DBB3E292A38293634A6DAC5E5AA9031BABC060DC704C15DCFA94BABE8EDB5F5120A5777065E28D2FF2DE845016D35DC2A60E4E3D1FC0402D16053F2ACBBA8666F461FE859F8DFCF26A5E7AC16E4B4CD295BAE3F53C6C04ADA6028D9D3A135697FCE7AFA9324D9A238430FED7489A41A61C84426660CEDE507EEE75FF55FCC47DDD5586A2590A183A9A5532FAC80F0DCBEBCC8F8CE4B65A7A81573F25DC4E0B0435E8E47B434F4DDEB3D98C3E1647DEB85A15B09591BEA1607DA9944C33C76AD02BD65942F7EFDFD5C7623B072A7F847EF24175E26C82D64F5ADD7C62289D8162795FADCD8EBBD08954E44494C0A572BA1513954EF7BE09F5BE46DB86D5E078AA7B901DBB941AACF04AE5DE5A67FD87749DB602907197797E35281DDBCE791CB67EDC8B8E524E955846F5A27BC09656EF345650A685D58A0BD0EB736555F71E91FB01AF65DC108F2A&#xD;&#xA;HTTP_HOST:localhost:9195&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip,deflate,sdch&#xD;&#xA;Accept-Language: en-US,en;q=0.8,es;q=0.6&#xD;&#xA;Cookie: aejqtheme=ui-lightness; __atuvc=2%7C19; smartstore.customer=dd5bb85d-19ce-42c2-a684-02d67ee5318d; ASP.NET_SessionId=zktndizy00kkvy40c250izlo; __RequestVerificationToken_L1BFUFBBTQ2=z6HG6nmTiuzs59t2NrVTRryWZtrpLdLMHI4Aoi-y3NbPxWl8Wj96iqvPyZQejDNwSMnfU183GzgMYLI5lXCUDuOz9vFZmF2H0iGZ6-7Vxk01; __RequestVerificationToken=fabt5GTahb5edAnAkP2S6ZAYCuPmxu20ZsQGcBqZCU6kf-4cm4Y-1NfEB0rJEarFMFB9GfWla97MZsVDY-GlvK5BSl9Txh2qSl6z-A0VzZo1; peppam=25207ECB4011573FBD59242E926CF51C319D7C40AFE5AE39FA7CE52C9AA4013E0E37F1E5F272E4CED20B50129067600EE87A205628BB2B2064FC7A3AC149417E0065D6E39AB235F2E206689A6B27EDC1669DAF1012FE36384FFD49F84FBE01CF63EBF7FF84AFCB5E44B588B85079D1009345FD3CF33E433ABE337B14B5BBED1F7CE65DB111D3A40C757736A8773747AF880CBC6DAA11CCB38865441EEF26A93659CB3C5F388E878528BEC21090391D7F6762E06CD2F04CCBAB4100AE0561BFBF3065B4706CA2A04C3A7FB007BAE5C19CD61F77984075CF850A8407ADFCF86F1B3C901810AE9010272A464B532969695C1964C8FBE7670346DBB3E292A38293634A6DAC5E5AA9031BABC060DC704C15DCFA94BABE8EDB5F5120A5777065E28D2FF2DE845016D35DC2A60E4E3D1FC0402D16053F2ACBBA8666F461FE859F8DFCF26A5E7AC16E4B4CD295BAE3F53C6C04ADA6028D9D3A135697FCE7AFA9324D9A238430FED7489A41A61C84426660CEDE507EEE75FF55FCC47DDD5586A2590A183A9A5532FAC80F0DCBEBCC8F8CE4B65A7A81573F25DC4E0B0435E8E47B434F4DDEB3D98C3E1647DEB85A15B09591BEA1607DA9944C33C76AD02BD65942F7EFDFD5C7623B072A7F847EF24175E26C82D64F5ADD7C62289D8162795FADCD8EBBD08954E44494C0A572BA1513954EF7BE09F5BE46DB86D5E078AA7B901DBB941AACF04AE5DE5A67FD87749DB602907197797E35281DDBCE791CB67EDC8B8E524E955846F5A27BC09656EF345650A685D58A0BD0EB736555F71E91FB01AF65DC108F2A&#xD;&#xA;Host: localhost:9195&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/18/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\nHydrate2013\trunk\Source\PEPPAM\OSIS.PEPPAM.Mvc\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="fpeguero@gmail.com" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="fpeguero@gmail.com" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="18" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/18" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Reportes/General" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\nHydrate2013\trunk\Source\PEPPAM\OSIS.PEPPAM.Mvc\Reportes\General" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="48776" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Reportes/General" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="9195" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/8.0" />
+    </item>
+    <item name="URL">
+      <value string="/Reportes/General" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip,deflate,sdch" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.8,es;q=0.6" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="aejqtheme=ui-lightness; __atuvc=2%7C19; smartstore.customer=dd5bb85d-19ce-42c2-a684-02d67ee5318d; ASP.NET_SessionId=zktndizy00kkvy40c250izlo; __RequestVerificationToken_L1BFUFBBTQ2=z6HG6nmTiuzs59t2NrVTRryWZtrpLdLMHI4Aoi-y3NbPxWl8Wj96iqvPyZQejDNwSMnfU183GzgMYLI5lXCUDuOz9vFZmF2H0iGZ6-7Vxk01; __RequestVerificationToken=fabt5GTahb5edAnAkP2S6ZAYCuPmxu20ZsQGcBqZCU6kf-4cm4Y-1NfEB0rJEarFMFB9GfWla97MZsVDY-GlvK5BSl9Txh2qSl6z-A0VzZo1; peppam=25207ECB4011573FBD59242E926CF51C319D7C40AFE5AE39FA7CE52C9AA4013E0E37F1E5F272E4CED20B50129067600EE87A205628BB2B2064FC7A3AC149417E0065D6E39AB235F2E206689A6B27EDC1669DAF1012FE36384FFD49F84FBE01CF63EBF7FF84AFCB5E44B588B85079D1009345FD3CF33E433ABE337B14B5BBED1F7CE65DB111D3A40C757736A8773747AF880CBC6DAA11CCB38865441EEF26A93659CB3C5F388E878528BEC21090391D7F6762E06CD2F04CCBAB4100AE0561BFBF3065B4706CA2A04C3A7FB007BAE5C19CD61F77984075CF850A8407ADFCF86F1B3C901810AE9010272A464B532969695C1964C8FBE7670346DBB3E292A38293634A6DAC5E5AA9031BABC060DC704C15DCFA94BABE8EDB5F5120A5777065E28D2FF2DE845016D35DC2A60E4E3D1FC0402D16053F2ACBBA8666F461FE859F8DFCF26A5E7AC16E4B4CD295BAE3F53C6C04ADA6028D9D3A135697FCE7AFA9324D9A238430FED7489A41A61C84426660CEDE507EEE75FF55FCC47DDD5586A2590A183A9A5532FAC80F0DCBEBCC8F8CE4B65A7A81573F25DC4E0B0435E8E47B434F4DDEB3D98C3E1647DEB85A15B09591BEA1607DA9944C33C76AD02BD65942F7EFDFD5C7623B072A7F847EF24175E26C82D64F5ADD7C62289D8162795FADCD8EBBD08954E44494C0A572BA1513954EF7BE09F5BE46DB86D5E078AA7B901DBB941AACF04AE5DE5A67FD87749DB602907197797E35281DDBCE791CB67EDC8B8E524E955846F5A27BC09656EF345650A685D58A0BD0EB736555F71E91FB01AF65DC108F2A" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:9195" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="aejqtheme">
+      <value string="ui-lightness" />
+    </item>
+    <item name="__atuvc">
+      <value string="2%7C19" />
+    </item>
+    <item name="smartstore.customer">
+      <value string="dd5bb85d-19ce-42c2-a684-02d67ee5318d" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="zktndizy00kkvy40c250izlo" />
+    </item>
+    <item name="__RequestVerificationToken_L1BFUFBBTQ2">
+      <value string="z6HG6nmTiuzs59t2NrVTRryWZtrpLdLMHI4Aoi-y3NbPxWl8Wj96iqvPyZQejDNwSMnfU183GzgMYLI5lXCUDuOz9vFZmF2H0iGZ6-7Vxk01" />
+    </item>
+    <item name="__RequestVerificationToken">
+      <value string="fabt5GTahb5edAnAkP2S6ZAYCuPmxu20ZsQGcBqZCU6kf-4cm4Y-1NfEB0rJEarFMFB9GfWla97MZsVDY-GlvK5BSl9Txh2qSl6z-A0VzZo1" />
+    </item>
+    <item name="peppam">
+      <value string="25207ECB4011573FBD59242E926CF51C319D7C40AFE5AE39FA7CE52C9AA4013E0E37F1E5F272E4CED20B50129067600EE87A205628BB2B2064FC7A3AC149417E0065D6E39AB235F2E206689A6B27EDC1669DAF1012FE36384FFD49F84FBE01CF63EBF7FF84AFCB5E44B588B85079D1009345FD3CF33E433ABE337B14B5BBED1F7CE65DB111D3A40C757736A8773747AF880CBC6DAA11CCB38865441EEF26A93659CB3C5F388E878528BEC21090391D7F6762E06CD2F04CCBAB4100AE0561BFBF3065B4706CA2A04C3A7FB007BAE5C19CD61F77984075CF850A8407ADFCF86F1B3C901810AE9010272A464B532969695C1964C8FBE7670346DBB3E292A38293634A6DAC5E5AA9031BABC060DC704C15DCFA94BABE8EDB5F5120A5777065E28D2FF2DE845016D35DC2A60E4E3D1FC0402D16053F2ACBBA8666F461FE859F8DFCF26A5E7AC16E4B4CD295BAE3F53C6C04ADA6028D9D3A135697FCE7AFA9324D9A238430FED7489A41A61C84426660CEDE507EEE75FF55FCC47DDD5586A2590A183A9A5532FAC80F0DCBEBCC8F8CE4B65A7A81573F25DC4E0B0435E8E47B434F4DDEB3D98C3E1647DEB85A15B09591BEA1607DA9944C33C76AD02BD65942F7EFDFD5C7623B072A7F847EF24175E26C82D64F5ADD7C62289D8162795FADCD8EBBD08954E44494C0A572BA1513954EF7BE09F5BE46DB86D5E078AA7B901DBB941AACF04AE5DE5A67FD87749DB602907197797E35281DDBCE791CB67EDC8B8E524E955846F5A27BC09656EF345650A685D58A0BD0EB736555F71E91FB01AF65DC108F2A" />
+    </item>
+    <item name="__LastErrorId">
+      <value string="800000007fb7752014458bb1" />
+      <value string="800000007fb7752014458bb2" />
+    </item>
+  </cookies>
+</error>

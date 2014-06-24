@@ -1,0 +1,174 @@
+﻿@using System.Web.Mvc
+@using Mvc.Core.UI
+@using OSIS.PEPPAM.Mvc.UI
+@model OSIS.PEPPAM.Mvc.Models.HorarioTurnosModel
+@{
+    IFuncionality uiObject = new Funcionality().GetFuncionality("Horario_Turnos_Add");
+    string twoLettersCulture = new System.Globalization.CultureInfo(Culture).TwoLetterISOLanguageName;
+    string decimalSeparator = new System.Globalization.CultureInfo(Culture).NumberFormat.NumberDecimalSeparator;
+    string groupSeparator = new System.Globalization.CultureInfo(Culture).NumberFormat.NumberGroupSeparator;
+}
+
+
+
+<div class="view-container">
+    <div class="entity-form-container">
+        @using (Html.BeginForm("AddHorarioTurnos", "Horario_Trans", FormMethod.Post, new { id = "Horario_TransForm", enctype = "multipart/form-data", @class = "form-horizontal form" }))
+        {
+            <h2>@uiObject.Name <small>@uiObject.Description</small>  </h2>
+
+          @Html.MyValidationSummary(false,Messages.GetOrSetMensaje("MENSAJE_ERROR_SUMMARY"))
+             @Html.Raw(HttpUtility.HtmlDecode(Html.ValidationMessageFor(model => model.Turnos).ToString()))
+            @Html.Partial("_AddHorario", Model)
+        }
+    </div>
+</div>
+
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(function() {
+
+            kendo.data.binders.widget.max = kendo.data.Binder.extend({
+                init: function(widget, bindings, options) {
+                    //call the base constructor
+                    kendo.data.Binder.fn.init.call(this, widget.element[0], bindings, options);
+                },
+                refresh: function() {
+                    var that = this,
+                        value = that.bindings["max"].get(); //get the value from the View-Model
+                    $(that.element).data("kendoTimePicker").max(value); //update the widget
+                }
+            });
+
+            kendo.data.binders.widget.min = kendo.data.Binder.extend({
+                init: function(widget, bindings, options) {
+                    //call the base constructor
+                    kendo.data.Binder.fn.init.call(this, widget.element[0], bindings, options);
+                },
+                refresh: function() {
+                    var that = this,
+                        value = that.bindings["min"].get(); //get the value from the View-Model
+                    $(that.element).data("kendoTimePicker").min(value); //update the widget
+                }
+            });
+
+            var viewModel = kendo.observable({
+                startChange: function(e) {
+
+                    var start = $("#" + e.sender.element.context.id).data("kendoTimePicker");
+                    var end = $("#" + e.sender.element.context.id.replace('Turno_Hora_Desde', 'Turno_Hora_Hasta')).data("kendoTimePicker");
+
+                    console.log(start);
+                    console.log(end);
+
+
+                    var startTime = start.value();
+
+
+                    if (startTime) {
+                        startTime = new Date(startTime);
+
+                        end.max(startTime);
+
+                        startTime.setMinutes(startTime.getMinutes() + e.sender.options.interval);
+
+                        end.min(startTime);
+                        end.value(startTime);
+                    }
+
+                    //console.log(viewModel);
+                },
+                minDesde: "06:00 AM",
+                maxDesde: "09:00 PM",
+                minHasta: "07:00 AM",
+                maxHasta: "10:00 PM",
+                endChange: function(e) {
+                    
+
+                    var start = $("#" + e.sender.element.context.id).data("kendoTimePicker");
+
+                    var res = e.sender.element.context.id.split("_");
+                    var endSplited = 'Turnos_' + (parseInt(res[1]) + 1) + '__Turno_Hora_Desde';
+                   
+
+                    //console.log(res);
+                    //console.log(endSplited);
+
+                    var end = $("#" + endSplited).data("kendoTimePicker");
+                    
+                    
+                    var startTime = start.value();
+                    
+                    if (startTime) {
+                        startTime = new Date(startTime);
+
+                        end.max(startTime);
+
+                        startTime.setMinutes(startTime.getMinutes());
+
+                        end.min(startTime);
+                        end.value(startTime);
+                    }
+
+                    var starEndSplited = 'Turnos_' + (parseInt(res[1]) + 1) + '__Turno_Hora_Hasta';
+                    var endsplited = $("#" + starEndSplited).data("kendoTimePicker");
+                    startTime.setMinutes(end.value().getMinutes() + end.options.interval);
+
+                    endsplited.min(startTime);
+
+                }
+            });
+
+            kendo.bind(document.body, viewModel);
+
+            function startChange1() {
+                var startTime = start.value();
+
+                alert('sdfs');
+
+                if (startTime) {
+                    startTime = new Date(startTime);
+
+                    end.max(startTime);
+
+                    startTime.setMinutes(startTime.getMinutes() + this.options.interval);
+
+                    end.min(startTime);
+                    end.value(startTime);
+                }
+            }
+
+        })
+    </script>
+    
+<script type="text/javascript">
+        $(document).ready(function() {
+            updatePuestos();
+        })
+
+        function updatePuestos() {
+            $("#Zona_Secuencia").change(function() {
+                $("#Ruta_Secuencia").empty();
+                $.ajax({
+                    type: 'POST',
+                    url: '@Url.Action("LoadPuestos")', // we are calling json method
+                    dataType: 'json',
+                    data: { zona: $("#Zona_Secuencia").val() },
+                    success: function(datas) {
+                        $.each(datas, function(i, data) {
+                            $("#Ruta_Secuencia").append('<option value="' + data.Ruta_Secuencia + '">' + data.Ruta_Descripcion + '</option>');
+                        });
+                    },
+                    error: function(ex) {
+                        alert('Failed to retrieve states.' + ex);
+                    }
+                });
+                return false;
+            })
+
+        }
+</script>
+}
+

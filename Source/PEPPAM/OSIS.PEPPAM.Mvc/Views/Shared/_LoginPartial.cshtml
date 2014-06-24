@@ -1,0 +1,11 @@
+@using System.Security.Claims
+@using Mvc.Core.Security
+
+@{
+    string culture = new System.Globalization.CultureInfo(Culture).TwoLetterISOLanguageName;
+}
+
+@if (!Request.IsAuthenticated)
+{
+    @Html.ActionLink(@Resources.Shared.Login, "Login", "Account", new { lang = @culture }, new { })
+}

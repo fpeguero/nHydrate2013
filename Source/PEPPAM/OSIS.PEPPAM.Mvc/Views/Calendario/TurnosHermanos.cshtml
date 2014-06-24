@@ -1,0 +1,202 @@
+﻿@using System.Net.Mime
+@using System.ServiceModel.Channels
+@using Mvc.Core.Security
+@using OSIS.PEPPAM.Mvc.UI
+@model IEnumerable< OSIS.PEPPAM.Mvc.Models.Personas_Turnos_TransModel>
+@{
+
+    var personasTurnosTransModel1 = Model.FirstOrDefault();
+    if (personasTurnosTransModel1 == null)
+    {
+        return;
+    }
+
+    var horario = personasTurnosTransModel1.Horario_Turno_Secuencia;
+    var dia = personasTurnosTransModel1.Dia_Secuencia;
+    var puesto = personasTurnosTransModel1.Ruta_Secuencia;
+
+    var turno = Horario_Turno_Dias_TransModel.Load(horario, dia);
+    var puestoDb = Rutas_MasterModel.Load(puesto);
+    var diaDescripcion = turno.DiasCata.Dia_Descripcion;
+
+    var fechadesde = turno.HorarioTurnoTrans.HorarioTrans.Horario_Fecha_Desde;
+    var fechaHasta = turno.HorarioTurnoTrans.HorarioTrans.Horario_Fecha_Hasta;
+
+    var culture = new System.Globalization.CultureInfo("es-DO");
+    var dateOfwek = culture.DateTimeFormat.GetDayName(fechadesde.DayOfWeek);
+
+    do
+    {
+        if (dateOfwek.ToLower() == diaDescripcion.ToLower())
+        {
+            break;
+        }
+        fechadesde = fechadesde.AddDays(1);
+        dateOfwek = culture.DateTimeFormat.GetDayName(fechadesde.DayOfWeek);
+    } while (fechadesde <= fechaHasta);
+
+
+    var yoestoyAnotado = "Agregarme";
+
+}
+
+
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Puesto        : @puestoDb.Ruta_Descripcion </h3>
+    <h5 id="myModalLabel">Turno         : @turno.HorarioTurnoTrans.Turno_Descripcion </h5>
+    <h5 id="myModalLabel">El            : @fechadesde.ToString("D", culture) </h5>
+    <h5 id="myModalLabel">Desde         : @turno.HorarioTurnoTrans.Turno_Hora_Desde Hasta : @turno.HorarioTurnoTrans.Turno_Hora_Hasta</h5>
+</div>
+<div>
+    <div class="modal-body">
+        @if (Model.Any(x => x.Persona != null))
+        {
+            <ul>
+                @foreach (var hermano in Model.Where(x => x.Persona != null))
+                {
+                    if (hermano.Persona_Turno_HC == "S")
+                    {
+                        <li>@hermano.Persona.Persona_Nombres @hermano.Persona.Persona_Apellidos ( @hermano.Persona.Congregacion.Congregacion_Nombre  ) (Hombre Clave) </li>
+                    }
+                    else
+                    {
+                        <li>@hermano.Persona.Persona_Nombres @(hermano.Persona.Persona_Sexo == "F" && hermano.Persona.Persona_Conyuge_Apellido != "N/A" ? hermano.Persona.Persona_Conyuge_Apellido : hermano.Persona.Persona_Apellidos) (@hermano.Persona.Congregacion.Congregacion_Nombre  ) </li>
+                    }
+                    <ul>
+                        @foreach (var personaContactosTransModel in hermano.Persona.ContactoInformaciones.OrderBy(x => x.Contacto_Tipo_Secuencia).Take(1))
+                        {
+                            <li>@personaContactosTransModel.ContactoTipo.EntityDisplayName <span> : @personaContactosTransModel.Persona_Contacto_Informacion</span> </li>
+                            if (!string.IsNullOrEmpty(@personaContactosTransModel.Persona_Contacto_Nota))
+                            {
+                                <span> <span class="h5">Nota: </span>  @personaContactosTransModel.Persona_Contacto_Nota</span>
+                            }
+                        }
+
+                    </ul>
+                }
+            </ul>
+        }
+        else
+        {
+
+            if (turno.Turno_Fecha < DateTime.Now)
+            {
+                @Html.Raw(Messages.GetOrSetMensaje("MENSAJE_TURNO_CADUCADO"))
+            }
+            else
+            {
+                @Html.Raw(Messages.GetOrSetMensaje("MENSAJE_TODOS_TURNOS_DISPONIBLES"))
+            }
+
+
+            
+        }
+    </div>
+</div>
+<div class="modal-footer" style="text-align: left;">
+    @using (Ajax.BeginForm("EditHermanosTurnos", "Calendario", FormMethod.Post, new AjaxOptions
+    {
+        InsertionMode = InsertionMode.Replace,
+        HttpMethod = "POST",
+        UpdateTargetId = ""
+    }, new { id = "addturnos" }))
+    {
+        var personasTurnosTransModel = Model.FirstOrDefault();
+        if (personasTurnosTransModel != null)
+        {
+            @Html.Hidden("turno", personasTurnosTransModel.Horario_Turno_Secuencia)
+            @Html.Hidden("dia", personasTurnosTransModel.Dia_Secuencia)
+            @Html.Hidden("puesto", personasTurnosTransModel.Ruta_Secuencia)
+            @Html.Hidden("horario", turno.HorarioTurnoTrans.Horario_Secuencia)
+        }
+
+
+
+        if (Model != null && Model.FirstOrDefault(x => x.Persona != null) != null && Model.Any(x => x.Persona.Persona_Secuencia == ((IPrincipal)User).UsuarioNumero))
+        {
+            if (turno.Turno_Fecha > DateTime.Now.AddDays(4) || Model.Any(x => x.Persona.Persona_Secuencia == ((IPrincipal)User).UsuarioNumero && x.Registro_Fecha > DateTime.Now.AddHours(-8)))
+            {
+                <button class="Btn blue btn-inverse " type="submit"> Quitarme del turno</button>
+            }
+            else
+            {
+                if (turno.Turno_Fecha >= DateTime.Now.AddHours(-8))
+                {
+                    <div style="text-align: left;">
+                        <span>@Html.Raw(Messages.GetOrSetMensaje("MENSAJE_AVISO_QUITARSE_TURNO_MENOR_CUANTRO_DIAS"))</span>
+                        @{
+                            var encargadoPuesto = Personas_MasterModel.Load(puestoDb.Ruta_Persona_Encargado);
+                            var auxiliarPuesto = Personas_MasterModel.Load(puestoDb.Ruta_Persona_Auxiliar);
+                        }
+                        @if (encargadoPuesto != null)
+                        {
+                            <span><b>@encargadoPuesto.Persona_Nombres @encargadoPuesto.Persona_Apellidos </b></span>
+                            foreach (var personaContactosTransModel in encargadoPuesto.ContactoInformaciones.OrderBy(x => x.Contacto_Tipo_Secuencia).Take(1))
+                            {
+                                <li>@personaContactosTransModel.ContactoTipo.EntityDisplayName <span> : @personaContactosTransModel.Persona_Contacto_Informacion</span> </li>
+                                if (!string.IsNullOrEmpty(personaContactosTransModel.Persona_Contacto_Nota))
+                                {
+                                    <span> <span class="h5">Nota: </span>  @personaContactosTransModel.Persona_Contacto_Nota</span>
+                                }
+                            }
+                        }
+                        <br />
+                        @if (auxiliarPuesto != null)
+                        {
+                            <span><b> @auxiliarPuesto.Persona_Nombres @auxiliarPuesto.Persona_Apellidos </b></span>
+                            foreach (var personaContactosTransModel in auxiliarPuesto.ContactoInformaciones.OrderBy(x => x.Contacto_Tipo_Secuencia).Take(1))
+                            {
+                                <li>@personaContactosTransModel.ContactoTipo.EntityDisplayName <span> : @personaContactosTransModel.Persona_Contacto_Informacion</span> </li>
+                                if (!string.IsNullOrEmpty(personaContactosTransModel.Persona_Contacto_Nota))
+                                {
+                                    <span> <span class="h5">Nota: </span>  @personaContactosTransModel.Persona_Contacto_Nota</span>
+                                }
+                            }
+                        }
+                    </div>
+                }
+            }
+        }
+        else
+        {
+            var incritos = Horario_TransModel.LoadPersonasInscritos(personasTurnosTransModel1.Dia_Secuencia, personasTurnosTransModel1.Horario_Turno_Secuencia);
+            var cantidadTurno = turno.HorarioTurnoTrans.Turno_Cantidad_Publicadores;
+            if (incritos.Count >= cantidadTurno)
+            {
+                <span>@Html.Raw(Messages.GetOrSetMensaje("MENSAJE_TURNOS_LLENOS"))</span>
+            }
+            else if (incritos.Count >= cantidadTurno - 1 && incritos.All(x => x.Persona_Turno_HC != "S") && ((IPrincipal)User).UsuarioSexo == "F")
+            {
+                <span>@Html.Raw(Messages.GetOrSetMensaje("MENSAJE_TURNOS_LLENOS_FALTA_HC"))</span>
+            }
+             //else if (turno.Turno_Fecha < DateTime.Now.AddHours(-4))
+             //{
+             //    //do nothing
+             //}
+             else
+             {
+
+                 var persona = ((IPrincipal) User).UsuarioNumero;
+                 var turnosAnteriores = Proc_Persona_Turnos_ValidarModel.LoadOne(turno.HorarioTurnoTrans.Turno_Hora_Desde, turno.HorarioTurnoTrans.Turno_Hora_Hasta, persona, fechadesde);
+                 if (turnosAnteriores != null && turnosAnteriores.Dia_Secuencia > 0)
+                 {
+                     @Html.Raw(Messages.GetOrSetMensaje("MENSAJE_ANOTADO_EN_OTRO_PUESTO").Replace("{Puesto}", turnosAnteriores.Ruta_Descripcion)
+                               .Replace("{Fecha}", turnosAnteriores.Turno_Fecha.Value.ToString("D"))
+                                    .Replace("{Hora_Desde}", turnosAnteriores.Turno_Hora_Desde)
+                                    .Replace("{Hora_Hasta}", turnosAnteriores.Turno_Hora_Hasta))
+                 }
+                 else
+                 {
+                     <button class="Btn blue btn-inverse " type="submit"> Agregarme al turno</button>
+                 }
+                 
+             }
+
+        }
+
+    }
+
+
+</div>

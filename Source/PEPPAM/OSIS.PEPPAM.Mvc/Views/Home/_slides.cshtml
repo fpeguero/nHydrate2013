@@ -1,0 +1,23 @@
+﻿
+
+@foreach (var slide in Sistemas_Slides_MasterModel.LoadSlides())
+{
+    var content = "content" + slide.Slide_Secuencia;
+    if (!string.IsNullOrEmpty(slide.Slide_Image_Abajo) && slide.Slide_Image_Abajo != "N/E")
+    {
+        
+        <style>
+            .@content {
+                background: #82807a url('@Url.Content("~/UploadFiles/Slides/" + slide.Slide_Image_Abajo)') no-repeat right;
+            }
+        </style>
+    }
+    <li>
+    <img src="@Url.Content("~/UploadFiles/Slides/" + slide.Slide_Image)" alt="" id="" title="" />
+        <div class="description @content">
+            @Html.Raw(slide.Slide_Contenido.Replace("<ul>", "<dt>").Replace("</ul>", "</dt>").Replace("<li>", "<dl>").Replace("</li>", "</dl>"))
+    </div>
+
+</li>    
+}
+

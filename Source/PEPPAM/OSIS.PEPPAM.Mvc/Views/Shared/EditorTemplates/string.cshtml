@@ -1,0 +1,21 @@
+@model string
+@{
+    var metadata = this.ViewData.ModelMetadata;
+    ControllerContext cctx = this.ViewContext.Controller.ControllerContext;
+
+    StringLengthAttributeAdapter stringLengthValidator = metadata.GetValidators(cctx)
+                                                                 .OfType<StringLengthAttributeAdapter>()
+                                                                 .FirstOrDefault();
+    var htmlAttrs = new Dictionary<string, object>();
+    htmlAttrs.Add("class", "form-control");
+    if (stringLengthValidator != null)
+    {
+        var parms = stringLengthValidator.GetClientValidationRules().First().ValidationParameters;
+        if (parms.ContainsKey("max"))
+        {
+            htmlAttrs.Add("maxlength", parms["max"]);
+        }
+    }
+}
+@Html.TextBoxFor(m => m, htmlAttrs)
+

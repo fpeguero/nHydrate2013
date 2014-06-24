@@ -1,0 +1,34 @@
+﻿@{@model Dictionary<int, int>
+}
+
+@{
+    var modulo = Model.FirstOrDefault().Key;
+    var _funcionalidad = Model.FirstOrDefault().Value;
+}
+
+@using Mvc.Core.Security
+
+<div class="submenu">
+    <ul>
+        @foreach (var funcionalidad in Personas_MasterModel.Funcionalidades(null, modulo,((IPrincipal)User).UsuarioNumero).OrderBy(x => x.Funcionalidad_Orden))
+    {
+        if (funcionalidad.Funcionalidad_Numero == _funcionalidad)
+        {
+            <li class="active"><a href="#"><span>@funcionalidad.Funcionalidad_Nombre</span></a></li>
+        }
+        else
+        {
+            <li><a href="@Url.Content(funcionalidad.Funcionalidad_Url)"><span>@funcionalidad.Funcionalidad_Nombre</span></a></li>
+        }
+        
+       
+
+    }
+        <div style="clear: both"></div>
+    </ul>
+</div>
+
+
+
+ 
+

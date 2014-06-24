@@ -1,0 +1,3 @@
+namespace OSIS.PEPPAM.BOM
+{
+}

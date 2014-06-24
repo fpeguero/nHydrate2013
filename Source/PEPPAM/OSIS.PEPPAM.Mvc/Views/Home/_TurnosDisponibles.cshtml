@@ -1,0 +1,28 @@
+﻿@using Mvc.Core.Security
+@using OSIS.PEPPAM.BOM
+@using OSIS.PEPPAM.Mvc.UI
+
+
+<div id="divTurnosdisponibles">
+    
+    @{
+        var message = Messages.GetOrSetMensaje("MENSAJE_DISPONIBILIDAD");
+        var message2 = Funcionality.GetDescription("LABEL_CLIKC_AQUI", "LABEL_CLIKC_AQUI",true);
+        var AllDisponibles = from dispo in Horario_Turno_Trans.LoadDisponibles(((IPrincipal)User).UsuarioNumero)
+                             group dispo by new { dispo.Ruta_Secuencia, dispo.Horario_Secuencia, dispo.Ruta_Descripcion, dispo.Horario_Fecha_Desde }
+            into g
+            select new Proc_Turnos_DisponiblesModel()
+            {
+                Ruta_Descripcion = g.Key.Ruta_Descripcion,
+                Ruta_Secuencia = g.Key.Ruta_Secuencia,
+                Horario_Secuencia = g.Key.Horario_Secuencia,
+                Cantidad_Restante = g.Sum(x => x.Cantidad_Restante),
+                Horario_Fecha_Desde = g.Key.Horario_Fecha_Desde
+            };
+    }
+    @foreach (var disponible in AllDisponibles.Take(6))
+    {
+        <li><a href="@Url.Action("Index", "Calendario", new { Ruta_Secuencia = disponible.Ruta_Secuencia, Horario_Secuencia  = disponible.Horario_Secuencia})" class="gray blink">@Html.Raw(String.Format(message, disponible.Cantidad_Restante, disponible.Ruta_Descripcion, disponible.Horario_Fecha_Desde.Value.ToString("d"))) <strong>@message2</strong></a></li>
+    }
+</div>
+ @*10 turnos disponibles en el puesto Buhoneros.*@

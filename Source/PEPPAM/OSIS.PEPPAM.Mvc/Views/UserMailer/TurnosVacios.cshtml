@@ -1,0 +1,56 @@
+﻿@using System.Globalization
+<html>
+
+<head>
+</head>
+<body style="background: #eceae7; color: #6F6F6F; font-family: Tahoma, Arial, San-serif; line-height: 24px; margin: 0;">
+    <div style="width: 100%">
+        <table style="background-color: #FFF; border: 1px solid #d4d4d4; border-collapse: collapse; box-shadow: 1px 1px 3px #d1d1d1; font-size: 14px; margin: 30px auto 0; max-width: 800px; min-width: 320px;">
+            <tr>
+                <td style="padding: 20px;">
+                    <h2 style="color: #339AB4; margin: 0 0 40px 0; border-bottom: 1px dotted #e0e0e0; padding-bottom: 20px; text-align: center; text-transform: uppercase"> @Raw(Model.Titulo)</h2>
+                    <h3 style="margin: 0 0 10px">@Raw(Model.SubTitulo)</h3>
+                    <p style="margin-top: 0">@Raw(Model.Cuerpo)</p>
+
+                    <table class="table table-striped" style=" border: 1px solid #ddd">
+                        <thead>
+                        <th style="background: #878F8F; color: #FFF">Puesto</th>
+                        <th style="background: #878F8F; color: #FFF">Día</th>
+                        <th style="background: #878F8F; color: #FFF">Turno</th>
+                        <th style="background: #878F8F; color: #FFF">Disponibles</th>
+                        <th style="background: #878F8F; color: #FFF">Tiene HC</th>
+                        </thead>
+
+                        <tbody>
+
+                            @foreach (var item in Model.Turnos)
+                            {
+                                <tr>
+                                    <td>
+                                        @item.Ruta_Descripcion
+                                    </td>
+                                    <td>
+                                        @item.Turno_Fecha.ToString("D", new CultureInfo("es-DO"))
+                                    </td>
+                                    <td>
+                                        @item.Turno_Descripcion (@item.Turno_Hora_Desde -  @item.Turno_Hora_Hasta)
+                                    </td>
+                                    <td>
+                                        @item.Turnos_Faltantes
+                                    </td>
+                                    <td>
+                                        @item.Persona_Turno_HC
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+
+                    </table>
+
+                    <div style="font-size: 16px; margin: 30px 0 0; text-align: right; text-transform: uppercase"><h4 style="margin: 0; font-style: italic;">- peppam -</h4></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

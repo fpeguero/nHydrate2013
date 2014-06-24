@@ -1,0 +1,19 @@
+﻿@using Mvc.Core.Security
+@using OSIS.PEPPAM.Mvc.UI
+@using OSIS.PEPPAM.Mvc.Infrastructure.Common
+@{
+ var dictinary = new Dictionary<int, int>();
+    dictinary.Add(3, 120);
+}
+
+<div id="wrapper-content " class="content">
+    @Html.Partial("_Funcionalidades", dictinary)
+    
+    <div class="form">
+    @Html.Raw(Util.StringFormarSexo(Messages.GetOrSetMensaje("MENSAJE_NO_HORARIOS_DISPONIBLE"), ((IPrincipal)User).UsuarioSexo))    
+    </div>
+    
+</div>
+
+
+

@@ -1,0 +1,12 @@
+﻿@model Publicaciones_CataModel
+@using CodeFluent.Runtime.Compression
+@using Mvc.Core.UI
+@using OSIS.PEPPAM.Mvc.UI
+
+
+<tr>
+    <td>@Model.Publicacion_Descripcion</td>
+    @Html.EditorFor(model => model.Idiomas)
+</tr>
+@Html.HiddenFor(model => model.Publicacion_Numero)
+@Html.HiddenFor(model => model.Publicacion_Descripcion)

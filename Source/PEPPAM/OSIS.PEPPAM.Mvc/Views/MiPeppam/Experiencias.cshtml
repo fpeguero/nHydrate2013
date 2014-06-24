@@ -1,0 +1,78 @@
+﻿
+@model Personas_MasterModel
+@using Mvc.Core.UI
+@using OSIS.PEPPAM.Mvc.UI
+
+@{
+    IFuncionality uiObject = new Funcionality().GetFuncionality("MI_PEPPAM_EXPERIENCIAS");
+
+    ViewBag.Title = Resources.Shared.AppName + " - " + uiObject.Name;
+    string twoLettersCulture = new System.Globalization.CultureInfo(Culture).TwoLetterISOLanguageName;
+    string decimalSeparator = new System.Globalization.CultureInfo(Culture).NumberFormat.NumberDecimalSeparator;
+    string groupSeparator = new System.Globalization.CultureInfo(Culture).NumberFormat.NumberGroupSeparator;
+    var dictinary = new Dictionary<int, int>();
+    dictinary.Add(6, 115);
+}
+@Html.Partial("_Funcionalidades", dictinary)
+
+<div class="form">
+    <h2>@uiObject.Name</h2>
+    <h5>@uiObject.Description</h5>
+    <hr/>
+    <div class="row">
+        <div class="form-inline grid-view-search col-xs-12">
+            <div class="form-group pull-right">
+                <input type="text" name="search" class="form-control search-box input-sm" value="" id="Experiencias_MasterSearch" placeholder="@uiObject.GetMessages("DoSearch").Description" />
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default btn-sm btn-default search-button" title="@uiObject.GetAction("DoSearch")"><span class="glyphicon glyphicon-search"></span></button>
+                    <button type="button" class="btn btn-default btn-sm clean-button" title="@uiObject.GetAction("Clean")"><span class="glyphicon glyphicon-remove"></span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <table id="Experiencias_MasterGrid" class="table table-striped table-bordered" width="100%"></table>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+
+        $(function () {
+        var gridId = "Experiencias_MasterGrid";
+            
+            gridUtils.setupGridSearchBox({
+                gridId: gridId,
+                searchContainerSelector: ".grid-view-search"
+            });
+            gridUtils.setupGridRowButtons({ gridId: gridId });
+
+            $("#"+gridId).dataTable({
+                "aoColumns": [
+                     @Html.Raw(uiObject.GetGridColumnsArray("MI_PEPPAM_EXPERIENCIAS"))
+                
+                   
+                ],
+                "aaSorting": [[1, "asc"]],
+                "oLanguage": datatables_locale,
+                "bProcessing": true,
+                "bFilter": true,
+                "bServerSide": true,
+                "sAjaxSource": "@Url.Action("LoadExperiencias")",
+                "sServerMethod": "POST",
+                "bStateSave": true,
+                "sCookiePrefix": "fapa_",
+                "fnCookieCallback": function (sName, oData, sExpires, sPath) {
+                    return sName + "="+JSON.stringify(oData)+";path=" + sPath;
+                },
+                "fnStateLoaded": function (oSettings) {
+                    var search = oSettings.oPreviousSearch;
+                    if (search) {
+                        $("input.search-box").val(search.sSearch);
+                    }
+                }
+            });
+
+           // table.fnSetColumnVis(1, false);
+        });
+    </script>
+} 

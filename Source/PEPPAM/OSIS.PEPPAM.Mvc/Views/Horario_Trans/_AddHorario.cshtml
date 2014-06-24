@@ -1,0 +1,152 @@
+﻿@using Mvc.Core.Security
+@using Mvc.Core.UI
+@using OSIS.PEPPAM.Mvc.UI
+@model OSIS.PEPPAM.Mvc.Models.HorarioTurnosModel
+@{
+    IFuncionality uiObject = new Funcionality().GetFuncionality("Horario_Turnos_Add");
+
+    ViewBag.Title = Resources.Shared.AppName + " - " + uiObject.Name;
+    string twoLettersCulture = new System.Globalization.CultureInfo(Culture).TwoLetterISOLanguageName;
+    string decimalSeparator = new System.Globalization.CultureInfo(Culture).NumberFormat.NumberDecimalSeparator;
+    string groupSeparator = new System.Globalization.CultureInfo(Culture).NumberFormat.NumberGroupSeparator;
+}
+
+
+@Html.HiddenFor(model => model.Horario_Secuencia)
+
+
+
+<div class="row">
+
+    @*@if ((bool)ViewBag.IsNew != true)
+        {
+            <div class="form-field-group">
+                <label class="control-label  col-sm-3 col-lg-4">@uiObject.GetField("Semana_Codigo").Description</label>
+                <div class="editor col-sm-7 col-lg-8">
+                    @Html.DisplayFor(model => model.HorarioSemanasCata.EntityDisplayName2)
+                    @Html.HiddenFor(model => model.Semana_Codigo)
+                </div>
+            </div>
+        }
+        else*@
+    @if (ViewBag.MasterProperty != "Horario_Semanas_Cata_Horario_Trans")
+    {
+        <div class="form-field-group">
+            <label class="control-label  col-sm-3 col-lg-4">@uiObject.GetField("Semana_Codigo").Description</label>
+            <div class="editor col-sm-7 col-lg-8">
+                @Html.DropDownListFor(model => model.Semana_Codigo, new SelectList(Horario_Semanas_CataModel.DisponiblesAbrirHorarios(), "Semana_Codigo", "EntityDisplayName2", Model.Semana_Codigo), new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Semana_Codigo)
+            </div>
+        </div>
+    }
+    else
+    {
+        @Html.HiddenFor(model => model.Semana_Codigo)
+    }
+
+</div>
+
+<div class="row">
+    @if (((IPrincipal)User).IsInNivel(SeguridadNivel.EncargadoZona))
+    {
+        <label class="control-label col-sm-3 col-lg-4">@Funcionality.GetDescription("Horario_Trans", "Zona_Secuencia", true)</label>
+        <div class="editor col-sm-7 col-lg-8">
+            @Html.DropDownListFor(model => model.Zona_Secuencia, new SelectList(Zonas_MasterModel.LoadAll(), "Zona_Secuencia", "Zona_Descripcion", Model.Zona_Secuencia), new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Zona_Secuencia)
+        </div>
+    }
+</div>
+<div class="row">
+
+    @*@if ((bool)ViewBag.IsNew != true)
+        {
+            <div class="form-field-group">
+                <label class="control-label  col-sm-3 col-lg-4">@uiObject.GetField("Ruta_Secuencia").Description</label>
+                <div class="editor col-sm-7 col-lg-8">
+                    @Html.DisplayFor(model => model.RutasMaster.Ruta_Descripcion)
+                    @Html.HiddenFor(model => model.Ruta_Secuencia)
+                </div>
+            </div>
+        }
+        else*@
+    @if (ViewBag.MasterProperty != "Rutas_Master_Horario_Trans")
+    {
+        <div class="form-field-group">
+            <label class="control-label  col-sm-3 col-lg-4">@uiObject.GetField("Ruta_Secuencia").Description</label>
+            <div class="editor col-sm-7 col-lg-8">
+                @Html.DropDownListFor(model => model.Ruta_Secuencia, new SelectList(ViewBag.Puestos, "Ruta_Secuencia", "EntityDisplayName", Model.Ruta_Secuencia), new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Ruta_Secuencia)
+            </div>
+        </div>
+    }
+    else
+    {
+        @Html.HiddenFor(model => model.Ruta_Secuencia)
+    }
+
+</div>
+
+<div class="row">
+    @if (ViewBag.MasterProperty != "Horarios_Master_Horario_Trans" && (bool)ViewBag.IsNew == true)
+    {
+        <div class="form-field-group">
+            <label class="control-label  col-sm-3 col-lg-4">@uiObject.GetField("Horario_Numero").Description</label>
+            <div class="editor col-sm-7 col-lg-8">
+                @Html.DropDownListFor(model => model.Horario_Numero, new SelectList(Horarios_MasterModel.LoadAll(), "Horario_Numero", "EntityDisplayName", Model.Horario_Numero), new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Horario_Numero)
+            </div>
+        </div>
+    }
+    else
+    {
+        @Html.HiddenFor(model => model.Horario_Numero)
+    }
+
+</div>
+@*<div class="row">
+
+        @if ((bool)ViewBag.IsNew == false)
+        {
+            <div class="form-field-group">
+                <label class="control-label col-sm-3 col-lg-4">@uiObject.GetField("Horario_Publicar").Description</label>
+                <div class="editor col-sm-7 col-lg-8">
+                    <label>@Html.RadioButtonFor(model => model.Horario_Publicar, "S", new { @class = " ", }) Si</label>
+                    <label>@Html.RadioButtonFor(model => model.Horario_Publicar, "N", new { @class = " ", }) No</label>
+                    @Html.ValidationMessageFor(model => model.Horario_Publicar)
+                </div>
+            </div>
+
+        }
+        else
+        {
+            @Html.HiddenFor(model => model.Horario_Publicar)
+        }
+    </div>*@
+
+
+<div class="form-commands-container">
+    <button class="btn btn-default btn-sm back-button" title="@uiObject.GetAction("Back").Help"><span class="glyphicon glyphicon-arrow-left"></span>@uiObject.GetAction("Back").Description</button>
+    <button class="btn btn-default btn-sm save-button" title="@uiObject.GetAction("Save").Help"><span class="glyphicon glyphicon-ok"></span>@uiObject.GetAction("Save").Description</button>
+</div>
+
+
+<div class="row">
+    
+    
+        <table class="table">
+            <thead>
+                <th></th>
+                <th>@uiObject.GetField("Turno_Nombre").Description </th>
+                <th>@uiObject.GetField("Turno_Dias").Description </th>
+                <th>@uiObject.GetField("Hora_Desde").Description </th>
+                <th>@uiObject.GetField("Hora_Hasta").Description </th>
+                <th>@uiObject.GetField("Cantidad_Publicadores").Description </th>
+            </thead>
+            <tbody>
+
+                @Html.EditorFor(model => model.Turnos)
+            </tbody>
+        </table>
+    
+</div>
+

@@ -1,0 +1,16 @@
+@model Nullable<Boolean>
+@if (Model.HasValue)
+{
+    if (Model.Value)
+    {
+        @Resources.Shared.Yes
+    }
+    else
+    {
+        @Resources.Shared.No
+    }
+}
+else
+{
+    @Resources.Shared.NotSet
+}

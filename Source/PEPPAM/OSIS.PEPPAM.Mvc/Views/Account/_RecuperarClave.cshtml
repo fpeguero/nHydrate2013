@@ -1,0 +1,41 @@
+﻿@using OSIS.PEPPAM.Mvc.UI
+@{
+    ViewBag.Title = "Recuperar Contraseña";
+}
+
+
+@using (Html.BeginForm("Recuperar", "Account", FormMethod.Post, new { id = "Registro" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h2>@Funcionality.GetDescription("TITULO_RECUPERAR_CLAVE", "TITULO_RECUPERAR_CLAVE", true)</h2>
+        <h5>@Messages.GetMensaje("TITULO_RECUPERAR_CLAVE_AYUDA")</h5>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        @if (TempData.ContainsKey("correoenviado"))
+        {
+            <div class="alert alert-success">
+                @TempData["correoenviado"]
+            </div>
+        }
+
+
+        <div class="form-group">
+            <label class="control-label col-md-2">@Funcionality.GetDescription("Recuperar_Correo_Electronico", "Recuperar_Correo_Electronico", true) </label>
+            <div class="col-md-10">
+                @Html.TextBox("correo","", new { @class = "form-control" })
+            </div>
+        </div>
+       
+       
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Recuperar" class="Btn" />
+            </div>
+        </div>
+    </div>
+}
+

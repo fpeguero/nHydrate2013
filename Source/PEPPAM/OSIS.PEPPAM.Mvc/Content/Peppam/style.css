@@ -1,0 +1,627 @@
+/*===================================================================================
+====================================== GENERAL ======================================
+===================================================================================*/
+
+* { outline: none; }
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto.eot');
+    src: url('fonts/Roboto.eot?#iefix') format('embedded-opentype'),
+        /*url('fonts/Roboto.woff') format('woff'),*/
+         url('fonts/Roboto.ttf') format('truetype'),
+         url('fonts/Roboto.svg#Roboto') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body { 
+	background-color: #eceae7;
+	color: #686868;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	line-height: 26px;
+	margin: 0 auto; 
+}
+
+/*a { color: #d55043; text-decoration: none; }
+a:hover { border-bottom: 1px dotted #d55043 }*/
+a.gray { color: #686868; border-bottom: 1px dotted #686868; }
+
+.content { margin: 0 auto; width: 980px; }
+
+.show { display: block; }
+.hide { display: none; }
+fieldset { border: 0; padding: 0; }
+
+h2.head_title, .form h2, .form-horizontal h2 { 
+	border-bottom: 1px dotted #e0e0e0;
+	margin: 0 0 20px; 
+	padding-bottom: 10px;
+}
+
+.block {
+	background-color: #FFF;
+	border: 1px solid #d4d4d4;
+	box-shadow: 1px 1px 3px #d1d1d1; 
+}
+
+/*BUTTONS*/
+/*====login====*/
+ .Btn {
+ 	border: 0;
+ 	color: #FFF;
+ 	display: block;
+ 	font-size: 18px;
+ 	padding: 12px;
+ 	text-align: center;
+ }
+
+ .Btn.blue { 
+ 	background: #178daa; 
+ 	border-bottom: 8px solid #117992;
+ 	text-shadow: 1px 2px 3px #0d2a3e;
+ 	width: 100%;
+ }
+
+ .Btn.blue:hover { background-color: #1890ae; }
+ .Btn.blue:active { 
+ 	background-color: #16839d; 
+ 	border-bottom: 0px;
+ 	box-shadow: 0 0 8px #094452 inset; 
+ 	padding: 16px 0;
+ }
+
+ .save-button, .button-cancel, .button-ok, .report-button, .btn-primary, .create-button { 
+ 	border: 0;
+ 	border-radius: 0;
+ 	color: #FFF !important;
+ 	outline: none !important;
+ 	padding: 5px 12px;
+ 	text-shadow: none;
+ 	width: auto;
+ }
+
+/*====forms====*/
+.save-button.btn-default, .btn-primary, .create-button { background: #178daa; border-bottom: 5px solid #117992 !important; }
+.save-button.btn-default:hover, .save-button.btn-default:focus, .btn-primary:hover, .btn-primary:focus, .create-button:hover 
+{ background-color: #339AB4 !important; border-color: #1B8DA8 }
+.save-button.btn-default:active, .btn-primary:active, .create-button:active
+{ background-color: #1B8DA8 !important; border-bottom: 5px solid #1B8DA8 !important; }
+
+.button-cancel { background: #d55043 !important; border-bottom: 5px solid #bd3f32 !important; }
+.button-cancel:hover { background-color: #e95c4f !important; border-color: #d04739 !important; }
+.button-cancel:active { background: #d04739 !important; border-bottom: 5px solid #d04739 !important; }
+
+.report-button { background: #80964b !important; border-bottom: 5px solid #6c7f3e !important; }
+.report-button:hover { background-color: #92ab55 !important; border-color: #7b9147 !important; }
+.report-button:active { background: #7b9147 !important; border-bottom: 5px solid #7b9147 !important; }
+
+/*BOOTSTRAP*/
+.page-content.inset { padding: 0; }
+	.page-content.inset .entity-form-container { margin-top: 0; }
+		/*.page-content.inset .entity-form-container h2 { border-bottom: 1px dotted #e0e0e0; margin: 0 0 20px; padding-bottom: 10px; }*/
+	.page-content.inset hr { display: none; }
+
+.form-horizontal .col-md-offset-2.col-md-10 { margin: 20px 0 0 0 !important; }
+.form-horizontal .control-label { text-align: left !important; }
+
+/*.modal-header { border-bottom: 0; position: absolute; right: 10px; top: 5px; }
+.modal-footer { padding: 15px; }*/
+
+table thead tr { background: #878F8F; color: #FFF; }
+.row-options { width: 90px !important; text-align: center; }
+	.row-options a.btn-md { color: #bdc3c7; padding: 0 6px; }
+	.row-options a.row-edit:hover, .row-options a.row-popup-edit:hover { color: #f39c12; }
+	.row-options a.row-details:hover { color: #27ae60; }
+	.row-options a.row-delete:hover { color: #e74c3c; }
+
+.alert-danger { margin: 15px auto -50px; text-align: center; width: 500px; }
+
+span..k-picker-wrap.k-state-default { border: 1px solid #dfdfdf !important; }
+.k-picker-wrap.k-state-default input.k-input {
+	border: 0 !important;
+	margin: 0 !important;
+	padding: 0.177em 0 !important;
+	outline: none !important;
+}
+
+/*===================================================================================
+=================================== FORM STYLES =====================================
+===================================================================================*/
+
+input[type="text"], input[type="password"], textarea, .formstyle div.select, select { 
+	border: 1px solid #dfdfdf !important; 
+	border-radius: 0 !important;
+	box-shadow: 0 0 6px #e2e2e2 inset !important;
+	color: #989898 !important;
+	display: block !important;
+	height: auto !important;
+	margin-bottom: 10px !important;
+	padding: 10px !important;
+}
+
+select { height: auto !important; margin-bottom: 0 !important !important; }
+input[type="text"]:focus, textarea:focus, select:focus { outline: none !important; }
+
+.formstyle { margin: 0; }
+
+	.formstyle input.Btn { margin-bottom: 15px; }
+
+	/*select*/
+	.formstyle .select { 
+		background: #FFF url('images/selectrow.png') no-repeat 95% 50%;
+		overflow: hidden; 
+		padding: 0!important;
+		width: 200px;
+	}
+
+		.formstyle div.select select { 
+			background-color: transparent; 
+			border: 0;
+			padding: 8px;
+			width: 124%; 
+			-webkit-appearance: value;
+   			-moz-appearance:none;
+  			 appearance: none;
+		}
+
+	/*checkbox*/
+	input.checkbox { display:none; }
+
+		input.checkbox + label {
+			background: url('images/checkbox.png') no-repeat 0 0;
+			cursor: pointer;
+			display: inline-block;			
+			height: 15px; 	
+			line-height: 15px;
+			padding-left: 20px;
+
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		input.checkbox:checked + label { background: url('images/checkbox.png') no-repeat 0 -16px; }
+
+/*===================================================================================
+======================================= HEADER ======================================
+===================================================================================*/
+
+#main_menu { 
+	background-color: #3e3e3e; 
+	border-bottom: 5px solid #d55043;
+	box-shadow: 0px 0 15px #4E4E4E;
+	min-width: 980px;
+	padding: 0 10px;
+}
+
+	#main_menu h2 { 
+		display: block;
+		font-size: 24px; 
+		float: left;
+		margin: 0;
+		padding: 16px 30px 16px 0;
+	}
+
+		#main_menu h2 .logo, #main_menu #nav a { color: #FFF; text-decoration: none; }
+		#main_menu h2 .logo:hover { border: 0; }
+
+	#main_menu #nav { 
+		border-left: 1px solid #333333;
+		float: left;
+		list-style: none; 
+		margin: 0; 
+		padding: 0;
+	}
+
+	#main_menu #nav.login { border: none; float: right; }
+
+		#main_menu #nav li { 
+			border-left: 1px solid #4b4a4a;
+			border-right: 1px solid #333333;
+			float: left; 
+			position: relative; 
+
+			-moz-transition: 0.25s;
+			-webkit-transition: 0.25s;
+			-0-transition: 0.25s;
+			transition: 0.25s;
+		}
+
+		#main_menu #nav.login li:first-child { border-left: none !important; }
+		#main_menu #nav li:last-child { border-right: none !important; }
+
+		#main_menu #nav li:hover, #main_menu #nav li.current_item { 
+			background-color: #d55043; 
+			border-bottom: 0; 
+			border-left: 1px solid transparent;
+			border-right: 1px solid transparent;
+		}
+
+			#main_menu #nav li a { 
+				display: block;
+				/*font-size: 12px;*/
+				padding: 6px 22px;
+                text-decoration: none;
+				text-transform: uppercase;
+			}
+
+			#main_menu #nav.login li a { padding: 16px; }
+
+				#main_menu #nav li a span {
+					background-size: 90% !important;
+					display: block;
+					height: 24px;
+					margin: 4px auto -8px;
+					width: 24px;
+				}
+
+				#main_menu #nav li a span.home { background: url('images/nav/home.png') no-repeat; }
+				#main_menu #nav li a span.clock { background: url('images/nav/clock.png') no-repeat; }
+				#main_menu #nav li a span.archive { background: url('images/nav/archive.png') no-repeat; }
+				#main_menu #nav li a span.user { background: url('images/nav/user.png') no-repeat; }
+				#main_menu #nav li a span.admin { background: url('images/nav/admin.png') no-repeat; }
+				#main_menu #nav li a span.closed { background: url('images/nav/close.png') no-repeat; }
+
+			#main_menu #nav li .subnav {
+				display: none;
+				margin: 0;
+				padding: 10px 0 0;
+				position: absolute;
+				top: 50px;
+				width: 190px;
+				z-index: 9999;
+			}
+
+			#main_menu #nav li:hover .subnav { display: block; }
+
+				#main_menu #nav li .subnav li { 
+					border-bottom: 1px solid #c4473b;
+					float: none; 
+					list-style: none; 
+				}
+
+				#main_menu #nav li .subnav li { background-color: #d55043; border: none; }
+				#main_menu #nav li .subnav li:hover { background-color: #c4473b; }
+
+.form { 
+	background-color: #FFF;
+	border: 1px solid #d4d4d4;
+	box-shadow: 1px 1px 3px #d1d1d1;
+	padding: 25px;
+	margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+	.form h3 { 
+		font-size: 18px; 
+		margin: 0 0 25px;
+		text-align: center; 
+	}
+
+
+/*===================================================================================
+======================================= LOGIN =======================================
+===================================================================================*/
+
+#login { 
+	background-color: #FFF;
+	border: 1px solid #d4d4d4;
+	box-shadow: 1px 0px 3px #d1d1d1;
+	padding: 25px;
+	margin: 8% auto 0;
+	width: 420px;
+}
+
+	#login h3 { 
+		font-size: 18px; 
+		margin: 0 0 30px;
+		text-align: center; 
+	}
+
+     { margin-bottom: 15px; }
+
+    #login .formstyle input[type="text"] , #login .formstyle input[type="password"] { 
+    	box-shadow: none !important;
+    	margin-bottom: 15px !important; 
+    	padding: 15px !important; 
+    	width: 100% !important;
+    }
+
+	#login .formstyle input[type="text"]:focus, #login .formstyle input[type="password"]:focus 
+	{ box-shadow: 0 0 6px #d1d1d1 inset !important; padding: 15px !important; }
+
+	#login .formstyle input#user { background: url('images/user_inpt_icon.png') no-repeat 96% 10px; }
+	#login .formstyle input#pass { background: url('images/pass_inpt_icon.png') no-repeat 96% 10px; }
+    
+
+	#login a#forgot-password { color: #178daa; text-decoration: underline; }
+	#login a#forgot-password:hover { border: 0; }
+
+	#login .formstyle input.checkbox + label { float: right; }
+
+
+/*===================================================================================
+======================================= REGISTRO =======================================
+===================================================================================*/
+
+#Registro { 
+	background-color: #FFF;
+	border: 1px solid #d4d4d4;
+	box-shadow: 1px 0px 3px #d1d1d1;
+	padding: 25px;
+	margin: 2% auto 0;
+	width: 55%;
+}
+
+	#Registro h3 { 
+		font-size: 18px; 
+		margin: 0 0 25px;
+		text-align: center; 
+	}
+
+    #Registro .formstyle input[type="password"] { box-shadow: none; padding: 15px; width: 100% }
+	#Registro .formstyle input[type="password"]:focus { box-shadow: 0 0 6px #d1d1d1 inset; padding: 15px; width: 100% }
+
+	#Registro .formstyle input[type="text"] { box-shadow: none; padding: 15px; width: 100% }
+	#Registro .formstyle input[type="text"]:focus { box-shadow: 0 0 6px #d1d1d1 inset; padding: 15px; width: 100% }
+
+	#Registro .formstyle input#user { background: url('images/user_inpt_icon.png') no-repeat 96% 10px; }
+	#Registro .formstyle input#pass { background: url('images/pass_inpt_icon.png') no-repeat 96% 10px; }
+    
+
+	#Registro a#forgot-password { color: #178daa; text-decoration: underline; }
+	#Registro a#forgot-password:hover { border: 0; }
+
+	#Registro .formstyle input.checkbox + label { float: right; }
+
+
+
+
+/*===================================================================================
+======================================== HOME =======================================
+===================================================================================*/
+
+#informations {
+	background-color: #FFF;
+	box-shadow: 0 0px 7px #d1d1d1;
+	height: 50%;	
+	min-width: 980px;
+	overflow: hidden;
+	padding-top: 30px;
+}
+
+@media only screen and (min-width : 1824px) { #informations { height: 58%; } }
+
+	#informations .column { 
+		float: left; 
+		padding: 0 26px;
+		margin-bottom: 50px;
+		min-height: 230px;
+		width: 326px;
+	}
+
+	#informations .column:first-child { padding-left: 0; }
+	#informations .column.middle { border-left: 1px solid #e4e4e4; border-right: 1px solid #e4e4e4; }
+	#informations .column.last { padding-right: 0 !important; }
+
+		#informations .column .ribbon { 
+			color: #FFF;
+			font-size: 15px;
+			font-weight: normal;
+			margin: 0; 
+			padding: 15px;
+			position: relative;
+			text-transform: uppercase;
+		}
+
+		#informations .column .ribbon:before {
+			bottom: -12px;
+			border-style: solid;
+			border-width: 12px 15px 0 15px;
+			content: '';
+			height: 0px;
+			left: 18px;			
+			position: absolute;
+			width: 0px;
+		}
+
+		#informations .column .ribbon.blue  {  background-color: #1f6f94; }
+		#informations .column .ribbon.green {  background-color: #80964b; }
+		#informations .column .ribbon.brown {  background-color: #a88e66; }
+
+		#informations .column .ribbon.blue:before { border-color: #1f6f94 transparent transparent transparent; }
+		#informations .column .ribbon.green:before { border-color: #80964b transparent transparent transparent; }
+		#informations .column .ribbon.brown:before { border-color: #a88e66 transparent transparent transparent; }
+
+			#informations .column .ribbon img { float: left; margin: -2px 10px 0 0; }
+
+		#informations .column ul { margin: 30px 0 0; padding-left: 20px; }
+		#informations .column ul.blueBullet { list-style-image: url('images/blueBullet.jpg'); }
+		#informations .column ul.greenBullet { list-style-image: url('images/greenBullet.jpg'); }
+		#informations .column ul.brownBullet { list-style-image: url('images/brownBullet.jpg'); }
+
+			#informations .column ul li { margin-bottom: 8px; }
+
+                #informations .column ul li a { text-decoration: none; }
+
+			    #informations .column ul li strong { font-size: 11px }
+
+	#informations .footer { 
+		border-top: 1px solid #e3e3e3; 
+		clear: both;
+		color: #737373;
+		font-size: 12px;
+		margin: 0;
+		padding: 10px 0; 
+	}
+
+/*===================================================================================
+====================================== HORARIOS =====================================
+===================================================================================*/
+
+.submenu { 
+	border-bottom: 1px solid #cacaca; 
+	margin: 50px 0 30px; 
+	height: 30px;
+	position: relative;
+}
+
+	.submenu ul { 
+		bottom: -8px;
+		list-style: none; 
+		margin: 0;
+		overflow: hidden;
+		padding: 0; 
+		position: absolute;
+	}
+
+		.submenu li { float: left; margin-right: 25px; }
+
+			.submenu li a { 
+				color: #474747;
+				display: block;
+				font-size: 16px;
+				/*letter-spacing: -1px;*/
+				padding: 0 0 8px 0; 
+                text-decoration: none;
+				text-transform: uppercase;
+			}
+
+			.submenu li a:hover, .submenu li.active a { border-bottom: 0; background: url('images/rowBottom.png') no-repeat center bottom; }
+
+				.submenu li a span { 
+					display: block; 
+					/*padding: 0 25px 5px 25px;*/ 
+					padding-bottom: 5px;
+				}
+
+					.submenu li a span:hover, .submenu li.active a span { border-bottom: 6px solid #178daa; }
+
+#opt-schedule { margin-bottom: 20px; overflow: hidden; }
+
+	#opt-schedule label { 
+		color: #474747;
+		float: left; 
+		margin: 5px 20px 0 0;
+		font-weight: bold; 
+	}
+
+	#opt-schedule div { float: left; margin-right: 20px; } 
+
+		/*#opt-schedule .select { margin-bottom: 0 }*/
+
+        #opt-schedule select { min-width: 200px;  }
+
+		#opt-schedule #semana { width: 150px }
+
+#calendar { 
+	background-color: #f6f6f6; 
+	border: 1px solid #e2e2e2;
+	overflow: hidden; 
+	padding: 10px 0 0 10px;
+}
+
+	#calendar #week .cel { 
+		background: none;
+		border-color: transparent;
+		color: #686868;
+		font-size: 13px;
+		height: auto;
+		padding: 0 8px 5px;
+		text-align: center;
+		text-transform: uppercase; 
+	}
+
+	#calendar .row { 
+        clear: both; 
+        margin: 0;
+        overflow: hidden; 
+	}
+
+		#calendar .row .cel { 
+			background: #FFF;
+			border: 1px solid #eaeaea; 
+			float: left; 
+			height: 98px;
+			margin: 0 -1px -1px 0;
+			padding: 10px 8px;
+			width: 11.22%;
+		}
+
+			#calendar .row .cel  a { 
+				color: #b3b3b3; 
+				display: block; 
+				height: 100%;
+                text-decoration: none; 
+				width: 100%; 
+			}
+
+			#calendar .row .cel a:hover { border: 0; }
+
+				#calendar .row .cel.days span.avilable { display: block; font-size: 11px; }
+				#calendar .row .cel a span.name.hc { color: #178daa; }
+
+				#calendar .row .cel a span.name { 
+					color: #686868; 
+					display: block;
+					font-size: 13px; 
+					font-weight: bold;
+					line-height: 20px; 
+ 					overflow: hidden;
+  					text-overflow: ellipsis;
+  					white-space: nowrap;
+				}			
+
+		#calendar .row .cel:last-child { border-right: 0; }
+
+		#calendar .row .cel.time { 
+			background: none;
+			border: 0; 
+			color: #80a8af;
+			padding: 16px 10px 0 0;
+			text-align: center;
+			text-transform: uppercase;
+			/*width: 80px;*/
+            width: 150px;
+		}
+
+			#calendar .row .cel.time h4 { margin: 0 0 5px; }
+			#calendar .row .cel.time span { display: block; margin-bottom: -5px }
+
+		/*#calendar .row .cel.days label { float: right; }
+
+		#calendar .row .cel.days span { 
+			color: #b3b3b3;
+			display: block; 
+			float: left; 
+			line-height: 12px;
+			width: 30px;
+		}*/
+
+		#calendar .row .cel.days.checked { box-shadow: 0 3px 0 #d55043 inset; }
+		#calendar .row .cel.days.full { background: #FFFCF7; }
+
+		#calendar .row .cel.days.disabled { 
+			background: #FAFAFA;
+			color: #686868;
+			font-size: 13px;
+			font-weight: bold;
+			line-height: 95px;
+			text-align: center;
+			text-transform: uppercase; 
+		}
+
+/*===================================================================================
+======================================= FOOTER ======================================
+===================================================================================*/
+
+footer { border-top: 1px solid #dad9d7; margin-top: 30px !important; }
+
+    footer p { margin-top: 10px; }

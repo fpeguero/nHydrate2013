@@ -1,0 +1,163 @@
+﻿@{
+    @model IEnumerable<Proc_Reporte_Publicaciones_IdiomaModel>
+}
+
+@using Mvc.Core.Security
+@using Mvc.Core.UI
+@using OSIS.PEPPAM.Mvc.UI
+
+@{
+    IFuncionality uiObject = new Funcionality().GetFuncionality("REPORTES_DETALLES");
+     var dictinary = new Dictionary<int, int>();
+    dictinary.Add(8, 140);
+}
+@Html.Partial("_Funcionalidades", dictinary)
+<link href="@Url.Content("~/Content/daterangepicker-bs3.css")" rel="stylesheet" type="text/css" />
+
+<div class="entity-form-container">
+    @using (Html.BeginForm("Detalles", "Reportes", FormMethod.Post, new { id = "InformesDetalladoForm", role = "form", @class = "form-horizontal form" }))
+    {
+
+        <h2>@uiObject.Name <small>@uiObject.Description</small></h2>
+        <hr />
+
+        <div class="searchBox form-inline ">
+
+          
+                @if (((IPrincipal)User).IsInNivel(SeguridadNivel.EncargadoZona))
+                {
+                    <div class="form-field-group">
+                        <label class="control-label ">@Funcionality.GetDescription("Horario_Trans", "Zona_Secuencia", true)</label>
+                        <div class="editor ">
+                            @Html.DropDownList("zona", new SelectList(Zonas_MasterModel.LoadAll(), "Zona_Secuencia", "Zona_Descripcion"), new { @class = "form-control" })
+                        </div>
+                    </div>
+                    
+                    <div class="form-field-group">
+                        <label class="control-label " for="fechas">Fecha</label>
+                        <div class="editor">
+                            <div class="input-prepend input-group">
+                                <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
+                                <input type="text" name="fechas" id="fechas" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-field-group">
+
+                        <label class="control-label ">@Funcionality.GetDescription("REPORTES_DETALLES", "Publicacion_Descripcion", true)</label>
+                        <div class="editor ">
+                            @Html.DropDownList("publicacion", new SelectList(Publicaciones_CataModel.LoadAll(), "Publicacion_Numero", "Publicacion_Descripcion"), new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="form-field-group">
+
+                        <label class="control-label "></label>
+                        <div class="editor ">
+                            <input type="submit" class="btn btn-default btn-md" value="Buscar"/>
+                        </div>
+                    </div>
+                }
+           
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+            <th>Puesto / Idioma</th>
+            @foreach (var header in Model.Select(x => new {x.Idioma_Numero, x.Idioma_Descripcion}).Distinct())
+                {
+                <th>@header.Idioma_Descripcion</th>
+                }
+
+            </thead>
+            <tbody>
+                @foreach (var reporte in Model.Select(x => new {x.Ruta_Secuencia, x.Ruta_Descripcion}).Distinct())
+                {
+                    <tr>
+                        <td>@reporte.Ruta_Descripcion</td>
+                        @foreach (var header in Model.Select(x => new {x.Idioma_Numero, x.Idioma_Descripcion}).Distinct())
+                        {
+                            var cantidad = Model.FirstOrDefault(x => x.Ruta_Secuencia == reporte.Ruta_Secuencia && x.Idioma_Numero == header.Idioma_Numero).Publicacion_Cantidad;
+                            <th>@cantidad</th>
+                        }
+                       
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+
+    }
+</div>
+
+@section scripts
+{
+    <script src="@Url.Content("~/Scripts/moment.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/daterangepicker.js")" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $("#zona").change(function () {
+            $("#InformesDetalladoForm").submit();
+        });
+
+        $("#publicacion").change(function () {
+            $("#InformesDetalladoForm").submit();
+        });
+
+        
+        $("#fechas").bind("change", function () {
+            $("#InformesDetalladoForm").submit();
+        });
+
+        $(document).ready(function () {
+
+            $('#fechas').val(moment().subtract('days', 29).format('DD/MM/YYYY') + ' - ' + moment().format('DD/MM/YYYY'));
+
+            $('#fechas').daterangepicker({
+                startDate: moment().subtract('days', 29),
+                endDate: moment(),
+                minDate: '01/01/2014',
+                maxDate: moment(),
+                dateLimit: { days: 60 },
+                showDropdowns: true,
+                showWeekNumbers: true,
+                timePicker: false,
+                timePickerIncrement: 1,
+                timePicker12Hour: true,
+                ranges: {
+                    'Hoy': [moment(), moment()],
+                    'Ayer': [moment().subtract('days', 1), moment().subtract('days', 1)],
+                    'Ultimos 7 días': [moment().subtract('days', 6), moment()],
+                    'Ultimos 30 días': [moment().subtract('days', 29), moment()],
+                    'Este mes': [moment().startOf('month'), moment().endOf('month')],
+                    'El mes pasado': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+                },
+                opens: 'left',
+                buttonClasses: ['btn btn-default'],
+                applyClass: 'btn-small btn-primary',
+                cancelClass: 'btn-small',
+                format: 'DD/MM/YYYY',
+                separator: ' - ',
+                locale: {
+                    applyLabel: 'Aplicar',
+                    cancelLabel: 'Limpiar',
+                    fromLabel: 'Desde',
+                    toLabel: 'Hasta',
+                    customRangeLabel: 'Seleccionar',
+                    daysOfWeek: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'],
+                    monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                    firstDay: 1
+                }
+            }, function (start, end, label) {
+                //console.log(start.toISOString(), end.toISOString(), label);
+                $("#InformesDetalladoForm").submit();
+            });
+        });
+    </script>
+}
+
+
+
+
+
+
+

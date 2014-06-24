@@ -1,0 +1,11 @@
+﻿@using Mvc.Core.Security
+
+
+<div id="divAvisos">
+    
+@foreach(var aviso in Personas_Notificaciones_TransModel.PageLoadByPersonas(0,10,((IPrincipal) User).UsuarioNumero))
+    {
+        <li>@aviso.Notificaciones.Notificacion_Descripcion</li>    
+    }
+    
+</div>

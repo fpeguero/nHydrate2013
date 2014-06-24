@@ -1,0 +1,39 @@
+@using FluentValidation.Resources
+@using Mvc.Core.UI
+@using OSIS.PEPPAM.Mvc.UI
+@model OSIS.PEPPAM.Mvc.Models.Account.LoginViewModel
+@{
+
+    IFuncionality uiObject = new Funcionality().GetFuncionality("LOGIN");
+
+    ViewBag.Title = Resources.Shared.AppName + " - " + uiObject.Name;
+    ViewBag.Title = @Resources.Login.Title;
+}
+
+<div class="row">
+   
+</div>
+
+<div id="wrapper-content" class="content">
+    <div id="login">
+        <h3>@OSIS.PEPPAM.Mvc.UI.Messages.GetMensaje("MENSAJE_TITULO_LOGIN") </h3>
+        @using (Html.BeginForm("Login", "Account", FormMethod.Post, new {  @class = "formstyle" }))
+        {
+        @Html.AntiForgeryToken()
+             @Html.ValidationSummary(true) 
+            @Html.TextBoxFor(m => m.UserName, new { @class = "", name = "user", id = "user", placeholder = Funcionality.GetDescription("Usuario", "Usuario", true) + " :" })
+            @Html.ValidationMessageFor(m => m.UserName)
+            @Html.PasswordFor(m => m.Password, new { @class = "", id = "pass", placeholder = Funcionality.GetDescription("Contrasenia", "Contrasenia", true)+" :" })
+            @Html.ValidationMessageFor(m => m.Password)
+
+            <input type="submit" value="@Resources.Login.SubmitLogin" class="Btn blue" />
+
+            <a href="@Url.Action("Recuperar", "Account")" id="forgot-password">@OSIS.PEPPAM.Mvc.UI.Messages.GetMensaje("OLVIDO_SU_CONTRASENIA")</a>
+            <input type="checkbox" name="checkboxG1" id="checkboxG1" class="checkbox" /><label for="checkboxG1" class="label">Recordar usuario</label>
+
+        }
+    </div>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

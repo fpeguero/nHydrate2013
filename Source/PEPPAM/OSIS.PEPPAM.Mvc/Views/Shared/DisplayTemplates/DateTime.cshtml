@@ -1,0 +1,6 @@
+@model Nullable<DateTime>
+@if (Model.HasValue)
+{
+    string twoLettersCulture = new System.Globalization.CultureInfo(Culture).TwoLetterISOLanguageName;
+    @Model.Value.ToString(twoLettersCulture == "en" ? "MM/dd/yyyy" : "dd/MM/yyyy")
+}

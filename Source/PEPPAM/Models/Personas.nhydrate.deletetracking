@@ -1,0 +1,10 @@
+<root>
+  <tables />
+  <views />
+  <storedprocedures>
+    <storedprocedure>ProcPuestosHorarioTurnosFaltantesNotificacion</storedprocedure>
+    <storedprocedure>ProcReportePublicacionesIdioma</storedprocedure>
+    <storedprocedure>ProcReporteGeneral</storedprocedure>
+  </storedprocedures>
+  <functions />
+</root>

@@ -1,0 +1,10 @@
+﻿@{
+    @model OSIS.PEPPAM.Mvc.Models.Dias_CataModel
+}
+
+
+<div class="col-lg-4">
+    @Html.HiddenFor(model => model.Dia_Secuencia)
+    <h5>@Model.Dia_Descripcion</h5>
+    @Html.EditorFor(model => model.HorasDiponibilidad)
+</div>

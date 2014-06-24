@@ -1,0 +1,125 @@
+﻿@model Personas_MasterModel
+@using Mvc.Core.UI
+@using OSIS.PEPPAM.Mvc.UI
+
+@{
+    IFuncionality uiObject = new Funcionality().GetFuncionality("MI_PEPPAM_DATOS_PERSONALES");
+
+    ViewBag.Title = Resources.Shared.AppName + " - " + uiObject.Name;
+    string twoLettersCulture = new System.Globalization.CultureInfo(Culture).TwoLetterISOLanguageName;
+    string decimalSeparator = new System.Globalization.CultureInfo(Culture).NumberFormat.NumberDecimalSeparator;
+    string groupSeparator = new System.Globalization.CultureInfo(Culture).NumberFormat.NumberGroupSeparator;
+    var dictinary = new Dictionary<int, int>();
+    dictinary.Add(2, 114);
+}
+
+
+@Html.Partial("_Funcionalidades", dictinary)
+
+<div class="entity-form-container">
+    @using (Html.BeginForm("Personales", "MiPeppam", FormMethod.Post, new { id = "personalesForm", role = "form", @class = "form-horizontal form" }))
+    {
+        <h2>@uiObject.Name</h2>
+        <h5>@uiObject.Description</h5>
+        <hr />
+
+        @Html.ValidationSummary(true)
+        @Html.Partial("_PersonalesCreateOrEdit.gen", Model)
+        
+        <div class="row">
+
+            <div class="form-field-group">
+                <label class="control-label  col-sm-2"></label>
+                <div class="editor col-sm-4">
+                    <button class="btn  btn-primary btn-sm save-button" title="@uiObject.GetAction("Update")"><span class="glyphicon glyphicon-ok"></span>@uiObject.GetAction("Update").Description</button>
+                </div>
+            </div>
+        </div>
+        
+    }
+
+
+
+    <hr />
+    <div class="form">
+
+        @Html.Partial("_DatosContacto", Model)
+    </div>
+</div>
+<div id="window"></div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript">
+
+        $(function () {
+            formUtils.setupFormControls("personalesForm");
+            formUtils.setupFormActionButtons({
+                formId: "personalesForm",
+                indexPageUrl: "@Url.Action("Index")",
+                buttonsContainerSelector: ".form-commands-container"
+            });
+
+            setupContacto_InformacionesGrid();
+        });
+    </script>
+
+    <script type="text/javascript">
+
+        var Contacto_InformacionesGrid;
+        function setupContacto_InformacionesGrid() {
+            var gridId = "Contacto_InformacionesGrid";
+
+            if ($("#" + gridId).data("grid-initialized")) {
+                Contacto_InformacionesGrid.fnClearTable();
+                return;
+            }
+            else
+                $("#" + gridId).data("grid-initialized", "true");
+
+
+            gridUtils.setupGridToolbarButtons({
+                gridId: gridId,
+                toolbarContainerSelector: "#contacto_InformacionesTab",
+                addUrl: "@Url.Action("AddContactoInformaciones", "MiPeppam", new { personaSecuencia = Model.Persona_Secuencia })",
+            });
+
+            gridUtils.setupGridRowButtons({
+                gridId: gridId
+            });
+
+            Contacto_InformacionesGrid = $("#" + gridId).dataTable({
+                "aoColumns": [
+                    @Html.Raw(uiObject.GetGridColumnsArray("Persona_Contactos_Trans")),
+
+                    {
+                        sClass: "row-options small",
+                        bSortable: false,
+                        mData: null,
+                        mRender: function (data, type, datasource) {
+                            var rowId = datasource.EntityKey;
+                            var editHtml = '<a href="@Url.Action("EditContactoInformaciones", "Personas_Master")?entityKey_child=' + rowId + '&persona_Secuencia_parent=@Model.Persona_Secuencia" data-detailname="EditContacto_Informaciones" class="row-popup-edit btn btn-sm btn-default" title="@Resources.Shared.Edit"><span class="glyphicon glyphicon-pencil" /></a>';
+                            var deleteHtml = '<a href="@Url.Action("DeleteContactoInformaciones", "Personas_Master")?entityKey_child=' + rowId + '&persona_Secuencia_parent=@Model.Persona_Secuencia" class="row-delete btn btn-sm btn-danger" title="@Resources.Shared.Delete"><span class="glyphicon glyphicon-remove" /></a>';
+                            return editHtml + deleteHtml;
+                        }
+                    }
+                ],
+                "aaSorting": [[1, "asc"]],
+                //
+                "oLanguage": datatables_locale,
+                "bFilter": false, /* Disable filtering */
+                "bSort": false, /* Disable sorting */
+                "bProcessing": true,
+                "bServerSide": true,
+                "sAjaxSource": "@Url.Action("LoadContactoInformaciones")",
+                "sServerMethod": "POST",
+                //
+                "fnServerParams": function (aoData) {
+                    aoData.push({ "name": "persona_Secuencia", "value": "@Model.Persona_Secuencia" });
+                }
+            });
+        }
+    </script>
+
+
+}

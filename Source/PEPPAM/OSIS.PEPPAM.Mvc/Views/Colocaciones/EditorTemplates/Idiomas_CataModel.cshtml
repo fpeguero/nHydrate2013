@@ -1,0 +1,9 @@
+﻿@model Idiomas_CataModel
+@using CodeFluent.Runtime.Compression
+@using Mvc.Core.UI
+@using OSIS.PEPPAM.Mvc.UI
+
+<td>@Html.EditorFor(model => model.Cantidad, "IntegerEditor")</td>
+@Html.HiddenFor(model => model.Idioma_Numero)
+@Html.HiddenFor(model => model.Publicacion_Idioma)
+@Html.HiddenFor(model => model.Idioma_Descripcion)

@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Models", "Models\Models.vbproj", "{9262CFB2-ABC1-43A4-AFE7-9CDAE78387D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuGet", ".nuGet", "{329BC0C0-DB0B-4682-9761-2E69EAA5196F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSIS.PEPPAM.Mvc", "OSIS.PEPPAM.Mvc\OSIS.PEPPAM.Mvc.csproj", "{59B42BC7-7A84-4E8A-A7A1-84080AC1F440}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSIS.PEPPAM.SQLDAL", "OSIS.PEPPAM.SQLDAL\OSIS.PEPPAM.SQLDAL.csproj", "{DC7010EF-169B-4503-8F6C-9E584FAC8F13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc.Core", "..\Mvc.Core\Mvc.Core.csproj", "{A27280AA-F03E-4CB3-9D3F-7C3696D07798}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9262CFB2-ABC1-43A4-AFE7-9CDAE78387D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9262CFB2-ABC1-43A4-AFE7-9CDAE78387D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9262CFB2-ABC1-43A4-AFE7-9CDAE78387D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9262CFB2-ABC1-43A4-AFE7-9CDAE78387D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59B42BC7-7A84-4E8A-A7A1-84080AC1F440}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59B42BC7-7A84-4E8A-A7A1-84080AC1F440}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59B42BC7-7A84-4E8A-A7A1-84080AC1F440}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59B42BC7-7A84-4E8A-A7A1-84080AC1F440}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC7010EF-169B-4503-8F6C-9E584FAC8F13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC7010EF-169B-4503-8F6C-9E584FAC8F13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC7010EF-169B-4503-8F6C-9E584FAC8F13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC7010EF-169B-4503-8F6C-9E584FAC8F13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A27280AA-F03E-4CB3-9D3F-7C3696D07798}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A27280AA-F03E-4CB3-9D3F-7C3696D07798}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A27280AA-F03E-4CB3-9D3F-7C3696D07798}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A27280AA-F03E-4CB3-9D3F-7C3696D07798}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

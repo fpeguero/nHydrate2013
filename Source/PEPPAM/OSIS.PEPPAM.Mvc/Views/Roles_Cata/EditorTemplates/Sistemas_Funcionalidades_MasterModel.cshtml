@@ -1,0 +1,12 @@
+﻿@{
+
+@model OSIS.PEPPAM.Mvc.Models.Sistemas_Funcionalidades_MasterModel
+        }
+
+<tr>
+    <td> @Html.CheckBoxFor(x => x.IsSelected)</td>
+    <td><strong> @Model.Funcionalidad_Nombre</strong></td>
+    <td>   @Model.Funcionalidad_Descripcion</td>
+</tr>
+@Html.HiddenFor(x => x.Funcionalidad_Numero)
+@Html.HiddenFor(x => x.Funcionalidad_Nombre)

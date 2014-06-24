@@ -1,0 +1,25 @@
+﻿@using Mvc.Core.Security
+@using Mvc.Core.UI
+@using OSIS.PEPPAM.Mvc.UI
+@model ColocacionesModel
+
+@{
+    IFuncionality uiObject = new Funcionality().GetFuncionality("INFORMES_COLOCACIONES");
+
+    ViewBag.Title = Resources.Shared.AppName + " - " + uiObject.Name;
+    var dictinary = new Dictionary<int, int>();
+    dictinary.Add(4, 130);
+}
+
+@Html.Partial("_Funcionalidades", dictinary)
+
+<div id="wrapper-content" class="content">
+
+    <div class="form">
+        <h2>@uiObject.Name</h2>
+        <h5>@uiObject.Description</h5>
+        <hr />
+        @Html.Raw(Messages.GetOrSetMensaje("MENSAJE_NO_INFORME_PENDIENTE").Replace("{Apellido}", ((IPrincipal)User).UsuarioApellido))
+    </div>
+</div>
+

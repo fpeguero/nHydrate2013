@@ -1,0 +1,11 @@
+﻿@{
+    @model OSIS.PEPPAM.Mvc.Models.Roles_Modulos
+}
+
+<ul class="list-group">
+    <li class="list-group-item">@Model.Modulo_Nombre</li>
+    <table>
+        @Html.EditorFor(x => x.Funcionalidades_ModuloList)
+    </table>
+</ul>
+@Html.HiddenFor(x => x.Modulo_Nombre)

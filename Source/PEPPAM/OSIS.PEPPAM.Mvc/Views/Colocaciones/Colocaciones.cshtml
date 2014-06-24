@@ -1,0 +1,109 @@
+﻿@using Mvc.Core.UI
+@using OSIS.PEPPAM.Mvc.UI
+@model ColocacionesModel
+
+@{
+    IFuncionality uiObject = new Funcionality().GetFuncionality("INFORMES_COLOCACIONES");
+
+    ViewBag.Title = Resources.Shared.AppName + " - " + uiObject.Name;
+    string twoLettersCulture = new System.Globalization.CultureInfo(Culture).TwoLetterISOLanguageName;
+    string decimalSeparator = new System.Globalization.CultureInfo(Culture).NumberFormat.NumberDecimalSeparator;
+    string groupSeparator = new System.Globalization.CultureInfo(Culture).NumberFormat.NumberGroupSeparator;
+    var dictinary = new Dictionary<int, int>();
+    dictinary.Add(4, 130);
+}
+
+@Html.Partial("_Funcionalidades", dictinary)
+
+<div id="wrapper-content" class="content">
+
+    <div class="form">
+        <h2>@uiObject.Name</h2>
+        <h5>@uiObject.Description</h5>
+        <hr />
+        @using (Html.BeginForm("AddColocacion", "Colocaciones", FormMethod.Post, new { id = "ColicacionesForm", role = "form", @class = "form-horizontal" }))
+{
+              @Html.ValidationSummary(true)
+    <div class="col-lg-12">
+       
+    </div>
+       
+
+
+          
+
+    <div class="row">
+                
+        <div class="form-field-group ">
+            <label class=" col-sm-2 col-lg-2">@Funcionality.GetDescription("INFORMES_COLOCACIONES", "Circuito_Numero", true)</label>
+            <div class="editor col-sm-7 col-lg-7">
+                @Html.DropDownListFor(model => model.EntityKey, new SelectList(Model.Turnos, "Turno_Keys", "Turno_Descripcion_Combinacion", Model.EntityKey), new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.EntityKey)
+            </div>
+        </div>
+        <div class=" col-sm-3 col-lg-3 ">
+            <div class="pull-right">
+                <button class="btn  btn-primary btn-sm save-button" title="@uiObject.GetAction("Send")"><span class="glyphicon glyphicon-ok"></span>@uiObject.GetAction("Send").Description</button>
+            </div>
+            
+        </div>
+    </div>
+    if (TempData["InformeEnviado"] != null)
+    {
+        <div class="row">
+            <div class=" col-sm-12 col-lg-12 ">
+                @Html.Raw(Messages.GetOrSetMensaje("MENSAJE_INFORME_ENVIADO_VISIBLE_MODIFICACION_4_DIAS"))
+            </div>
+        </div>
+    }
+
+    <div class="row">
+        <div class="col-lg-12">
+            <table class="table table-bordered">
+                <thead>
+                <th>Publicaciones / Idiomas</th>
+                @foreach (var idiomas in Model.Publicaciones.FirstOrDefault().Idiomas)
+                {
+                    <th>@idiomas.Idioma_Descripcion</th>
+                }
+                </thead>
+
+                <tbody>
+                    @Html.EditorFor(model => model.Publicaciones)
+                </tbody>
+            </table>
+        </div>
+    </div>
+}
+    </div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript">
+
+        $(function () {
+            formUtils.setupFormControls("personalesForm");
+            formUtils.setupFormActionButtons({
+                formId: "personalesForm",
+                indexPageUrl: "@Url.Action("Index")",
+                buttonsContainerSelector: ".form-commands-container"
+            });
+
+
+            $("#EntityKey").change(function(evt) {
+
+                var url = '@Url.Action("Index")' + '?keyTurnos=' + $(this).val();
+
+                location.href = url;
+
+            });
+
+
+        });
+    </script>
+
+
+}

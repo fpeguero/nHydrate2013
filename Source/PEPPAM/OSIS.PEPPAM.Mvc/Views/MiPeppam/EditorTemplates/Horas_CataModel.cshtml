@@ -1,0 +1,18 @@
+﻿@{
+
+    @model OSIS.PEPPAM.Mvc.Models.Horas_CataModel
+}
+
+<style>
+    #lihoras {
+        margin-left: 30px
+    }
+</style>
+
+<div id="lihoras" >
+     @Html.CheckBoxFor(x => x.IsSelected)
+     @Model.Hora_Desde - @Model.Hora_Hasta
+</div>
+@Html.HiddenFor(x => x.Hora_Desde)
+@Html.HiddenFor(x => x.Hora_Hasta)
+@Html.HiddenFor(x => x.Hora_Secuencia)

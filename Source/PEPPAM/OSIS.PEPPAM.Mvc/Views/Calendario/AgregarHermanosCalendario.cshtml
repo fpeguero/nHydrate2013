@@ -1,0 +1,212 @@
+﻿@{
+
+
+    @model OSIS.PEPPAM.Mvc.Controllers.Calendario.CalendarioModel
+}
+<div id="wrapper-content" class="content">
+    <div class="submenu">
+        <ul>
+            <li class="active"><a href="#"><span>Horarios</span></a></li>
+            <li><a href="@Url.Action("MisTurnosPendientes")"><span>Mis turnos de predicación</span></a></li>
+        </ul>
+        <div style="clear: both"></div>
+    </div>
+
+    @using (Html.BeginForm("Calendario", "Calendario", FormMethod.Post, new { id = "Dias_CataForm", role="form", @class="formstyle" }))
+{
+
+        <div id="opt-schedule">
+
+            <div class="form-field-group">
+                <label class="">Puestos</label>
+                <div class="">
+                    <div id="puesto" class="select">
+                        @Html.DropDownListFor(model => model.Ruta_Secuencia, new SelectList(ViewBag.Rutas, "EntityKey", "EntityDisplayName", Model.Ruta_Secuencia), new { @class = "" })
+                        @Html.ValidationMessageFor(model => model.Ruta_Secuencia)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-field-group">
+                <label class="">Semana</label>
+                <div class="">
+                    <div id="puesto" class="select">
+                        @Html.DropDownListFor(model => model.Horario_Secuencia, new SelectList( ViewBag.Horarios, "EntityKey", "EntityDisplayName2", Model.Horario_Secuencia), new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Horario_Secuencia)
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-field-group">
+
+                <div class="">
+                    <button class="btn  btn-default btn-sm save-button" title=""><span class="glyphicon glyphicon-search"></span>Buscar</button>
+                </div>
+            </div>
+
+
+
+
+        </div>
+}
+    @{
+        //var count = Model.Turnos.Select(x => x.DiasCata).Distinct().Count() ;
+        var diastodos = Dias_CataModel.LoadAll();
+         var count = diastodos.Count ;
+        var with = (89/count).ToString() + "%";
+        
+        
+    }
+
+
+    <style>
+        #calendar .row .mydays {
+            width: @with !important
+        }
+    </style>
+    <form class="formstyle">
+
+        <!-- Calendario -->
+        <div id="calendar">
+            <div id="week" class="row">
+                <div class="cel time" style="padding-left: 0"></div>
+                @*@foreach (var dias in Model.Turnos.Select(x => x.DiasCata).Distinct())*@
+                @foreach (var dias in diastodos)
+                {
+                    <div class="cel mydays">@dias.Dia_Descripcion</div>
+                }
+
+                @*<div class="cel">Lunes 14</div>
+                    <div class="cel">Martes 15</div>
+                    <div class="cel">Miércoles 16</div>
+                    <div class="cel">Jueves 17</div>
+                    <div class="cel">Viernes 18</div>
+                    <div class="cel">Sábado 19</div>
+                    <div class="cel">Domingo 20</div>*@
+            </div>
+            <div id="schedule">
+                <!-- TURNO 1 -->
+                @foreach (var turnos in Model.Turnos.Select(x => x.HorarioTurnoTrans).Distinct())
+                {
+                    <div class="row">
+                        <div class="cel time">
+                            <h4>@turnos.Turno_Descripcion</h4>
+                            <span>@turnos.Turno_Hora_Desde</span>
+                            <span>@turnos.Turno_Hora_Hasta</span>
+                        </div>
+
+                        @*@foreach (var dias1 in Model.Turnos.Select(x => x.DiasCata).Distinct())*@
+                        @foreach (var dias1 in diastodos)
+                        {
+                            if (Model.Turnos.Any(x => x.Dia_Secuencia == dias1.Dia_Secuencia && x.Horario_Turno_Secuencia == turnos.Horario_Turno_Secuencia))
+                            {
+                                <div class="cel days mydays">
+                                    <a href="@Url.Action("LoadHermanosTurnos", new {puesto = Model.Ruta_Secuencia, horario = turnos.Horario_Turno_Secuencia, dia = dias1.Dia_Secuencia})">
+                                        
+                                        @{
+
+                                            var horarioTurnoDiasTransModel = Model.Turnos.FirstOrDefault(x => x.Dia_Secuencia == dias1.Dia_Secuencia && x.Horario_Turno_Secuencia == turnos.Horario_Turno_Secuencia);
+                                        }
+                                        
+                                        @if (horarioTurnoDiasTransModel != null)
+                                        {
+                                            <span class="avilable">@horarioTurnoDiasTransModel.PersonasTurnosTrans.Count/@Model.Puesto.Ruta_Publicadores_Cantidad</span>
+
+                                            foreach (var hermanos in horarioTurnoDiasTransModel.PersonasTurnosTrans)
+                                            {
+                                                var nombrecompleto = hermanos.Persona.Persona_Nombres + " " + hermanos.Persona.Persona_Apellidos;
+                                                <span class="name hc" title="@nombrecompleto">@nombrecompleto</span>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <span class="avilable">0/@Model.Puesto.Ruta_Publicadores_Cantidad</span>
+                                        }
+                                    </a>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="cel days disabled mydays">No disponible</div>
+                            }
+
+
+                        }
+
+
+                    </div>
+                }
+
+
+                @*<div class="cel days checked full">
+                        <a href="#">
+                            <span class="avilable">3/3</span>
+                            <span class="name hc" title="Hairo Mercedes Hernandez">Hairo Mercedes Hernández</span>
+                            <span class="name">Josefina Mateo</span>
+                            <span class="name">Luisa Matias</span>
+                        </a>
+                    </div>
+                    <div class="cel days"><a href="#"></a></div>
+                    <div class="cel days"><a href="#"></a></div>
+                    <div class="cel days"><a href="#"></a></div>
+                    <div class="cel days"><a href="#"></a></div>
+                    <div class="cel days"><a href="#"></a></div>
+                    <div class="cel days"><a href="#"></a></div>*@
+
+                <!-- TURNO 2 -->
+                @*<div class="row">
+                        <div class="cel time">
+                            <h4>Turno #2</h4>
+                            <span>11:30 A.M</span>
+                            <span>03:00 P.M</span>
+                        </div>
+                        <div class="cel days disabled"></div>
+                        <div class="cel days"><a href="#"></a></div>
+                        <div class="cel days"><a href="#"></a></div>
+                        <div class="cel days"><a href="#"></a></div>
+                        <div class="cel days"><a href="#"></a></div>
+                        <div class="cel days"><a href="#"></a></div>
+                        <div class="cel days"><a href="#"></a></div>
+                    </div>*@
+                <!-- TURNO 1 -->
+                @*<div class="row">
+                        <div class="cel time">
+                            <h4>Turno #3</h4>
+                            <span>03:00 P.M</span>
+                            <span>06:30 P.M</span>
+                        </div>
+                        <div class="cel days">
+                            <a href="">
+                                <span class="avilable">0/3</span>
+                            </a>
+                        </div>
+                        <div class="cel days"><a href="#"></a></div>
+                        <div class="cel days"><a href="#"></a></div>
+                        <div class="cel days"><a href="#"></a></div>
+                        <div class="cel days full">
+                            <a href="#">
+                                <span class="avilable">3/3</span>
+                                <span class="name hc" title="Hairo Mercedes Hernandez">Hairo Mercedes Hernández</span>
+                                <span class="name">Josefina Mateo</span>
+                                <span class="name">Luisa Matias</span>
+                            </a>
+                        </div>
+                        <div class="cel days"><a href="#"></a></div>
+                        <div class="cel days"><a href="#"></a></div>
+                    </div>*@
+            </div>
+        </div>
+        <!-- END Calendario -->
+    </form>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

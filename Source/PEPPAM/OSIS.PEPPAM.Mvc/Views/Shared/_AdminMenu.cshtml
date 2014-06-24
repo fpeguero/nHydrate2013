@@ -1,0 +1,12 @@
+﻿<ul class="sidebar-nav">
+    <li class="sidebar-brand">
+        <a href="#">Administración</a>
+    </li>
+    @foreach (var funcionalidad in Sistemas_Funcionalidades_MasterModel.PageLoadByModulo(0, 1000, 1))
+    {
+        <li>
+            <a href="@funcionalidad.Funcionalidad_Url">@funcionalidad.Funcionalidad_Nombre</a>
+        </li>
+    }
+   
+</ul>

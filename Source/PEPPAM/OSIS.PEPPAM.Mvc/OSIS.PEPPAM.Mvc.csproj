@@ -1,0 +1,2846 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{59B42BC7-7A84-4E8A-A7A1-84080AC1F440}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OSIS.PEPPAM.Mvc</RootNamespace>
+    <AssemblyName>OSIS.PEPPAM.Mvc</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CodeFluent.Runtime">
+      <HintPath>..\..\..\..\..\Program Files (x86)\SoftFluent\CodeFluent\Modeler\CodeFluent.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah, Version=1.2.14706.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah.Mvc, Version=2.0.0.29988, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Elmah.MVC.2.1.1\lib\net40\Elmah.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Exceptionless">
+      <HintPath>..\packages\Exceptionless.1.5.2064\lib\net45\Exceptionless.dll</HintPath>
+    </Reference>
+    <Reference Include="Exceptionless.Mvc">
+      <HintPath>..\packages\Exceptionless.Mvc.1.5.2064\lib\net45\Exceptionless.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentScheduler">
+      <HintPath>..\packages\FluentScheduler.3.1.44\lib\net40\FluentScheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\fluentvalidation\src\FluentValidation.Mvc5\bin\Debug\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation.Mvc, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\fluentvalidation\src\FluentValidation.Mvc5\bin\Debug\FluentValidation.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.AspNet, Version=1.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Glimpse.AspNet.1.8.1\lib\net45\Glimpse.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.Core, Version=1.8.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Glimpse.1.8.5\lib\net45\Glimpse.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.Elmah, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Glimpse.Elmah.1.1.1\lib\net40\Glimpse.Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.Mvc5, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Glimpse.Mvc5.1.5.3\lib\net45\Glimpse.Mvc5.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetZip.1.9.1.8\lib\net20\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desarrollos\@@Works\ELMAH-1.2-sp2-bin-x64\bin\net-2.0\Release\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Mvc.Mailer">
+      <HintPath>..\packages\MvcMailer.4.5\lib\45\Mvc.Mailer.dll</HintPath>
+    </Reference>
+    <Reference Include="mysql.data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desarrollos\@@Works\ELMAH-1.2-sp2-bin-x64\bin\net-2.0\Release\mysql.data.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=2.0.6.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desarrollos\@@Works\ELMAH-1.2-sp2-bin-x64\bin\net-2.0\Release\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorEngine">
+      <HintPath>..\packages\RazorEngine.3.3.0\lib\net40\RazorEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desarrollos\@@Works\ELMAH-1.2-sp2-bin-x64\bin\net-2.0\Release\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Abstractions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.1.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=2.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.2.0.2\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.2.0.2\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=2.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.0.2\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\About.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>About.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\About.es.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>About.es.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Index.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Index.es.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.es.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Login.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Login.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Login.es.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Login.es.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Shared.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Shared.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Shared.es.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Shared.es.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\EntityMappingsConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\BinderConfig.cs" />
+    <Compile Include="App_Start\ViewEngineConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Calendario\CalendarioController.cs" />
+    <Compile Include="Controllers\Circuitos_CataController.cs" />
+    <Compile Include="Controllers\Circuitos_CataController.Generated.cs">
+      <DependentUpon>Circuitos_CataController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ColocacionesController.cs" />
+    <Compile Include="Controllers\Congregaciones_MasterController.cs" />
+    <Compile Include="Controllers\Congregaciones_MasterController.Generated.cs">
+      <DependentUpon>Congregaciones_MasterController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Contacto_Tipo_CataController.cs" />
+    <Compile Include="Controllers\Contacto_Tipo_CataController.Generated.cs">
+      <DependentUpon>Contacto_Tipo_CataController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Dias_CataController.cs" />
+    <Compile Include="Controllers\Dias_CataController.Generated.cs">
+      <DependentUpon>Dias_CataController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Documentos_MasterController.cs" />
+    <Compile Include="Controllers\Documentos_MasterController.Generated.cs">
+      <DependentUpon>Documentos_MasterController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Documentos_Objetivos_TransController.cs" />
+    <Compile Include="Controllers\Documentos_Objetivos_TransController.Generated.cs">
+      <DependentUpon>Documentos_Objetivos_TransController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Experiencias_MasterController.cs" />
+    <Compile Include="Controllers\Experiencias_MasterController.Generated.cs">
+      <DependentUpon>Experiencias_MasterController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Horarios_MasterController.cs" />
+    <Compile Include="Controllers\Horarios_MasterController.Generated.cs">
+      <DependentUpon>Horarios_MasterController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Horario_Semanas_CataController.cs" />
+    <Compile Include="Controllers\Horario_Semanas_CataController.Generated.cs">
+      <DependentUpon>Horario_Semanas_CataController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Horario_TransController.cs" />
+    <Compile Include="Controllers\Horario_TransController.Generated.cs">
+      <DependentUpon>Horario_TransController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Horario_Turno_Dias_TransController.cs" />
+    <Compile Include="Controllers\Horario_Turno_Dias_TransController.Generated.cs">
+      <DependentUpon>Horario_Turno_Dias_TransController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Horario_Turno_Informe_TransController.cs" />
+    <Compile Include="Controllers\Horario_Turno_Informe_TransController.Generated.cs">
+      <DependentUpon>Horario_Turno_Informe_TransController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Horario_Turno_TransController.cs" />
+    <Compile Include="Controllers\Horario_Turno_TransController.Generated.cs">
+      <DependentUpon>Horario_Turno_TransController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Horas_CataController.cs" />
+    <Compile Include="Controllers\Horas_CataController.Generated.cs">
+      <DependentUpon>Horas_CataController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Idiomas_CataController.cs" />
+    <Compile Include="Controllers\Idiomas_CataController.Generated.cs">
+      <DependentUpon>Idiomas_CataController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\MiPeppamController.cs" />
+    <Compile Include="Controllers\Notificaciones_MasterController.cs" />
+    <Compile Include="Controllers\Notificaciones_MasterController.Generated.cs">
+      <DependentUpon>Notificaciones_MasterController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Notificaciones_Objetivo_TransController.cs" />
+    <Compile Include="Controllers\Notificaciones_Objetivo_TransController.Generated.cs">
+      <DependentUpon>Notificaciones_Objetivo_TransController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Notificaciones_Personas_TransController.cs" />
+    <Compile Include="Controllers\Notificaciones_Personas_TransController.Generated.cs">
+      <DependentUpon>Notificaciones_Personas_TransController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Notificaciones_Prioridades_CataController.cs" />
+    <Compile Include="Controllers\Notificaciones_Prioridades_CataController.Generated.cs">
+      <DependentUpon>Notificaciones_Prioridades_CataController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Parametros_TransController.cs" />
+    <Compile Include="Controllers\Parametros_TransController.Generated.cs">
+      <DependentUpon>Parametros_TransController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Personas_DiponibilidadController.cs" />
+    <Compile Include="Controllers\Personas_DiponibilidadController.Generated.cs">
+      <DependentUpon>Personas_DiponibilidadController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Personas_MasterController.cs" />
+    <Compile Include="Controllers\Personas_MasterController.Generated.cs">
+      <DependentUpon>Personas_MasterController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Personas_Notificaciones_TransController.cs" />
+    <Compile Include="Controllers\Personas_Notificaciones_TransController.Generated.cs">
+      <DependentUpon>Personas_Notificaciones_TransController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Personas_Tipos_TransController.cs" />
+    <Compile Include="Controllers\Personas_Tipos_TransController.Generated.cs">
+      <DependentUpon>Personas_Tipos_TransController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Personas_Tipo_CataController.cs" />
+    <Compile Include="Controllers\Personas_Tipo_CataController.Generated.cs">
+      <DependentUpon>Personas_Tipo_CataController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Personas_Turnos_TransController.cs" />
+    <Compile Include="Controllers\Personas_Turnos_TransController.Generated.cs">
+      <DependentUpon>Personas_Turnos_TransController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Persona_Contactos_TransController.cs" />
+    <Compile Include="Controllers\Persona_Contactos_TransController.Generated.cs">
+      <DependentUpon>Persona_Contactos_TransController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Persona_Estado_CataController.cs" />
+    <Compile Include="Controllers\Persona_Estado_CataController.Generated.cs">
+      <DependentUpon>Persona_Estado_CataController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Persona_Roles_TransController.cs" />
+    <Compile Include="Controllers\Persona_Roles_TransController.Generated.cs">
+      <DependentUpon>Persona_Roles_TransController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Publicaciones_CataController.cs" />
+    <Compile Include="Controllers\Publicaciones_CataController.Generated.cs">
+      <DependentUpon>Publicaciones_CataController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Registro_Preguntas_CataController.cs" />
+    <Compile Include="Controllers\Registro_Preguntas_CataController.Generated.cs">
+      <DependentUpon>Registro_Preguntas_CataController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Registro_Pregunta_Respuestas_TransController.cs" />
+    <Compile Include="Controllers\Registro_Pregunta_Respuestas_TransController.Generated.cs">
+      <DependentUpon>Registro_Pregunta_Respuestas_TransController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Registro_Respuestas_CataController.cs" />
+    <Compile Include="Controllers\Registro_Respuestas_CataController.Generated.cs">
+      <DependentUpon>Registro_Respuestas_CataController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Registro_Respueta_Categorias_CataController.cs" />
+    <Compile Include="Controllers\Registro_Respueta_Categorias_CataController.Generated.cs">
+      <DependentUpon>Registro_Respueta_Categorias_CataController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ReportesController.cs" />
+    <Compile Include="Controllers\Roles_CataController.cs" />
+    <Compile Include="Controllers\Roles_CataController.Generated.cs">
+      <DependentUpon>Roles_CataController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Roles_Funcionalidad_Acciones_TransController.cs" />
+    <Compile Include="Controllers\Roles_Funcionalidad_Acciones_TransController.Generated.cs">
+      <DependentUpon>Roles_Funcionalidad_Acciones_TransController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Roles_Niveles_CataController.cs" />
+    <Compile Include="Controllers\Roles_Niveles_CataController.Generated.cs">
+      <DependentUpon>Roles_Niveles_CataController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Rutas_MasterController.cs" />
+    <Compile Include="Controllers\Rutas_MasterController.Generated.cs">
+      <DependentUpon>Rutas_MasterController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ScheduleTaskController.cs" />
+    <Compile Include="Controllers\Sistemas_Correos_CataController.cs" />
+    <Compile Include="Controllers\Sistemas_Correos_CataController.Generated.cs">
+      <DependentUpon>Sistemas_Correos_CataController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Sistemas_Descripciones_TransController.cs" />
+    <Compile Include="Controllers\Sistemas_Descripciones_TransController.Generated.cs">
+      <DependentUpon>Sistemas_Descripciones_TransController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Sistemas_Funcionalidades_Acciones_CataController.cs" />
+    <Compile Include="Controllers\Sistemas_Funcionalidades_Acciones_CataController.Generated.cs">
+      <DependentUpon>Sistemas_Funcionalidades_Acciones_CataController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Sistemas_Funcionalidades_Acciones_Tipo_CataController.cs" />
+    <Compile Include="Controllers\Sistemas_Funcionalidades_Acciones_Tipo_CataController.Generated.cs">
+      <DependentUpon>Sistemas_Funcionalidades_Acciones_Tipo_CataController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Sistemas_Funcionalidades_Acciones_TransController.cs" />
+    <Compile Include="Controllers\Sistemas_Funcionalidades_Acciones_TransController.Generated.cs">
+      <DependentUpon>Sistemas_Funcionalidades_Acciones_TransController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Sistemas_Funcionalidades_MasterController.cs" />
+    <Compile Include="Controllers\Sistemas_Funcionalidades_MasterController.Generated.cs">
+      <DependentUpon>Sistemas_Funcionalidades_MasterController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Sistemas_Mensaje_TransController.cs" />
+    <Compile Include="Controllers\Sistemas_Mensaje_TransController.Generated.cs">
+      <DependentUpon>Sistemas_Mensaje_TransController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Sistemas_Modulos_MasterController.cs" />
+    <Compile Include="Controllers\Sistemas_Modulos_MasterController.Generated.cs">
+      <DependentUpon>Sistemas_Modulos_MasterController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Sistemas_Slides_MasterController.cs" />
+    <Compile Include="Controllers\Sistemas_Slides_MasterController.Generated.cs">
+      <DependentUpon>Sistemas_Slides_MasterController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Sistema_Correos_Enviado_TransController.cs" />
+    <Compile Include="Controllers\Sistema_Correos_Enviado_TransController.Generated.cs">
+      <DependentUpon>Sistema_Correos_Enviado_TransController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Turnos_Dias_TransController.cs" />
+    <Compile Include="Controllers\Turnos_Dias_TransController.Generated.cs">
+      <DependentUpon>Turnos_Dias_TransController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Turnos_MasterController.cs" />
+    <Compile Include="Controllers\Turnos_MasterController.Generated.cs">
+      <DependentUpon>Turnos_MasterController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Zonas_Encargados_TransController.cs" />
+    <Compile Include="Controllers\Zonas_Encargados_TransController.Generated.cs">
+      <DependentUpon>Zonas_Encargados_TransController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Zonas_MasterController.cs" />
+    <Compile Include="Controllers\Zonas_MasterController.Generated.cs">
+      <DependentUpon>Zonas_MasterController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\Controllers\ControllerExtensions.cs" />
+    <Compile Include="Extensions\Controllers\BaseController.cs" />
+    <Compile Include="Extensions\ActionResults\CsvReportResult.cs" />
+    <Compile Include="Extensions\Unity\PerRequestLifetimeManager.cs" />
+    <Compile Include="Extensions\Unity\UnityFilterAttributeFilterProvider.cs" />
+    <Compile Include="Extensions\Unity\UnityPerRequestHttpModule.cs" />
+    <Compile Include="Extensions\Unity\UnityDependencyResolver.cs" />
+    <Compile Include="Extensions\Helpers\FileHelper.cs" />
+    <Compile Include="Extensions\Helpers\ZipUtil.cs" />
+    <Compile Include="Extensions\ModelBinders\NumericModelBinder.cs" />
+    <Compile Include="Extensions\ModelBinders\DateTimeModelBinder.cs" />
+    <Compile Include="Extensions\ModelBinders\DataTablesGridRequestModelBinder.cs" />
+    <Compile Include="GlimpseSecurityPolicy.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\AuthorizeAttribute.cs" />
+    <Compile Include="Infrastructure\Common\Util.cs" />
+    <Compile Include="Infrastructure\Extension\ValidationSummary.cs" />
+    <Compile Include="Infrastructure\Mvc\BaseViewPage.cs" />
+    <Compile Include="Infrastructure\Mvc\DisplayNameAttribute.cs" />
+    <Compile Include="Infrastructure\ScheduleTask\ScheduleTask.cs" />
+    <Compile Include="Infrastructure\ScheduleTask\TaskRegistry.cs" />
+    <Compile Include="Infrastructure\Security\Encript.cs" />
+    <Compile Include="Infrastructure\Security\IPrincipal.cs" />
+    <Compile Include="Infrastructure\Security\Principal.cs" />
+    <Compile Include="Infrastructure\Security\PrincipalSerializeModel.cs" />
+    <Compile Include="Mailers\IUserMailer.cs" />
+    <Compile Include="Mailers\UserMailer.cs" />
+    <Compile Include="Models\Account\AccountModels.cs" />
+    <Compile Include="Models\Circuitos_Cata.cs" />
+    <Compile Include="Models\Circuitos_Cata.Generated.cs">
+      <DependentUpon>Circuitos_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Circuitos_CataValidator.Generated.cs">
+      <DependentUpon>Circuitos_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ColocacionesModel.cs" />
+    <Compile Include="Models\Congregaciones_Master.cs" />
+    <Compile Include="Models\Congregaciones_Master.Generated.cs">
+      <DependentUpon>Congregaciones_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Congregaciones_MasterValidator.Generated.cs">
+      <DependentUpon>Congregaciones_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Contacto_Tipo_Cata.cs" />
+    <Compile Include="Models\Contacto_Tipo_Cata.Generated.cs">
+      <DependentUpon>Contacto_Tipo_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Contacto_Tipo_CataValidator.Generated.cs">
+      <DependentUpon>Contacto_Tipo_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Dias_Cata.cs" />
+    <Compile Include="Models\Dias_Cata.Generated.cs">
+      <DependentUpon>Dias_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Dias_CataValidator.Generated.cs">
+      <DependentUpon>Dias_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DisponibilidadModel.cs" />
+    <Compile Include="Models\Documentos_Master.cs" />
+    <Compile Include="Models\Documentos_Master.Generated.cs">
+      <DependentUpon>Documentos_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Documentos_MasterValidator.Generated.cs">
+      <DependentUpon>Documentos_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Documentos_Objetivos_Trans.cs" />
+    <Compile Include="Models\Documentos_Objetivos_Trans.Generated.cs">
+      <DependentUpon>Documentos_Objetivos_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Documentos_Objetivos_TransValidator.Generated.cs">
+      <DependentUpon>Documentos_Objetivos_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Experiencias_Master.cs" />
+    <Compile Include="Models\Experiencias_Master.Generated.cs">
+      <DependentUpon>Experiencias_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Experiencias_MasterValidator.Generated.cs">
+      <DependentUpon>Experiencias_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Horarios_Master.cs" />
+    <Compile Include="Models\Horarios_Master.Generated.cs">
+      <DependentUpon>Horarios_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Horarios_MasterValidator.Generated.cs">
+      <DependentUpon>Horarios_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Horario_Semanas_Cata.cs" />
+    <Compile Include="Models\Horario_Semanas_Cata.Generated.cs">
+      <DependentUpon>Horario_Semanas_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Horario_Semanas_CataValidator.Generated.cs">
+      <DependentUpon>Horario_Semanas_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Horario_Trans.cs" />
+    <Compile Include="Models\Horario_Trans.Generated.cs">
+      <DependentUpon>Horario_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Horario_TransValidator.Generated.cs">
+      <DependentUpon>Horario_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Horario_Turno_Dias_Trans.cs" />
+    <Compile Include="Models\Horario_Turno_Dias_Trans.Generated.cs">
+      <DependentUpon>Horario_Turno_Dias_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Horario_Turno_Dias_TransValidator.Generated.cs">
+      <DependentUpon>Horario_Turno_Dias_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Horario_Turno_Informe_Trans.cs" />
+    <Compile Include="Models\Horario_Turno_Informe_Trans.Generated.cs">
+      <DependentUpon>Horario_Turno_Informe_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Horario_Turno_Informe_TransValidator.Generated.cs">
+      <DependentUpon>Horario_Turno_Informe_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Horario_Turno_Trans.cs" />
+    <Compile Include="Models\Horario_Turno_Trans.Generated.cs">
+      <DependentUpon>Horario_Turno_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Horario_Turno_TransValidator.Generated.cs">
+      <DependentUpon>Horario_Turno_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Horas_Cata.cs" />
+    <Compile Include="Models\Horas_Cata.Generated.cs">
+      <DependentUpon>Horas_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Horas_CataValidator.Generated.cs">
+      <DependentUpon>Horas_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Idiomas_Cata.cs" />
+    <Compile Include="Models\Idiomas_Cata.Generated.cs">
+      <DependentUpon>Idiomas_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Idiomas_CataValidator.Generated.cs">
+      <DependentUpon>Idiomas_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Notificaciones_Master.cs" />
+    <Compile Include="Models\Notificaciones_Master.Generated.cs">
+      <DependentUpon>Notificaciones_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Notificaciones_MasterValidator.Generated.cs">
+      <DependentUpon>Notificaciones_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Notificaciones_Objetivo_Trans.cs" />
+    <Compile Include="Models\Notificaciones_Objetivo_Trans.Generated.cs">
+      <DependentUpon>Notificaciones_Objetivo_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Notificaciones_Objetivo_TransValidator.Generated.cs">
+      <DependentUpon>Notificaciones_Objetivo_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Notificaciones_Personas_Trans.cs" />
+    <Compile Include="Models\Notificaciones_Personas_Trans.Generated.cs">
+      <DependentUpon>Notificaciones_Personas_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Notificaciones_Personas_TransValidator.Generated.cs">
+      <DependentUpon>Notificaciones_Personas_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Notificaciones_Prioridades_Cata.cs" />
+    <Compile Include="Models\Notificaciones_Prioridades_Cata.Generated.cs">
+      <DependentUpon>Notificaciones_Prioridades_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Notificaciones_Prioridades_CataValidator.Generated.cs">
+      <DependentUpon>Notificaciones_Prioridades_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Parametros_Trans.cs" />
+    <Compile Include="Models\Parametros_Trans.Generated.cs">
+      <DependentUpon>Parametros_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Parametros_TransValidator.Generated.cs">
+      <DependentUpon>Parametros_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Personas_Diponibilidad.cs" />
+    <Compile Include="Models\Personas_Diponibilidad.Generated.cs">
+      <DependentUpon>Personas_Diponibilidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Personas_DiponibilidadValidator.Generated.cs">
+      <DependentUpon>Personas_Diponibilidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Personas_Master.cs" />
+    <Compile Include="Models\Personas_Master.Generated.cs">
+      <DependentUpon>Personas_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Personas_MasterValidator.Generated.cs">
+      <DependentUpon>Personas_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Personas_Notificaciones_Trans.cs" />
+    <Compile Include="Models\Personas_Notificaciones_Trans.Generated.cs">
+      <DependentUpon>Personas_Notificaciones_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Personas_Notificaciones_TransValidator.Generated.cs">
+      <DependentUpon>Personas_Notificaciones_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Personas_Tipos_Trans.cs" />
+    <Compile Include="Models\Personas_Tipos_Trans.Generated.cs">
+      <DependentUpon>Personas_Tipos_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Personas_Tipos_TransValidator.Generated.cs">
+      <DependentUpon>Personas_Tipos_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Personas_Tipo_Cata.cs" />
+    <Compile Include="Models\Personas_Tipo_Cata.Generated.cs">
+      <DependentUpon>Personas_Tipo_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Personas_Tipo_CataValidator.Generated.cs">
+      <DependentUpon>Personas_Tipo_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Personas_Turnos_Trans.cs" />
+    <Compile Include="Models\Personas_Turnos_Trans.Generated.cs">
+      <DependentUpon>Personas_Turnos_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Personas_Turnos_TransValidator.Generated.cs">
+      <DependentUpon>Personas_Turnos_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Persona_Contactos_Trans.cs" />
+    <Compile Include="Models\Persona_Contactos_Trans.Generated.cs">
+      <DependentUpon>Persona_Contactos_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Persona_Contactos_TransValidator.Generated.cs">
+      <DependentUpon>Persona_Contactos_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Persona_Estado_Cata.cs" />
+    <Compile Include="Models\Persona_Estado_Cata.Generated.cs">
+      <DependentUpon>Persona_Estado_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Persona_Estado_CataValidator.Generated.cs">
+      <DependentUpon>Persona_Estado_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Persona_Roles_Trans.cs" />
+    <Compile Include="Models\Persona_Roles_Trans.Generated.cs">
+      <DependentUpon>Persona_Roles_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Persona_Roles_TransValidator.Generated.cs">
+      <DependentUpon>Persona_Roles_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Correo_Enviado_Hoy.cs" />
+    <Compile Include="Models\Proc_Correo_Enviado_Hoy.Generated.cs">
+      <DependentUpon>Proc_Correo_Enviado_Hoy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Experiencias_Paging.cs" />
+    <Compile Include="Models\Proc_Experiencias_Paging.Generated.cs">
+      <DependentUpon>Proc_Experiencias_Paging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Horarios_Ruta.cs" />
+    <Compile Include="Models\Proc_Horarios_Ruta.Generated.cs">
+      <DependentUpon>Proc_Horarios_Ruta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Horarios_Turnos.cs" />
+    <Compile Include="Models\Proc_Horarios_Turnos.Generated.cs">
+      <DependentUpon>Proc_Horarios_Turnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Horarios_Turnos_Dias.cs" />
+    <Compile Include="Models\Proc_Horarios_Turnos_Dias.Generated.cs">
+      <DependentUpon>Proc_Horarios_Turnos_Dias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Horario_Trans_Custom_Paging.cs" />
+    <Compile Include="Models\Proc_Horario_Trans_Custom_Paging.Generated.cs">
+      <DependentUpon>Proc_Horario_Trans_Custom_Paging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Horario_Turno_Dias_LOAD_Puesto_Horario.cs" />
+    <Compile Include="Models\Proc_Horario_Turno_Dias_LOAD_Puesto_Horario.Generated.cs" />
+    <Compile Include="Models\Proc_Informes_Faltantes.cs" />
+    <Compile Include="Models\Proc_Informes_Faltantes.Generated.cs">
+      <DependentUpon>Proc_Informes_Faltantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Mis_Turnos_Predicacion.cs" />
+    <Compile Include="Models\Proc_Mis_Turnos_Predicacion.Generated.cs">
+      <DependentUpon>Proc_Mis_Turnos_Predicacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Notificaciones_Actualizar.cs" />
+    <Compile Include="Models\Proc_Notificaciones_Actualizar.Generated.cs">
+      <DependentUpon>Proc_Notificaciones_Actualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Notificaciones_Registrar.cs" />
+    <Compile Include="Models\Proc_Notificaciones_Registrar.Generated.cs">
+      <DependentUpon>Proc_Notificaciones_Registrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Permisos_Roles_Funcionalidad.cs" />
+    <Compile Include="Models\Proc_Permisos_Roles_Funcionalidad.Generated.cs">
+      <DependentUpon>Proc_Permisos_Roles_Funcionalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Personas_Descripciones.cs" />
+    <Compile Include="Models\Proc_Personas_Descripciones.Generated.cs">
+      <DependentUpon>Proc_Personas_Descripciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Personas_Role.cs" />
+    <Compile Include="Models\Proc_Personas_Role.Generated.cs">
+      <DependentUpon>Proc_Personas_Role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Personas_Tipo_Consulta.cs" />
+    <Compile Include="Models\Proc_Personas_Tipo_Consulta.Generated.cs">
+      <DependentUpon>Proc_Personas_Tipo_Consulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Personas_Turnos.cs" />
+    <Compile Include="Models\Proc_Personas_Turnos.Generated.cs">
+      <DependentUpon>Proc_Personas_Turnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Persona_Documentos.cs" />
+    <Compile Include="Models\Proc_Persona_Documentos.Generated.cs">
+      <DependentUpon>Proc_Persona_Documentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Persona_Funcionalidades.cs" />
+    <Compile Include="Models\Proc_Persona_Funcionalidades.Generated.cs">
+      <DependentUpon>Proc_Persona_Funcionalidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Persona_Funcionalidades_Acciones.cs" />
+    <Compile Include="Models\Proc_Persona_Funcionalidades_Acciones.Generated.cs">
+      <DependentUpon>Proc_Persona_Funcionalidades_Acciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Persona_Informes.cs" />
+    <Compile Include="Models\Proc_Persona_Informes.Generated.cs">
+      <DependentUpon>Proc_Persona_Informes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Persona_Modulos.cs" />
+    <Compile Include="Models\Proc_Persona_Modulos.Generated.cs">
+      <DependentUpon>Proc_Persona_Modulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Persona_Notificaciones.cs" />
+    <Compile Include="Models\Proc_Persona_Notificaciones.Generated.cs">
+      <DependentUpon>Proc_Persona_Notificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Persona_Participacion.cs" />
+    <Compile Include="Models\Proc_Persona_Participacion.Generated.cs">
+      <DependentUpon>Proc_Persona_Participacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Persona_Rutas_Horarios.cs" />
+    <Compile Include="Models\Proc_Persona_Rutas_Horarios.Generated.cs">
+      <DependentUpon>Proc_Persona_Rutas_Horarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Persona_Turnos.cs" />
+    <Compile Include="Models\Proc_Persona_Turnos.Generated.cs">
+      <DependentUpon>Proc_Persona_Turnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Persona_Turnos_Informes.cs" />
+    <Compile Include="Models\Proc_Persona_Turnos_Informes.Generated.cs">
+      <DependentUpon>Proc_Persona_Turnos_Informes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Persona_Turnos_Pasados.cs" />
+    <Compile Include="Models\Proc_Persona_Turnos_Pasados.Generated.cs">
+      <DependentUpon>Proc_Persona_Turnos_Pasados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Persona_Turnos_Validar.cs" />
+    <Compile Include="Models\Proc_Persona_Turnos_Validar.Generated.cs">
+      <DependentUpon>Proc_Persona_Turnos_Validar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Puestos_Hombres_Clave_Faltantes.cs" />
+    <Compile Include="Models\Proc_Puestos_Hombres_Clave_Faltantes.Generated.cs">
+      <DependentUpon>Proc_Puestos_Hombres_Clave_Faltantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Puestos_Horario_Turnos_Faltantes.cs" />
+    <Compile Include="Models\Proc_Puestos_Horario_Turnos_Faltantes.Generated.cs">
+      <DependentUpon>Proc_Puestos_Horario_Turnos_Faltantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Puestos_Horario_Turnos_Faltantes_Notificacion.cs" />
+    <Compile Include="Models\Proc_Puestos_Horario_Turnos_Faltantes_Notificacion.Generated.cs">
+      <DependentUpon>Proc_Puestos_Horario_Turnos_Faltantes_Notificacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Puesto_Horarios.cs" />
+    <Compile Include="Models\Proc_Puesto_Horarios.Generated.cs">
+      <DependentUpon>Proc_Puesto_Horarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Puesto_Horarios_Pesonas.cs" />
+    <Compile Include="Models\Proc_Puesto_Horarios_Pesonas.Generated.cs">
+      <DependentUpon>Proc_Puesto_Horarios_Pesonas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Registro_Pregunta_Respuestas.cs" />
+    <Compile Include="Models\Proc_Registro_Pregunta_Respuestas.Generated.cs">
+      <DependentUpon>Proc_Registro_Pregunta_Respuestas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Reporte_General.cs" />
+    <Compile Include="Models\Proc_Reporte_General.Generated.cs">
+      <DependentUpon>Proc_Reporte_General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Reporte_Publicaciones_Idioma.cs" />
+    <Compile Include="Models\Proc_Reporte_Publicaciones_Idioma.Generated.cs">
+      <DependentUpon>Proc_Reporte_Publicaciones_Idioma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Roles_Funcionalidad_Acciones.cs" />
+    <Compile Include="Models\Proc_Roles_Funcionalidad_Acciones.Generated.cs">
+      <DependentUpon>Proc_Roles_Funcionalidad_Acciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Rutas_Relacionados_Descripcion.cs" />
+    <Compile Include="Models\Proc_Rutas_Relacionados_Descripcion.Generated.cs">
+      <DependentUpon>Proc_Rutas_Relacionados_Descripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Semanas_Abrir_Horarios.cs" />
+    <Compile Include="Models\Proc_Semanas_Abrir_Horarios.Generated.cs">
+      <DependentUpon>Proc_Semanas_Abrir_Horarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Slides.cs" />
+    <Compile Include="Models\Proc_Slides.Generated.cs">
+      <DependentUpon>Proc_Slides.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proc_Turnos_Disponibles.cs" />
+    <Compile Include="Models\Proc_Turnos_Disponibles.Generated.cs">
+      <DependentUpon>Proc_Turnos_Disponibles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Publicaciones_Cata.cs" />
+    <Compile Include="Models\Publicaciones_Cata.Generated.cs">
+      <DependentUpon>Publicaciones_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Publicaciones_CataValidator.Generated.cs">
+      <DependentUpon>Publicaciones_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Registro_Preguntas_Cata.cs" />
+    <Compile Include="Models\Registro_Preguntas_Cata.Generated.cs">
+      <DependentUpon>Registro_Preguntas_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Registro_Preguntas_CataValidator.Generated.cs">
+      <DependentUpon>Registro_Preguntas_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Registro_Pregunta_Respuestas_Trans.cs" />
+    <Compile Include="Models\Registro_Pregunta_Respuestas_Trans.Generated.cs">
+      <DependentUpon>Registro_Pregunta_Respuestas_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Registro_Pregunta_Respuestas_TransValidator.Generated.cs">
+      <DependentUpon>Registro_Pregunta_Respuestas_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Registro_Respuestas_Cata.cs" />
+    <Compile Include="Models\Registro_Respuestas_Cata.Generated.cs">
+      <DependentUpon>Registro_Respuestas_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Registro_Respuestas_CataValidator.Generated.cs">
+      <DependentUpon>Registro_Respuestas_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Registro_Respueta_Categorias_Cata.cs" />
+    <Compile Include="Models\Registro_Respueta_Categorias_Cata.Generated.cs">
+      <DependentUpon>Registro_Respueta_Categorias_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Registro_Respueta_Categorias_CataValidator.Generated.cs">
+      <DependentUpon>Registro_Respueta_Categorias_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Roles_Cata.cs" />
+    <Compile Include="Models\Roles_Cata.Generated.cs">
+      <DependentUpon>Roles_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Roles_CataValidator.Generated.cs">
+      <DependentUpon>Roles_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Roles_Funcionalidad_Acciones_Trans.cs" />
+    <Compile Include="Models\Roles_Funcionalidad_Acciones_Trans.Generated.cs">
+      <DependentUpon>Roles_Funcionalidad_Acciones_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Roles_Funcionalidad_Acciones_TransValidator.Generated.cs">
+      <DependentUpon>Roles_Funcionalidad_Acciones_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Roles_Niveles_Cata.cs" />
+    <Compile Include="Models\Roles_Niveles_Cata.Generated.cs">
+      <DependentUpon>Roles_Niveles_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Roles_Niveles_CataValidator.Generated.cs">
+      <DependentUpon>Roles_Niveles_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Rutas_Master.cs" />
+    <Compile Include="Models\Rutas_Master.Generated.cs">
+      <DependentUpon>Rutas_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Rutas_MasterValidator.Generated.cs">
+      <DependentUpon>Rutas_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Shared\GridRequestViewModel.cs" />
+    <Compile Include="Models\Sistemas_Correos_Cata.cs" />
+    <Compile Include="Models\Sistemas_Correos_Cata.Generated.cs">
+      <DependentUpon>Sistemas_Correos_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sistemas_Correos_CataValidator.Generated.cs">
+      <DependentUpon>Sistemas_Correos_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sistemas_Descripciones_Trans.cs" />
+    <Compile Include="Models\Sistemas_Descripciones_Trans.Generated.cs">
+      <DependentUpon>Sistemas_Descripciones_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sistemas_Descripciones_TransValidator.Generated.cs">
+      <DependentUpon>Sistemas_Descripciones_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sistemas_Funcionalidades_Acciones_Cata.cs" />
+    <Compile Include="Models\Sistemas_Funcionalidades_Acciones_Cata.Generated.cs">
+      <DependentUpon>Sistemas_Funcionalidades_Acciones_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sistemas_Funcionalidades_Acciones_CataValidator.Generated.cs">
+      <DependentUpon>Sistemas_Funcionalidades_Acciones_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sistemas_Funcionalidades_Acciones_Tipo_Cata.cs" />
+    <Compile Include="Models\Sistemas_Funcionalidades_Acciones_Tipo_Cata.Generated.cs">
+      <DependentUpon>Sistemas_Funcionalidades_Acciones_Tipo_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sistemas_Funcionalidades_Acciones_Tipo_CataValidator.Generated.cs">
+      <DependentUpon>Sistemas_Funcionalidades_Acciones_Tipo_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sistemas_Funcionalidades_Acciones_Trans.cs" />
+    <Compile Include="Models\Sistemas_Funcionalidades_Acciones_Trans.Generated.cs">
+      <DependentUpon>Sistemas_Funcionalidades_Acciones_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sistemas_Funcionalidades_Acciones_TransValidator.Generated.cs">
+      <DependentUpon>Sistemas_Funcionalidades_Acciones_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sistemas_Funcionalidades_Master.cs" />
+    <Compile Include="Models\Sistemas_Funcionalidades_Master.Generated.cs">
+      <DependentUpon>Sistemas_Funcionalidades_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sistemas_Funcionalidades_MasterValidator.Generated.cs">
+      <DependentUpon>Sistemas_Funcionalidades_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sistemas_Mensaje_Trans.cs" />
+    <Compile Include="Models\Sistemas_Mensaje_Trans.Generated.cs">
+      <DependentUpon>Sistemas_Mensaje_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sistemas_Mensaje_TransValidator.Generated.cs">
+      <DependentUpon>Sistemas_Mensaje_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sistemas_Modulos_Master.cs" />
+    <Compile Include="Models\Sistemas_Modulos_Master.Generated.cs">
+      <DependentUpon>Sistemas_Modulos_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sistemas_Modulos_MasterValidator.Generated.cs">
+      <DependentUpon>Sistemas_Modulos_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sistemas_Slides_Master.cs" />
+    <Compile Include="Models\Sistemas_Slides_Master.Generated.cs">
+      <DependentUpon>Sistemas_Slides_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sistemas_Slides_MasterValidator.Generated.cs">
+      <DependentUpon>Sistemas_Slides_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sistema_Correos_Enviado_Trans.cs" />
+    <Compile Include="Models\Sistema_Correos_Enviado_Trans.Generated.cs">
+      <DependentUpon>Sistema_Correos_Enviado_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sistema_Correos_Enviado_TransValidator.Generated.cs">
+      <DependentUpon>Sistema_Correos_Enviado_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Turnos_Dias_Trans.cs" />
+    <Compile Include="Models\Turnos_Dias_Trans.Generated.cs">
+      <DependentUpon>Turnos_Dias_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Turnos_Dias_TransValidator.Generated.cs">
+      <DependentUpon>Turnos_Dias_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Turnos_Master.cs" />
+    <Compile Include="Models\Turnos_Master.Generated.cs">
+      <DependentUpon>Turnos_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Turnos_MasterValidator.Generated.cs">
+      <DependentUpon>Turnos_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Zonas_Encargados_Trans.cs" />
+    <Compile Include="Models\Zonas_Encargados_Trans.Generated.cs">
+      <DependentUpon>Zonas_Encargados_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Zonas_Encargados_TransValidator.Generated.cs">
+      <DependentUpon>Zonas_Encargados_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Zonas_Master.cs" />
+    <Compile Include="Models\Zonas_Master.Generated.cs">
+      <DependentUpon>Zonas_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Zonas_MasterValidator.Generated.cs">
+      <DependentUpon>Zonas_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="UI\Action.cs" />
+    <Compile Include="UI\Field.cs" />
+    <Compile Include="UI\Funcionality.cs" />
+    <Compile Include="UI\Helper.cs" />
+    <Compile Include="UI\Messages.cs" />
+    <Compile Include="UI\Module.cs" />
+    <Compile Include="Controllers\ExperienciasController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\animate.css\animate.css" />
+    <Content Include="Content\animate.css\animate.min.css" />
+    <Content Include="Content\bootstrap-dialog\bootstrap-dialog.css" />
+    <Content Include="Content\bootstrap-dialog\bootstrap-dialog.min.css" />
+    <Content Include="Content\customStyle.css" />
+    <Content Include="Content\daterangepicker-bs3.css" />
+    <Content Include="Content\Peppam\normalize.css" />
+    <Content Include="Content\Peppam\slide.css" />
+    <Content Include="Scripts\App\popupAddOrEdit.js" />
+    <Content Include="Scripts\bootstrap-dialog\bootstrap-dialog.js" />
+    <Content Include="Scripts\bootstrap-dialog\bootstrap-dialog.min.js" />
+    <Content Include="Scripts\ckeditor.js" />
+    <Content Include="Scripts\daterangepicker.js" />
+    <Content Include="Scripts\jquery.bpopup.min.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\jquery.min.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\kendo.all.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Views\UserMailer\row.png" />
+    <Content Include="_CodeTemplates\MvcFullDependencyCodeGenerator\Site.css" />
+    <Content Include="_CodeTemplates\PackageVersions.xml" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap-datepicker.css" />
+    <Content Include="Content\bootstrap-datepicker3.css" />
+    <Content Include="Content\dataTables.bootstrap.css" />
+    <Content Include="Content\Images\back_disabled.png" />
+    <Content Include="Content\Images\back_enabled.png" />
+    <Content Include="Content\Images\back_enabled_hover.png" />
+    <Content Include="Content\Images\forward_disabled.png" />
+    <Content Include="Content\Images\forward_enabled.png" />
+    <Content Include="Content\Images\forward_enabled_hover.png" />
+    <Content Include="Content\Images\sort_asc.png" />
+    <Content Include="Content\Images\sort_asc_disabled.png" />
+    <Content Include="Content\Images\sort_both.png" />
+    <Content Include="Content\Images\sort_desc.png" />
+    <Content Include="Content\Images\sort_desc_disabled.png" />
+    <Content Include="Content\MultipleSelect\multiple-select.css" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="Content\Peppam\css\normalize.css" />
+    <Content Include="Content\Peppam\css\slide.css" />
+    <Content Include="Content\Peppam\fonts\Roboto.svg" />
+    <Content Include="Content\Peppam\images\blueBullet.jpg" />
+    <Content Include="Content\Peppam\images\brownBullet.jpg" />
+    <Content Include="Content\Peppam\images\checkbox.png" />
+    <Content Include="Content\Peppam\images\clock.png" />
+    <Content Include="Content\Peppam\images\closeUp.png" />
+    <Content Include="Content\Peppam\images\document.png" />
+    <Content Include="Content\Peppam\images\greenBullet.jpg" />
+    <Content Include="Content\Peppam\images\horn.png" />
+    <Content Include="Content\Peppam\images\location.png" />
+    <Content Include="Content\Peppam\images\mapas\map-ed.png" />
+    <Content Include="Content\Peppam\images\nav\admin.png" />
+    <Content Include="Content\Peppam\images\nav\archive.png" />
+    <Content Include="Content\Peppam\images\nav\clock.png" />
+    <Content Include="Content\Peppam\images\nav\close.png" />
+    <Content Include="Content\Peppam\images\nav\home.png" />
+    <Content Include="Content\Peppam\images\nav\user.png" />
+    <Content Include="Content\Peppam\images\pass_inpt_icon.png" />
+    <Content Include="Content\Peppam\images\rowBottom.png" />
+    <Content Include="Content\Peppam\images\selectrow.png" />
+    <Content Include="Content\Peppam\images\slide\buttons\arrows.png" />
+    <Content Include="Content\Peppam\images\slide\buttons\bullet.png" />
+    <Content Include="Content\Peppam\images\slide\buttons\fullscreen.png" />
+    <Content Include="Content\Peppam\images\slide\buttons\pause.png" />
+    <Content Include="Content\Peppam\images\slide\buttons\play.png" />
+    <Content Include="Content\Peppam\images\slide\buttons\triangle.png" />
+    <Content Include="Content\Peppam\images\slide\slide1.png" />
+    <Content Include="Content\Peppam\images\slide\slide2.jpg" />
+    <Content Include="Content\Peppam\images\slide\slide3.jpg" />
+    <Content Include="Content\Peppam\images\transparentBg.png" />
+    <Content Include="Content\Peppam\images\user_inpt_icon.png" />
+    <Content Include="Content\Peppam\js\jquery-1.11.0.js" />
+    <Content Include="Content\Peppam\js\jquery.js" />
+    <Content Include="Content\Peppam\js\script.js" />
+    <Content Include="Content\Peppam\js\wowslider.js" />
+    <Content Include="Content\Peppam\js\wowslider.mod.js" />
+    <Content Include="Content\Peppam\style.css" />
+    <Content Include="Content\simple-sidebar.css" />
+    <Content Include="Fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\site.css" />
+    <Content Include="Content\Images\favicon.ico" />
+    <Content Include="Content\Images\no.gif" />
+    <Content Include="Content\Images\yes.gif" />
+    <Content Include="Content\custom-datatables.css" />
+    <Content Include="Content\datatables\css\jquery.dataTables.css" />
+    <Content Include="Content\datatables\css\jquery.dataTables_themeroller.css" />
+    <Content Include="Content\datatables\images\back_disabled.png" />
+    <Content Include="Content\datatables\images\back_enabled.png" />
+    <Content Include="Content\datatables\images\back_enabled_hover.png" />
+    <Content Include="Content\datatables\images\favicon.ico" />
+    <Content Include="Content\datatables\images\forward_disabled.png" />
+    <Content Include="Content\datatables\images\forward_enabled.png" />
+    <Content Include="Content\datatables\images\forward_enabled_hover.png" />
+    <Content Include="Content\datatables\images\sort_asc.png" />
+    <Content Include="Content\datatables\images\sort_asc_disabled.png" />
+    <Content Include="Content\datatables\images\sort_both.png" />
+    <Content Include="Content\datatables\images\sort_desc.png" />
+    <Content Include="Content\datatables\images\sort_desc_disabled.png" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\ckeditor\adapters\jquery.js" />
+    <Content Include="Scripts\ckeditor\build-config.js" />
+    <Content Include="Scripts\ckeditor\ckeditor.js" />
+    <Content Include="Scripts\ckeditor\config.js" />
+    <Content Include="Scripts\ckeditor\contents.css" />
+    <Content Include="Scripts\ckeditor\lang\af.js" />
+    <Content Include="Scripts\ckeditor\lang\ar.js" />
+    <Content Include="Scripts\ckeditor\lang\bg.js" />
+    <Content Include="Scripts\ckeditor\lang\bn.js" />
+    <Content Include="Scripts\ckeditor\lang\bs.js" />
+    <Content Include="Scripts\ckeditor\lang\ca.js" />
+    <Content Include="Scripts\ckeditor\lang\cs.js" />
+    <Content Include="Scripts\ckeditor\lang\cy.js" />
+    <Content Include="Scripts\ckeditor\lang\da.js" />
+    <Content Include="Scripts\ckeditor\lang\de.js" />
+    <Content Include="Scripts\ckeditor\lang\el.js" />
+    <Content Include="Scripts\ckeditor\lang\en-au.js" />
+    <Content Include="Scripts\ckeditor\lang\en-ca.js" />
+    <Content Include="Scripts\ckeditor\lang\en-gb.js" />
+    <Content Include="Scripts\ckeditor\lang\en.js" />
+    <Content Include="Scripts\ckeditor\lang\eo.js" />
+    <Content Include="Scripts\ckeditor\lang\es.js" />
+    <Content Include="Scripts\ckeditor\lang\et.js" />
+    <Content Include="Scripts\ckeditor\lang\eu.js" />
+    <Content Include="Scripts\ckeditor\lang\fa.js" />
+    <Content Include="Scripts\ckeditor\lang\fi.js" />
+    <Content Include="Scripts\ckeditor\lang\fo.js" />
+    <Content Include="Scripts\ckeditor\lang\fr-ca.js" />
+    <Content Include="Scripts\ckeditor\lang\fr.js" />
+    <Content Include="Scripts\ckeditor\lang\gl.js" />
+    <Content Include="Scripts\ckeditor\lang\gu.js" />
+    <Content Include="Scripts\ckeditor\lang\he.js" />
+    <Content Include="Scripts\ckeditor\lang\hi.js" />
+    <Content Include="Scripts\ckeditor\lang\hr.js" />
+    <Content Include="Scripts\ckeditor\lang\hu.js" />
+    <Content Include="Scripts\ckeditor\lang\id.js" />
+    <Content Include="Scripts\ckeditor\lang\is.js" />
+    <Content Include="Scripts\ckeditor\lang\it.js" />
+    <Content Include="Scripts\ckeditor\lang\ja.js" />
+    <Content Include="Scripts\ckeditor\lang\ka.js" />
+    <Content Include="Scripts\ckeditor\lang\km.js" />
+    <Content Include="Scripts\ckeditor\lang\ko.js" />
+    <Content Include="Scripts\ckeditor\lang\ku.js" />
+    <Content Include="Scripts\ckeditor\lang\lt.js" />
+    <Content Include="Scripts\ckeditor\lang\lv.js" />
+    <Content Include="Scripts\ckeditor\lang\mk.js" />
+    <Content Include="Scripts\ckeditor\lang\mn.js" />
+    <Content Include="Scripts\ckeditor\lang\ms.js" />
+    <Content Include="Scripts\ckeditor\lang\nb.js" />
+    <Content Include="Scripts\ckeditor\lang\nl.js" />
+    <Content Include="Scripts\ckeditor\lang\no.js" />
+    <Content Include="Scripts\ckeditor\lang\pl.js" />
+    <Content Include="Scripts\ckeditor\lang\pt-br.js" />
+    <Content Include="Scripts\ckeditor\lang\pt.js" />
+    <Content Include="Scripts\ckeditor\lang\ro.js" />
+    <Content Include="Scripts\ckeditor\lang\ru.js" />
+    <Content Include="Scripts\ckeditor\lang\si.js" />
+    <Content Include="Scripts\ckeditor\lang\sk.js" />
+    <Content Include="Scripts\ckeditor\lang\sl.js" />
+    <Content Include="Scripts\ckeditor\lang\sq.js" />
+    <Content Include="Scripts\ckeditor\lang\sr-latn.js" />
+    <Content Include="Scripts\ckeditor\lang\sr.js" />
+    <Content Include="Scripts\ckeditor\lang\sv.js" />
+    <Content Include="Scripts\ckeditor\lang\th.js" />
+    <Content Include="Scripts\ckeditor\lang\tr.js" />
+    <Content Include="Scripts\ckeditor\lang\tt.js" />
+    <Content Include="Scripts\ckeditor\lang\ug.js" />
+    <Content Include="Scripts\ckeditor\lang\uk.js" />
+    <Content Include="Scripts\ckeditor\lang\vi.js" />
+    <Content Include="Scripts\ckeditor\lang\zh-cn.js" />
+    <Content Include="Scripts\ckeditor\lang\zh.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ar.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\bg.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ca.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\cs.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\cy.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\da.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\de.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\el.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\en-gb.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\en.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\eo.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\es.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\et.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\fa.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\fi.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\fr-ca.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\fr.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\gl.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\gu.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\he.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\hi.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\hr.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\hu.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\id.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\it.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ja.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\km.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ko.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ku.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\lt.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\lv.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\mk.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\mn.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\nb.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\nl.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\no.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\pl.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\pt-br.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\pt.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ro.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ru.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\si.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\sk.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\sl.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\sq.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\sr-latn.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\sr.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\sv.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\th.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\tr.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\tt.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ug.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\uk.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\vi.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\zh-cn.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\zh.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\_translationstatus.txt" />
+    <Content Include="Scripts\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="Scripts\ckeditor\plugins\about\dialogs\hidpi\logo_ckeditor.png" />
+    <Content Include="Scripts\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="Scripts\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="Scripts\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="Scripts\ckeditor\plugins\icons.png" />
+    <Content Include="Scripts\ckeditor\plugins\icons_hidpi.png" />
+    <Content Include="Scripts\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="Scripts\ckeditor\plugins\image\images\noimage.png" />
+    <Content Include="Scripts\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="Scripts\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="Scripts\ckeditor\plugins\link\images\anchor.png" />
+    <Content Include="Scripts\ckeditor\plugins\link\images\hidpi\anchor.png" />
+    <Content Include="Scripts\ckeditor\plugins\magicline\images\hidpi\icon.png" />
+    <Content Include="Scripts\ckeditor\plugins\magicline\images\icon.png" />
+    <Content Include="Scripts\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="Scripts\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="Scripts\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\ar.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\bg.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\ca.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\cs.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\cy.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\de.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\el.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\en-gb.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\en.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\eo.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\es.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\et.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\fa.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\fi.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\fr-ca.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\fr.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\gl.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\he.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\hr.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\hu.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\id.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\it.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\ja.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\km.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\ku.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\lv.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\nb.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\nl.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\no.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\pl.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\pt-br.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\pt.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\ru.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\si.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\sk.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\sl.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\sq.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\sv.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\th.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\tr.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\tt.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\ug.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\uk.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\vi.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\zh-cn.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\zh.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\_translationstatus.txt" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="Scripts\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="Scripts\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\wsc_ie.js" />
+    <Content Include="Scripts\ckeditor\samples\ajax.html" />
+    <Content Include="Scripts\ckeditor\samples\api.html" />
+    <Content Include="Scripts\ckeditor\samples\appendto.html" />
+    <Content Include="Scripts\ckeditor\samples\assets\inlineall\logo.png" />
+    <Content Include="Scripts\ckeditor\samples\assets\outputxhtml\outputxhtml.css" />
+    <Content Include="Scripts\ckeditor\samples\assets\sample.css" />
+    <Content Include="Scripts\ckeditor\samples\assets\sample.jpg" />
+    <Content Include="Scripts\ckeditor\samples\assets\uilanguages\languages.js" />
+    <Content Include="Scripts\ckeditor\samples\datafiltering.html" />
+    <Content Include="Scripts\ckeditor\samples\divreplace.html" />
+    <Content Include="Scripts\ckeditor\samples\index.html" />
+    <Content Include="Scripts\ckeditor\samples\inlineall.html" />
+    <Content Include="Scripts\ckeditor\samples\inlinebycode.html" />
+    <Content Include="Scripts\ckeditor\samples\inlinetextarea.html" />
+    <Content Include="Scripts\ckeditor\samples\jquery.html" />
+    <Content Include="Scripts\ckeditor\samples\plugins\dialog\assets\my_dialog.js" />
+    <Content Include="Scripts\ckeditor\samples\plugins\dialog\dialog.html" />
+    <Content Include="Scripts\ckeditor\samples\plugins\enterkey\enterkey.html" />
+    <Content Include="Scripts\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\outputforflash.swf" />
+    <Content Include="Scripts\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\swfobject.js" />
+    <Content Include="Scripts\ckeditor\samples\plugins\htmlwriter\outputforflash.html" />
+    <Content Include="Scripts\ckeditor\samples\plugins\htmlwriter\outputhtml.html" />
+    <Content Include="Scripts\ckeditor\samples\plugins\magicline\magicline.html" />
+    <Content Include="Scripts\ckeditor\samples\plugins\toolbar\toolbar.html" />
+    <Content Include="Scripts\ckeditor\samples\plugins\wysiwygarea\fullpage.html" />
+    <Content Include="Scripts\ckeditor\samples\readonly.html" />
+    <Content Include="Scripts\ckeditor\samples\replacebyclass.html" />
+    <Content Include="Scripts\ckeditor\samples\replacebycode.html" />
+    <Content Include="Scripts\ckeditor\samples\sample.css" />
+    <Content Include="Scripts\ckeditor\samples\sample.js" />
+    <Content Include="Scripts\ckeditor\samples\tabindex.html" />
+    <Content Include="Scripts\ckeditor\samples\uicolor.html" />
+    <Content Include="Scripts\ckeditor\samples\uilanguages.html" />
+    <Content Include="Scripts\ckeditor\samples\xhtmlstyle.html" />
+    <Content Include="Scripts\ckeditor\skins\moono\dialog.css" />
+    <Content Include="Scripts\ckeditor\skins\moono\dialog_ie.css" />
+    <Content Include="Scripts\ckeditor\skins\moono\dialog_ie7.css" />
+    <Content Include="Scripts\ckeditor\skins\moono\dialog_ie8.css" />
+    <Content Include="Scripts\ckeditor\skins\moono\dialog_iequirks.css" />
+    <Content Include="Scripts\ckeditor\skins\moono\editor.css" />
+    <Content Include="Scripts\ckeditor\skins\moono\editor_gecko.css" />
+    <Content Include="Scripts\ckeditor\skins\moono\editor_ie.css" />
+    <Content Include="Scripts\ckeditor\skins\moono\editor_ie7.css" />
+    <Content Include="Scripts\ckeditor\skins\moono\editor_ie8.css" />
+    <Content Include="Scripts\ckeditor\skins\moono\editor_iequirks.css" />
+    <Content Include="Scripts\ckeditor\skins\moono\icons.png" />
+    <Content Include="Scripts\ckeditor\skins\moono\icons_hidpi.png" />
+    <Content Include="Scripts\ckeditor\skins\moono\images\arrow.png" />
+    <Content Include="Scripts\ckeditor\skins\moono\images\close.png" />
+    <Content Include="Scripts\ckeditor\skins\moono\images\hidpi\close.png" />
+    <Content Include="Scripts\ckeditor\skins\moono\images\hidpi\lock-open.png" />
+    <Content Include="Scripts\ckeditor\skins\moono\images\hidpi\lock.png" />
+    <Content Include="Scripts\ckeditor\skins\moono\images\hidpi\refresh.png" />
+    <Content Include="Scripts\ckeditor\skins\moono\images\lock-open.png" />
+    <Content Include="Scripts\ckeditor\skins\moono\images\lock.png" />
+    <Content Include="Scripts\ckeditor\skins\moono\images\refresh.png" />
+    <Content Include="Scripts\ckeditor\styles.js" />
+    <Content Include="Scripts\datatables\dataTables.bootstrap.js" />
+    <Content Include="Scripts\i18n\globalize.culture.en-US.js" />
+    <Content Include="Scripts\i18n\globalize.culture.es-ES.js" />
+    <Content Include="Scripts\i18n\ui.locale-en.js" />
+    <Content Include="Scripts\i18n\ui.locale-es.js" />
+    <Content Include="Scripts\i18n\datatables.locale-en.js" />
+    <Content Include="Scripts\i18n\datatables.locale-es.js" />
+    <Content Include="Scripts\datatables\jquery.dataTables.js" />
+    <Content Include="Scripts\datatables\jquery.dataTables.min.js" />
+    <Content Include="Scripts\globalize.js" />
+    <Content Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Content\Peppam\fonts\Roboto.eot" />
+    <Content Include="Content\Peppam\fonts\Roboto.ttf" />
+    <Content Include="Content\Peppam\fonts\Roboto.woff" />
+    <Content Include="_CodeTemplates\ApiControllerEmpty\Controller.cs.t4" />
+    <Content Include="_CodeTemplates\ApiControllerEmpty\Controller.vb.t4" />
+    <Content Include="_CodeTemplates\ApiControllerWithActions\Controller.cs.t4" />
+    <Content Include="_CodeTemplates\ApiControllerWithActions\Controller.vb.t4" />
+    <Content Include="_CodeTemplates\ApiControllerWithContext\Controller.cs.t4" />
+    <Content Include="_CodeTemplates\ApiControllerWithContext\Controller.vb.t4" />
+    <Content Include="_CodeTemplates\ApiDependencyCodeGenerator\Global.asax.cs.t4" />
+    <Content Include="_CodeTemplates\ApiDependencyCodeGenerator\Global.asax.vb.t4" />
+    <Content Include="_CodeTemplates\ApiDependencyCodeGenerator\Global.cs.t4" />
+    <Content Include="_CodeTemplates\ApiDependencyCodeGenerator\Global.vb.t4" />
+    <Content Include="_CodeTemplates\ApiDependencyCodeGenerator\WebApiConfig.cs.t4" />
+    <Content Include="_CodeTemplates\ApiDependencyCodeGenerator\WebApiConfig.vb.t4" />
+    <Content Include="_CodeTemplates\MvcArea\Area.cs.t4" />
+    <Content Include="_CodeTemplates\MvcArea\Area.vb.t4" />
+    <Content Include="_CodeTemplates\MvcArea\web.cs.t4" />
+    <Content Include="_CodeTemplates\MvcArea\web.vb.t4" />
+    <Content Include="_CodeTemplates\MvcControllerEmpty\Controller.cs.t4" />
+    <Content Include="_CodeTemplates\MvcControllerEmpty\Controller.vb.t4" />
+    <Content Include="_CodeTemplates\MvcControllerWithActions\Controller.cs.t4" />
+    <Content Include="_CodeTemplates\MvcControllerWithActions\Controller.vb.t4" />
+    <Content Include="_CodeTemplates\MvcControllerWithContext\Controller.cs.t4" />
+    <Content Include="_CodeTemplates\MvcControllerWithContext\Controller.vb.t4" />
+    <Content Include="_CodeTemplates\MvcFullDependencyCodeGenerator\BundleConfig.cs.t4" />
+    <Content Include="_CodeTemplates\MvcFullDependencyCodeGenerator\BundleConfig.vb.t4" />
+    <Content Include="_CodeTemplates\MvcFullDependencyCodeGenerator\Error.cshtml" />
+    <Content Include="_CodeTemplates\MvcFullDependencyCodeGenerator\Error.vbhtml" />
+    <Content Include="_CodeTemplates\MvcFullDependencyCodeGenerator\FilterConfig.cs.t4" />
+    <Content Include="_CodeTemplates\MvcFullDependencyCodeGenerator\FilterConfig.vb.t4" />
+    <Content Include="_CodeTemplates\MvcFullDependencyCodeGenerator\Global.asax.cs.t4" />
+    <Content Include="_CodeTemplates\MvcFullDependencyCodeGenerator\Global.asax.vb.t4" />
+    <Content Include="_CodeTemplates\MvcFullDependencyCodeGenerator\Global.cs.t4" />
+    <Content Include="_CodeTemplates\MvcFullDependencyCodeGenerator\Global.vb.t4" />
+    <Content Include="_CodeTemplates\MvcFullDependencyCodeGenerator\RouteConfig.cs.t4" />
+    <Content Include="_CodeTemplates\MvcFullDependencyCodeGenerator\RouteConfig.vb.t4" />
+    <Content Include="_CodeTemplates\MvcFullDependencyCodeGenerator\web.cs.t4" />
+    <Content Include="_CodeTemplates\MvcFullDependencyCodeGenerator\web.vb.t4" />
+    <Content Include="_CodeTemplates\MvcFullDependencyCodeGenerator\_Layout.cs.t4" />
+    <Content Include="_CodeTemplates\MvcFullDependencyCodeGenerator\_Layout.vb.t4" />
+    <Content Include="_CodeTemplates\MvcFullDependencyCodeGenerator\_ViewStart.cs.t4" />
+    <Content Include="_CodeTemplates\MvcFullDependencyCodeGenerator\_ViewStart.vb.t4" />
+    <Content Include="_CodeTemplates\MvcMinimalDependencyCodeGenerator\Global.asax.cs.t4" />
+    <Content Include="_CodeTemplates\MvcMinimalDependencyCodeGenerator\Global.asax.vb.t4" />
+    <Content Include="_CodeTemplates\MvcMinimalDependencyCodeGenerator\Global.cs.t4" />
+    <Content Include="_CodeTemplates\MvcMinimalDependencyCodeGenerator\Global.vb.t4" />
+    <Content Include="_CodeTemplates\MvcMinimalDependencyCodeGenerator\RouteConfig.cs.t4" />
+    <Content Include="_CodeTemplates\MvcMinimalDependencyCodeGenerator\RouteConfig.vb.t4" />
+    <Content Include="_CodeTemplates\MvcMinimalDependencyCodeGenerator\web.cs.t4" />
+    <Content Include="_CodeTemplates\MvcMinimalDependencyCodeGenerator\web.vb.t4" />
+    <Content Include="Views\Colocaciones\EditorTemplates\Publicaciones_CataModel.cshtml" />
+    <Content Include="Views\Colocaciones\EditorTemplates\Idiomas_CataModel.cshtml" />
+    <Content Include="Views\Colocaciones\NoInforme.cshtml" />
+    <Content Include="Views\Horario_Semanas_Cata\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Horario_Semanas_Cata\Create.cshtml" />
+    <Content Include="Views\Horario_Semanas_Cata\Details.cshtml" />
+    <Content Include="Views\Horario_Semanas_Cata\Edit.cshtml" />
+    <Content Include="Views\Horario_Semanas_Cata\Index.cshtml" />
+    <Content Include="Views\Horario_Semanas_Cata\PopUp.cshtml" />
+    <Content Include="Views\Horario_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Horario_Trans\_Filtral.cshtml" />
+    <None Include="Properties\PublishProfiles\Local.pubxml" />
+    <None Include="Properties\PublishProfiles\PEPPAM.COM.pubxml" />
+    <Content Include="Views\Horario_Turno_Trans\PopUpEdit.cshtml" />
+    <Content Include="Views\Horario_Trans\Cancelar.cshtml" />
+    <Content Include="Views\Horario_Trans\EditorTemplates\Horario_Turno_Dias_TransModel.cshtml" />
+    <Content Include="Views\Experiencias_Master\Comentario.cshtml" />
+    <Content Include="Views\Zonas_Master\Create.cshtml" />
+    <Content Include="Views\Zonas_Master\Edit.cshtml" />
+    <Content Include="Views\Zonas_Master\Index.cshtml" />
+    <Content Include="Views\Congregaciones_Master\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Persona_Estado_Cata\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Persona_Estado_Cata\Create.cshtml" />
+    <Content Include="Views\Persona_Estado_Cata\Details.cshtml" />
+    <Content Include="Views\Persona_Estado_Cata\Edit.cshtml" />
+    <Content Include="Views\Persona_Estado_Cata\Index.cshtml" />
+    <Content Include="Views\Persona_Estado_Cata\PopUp.cshtml" />
+    <Content Include="Views\Parametros_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Parametros_Trans\Create.cshtml" />
+    <Content Include="Views\Parametros_Trans\Details.cshtml" />
+    <Content Include="Views\Parametros_Trans\Edit.cshtml" />
+    <Content Include="Views\Parametros_Trans\Index.cshtml" />
+    <Content Include="Views\Parametros_Trans\PopUp.cshtml" />
+    <Content Include="Views\Registro_Preguntas_Cata\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Registro_Preguntas_Cata\Create.cshtml" />
+    <Content Include="Views\Registro_Preguntas_Cata\Details.cshtml" />
+    <Content Include="Views\Registro_Preguntas_Cata\Edit.cshtml" />
+    <Content Include="Views\Registro_Preguntas_Cata\Index.cshtml" />
+    <Content Include="Views\Registro_Preguntas_Cata\PopUp.cshtml" />
+    <Content Include="Views\Registro_Respuestas_Cata\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Registro_Respuestas_Cata\Create.cshtml" />
+    <Content Include="Views\Registro_Respuestas_Cata\Details.cshtml" />
+    <Content Include="Views\Registro_Respuestas_Cata\Edit.cshtml" />
+    <Content Include="Views\Registro_Respuestas_Cata\Index.cshtml" />
+    <Content Include="Views\Registro_Respuestas_Cata\PopUp.cshtml" />
+    <Content Include="Views\Registro_Respueta_Categorias_Cata\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Registro_Respueta_Categorias_Cata\Create.cshtml" />
+    <Content Include="Views\Registro_Respueta_Categorias_Cata\Details.cshtml" />
+    <Content Include="Views\Registro_Respueta_Categorias_Cata\Edit.cshtml" />
+    <Content Include="Views\Registro_Respueta_Categorias_Cata\Index.cshtml" />
+    <Content Include="Views\Registro_Respueta_Categorias_Cata\PopUp.cshtml" />
+    <Content Include="Views\___Horario_Turno_Trans\View.cshtml" />
+    <Content Include="Views\Shared\_LayoutHome.cshtml" />
+    <Content Include="Views\Shared\_msg.cshtml" />
+    <Content Include="Views\Horario_Turno_Trans\PopUpJs.cshtml" />
+    <Content Include="Views\Horario_Trans\AddHorario.cshtml" />
+    <Content Include="Views\Horario_Trans\_AddHorario.cshtml" />
+    <Content Include="Views\Horario_Trans\EditorTemplates\TurnosModel.cshtml" />
+    <Content Include="Views\Horario_Trans\EditorTemplates\DiasModel.cshtml" />
+    <Content Include="Views\Experiencias_Master\_view.cshtml" />
+    <Content Include="Views\Personas_Master\Create.cshtml" />
+    <Content Include="Views\Personas_Master\Details.cshtml" />
+    <Content Include="Views\Personas_Master\Edit.cshtml" />
+    <Content Include="Views\Personas_Master\Index.cshtml" />
+    <Content Include="Views\Personas_Master\PopUp.cshtml" />
+    <Content Include="Views\Personas_Master\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Personas_Turnos_Trans - Copy\__CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Personas_Turnos_Trans - Copy\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Personas_Turnos_Trans - Copy\Create.cshtml" />
+    <Content Include="Views\Personas_Turnos_Trans - Copy\Details.cshtml" />
+    <Content Include="Views\Personas_Turnos_Trans - Copy\Edit.cshtml" />
+    <Content Include="Views\Personas_Turnos_Trans - Copy\Index.cshtml" />
+    <Content Include="Views\Personas_Turnos_Trans - Copy\PopUp.cshtml" />
+    <Content Include="Views\Personas_Turnos_Trans\Create.cshtml" />
+    <Content Include="Views\Personas_Turnos_Trans\Details.cshtml" />
+    <Content Include="Views\Personas_Turnos_Trans\Edit.cshtml" />
+    <Content Include="Views\Personas_Turnos_Trans\Index.cshtml" />
+    <Content Include="Views\Personas_Turnos_Trans\PopUp.cshtml" />
+    <Content Include="Views\Personas_Turnos_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Calendario\NoTurnosProgramados.cshtml" />
+    <Content Include="Views\Sistemas_Descripciones_Trans\Create.cshtml" />
+    <Content Include="Views\Sistemas_Descripciones_Trans\Details.cshtml" />
+    <Content Include="Views\Sistemas_Descripciones_Trans\Edit.cshtml" />
+    <Content Include="Views\Sistemas_Descripciones_Trans\Index.cshtml" />
+    <Content Include="Views\Sistemas_Descripciones_Trans\PopUp.cshtml" />
+    <Content Include="Views\Sistemas_Descripciones_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Sistemas_Funcionalidades_Acciones_Cata\Create.cshtml" />
+    <Content Include="Views\Sistemas_Funcionalidades_Acciones_Cata\Details.cshtml" />
+    <Content Include="Views\Sistemas_Funcionalidades_Acciones_Cata\Edit.cshtml" />
+    <Content Include="Views\Sistemas_Funcionalidades_Acciones_Cata\Index.cshtml" />
+    <Content Include="Views\Sistemas_Funcionalidades_Acciones_Cata\PopUp.cshtml" />
+    <Content Include="Views\Sistemas_Funcionalidades_Acciones_Cata\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Sistemas_Funcionalidades_Acciones_Tipo_Cata\Create.cshtml" />
+    <Content Include="Views\Sistemas_Funcionalidades_Acciones_Tipo_Cata\Details.cshtml" />
+    <Content Include="Views\Sistemas_Funcionalidades_Acciones_Tipo_Cata\Edit.cshtml" />
+    <Content Include="Views\Sistemas_Funcionalidades_Acciones_Tipo_Cata\Index.cshtml" />
+    <Content Include="Views\Sistemas_Funcionalidades_Acciones_Tipo_Cata\PopUp.cshtml" />
+    <Content Include="Views\Sistemas_Funcionalidades_Acciones_Tipo_Cata\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Sistemas_Funcionalidades_Acciones_Trans\Create.cshtml" />
+    <Content Include="Views\Sistemas_Funcionalidades_Acciones_Trans\Details.cshtml" />
+    <Content Include="Views\Sistemas_Funcionalidades_Acciones_Trans\Edit.cshtml" />
+    <Content Include="Views\Sistemas_Funcionalidades_Acciones_Trans\Index.cshtml" />
+    <Content Include="Views\Sistemas_Funcionalidades_Acciones_Trans\PopUp.cshtml" />
+    <Content Include="Views\Sistemas_Funcionalidades_Acciones_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Sistemas_Funcionalidades_Master\Create.cshtml" />
+    <Content Include="Views\Sistemas_Funcionalidades_Master\Details.cshtml" />
+    <Content Include="Views\Sistemas_Funcionalidades_Master\Edit.cshtml" />
+    <Content Include="Views\Sistemas_Funcionalidades_Master\Index.cshtml" />
+    <Content Include="Views\Sistemas_Funcionalidades_Master\PopUp.cshtml" />
+    <Content Include="Views\Sistemas_Funcionalidades_Master\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Sistemas_Mensaje_Trans\Create.cshtml" />
+    <Content Include="Views\Sistemas_Mensaje_Trans\Details.cshtml" />
+    <Content Include="Views\Sistemas_Mensaje_Trans\Edit.cshtml" />
+    <Content Include="Views\Sistemas_Mensaje_Trans\Index.cshtml" />
+    <Content Include="Views\Sistemas_Mensaje_Trans\PopUp.cshtml" />
+    <Content Include="Views\Sistemas_Mensaje_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Sistemas_Modulos_Master\Create.cshtml" />
+    <Content Include="Views\Sistemas_Modulos_Master\Details.cshtml" />
+    <Content Include="Views\Sistemas_Modulos_Master\Edit.cshtml" />
+    <Content Include="Views\Sistemas_Modulos_Master\Index.cshtml" />
+    <Content Include="Views\Sistemas_Modulos_Master\PopUp.cshtml" />
+    <Content Include="Views\Sistemas_Modulos_Master\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\UserMailer\_Layout.cshtml" />
+    <Content Include="Views\UserMailer\Welcome.cshtml" />
+    <Content Include="Views\UserMailer\PasswordReset.cshtml" />
+    <Content Include="Views\UserMailer\Correo.cshtml" />
+    <Content Include="Views\Sistemas_Correos_Cata\Create.cshtml" />
+    <Content Include="Views\Sistemas_Correos_Cata\Details.cshtml" />
+    <Content Include="Views\Sistemas_Correos_Cata\Edit.cshtml" />
+    <Content Include="Views\Sistemas_Correos_Cata\Index.cshtml" />
+    <Content Include="Views\Sistemas_Correos_Cata\PopUp.cshtml" />
+    <Content Include="Views\Sistemas_Correos_Cata\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Sistema_Correos_Enviado_Trans\Create.cshtml" />
+    <Content Include="Views\Sistema_Correos_Enviado_Trans\Details.cshtml" />
+    <Content Include="Views\Sistema_Correos_Enviado_Trans\Edit.cshtml" />
+    <Content Include="Views\Sistema_Correos_Enviado_Trans\Index.cshtml" />
+    <Content Include="Views\Sistema_Correos_Enviado_Trans\PopUp.cshtml" />
+    <Content Include="Views\Sistema_Correos_Enviado_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\UserMailer\TurnosVacios.cshtml" />
+    <Content Include="Views\UserMailer\Correo1.cshtml" />
+    <Content Include="Views\Reportes\General.cshtml" />
+    <Content Include="Views\Reportes\Detalles.cshtml" />
+    <None Include="_CodeTemplates\MvcView1\BootstrapForm.t4" />
+    <Content Include="_CodeTemplates\MvcView1\Create.tt" />
+    <Content Include="_CodeTemplates\MvcView1\Delete.tt" />
+    <Content Include="_CodeTemplates\MvcView1\Details.tt" />
+    <Content Include="_CodeTemplates\MvcView1\Edit.tt" />
+    <Content Include="_CodeTemplates\MvcView1\Empty.tt" />
+    <Content Include="_CodeTemplates\MvcView1\List.tt" />
+    <Content Include="_CodeTemplates\MvcViewWithoutModel\Empty.cs.t4" />
+    <Content Include="_CodeTemplates\MvcViewWithoutModel\Empty.vb.t4" />
+    <Content Include="_CodeTemplates\MvcViewWithoutModel\Imports.include.t4" />
+    <Content Include="_CodeTemplates\MvcView\Create.cs.t4" />
+    <Content Include="_CodeTemplates\MvcView\Create.vb.t4" />
+    <Content Include="_CodeTemplates\MvcView\Delete.cs.t4" />
+    <Content Include="_CodeTemplates\MvcView\Delete.vb.t4" />
+    <Content Include="_CodeTemplates\MvcView\Details.cs.t4" />
+    <Content Include="_CodeTemplates\MvcView\Details.vb.t4" />
+    <Content Include="_CodeTemplates\MvcView\Edit.cs.t4" />
+    <Content Include="_CodeTemplates\MvcView\Edit.vb.t4" />
+    <Content Include="_CodeTemplates\MvcView\Empty.cs.t4" />
+    <Content Include="_CodeTemplates\MvcView\Empty.vb.t4" />
+    <Content Include="_CodeTemplates\MvcView\Imports.include.t4" />
+    <Content Include="_CodeTemplates\MvcView\List.cs.t4" />
+    <Content Include="_CodeTemplates\MvcView\List.vb.t4" />
+    <Content Include="_CodeTemplates\MvcView\ModelMetadataFunctions.cs.include.t4" />
+    <Content Include="_CodeTemplates\MvcView\ModelMetadataFunctions.vb.include.t4" />
+    <Content Include="_CodeTemplates\ODataControllerWithContext\Controller.cs.t4" />
+    <Content Include="_CodeTemplates\ODataControllerWithContext\Controller.vb.t4" />
+    <Content Include="Scripts\ckeditor\CHANGES.md" />
+    <Content Include="Scripts\ckeditor\LICENSE.md" />
+    <Content Include="Scripts\ckeditor\plugins\scayt\LICENSE.md" />
+    <Content Include="Scripts\ckeditor\plugins\scayt\README.md" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\LICENSE.md" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\README.md" />
+    <Content Include="Scripts\ckeditor\README.md" />
+    <Content Include="Scripts\ckeditor\samples\assets\posteddata.php" />
+    <Content Include="Scripts\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\outputforflash.fla" />
+    <Content Include="Scripts\ckeditor\samples\sample_posteddata.php" />
+    <Content Include="Scripts\ckeditor\skins\moono\readme.md" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.af-ZA.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.af.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.am-ET.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.am.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ar-AE.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ar-BH.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ar-DZ.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ar-EG.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ar-IQ.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ar-JO.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ar-KW.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ar-LB.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ar-LY.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ar-MA.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ar-OM.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ar-QA.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ar-SA.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ar-SY.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ar-TN.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ar-YE.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ar.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.arn-CL.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.arn.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.as-IN.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.as.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.az-Cyrl-AZ.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.az-Cyrl.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.az-Latn-AZ.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.az-Latn.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.az.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ba-RU.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ba.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.be-BY.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.be.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.bg-BG.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.bg.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.bn-BD.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.bn-IN.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.bn.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.bo-CN.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.bo.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.br-FR.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.br.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.bs-Cyrl-BA.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.bs-Cyrl.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.bs-Latn-BA.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.bs-Latn.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.bs.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ca-ES.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ca.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.co-FR.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.co.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.cs-CZ.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.cs.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.cy-GB.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.cy.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.da-DK.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.da.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.de-AT.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.de-CH.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.de-DE.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.de-LI.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.de-LU.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.de.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.dsb-DE.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.dsb.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.dv-MV.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.dv.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.el-GR.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.el.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.en-029.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.en-AU.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.en-BZ.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.en-CA.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.en-GB.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.en-IE.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.en-IN.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.en-JM.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.en-MY.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.en-NZ.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.en-PH.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.en-SG.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.en-TT.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.en-US.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.en-ZA.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.en-ZW.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.en.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.es-AR.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.es-BO.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.es-CL.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.es-CO.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.es-CR.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.es-DO.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.es-EC.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.es-ES.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.es-GT.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.es-HN.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.es-MX.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.es-NI.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.es-PA.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.es-PE.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.es-PR.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.es-PY.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.es-SV.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.es-US.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.es-UY.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.es-VE.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.es.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.et-EE.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.et.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.eu-ES.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.eu.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.fa-IR.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.fa.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.fi-FI.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.fi.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.fil-PH.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.fil.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.fo-FO.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.fo.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.fr-BE.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.fr-CA.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.fr-CH.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.fr-FR.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.fr-LU.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.fr-MC.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.fr.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.fy-NL.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.fy.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ga-IE.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ga.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.gd-GB.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.gd.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.gl-ES.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.gl.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.gsw-FR.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.gsw.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.gu-IN.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.gu.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ha-Latn-NG.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ha-Latn.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ha.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.he-IL.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.he.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.hi-IN.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.hi.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.hr-BA.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.hr-HR.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.hr.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.hsb-DE.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.hsb.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.hu-HU.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.hu.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.hy-AM.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.hy.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.id-ID.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.id.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ig-NG.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ig.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ii-CN.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ii.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.is-IS.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.is.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.it-CH.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.it-IT.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.it.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.iu-Cans-CA.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.iu-Cans.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.iu-Latn-CA.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.iu-Latn.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.iu.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ja-JP.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ja.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ka-GE.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ka.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.kk-KZ.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.kk.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.kl-GL.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.kl.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.km-KH.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.km.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.kn-IN.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.kn.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ko-KR.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ko.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.kok-IN.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.kok.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ky-KG.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ky.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.lb-LU.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.lb.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.lo-LA.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.lo.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.lt-LT.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.lt.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.lv-LV.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.lv.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.mi-NZ.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.mi.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.mk-MK.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.mk.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ml-IN.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ml.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.mn-Cyrl.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.mn-MN.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.mn-Mong-CN.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.mn-Mong.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.mn.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.moh-CA.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.moh.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.mr-IN.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.mr.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ms-BN.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ms-MY.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ms.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.mt-MT.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.mt.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.nb-NO.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.nb.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ne-NP.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ne.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.nl-BE.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.nl-NL.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.nl.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.nn-NO.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.nn.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.no.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.nso-ZA.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.nso.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.oc-FR.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.oc.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.or-IN.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.or.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.pa-IN.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.pa.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.pl-PL.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.pl.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.prs-AF.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.prs.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ps-AF.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ps.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.pt-BR.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.pt-PT.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.pt.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.qut-GT.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.qut.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.quz-BO.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.quz-EC.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.quz-PE.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.quz.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.rm-CH.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.rm.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ro-RO.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ro.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ru-RU.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ru-UA.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ru.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.rw-RW.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.rw.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sa-IN.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sa.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sah-RU.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sah.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.se-FI.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.se-NO.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.se-SE.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.se.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.si-LK.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.si.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sk-SK.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sk.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sl-SI.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sl.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sma-NO.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sma-SE.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sma.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.smj-NO.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.smj-SE.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.smj.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.smn-FI.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.smn.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sms-FI.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sms.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sq-AL.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sq.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sr-Cyrl-BA.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sr-Cyrl-CS.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sr-Cyrl-ME.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sr-Cyrl-RS.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sr-Cyrl.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sr-Latn-BA.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sr-Latn-CS.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sr-Latn-ME.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sr-Latn-RS.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sr-Latn.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sr.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sv-FI.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sv-SE.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sv.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sw-KE.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.sw.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.syr-SY.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.syr.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ta-IN.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ta.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.te-IN.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.te.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.tg-Cyrl-TJ.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.tg-Cyrl.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.tg.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.th-TH.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.th.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.tk-TM.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.tk.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.tn-ZA.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.tn.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.tr-TR.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.tr.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.tt-RU.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.tt.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.tzm-Latn-DZ.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.tzm-Latn.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.tzm.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ug-CN.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ug.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.uk-UA.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.uk.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ur-PK.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.ur.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.uz-Cyrl-UZ.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.uz-Cyrl.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.uz-Latn-UZ.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.uz-Latn.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.uz.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.vi-VN.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.vi.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.wo-SN.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.wo.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.xh-ZA.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.xh.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.yo-NG.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.yo.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.zh-CHS.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.zh-CHT.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.zh-CN.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.zh-Hans.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.zh-Hant.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.zh-HK.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.zh-MO.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.zh-SG.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.zh-TW.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.zh.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.zu-ZA.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\cultures\kendo.culture.zu.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.autocomplete.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.binder.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.button.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.calendar.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.colorpicker.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.combobox.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.core.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.data.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.data.odata.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.data.signalr.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.data.xml.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.datepicker.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.datetimepicker.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.draganddrop.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.dropdownlist.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.editable.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.fx.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.list.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.listview.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.maskedtextbox.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.menu.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.mobile.actionsheet.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.mobile.application.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.mobile.button.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.mobile.buttongroup.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.mobile.drawer.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.mobile.listview.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.mobile.loader.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.mobile.modalview.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.mobile.navbar.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.mobile.pane.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.mobile.popover.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.mobile.scroller.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.mobile.scrollview.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.mobile.shim.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.mobile.splitview.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.mobile.switch.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.mobile.tabstrip.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.mobile.view.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.multiselect.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.notification.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.numerictextbox.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.pager.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.panelbar.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.popup.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.progressbar.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.resizable.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.router.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.selectable.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.slider.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.sortable.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.splitter.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.tabstrip.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.timepicker.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.timezones.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.tooltip.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.touch.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.ui.core.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.userevents.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.validator.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.view.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\js\kendo.window.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Black\editor.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Black\imagebrowser.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Black\indeterminate.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Black\loading-image.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Black\loading.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Black\loading_2x.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Black\slider-h.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Black\slider-v.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Black\sprite.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Black\sprite_2x.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\BlueOpal\editor.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\BlueOpal\imagebrowser.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\BlueOpal\indeterminate.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\BlueOpal\loading-image.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\BlueOpal\loading.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\BlueOpal\loading_2x.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\BlueOpal\slider-h.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\BlueOpal\slider-v.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\BlueOpal\sprite.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\BlueOpal\sprite_2x.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Bootstrap\editor.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Bootstrap\imagebrowser.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Bootstrap\indeterminate.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Bootstrap\loading-image.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Bootstrap\loading.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Bootstrap\loading_2x.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Bootstrap\slider-h.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Bootstrap\slider-v.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Bootstrap\sprite.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Bootstrap\sprite_2x.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Default\editor.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Default\imagebrowser.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Default\indeterminate.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Default\loading-image.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Default\loading.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Default\loading_2x.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Default\slider-h.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Default\slider-v.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Default\sprite.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Default\sprite_2x.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Flat\editor.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Flat\imagebrowser.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Flat\indeterminate.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Flat\loading-image.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Flat\loading.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Flat\loading_2x.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Flat\slider-h.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Flat\slider-v.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Flat\sprite.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Flat\sprite_2x.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\HighContrast\editor.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\HighContrast\imagebrowser.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\HighContrast\indeterminate.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\HighContrast\loading-image.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\HighContrast\loading.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\HighContrast\loading_2x.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\HighContrast\slider-h.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\HighContrast\slider-v.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\HighContrast\sprite.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\HighContrast\sprite_2x.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.black.css" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.black.mobile.css" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.blueopal.css" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.blueopal.mobile.css" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.bootstrap.css" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.bootstrap.mobile.css" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.common-bootstrap.core.css" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.common.core.css" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.default.css" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.default.mobile.css" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.flat.css" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.flat.mobile.css" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.highcontrast.css" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.highcontrast.mobile.css" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.metro.css" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.metro.mobile.css" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.metroblack.css" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.metroblack.mobile.css" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.moonlight.css" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.moonlight.mobile.css" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.rtl.css" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.silver.css" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.silver.mobile.css" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.uniform.css" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.uniform.mobile.css" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\MetroBlack\editor.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\MetroBlack\imagebrowser.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\MetroBlack\indeterminate.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\MetroBlack\loading-image.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\MetroBlack\loading.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\MetroBlack\loading_2x.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\MetroBlack\slider-h.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\MetroBlack\slider-v.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\MetroBlack\sprite.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\MetroBlack\sprite_2x.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Metro\editor.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Metro\imagebrowser.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Metro\indeterminate.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Metro\loading-image.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Metro\loading.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Metro\loading_2x.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Metro\slider-h.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Metro\slider-v.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Metro\sprite.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Metro\sprite_2x.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Moonlight\editor.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Moonlight\imagebrowser.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Moonlight\indeterminate.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Moonlight\loading-image.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Moonlight\loading.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Moonlight\loading_2x.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Moonlight\slider-h.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Moonlight\slider-v.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Moonlight\sprite.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Moonlight\sprite_2x.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Silver\editor.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Silver\imagebrowser.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Silver\indeterminate.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Silver\loading-image.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Silver\loading.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Silver\loading_2x.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Silver\slider-h.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Silver\slider-v.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Silver\sprite.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Silver\sprite_2x.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\brushed-metal.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\dots1.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\dots10.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\dots11.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\dots12.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\dots13.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\dots2.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\dots3.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\dots4.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\dots5.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\dots6.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\dots7.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\dots8.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\dots9.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\glass-lighter.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\glass.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\highlight.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\hsv-gradient.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\hue.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\leather1.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\leather2.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\noise.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\stripe1.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\stripe2.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\stripe3.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\stripe4.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\stripe5.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\stripe6.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\transparency.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\textures\transtexture.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Uniform\editor.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Uniform\imagebrowser.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Uniform\indeterminate.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Uniform\loading-image.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Uniform\loading.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Uniform\loading_2x.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Uniform\slider-h.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Uniform\slider-v.gif" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Uniform\sprite.png" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\Uniform\sprite_2x.png" />
+    <Content Include="Scripts\modernizr-2.7.1.js" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\common\transitions.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common-mobile\actionsheet.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common-mobile\all.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common-mobile\base.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common-mobile\button.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common-mobile\buttongroup.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common-mobile\drawer.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common-mobile\forms.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common-mobile\listview.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common-mobile\mobile-template.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common-mobile\modalview.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common-mobile\navbar.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common-mobile\popover.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common-mobile\scroller.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common-mobile\scrollview.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common-mobile\splitview.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common-mobile\switch.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common-mobile\tabstrip.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common\adaptive.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common\all.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common\base.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common\calendar.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common\core.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common\forms.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common\ie7.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common\inputs.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common\menu.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common\mixins.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common\notification.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common\panelbar.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common\progressbar.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common\slider.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common\splitter.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common\tabstrip.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common\tooltip.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\common\window.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\images\kendoui.ttf" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\images\kendoui.woff" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.black.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.black.mobile.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.blueopal.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.blueopal.mobile.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.bootstrap.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.bootstrap.mobile.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.common-bootstrap.core.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.common.core.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.default.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.default.mobile.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.flat.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.flat.mobile.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.highcontrast.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.highcontrast.mobile.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.metro.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.metro.mobile.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.metroblack.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.metroblack.mobile.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.moonlight.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.moonlight.mobile.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.silver.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.silver.mobile.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.uniform.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\kendo.uniform.mobile.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\theme-template.less" />
+    <Content Include="Scripts\kendoui.2014.1.416\styles\web\type-metro.less" />
+    <None Include="Scripts\MultipleSelect\jquery.multiple.select.js" />
+    <Content Include="Scripts\Notificacion-messages\notification-messages.css" />
+    <Content Include="Scripts\Notificacion-messages\notification-messages.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap-datepicker.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.es.js" />
+    <Content Include="Scripts\ui.utils.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout1.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Shared\_ChooseCulture.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Boolean.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\DateTime.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Time.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Date.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\boolean.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\string.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Date.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\IntegerEditor.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\DecimalEditor.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\TimeSpan.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Guid.cshtml" />
+    <Content Include="Views\_Sistemas_Descripciones_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\_Sistemas_Descripciones_Trans\Create.cshtml" />
+    <Content Include="Views\_Sistemas_Descripciones_Trans\Details.cshtml" />
+    <Content Include="Views\_Sistemas_Descripciones_Trans\Edit.cshtml" />
+    <Content Include="Views\_Sistemas_Descripciones_Trans\Index.cshtml" />
+    <Content Include="Views\_Sistemas_Descripciones_Trans\PopUp.cshtml" />
+    <Content Include="Views\_Sistemas_Funcionalidades_Acciones_Cata\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\_Sistemas_Funcionalidades_Acciones_Cata\Create.cshtml" />
+    <Content Include="Views\_Sistemas_Funcionalidades_Acciones_Cata\Details.cshtml" />
+    <Content Include="Views\_Sistemas_Funcionalidades_Acciones_Cata\Edit.cshtml" />
+    <Content Include="Views\_Sistemas_Funcionalidades_Acciones_Cata\Index.cshtml" />
+    <Content Include="Views\_Sistemas_Funcionalidades_Acciones_Cata\PopUp.cshtml" />
+    <Content Include="Views\_Sistemas_Funcionalidades_Acciones_Tipo_Cata\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\_Sistemas_Funcionalidades_Acciones_Tipo_Cata\Create.cshtml" />
+    <Content Include="Views\_Sistemas_Funcionalidades_Acciones_Tipo_Cata\Details.cshtml" />
+    <Content Include="Views\_Sistemas_Funcionalidades_Acciones_Tipo_Cata\Edit.cshtml" />
+    <Content Include="Views\_Sistemas_Funcionalidades_Acciones_Tipo_Cata\Index.cshtml" />
+    <Content Include="Views\_Sistemas_Funcionalidades_Acciones_Tipo_Cata\PopUp.cshtml" />
+    <Content Include="Views\_Sistemas_Funcionalidades_Acciones_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\_Sistemas_Funcionalidades_Acciones_Trans\Create.cshtml" />
+    <Content Include="Views\_Sistemas_Funcionalidades_Acciones_Trans\Details.cshtml" />
+    <Content Include="Views\_Sistemas_Funcionalidades_Acciones_Trans\Edit.cshtml" />
+    <Content Include="Views\_Sistemas_Funcionalidades_Acciones_Trans\Index.cshtml" />
+    <Content Include="Views\_Sistemas_Funcionalidades_Acciones_Trans\PopUp.cshtml" />
+    <Content Include="Views\_Sistemas_Funcionalidades_Master\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\_Sistemas_Funcionalidades_Master\Create.cshtml" />
+    <Content Include="Views\_Sistemas_Funcionalidades_Master\Details.cshtml" />
+    <Content Include="Views\_Sistemas_Funcionalidades_Master\Edit.cshtml" />
+    <Content Include="Views\_Sistemas_Funcionalidades_Master\Index.cshtml" />
+    <Content Include="Views\_Sistemas_Funcionalidades_Master\PopUp.cshtml" />
+    <Content Include="Views\_Sistemas_Mensaje_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\_Sistemas_Mensaje_Trans\Create.cshtml" />
+    <Content Include="Views\_Sistemas_Mensaje_Trans\Details.cshtml" />
+    <Content Include="Views\_Sistemas_Mensaje_Trans\Edit.cshtml" />
+    <Content Include="Views\_Sistemas_Mensaje_Trans\Index.cshtml" />
+    <Content Include="Views\_Sistemas_Mensaje_Trans\PopUp.cshtml" />
+    <Content Include="Views\_Sistemas_Modulos_Master\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\_Sistemas_Modulos_Master\Create.cshtml" />
+    <Content Include="Views\_Sistemas_Modulos_Master\Details.cshtml" />
+    <Content Include="Views\_Sistemas_Modulos_Master\Edit.cshtml" />
+    <Content Include="Views\_Sistemas_Modulos_Master\Index.cshtml" />
+    <Content Include="Views\_Sistemas_Modulos_Master\PopUp.cshtml" />
+    <Content Include="Views\Contacto_Tipo_Cata\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Contacto_Tipo_Cata\Create.cshtml" />
+    <Content Include="Views\Contacto_Tipo_Cata\Details.cshtml" />
+    <Content Include="Views\Contacto_Tipo_Cata\Edit.cshtml" />
+    <Content Include="Views\Contacto_Tipo_Cata\Index.cshtml" />
+    <Content Include="Views\Contacto_Tipo_Cata\PopUp.cshtml" />
+    <Content Include="Views\Circuitos_Cata\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Circuitos_Cata\Create.cshtml" />
+    <Content Include="Views\Circuitos_Cata\Details.cshtml" />
+    <Content Include="Views\Circuitos_Cata\Edit.cshtml" />
+    <Content Include="Views\Circuitos_Cata\Index.cshtml" />
+    <Content Include="Views\Circuitos_Cata\PopUp.cshtml" />
+    <Content Include="Views\Congregaciones_Master\__CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Congregaciones_Master\Create.cshtml" />
+    <Content Include="Views\Congregaciones_Master\Details.cshtml" />
+    <Content Include="Views\Congregaciones_Master\Edit.cshtml" />
+    <Content Include="Views\Congregaciones_Master\Index.cshtml" />
+    <Content Include="Views\Congregaciones_Master\PopUp.cshtml" />
+    <Content Include="Views\Dias_Cata\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Dias_Cata\Create.cshtml" />
+    <Content Include="Views\Dias_Cata\Details.cshtml" />
+    <Content Include="Views\Dias_Cata\Edit.cshtml" />
+    <Content Include="Views\Dias_Cata\Index.cshtml" />
+    <Content Include="Views\Dias_Cata\PopUp.cshtml" />
+    <Content Include="Views\_Horario_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\_Horario_Trans\Create.cshtml" />
+    <Content Include="Views\_Horario_Trans\Details.cshtml" />
+    <Content Include="Views\_Horario_Trans\Edit.cshtml" />
+    <Content Include="Views\_Horario_Trans\Index.cshtml" />
+    <Content Include="Views\_Horario_Trans\PopUp.cshtml" />
+    <Content Include="Views\Horario_Turno_Informe_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Horario_Turno_Informe_Trans\Create.cshtml" />
+    <Content Include="Views\Horario_Turno_Informe_Trans\Details.cshtml" />
+    <Content Include="Views\Horario_Turno_Informe_Trans\Edit.cshtml" />
+    <Content Include="Views\Horario_Turno_Informe_Trans\Index.cshtml" />
+    <Content Include="Views\Horario_Turno_Informe_Trans\PopUp.cshtml" />
+    <Content Include="Views\_Horario_Turno_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\_Horario_Turno_Trans\Create.cshtml" />
+    <Content Include="Views\_Horario_Turno_Trans\Details.cshtml" />
+    <Content Include="Views\_Horario_Turno_Trans\Edit.cshtml" />
+    <Content Include="Views\_Horario_Turno_Trans\Index.cshtml" />
+    <Content Include="Views\_Horario_Turno_Trans\PopUp.cshtml" />
+    <Content Include="Views\_Horarios_Master\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\_Horarios_Master\Create.cshtml" />
+    <Content Include="Views\_Horarios_Master\Details.cshtml" />
+    <Content Include="Views\_Horarios_Master\Edit.cshtml" />
+    <Content Include="Views\_Horarios_Master\Index.cshtml" />
+    <Content Include="Views\_Horarios_Master\PopUp.cshtml" />
+    <Content Include="Views\Idiomas_Cata\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Idiomas_Cata\Create.cshtml" />
+    <Content Include="Views\Idiomas_Cata\Details.cshtml" />
+    <Content Include="Views\Idiomas_Cata\Edit.cshtml" />
+    <Content Include="Views\Idiomas_Cata\Index.cshtml" />
+    <Content Include="Views\Idiomas_Cata\PopUp.cshtml" />
+    <Content Include="Views\_Notificaciones_Master\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\_Notificaciones_Master\Create.cshtml" />
+    <Content Include="Views\_Notificaciones_Master\Details.cshtml" />
+    <Content Include="Views\_Notificaciones_Master\Edit.cshtml" />
+    <Content Include="Views\_Notificaciones_Master\Index.cshtml" />
+    <Content Include="Views\_Notificaciones_Master\PopUp.cshtml" />
+    <Content Include="Views\Notificaciones_Prioridades_Cata\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Notificaciones_Prioridades_Cata\Create.cshtml" />
+    <Content Include="Views\Notificaciones_Prioridades_Cata\Details.cshtml" />
+    <Content Include="Views\Notificaciones_Prioridades_Cata\Edit.cshtml" />
+    <Content Include="Views\Notificaciones_Prioridades_Cata\Index.cshtml" />
+    <Content Include="Views\Notificaciones_Prioridades_Cata\PopUp.cshtml" />
+    <Content Include="Views\Persona_Contactos_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Persona_Contactos_Trans\Create.cshtml" />
+    <Content Include="Views\Persona_Contactos_Trans\Details.cshtml" />
+    <Content Include="Views\Persona_Contactos_Trans\Edit.cshtml" />
+    <Content Include="Views\Persona_Contactos_Trans\Index.cshtml" />
+    <Content Include="Views\Persona_Contactos_Trans\PopUp.cshtml" />
+    <Content Include="Views\_Personas_Master\__CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\_Personas_Master\Create.cshtml" />
+    <Content Include="Views\_Personas_Master\Details.cshtml" />
+    <Content Include="Views\_Personas_Master\Edit.cshtml" />
+    <Content Include="Views\_Personas_Master\Index.cshtml" />
+    <Content Include="Views\_Personas_Master\PopUp.cshtml" />
+    <Content Include="Views\Personas_Notificaciones_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Personas_Notificaciones_Trans\Create.cshtml" />
+    <Content Include="Views\Personas_Notificaciones_Trans\Details.cshtml" />
+    <Content Include="Views\Personas_Notificaciones_Trans\Edit.cshtml" />
+    <Content Include="Views\Personas_Notificaciones_Trans\Index.cshtml" />
+    <Content Include="Views\Personas_Notificaciones_Trans\PopUp.cshtml" />
+    <Content Include="Views\Personas_Tipo_Cata\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Personas_Tipo_Cata\Create.cshtml" />
+    <Content Include="Views\Personas_Tipo_Cata\Details.cshtml" />
+    <Content Include="Views\Personas_Tipo_Cata\Edit.cshtml" />
+    <Content Include="Views\Personas_Tipo_Cata\Index.cshtml" />
+    <Content Include="Views\Personas_Tipo_Cata\PopUp.cshtml" />
+    <Content Include="Views\Personas_Tipos_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Personas_Tipos_Trans\Create.cshtml" />
+    <Content Include="Views\Personas_Tipos_Trans\Details.cshtml" />
+    <Content Include="Views\Personas_Tipos_Trans\Edit.cshtml" />
+    <Content Include="Views\Personas_Tipos_Trans\Index.cshtml" />
+    <Content Include="Views\Personas_Tipos_Trans\PopUp.cshtml" />
+    <Content Include="Views\Publicaciones_Cata\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Publicaciones_Cata\Create.cshtml" />
+    <Content Include="Views\Publicaciones_Cata\Details.cshtml" />
+    <Content Include="Views\Publicaciones_Cata\Edit.cshtml" />
+    <Content Include="Views\Publicaciones_Cata\Index.cshtml" />
+    <Content Include="Views\Publicaciones_Cata\PopUp.cshtml" />
+    <Content Include="Views\Rutas_Master\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Rutas_Master\Create.cshtml" />
+    <Content Include="Views\Rutas_Master\Details.cshtml" />
+    <Content Include="Views\Rutas_Master\Edit.cshtml" />
+    <Content Include="Views\Rutas_Master\Index.cshtml" />
+    <Content Include="Views\Rutas_Master\PopUp.cshtml" />
+    <Content Include="Views\_Turnos_Master\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\_Turnos_Master\Create.cshtml" />
+    <Content Include="Views\_Turnos_Master\Details.cshtml" />
+    <Content Include="Views\_Turnos_Master\Edit.cshtml" />
+    <Content Include="Views\_Turnos_Master\Index.cshtml" />
+    <Content Include="Views\_Turnos_Master\PopUp.cshtml" />
+    <Content Include="Views\Zonas_Encargados_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Zonas_Encargados_Trans\Create.cshtml" />
+    <Content Include="Views\Zonas_Encargados_Trans\Details.cshtml" />
+    <Content Include="Views\Zonas_Encargados_Trans\Edit.cshtml" />
+    <Content Include="Views\Zonas_Encargados_Trans\Index.cshtml" />
+    <Content Include="Views\Zonas_Encargados_Trans\PopUp.cshtml" />
+    <Content Include="Views\Zonas_Master\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Zonas_Master\_Create.cshtml" />
+    <Content Include="Views\Zonas_Master\Details.cshtml" />
+    <Content Include="Views\Zonas_Master\_Edit.cshtml" />
+    <Content Include="Views\Zonas_Master\_Index.cshtml" />
+    <Content Include="Views\Zonas_Master\PopUp.cshtml" />
+    <Content Include="Views\Shared\_Menu.cshtml" />
+    <Content Include="Views\Shared\_AdminMenu.cshtml" />
+    <Content Include="Views\_Personas_Master\____Edit.cshtml" />
+    <Content Include="Views\_Personas_Master\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\_Horario_Turno_Dias_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\_Horario_Turno_Dias_Trans\Create.cshtml" />
+    <Content Include="Views\_Horario_Turno_Dias_Trans\Details.cshtml" />
+    <Content Include="Views\_Horario_Turno_Dias_Trans\Edit.cshtml" />
+    <Content Include="Views\_Horario_Turno_Dias_Trans\Index.cshtml" />
+    <Content Include="Views\_Horario_Turno_Dias_Trans\PopUp.cshtml" />
+    <Content Include="Views\__Horarios_Master\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\__Horarios_Master\Create.cshtml" />
+    <Content Include="Views\__Horarios_Master\Details.cshtml" />
+    <Content Include="Views\__Horarios_Master\Edit.cshtml" />
+    <Content Include="Views\__Horarios_Master\Index.cshtml" />
+    <Content Include="Views\__Horarios_Master\PopUp.cshtml" />
+    <Content Include="Views\Turnos_Dias_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Turnos_Dias_Trans\Create.cshtml" />
+    <Content Include="Views\Turnos_Dias_Trans\Details.cshtml" />
+    <Content Include="Views\Turnos_Dias_Trans\Edit.cshtml" />
+    <Content Include="Views\Turnos_Dias_Trans\Index.cshtml" />
+    <Content Include="Views\Turnos_Dias_Trans\PopUp.cshtml" />
+    <Content Include="Views\Horarios_Master\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Horarios_Master\Create.cshtml" />
+    <Content Include="Views\Horarios_Master\Details.cshtml" />
+    <Content Include="Views\Horarios_Master\Edit.cshtml" />
+    <Content Include="Views\Horarios_Master\Index.cshtml" />
+    <Content Include="Views\Horarios_Master\PopUp.cshtml" />
+    <Content Include="Views\__Horario_Turno_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\__Horario_Turno_Trans\Create.cshtml" />
+    <Content Include="Views\__Horario_Turno_Trans\Details.cshtml" />
+    <Content Include="Views\__Horario_Turno_Trans\Edit.cshtml" />
+    <Content Include="Views\__Horario_Turno_Trans\Index.cshtml" />
+    <Content Include="Views\__Horario_Turno_Trans\PopUp.cshtml" />
+    <Content Include="Views\Turnos_Master\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Turnos_Master\Create.cshtml" />
+    <Content Include="Views\Turnos_Master\Details.cshtml" />
+    <Content Include="Views\Turnos_Master\Edit.cshtml" />
+    <Content Include="Views\Turnos_Master\Index.cshtml" />
+    <Content Include="Views\Turnos_Master\PopUp.cshtml" />
+    <Content Include="Views\Horario_Trans\Create.cshtml" />
+    <Content Include="Views\Horario_Trans\Details.cshtml" />
+    <Content Include="Views\Horario_Trans\_Edit.cshtml" />
+    <Content Include="Views\Horario_Trans\Index.cshtml" />
+    <Content Include="Views\Horario_Trans\PopUp.cshtml" />
+    <Content Include="Views\__Horario_Turno_Dias_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\__Horario_Turno_Dias_Trans\Create.cshtml" />
+    <Content Include="Views\__Horario_Turno_Dias_Trans\Details.cshtml" />
+    <Content Include="Views\__Horario_Turno_Dias_Trans\Edit.cshtml" />
+    <Content Include="Views\__Horario_Turno_Dias_Trans\Index.cshtml" />
+    <Content Include="Views\__Horario_Turno_Dias_Trans\PopUp.cshtml" />
+    <Content Include="Views\___Horario_Turno_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\___Horario_Turno_Trans\Create.cshtml" />
+    <Content Include="Views\___Horario_Turno_Trans\Details.cshtml" />
+    <Content Include="Views\___Horario_Turno_Trans\Edit.cshtml" />
+    <Content Include="Views\___Horario_Turno_Trans\Index.cshtml" />
+    <Content Include="Views\___Horario_Turno_Trans\PopUp.cshtml" />
+    <Content Include="Views\Horario_Trans\__CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Horario_Turno_Dias_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Horario_Turno_Dias_Trans\Create.cshtml" />
+    <Content Include="Views\Horario_Turno_Dias_Trans\Details.cshtml" />
+    <Content Include="Views\Horario_Turno_Dias_Trans\Edit.cshtml" />
+    <Content Include="Views\Horario_Turno_Dias_Trans\Index.cshtml" />
+    <Content Include="Views\Horario_Turno_Dias_Trans\PopUp.cshtml" />
+    <Content Include="Views\Horario_Turno_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Horario_Turno_Trans\Create.cshtml" />
+    <Content Include="Views\Horario_Turno_Trans\Details.cshtml" />
+    <Content Include="Views\Horario_Turno_Trans\Edit.cshtml" />
+    <Content Include="Views\Horario_Turno_Trans\Index.cshtml" />
+    <Content Include="Views\Horario_Turno_Trans\PopUp.cshtml" />
+    <Content Include="Views\Horario_Trans\Edit.cshtml" />
+    <Content Include="Views\Horario_Trans\___CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Calendario\Calendario.cshtml" />
+    <Content Include="Views\Calendario\TurnosHermanos.cshtml" />
+    <Content Include="Views\Calendario\CalendarioMain.cshtml" />
+    <Content Include="Views\Calendario\MisTurnosPredicacion.cshtml" />
+    <Content Include="Views\Calendario\AgregarHermanosCalendario.cshtml" />
+    <Content Include="Views\Calendario\AgregarHermano.cshtml" />
+    <Content Include="Views\Persona_Roles_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Persona_Roles_Trans\Create.cshtml" />
+    <Content Include="Views\Persona_Roles_Trans\Details.cshtml" />
+    <Content Include="Views\Persona_Roles_Trans\Edit.cshtml" />
+    <Content Include="Views\Persona_Roles_Trans\Index.cshtml" />
+    <Content Include="Views\Persona_Roles_Trans\PopUp.cshtml" />
+    <Content Include="Views\Roles_Cata\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Roles_Cata\Create.cshtml" />
+    <Content Include="Views\Roles_Cata\Details.cshtml" />
+    <Content Include="Views\Roles_Cata\Edit.cshtml" />
+    <Content Include="Views\Roles_Cata\Index.cshtml" />
+    <Content Include="Views\Roles_Cata\PopUp.cshtml" />
+    <Content Include="Views\Roles_Funcionalidad_Acciones_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Roles_Funcionalidad_Acciones_Trans\Create.cshtml" />
+    <Content Include="Views\Roles_Funcionalidad_Acciones_Trans\Details.cshtml" />
+    <Content Include="Views\Roles_Funcionalidad_Acciones_Trans\Edit.cshtml" />
+    <Content Include="Views\Roles_Funcionalidad_Acciones_Trans\Index.cshtml" />
+    <Content Include="Views\Roles_Funcionalidad_Acciones_Trans\PopUp.cshtml" />
+    <Content Include="Views\Shared\AccesDenied.cshtml" />
+    <Content Include="Views\Account\_RegistroCreate.cshtml" />
+    <Content Include="Views\Account\_RecuperarClave.cshtml" />
+    <Content Include="Views\Account\_Confirmacion.cshtml" />
+    <Content Include="Views\Roles_Cata\_Permisos.cshtml" />
+    <Content Include="Views\Roles_Cata\_Funcionalidad_Accion.cshtml" />
+    <Content Include="Views\Roles_Cata\EditorTemplates\Sistemas_Funcionalidades_MasterModel.cshtml" />
+    <Content Include="Views\Roles_Cata\EditorTemplates\Roles_Modulos.cshtml" />
+    <Content Include="Views\_Documentos_Master\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\_Documentos_Master\Create.cshtml" />
+    <Content Include="Views\_Documentos_Master\Details.cshtml" />
+    <Content Include="Views\_Documentos_Master\Edit.cshtml" />
+    <Content Include="Views\_Documentos_Master\Index.cshtml" />
+    <Content Include="Views\_Documentos_Master\PopUp.cshtml" />
+    <Content Include="Views\_Documentos_Objetivos_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\_Documentos_Objetivos_Trans\Create.cshtml" />
+    <Content Include="Views\_Documentos_Objetivos_Trans\Details.cshtml" />
+    <Content Include="Views\_Documentos_Objetivos_Trans\Edit.cshtml" />
+    <Content Include="Views\_Documentos_Objetivos_Trans\Index.cshtml" />
+    <Content Include="Views\_Documentos_Objetivos_Trans\PopUp.cshtml" />
+    <Content Include="Views\Notificaciones_Objetivo_Trans\__CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Notificaciones_Objetivo_Trans\Create.cshtml" />
+    <Content Include="Views\Notificaciones_Objetivo_Trans\Details.cshtml" />
+    <Content Include="Views\Notificaciones_Objetivo_Trans\Edit.cshtml" />
+    <Content Include="Views\Notificaciones_Objetivo_Trans\Index.cshtml" />
+    <Content Include="Views\Notificaciones_Objetivo_Trans\PopUp.cshtml" />
+    <Content Include="Views\Notificaciones_Personas_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Notificaciones_Personas_Trans\Create.cshtml" />
+    <Content Include="Views\Notificaciones_Personas_Trans\Details.cshtml" />
+    <Content Include="Views\Notificaciones_Personas_Trans\Edit.cshtml" />
+    <Content Include="Views\Notificaciones_Personas_Trans\Index.cshtml" />
+    <Content Include="Views\Notificaciones_Personas_Trans\PopUp.cshtml" />
+    <Content Include="Views\_Sistemas_Slides_Master\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\_Sistemas_Slides_Master\Create.cshtml" />
+    <Content Include="Views\_Sistemas_Slides_Master\Details.cshtml" />
+    <Content Include="Views\_Sistemas_Slides_Master\Edit.cshtml" />
+    <Content Include="Views\_Sistemas_Slides_Master\Index.cshtml" />
+    <Content Include="Views\_Sistemas_Slides_Master\PopUp.cshtml" />
+    <Content Include="Views\Sistemas_Slides_Master\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Sistemas_Slides_Master\Create.cshtml" />
+    <Content Include="Views\Sistemas_Slides_Master\Details.cshtml" />
+    <Content Include="Views\Sistemas_Slides_Master\Edit.cshtml" />
+    <Content Include="Views\Sistemas_Slides_Master\Index.cshtml" />
+    <Content Include="Views\Sistemas_Slides_Master\PopUp.cshtml" />
+    <Content Include="Views\Sistemas_Slides_Master\1_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Home\_slides.cshtml" />
+    <Content Include="Views\Notificaciones_Master\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Notificaciones_Master\Create.cshtml" />
+    <Content Include="Views\Notificaciones_Master\Details.cshtml" />
+    <Content Include="Views\Notificaciones_Master\Edit.cshtml" />
+    <Content Include="Views\Notificaciones_Master\Index.cshtml" />
+    <Content Include="Views\Notificaciones_Master\PopUp.cshtml" />
+    <Content Include="Views\Notificaciones_Objetivo_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Home\_AvisosNotificaciones.cshtml" />
+    <Content Include="Views\Home\_TurnosDisponibles.cshtml" />
+    <Content Include="Views\Documentos_Master\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Documentos_Master\Create.cshtml" />
+    <Content Include="Views\Documentos_Master\Details.cshtml" />
+    <Content Include="Views\Documentos_Master\Edit.cshtml" />
+    <Content Include="Views\Documentos_Master\Index.cshtml" />
+    <Content Include="Views\Documentos_Master\PopUp.cshtml" />
+    <Content Include="Views\Documentos_Objetivos_Trans\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Documentos_Objetivos_Trans\Create.cshtml" />
+    <Content Include="Views\Documentos_Objetivos_Trans\Details.cshtml" />
+    <Content Include="Views\Documentos_Objetivos_Trans\Edit.cshtml" />
+    <Content Include="Views\Documentos_Objetivos_Trans\Index.cshtml" />
+    <Content Include="Views\Documentos_Objetivos_Trans\PopUp.cshtml" />
+    <Content Include="Views\Home\_Documentos.cshtml" />
+    <Content Include="Views\MiPeppam\Index.cshtml" />
+    <Content Include="Views\MiPeppam\Personales.cshtml" />
+    <Content Include="Views\MiPeppam\_PersonalesCreateOrEdit.gen.cshtml" />
+    <Content Include="Views\MiPeppam\_DatosContacto.cshtml" />
+    <Content Include="Views\Shared\_Funcionalidades.cshtml" />
+    <Content Include="Views\Experiencias_Master\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Experiencias_Master\Create.cshtml" />
+    <Content Include="Views\Experiencias_Master\Details.cshtml" />
+    <Content Include="Views\Experiencias_Master\Edit.cshtml" />
+    <Content Include="Views\Experiencias_Master\Index.cshtml" />
+    <Content Include="Views\Experiencias_Master\PopUp.cshtml" />
+    <Content Include="Views\MiPeppam\Experiencias.cshtml" />
+    <Content Include="Views\MiPeppam\_Experiencias.cshtml" />
+    <Content Include="Views\Experiencias\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Experiencias\Create.cshtml" />
+    <Content Include="Views\Experiencias\Details.cshtml" />
+    <Content Include="Views\Experiencias\Edit.cshtml" />
+    <Content Include="Views\Experiencias\Index.cshtml" />
+    <Content Include="Views\Experiencias\PopUp.cshtml" />
+    <Content Include="Views\Roles_Niveles_Cata\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Roles_Niveles_Cata\Create.cshtml" />
+    <Content Include="Views\Roles_Niveles_Cata\Details.cshtml" />
+    <Content Include="Views\Roles_Niveles_Cata\Edit.cshtml" />
+    <Content Include="Views\Roles_Niveles_Cata\Index.cshtml" />
+    <Content Include="Views\Roles_Niveles_Cata\PopUp.cshtml" />
+    <Content Include="Views\MiPeppam\_AddDatosContacto.cshtml" />
+    <Content Include="Views\MiPeppam\_AddDatosContactoPartial.cshtml" />
+    <Content Include="Views\Horas_Cata\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Horas_Cata\Create.cshtml" />
+    <Content Include="Views\Horas_Cata\Details.cshtml" />
+    <Content Include="Views\Horas_Cata\Edit.cshtml" />
+    <Content Include="Views\Horas_Cata\Index.cshtml" />
+    <Content Include="Views\Horas_Cata\PopUp.cshtml" />
+    <Content Include="Views\Personas_Diponibilidad\_CreateOrEdit.gen.cshtml" />
+    <Content Include="Views\Personas_Diponibilidad\Create.cshtml" />
+    <Content Include="Views\Personas_Diponibilidad\Details.cshtml" />
+    <Content Include="Views\Personas_Diponibilidad\Edit.cshtml" />
+    <Content Include="Views\Personas_Diponibilidad\Index.cshtml" />
+    <Content Include="Views\Personas_Diponibilidad\PopUp.cshtml" />
+    <Content Include="Views\MiPeppam\Disponibilidad.cshtml" />
+    <Content Include="Views\MiPeppam\EditorTemplates\Horas_CataModel.cshtml" />
+    <Content Include="Views\MiPeppam\EditorTemplates\Dias_CataModel.cshtml" />
+    <Content Include="Views\MiPeppam\Informes.cshtml" />
+    <Content Include="Views\MiPeppam\Participaciones.cshtml" />
+    <Content Include="Views\MiPeppam\Notificaciones.cshtml" />
+    <Content Include="Views\Calendario\NoPuestoConHorarios.cshtml" />
+    <Content Include="Views\Experiencias\ExperienciaEnviada.cshtml" />
+    <Content Include="Views\Colocaciones\Colocaciones.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="UploadFiles\Documentos\" />
+    <Folder Include="UploadFiles\Slides\" />
+    <Folder Include="Views\Horario_Turno_Trans\EditorTemplate\" />
+    <Folder Include="Views\ScheduleTask\" />
+    <Folder Include="_CodeTemplates\MvcView1\CSHTML\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\About.es.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>About.es.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\About.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>About.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Index.es.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Index.es.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Index.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Index.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Shared.es.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Shared.es.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_GlobalResources\Shared.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Shared.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Login.es.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Login.es.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_GlobalResources\Login.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Login.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Mvc.Core\Mvc.Core.csproj">
+      <Project>{a27280aa-f03e-4cb3-9d3f-7c3696d07798}</Project>
+      <Name>Mvc.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OSIS.PEPPAM.SQLDAL\OSIS.PEPPAM.SQLDAL.csproj">
+      <Project>{dc7010ef-169b-4503-8f6c-9e584fac8f13}</Project>
+      <Name>OSIS.PEPPAM.SQLDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>9195</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/PEPPAM</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>if not exist "$(SolutionDir)bin" mkdir "$(SolutionDir)bin"
+attrib -r "$(SolutionDir)Bin\*.*"</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetDir)$(TargetName).*" "$(SolutionDir)Bin\"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

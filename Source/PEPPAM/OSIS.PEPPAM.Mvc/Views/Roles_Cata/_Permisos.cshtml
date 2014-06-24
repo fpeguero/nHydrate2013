@@ -1,0 +1,81 @@
+﻿@using Mvc.Core.UI
+@using OSIS.PEPPAM.Mvc.UI
+@{
+    IFuncionality uiObject = new Funcionality().GetFuncionality("Roles_Funcionalidad_Acciones_Trans");
+
+    ViewBag.Title = Resources.Shared.AppName + " - " + uiObject.Name;
+}
+<h2>@uiObject.Name</h2>
+<h5>@uiObject.Description</h5>
+
+@{
+    @model OSIS.PEPPAM.Mvc.Models.Roles_CataModel
+}
+@{
+    var role = Request.Params["role"];
+}
+<style>
+    .list-group > table {
+        margin-left: 15px;
+        border-bottom: solid 1px;
+        width: 90%;
+    }
+
+        .list-group > table > tbody > tr > td {
+            border-bottom: solid 1px aliceblue;
+        }
+
+    input[type="checkbox"] {
+        margin-right: 15px;
+    }
+</style>
+<div class="grid-commands-container grid-bottom-buttons">
+    @ToolbarButtons()
+</div>
+
+@helper ToolbarButtons()
+{
+    IFuncionality uiObject = new Funcionality().GetFuncionality("Roles_Funcionalidad_Acciones_Trans");
+
+    <button class="btn btn-default btn-sm create-button" title="@uiObject.GetAction("Update").Help"><span class="glyphicon glyphicon-plus-sign"></span>@uiObject.GetAction("Update").Description</button>
+
+}
+
+
+<div class="entity-form-container">
+    @using (Html.BeginForm("PermisosFuncionalidad", "Roles_Cata", FormMethod.Post, new {id = "PermisosForm", role = "form", @class = "form-horizontal"}))
+    {
+        
+          @Html.EditorFor(x => x.Modulos)
+        
+        @Html.HiddenFor(model => model.Role_Numero)
+        @Html.HiddenFor(model => model.Role_Nombre)
+        @Html.HiddenFor(model => model.Role_Descripcion)
+        @Html.HiddenFor(model => model.Registro_Estado)
+        @Html.HiddenFor(model => model.Registro_Fecha)
+        @Html.HiddenFor(model => model.Registro_Usuario)
+        
+        
+        @*foreach (var modulo in Model)
+        {
+            <ul class="list-group">
+                <li class="list-group-item">@modulo.Modulo_Nombre</li>
+                @{ Html.RenderAction("PermisosFuncionalidad", new {role = role, modulo = modulo.Modulo_Numero}); }
+
+            </ul>
+        }*@
+
+    }
+</div>
+@section Scripts {
+    
+    <script type="text/javascript">
+
+        $(function() {
+            $(".create-button").on("click",function (evt) {
+                evt.preventDefault();
+                $("#PermisosForm").submit();
+            });
+        });
+    </script>
+}

@@ -1,0 +1,46 @@
+﻿@using Mvc.Core.Security
+@using OSIS.PEPPAM.BOM
+
+@*<ul id="nav">
+        <li><a href="#" class="current_item"><span class="icon home"></span>Inicio</a></li>
+        <li><a href="#"><span class="icon clock"></span>Horarios</a></li>
+        <li><a href="#"><span class="icon archive"></span>Informes</a></li>
+        <li><a href="#"><span class="icon archive"></span>Experiencias</a></li>
+        <li><a href="#"><span class="icon user"></span>Mi Peppam</a></li>
+        <li><a href="#"><span class="icon admin"></span>Administración</a></li>
+        <li><a href="#"><span class="icon close"></span>Cerrar Sesión</a></li>
+    </ul>*@
+
+<ul id="nav">
+    <li><a href="@Url.Action("Index","Home")"><span class="icon home"></span>Inicio</a></li>
+    @foreach (var module in Sistemas_Modulos_MasterModel.LoadPersona(((IPrincipal)User).UsuarioNumero).OrderBy(x => x.Modulo_Orden))
+    {
+        if (module.Modulo_Numero == 8)
+        {
+            continue;
+        }
+
+        <li>
+            <a href="@Url.Content(module.Modulo_Url)"><span class="icon @module.Modulo_Icon"></span>@module.Modulo_Nombre</a>
+            @if (module.Modulo_Numero == 5)
+            {
+                <ul class="subnav">
+                    @foreach (var funcionalidad in Proc_Persona_FuncionalidadesModel.Load(null, module.Modulo_Numero, ((IPrincipal) User).UsuarioNumero))
+                    {
+                         <li><a href="@Url.Content(funcionalidad.Funcionalidad_Url)">@funcionalidad.Funcionalidad_Nombre</a></li>
+                    }
+                </ul>
+            }
+        </li>
+
+    }
+    <li>
+        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", style = "display: inline" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <a href="javascript:document.getElementById('logoutForm').submit()"><span class="icon closed"></span>Cerrar Sesión</a>
+        }
+    </li>
+</ul>
+

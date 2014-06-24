@@ -1,0 +1,34 @@
+﻿@using Mvc.Core.UI
+@using OSIS.PEPPAM.Mvc.UI
+@model OSIS.PEPPAM.Mvc.Models.TurnosModel
+@{
+    IFuncionality uiObject = new Funcionality().GetFuncionality("Horario_Turnos_Add");
+
+    ViewBag.Title = Resources.Shared.AppName + " - " + uiObject.Name;
+    string twoLettersCulture = new System.Globalization.CultureInfo(Culture).TwoLetterISOLanguageName;
+    string decimalSeparator = new System.Globalization.CultureInfo(Culture).NumberFormat.NumberDecimalSeparator;
+    string groupSeparator = new System.Globalization.CultureInfo(Culture).NumberFormat.NumberGroupSeparator;
+}
+
+<tr>
+    <td>
+        @Html.CheckBoxFor(x => x.IsSelected)
+    </td>
+    <td>@Html.EditorFor(model => model.Turno_Descripcion)
+        @Html.ValidationMessageFor(model => model.Turno_Descripcion)</td>
+    
+    <td>@Html.EditorFor(model => model.Dias)
+        @Html.Raw(HttpUtility.HtmlDecode(Html.ValidationMessageFor(model => model.Dias).ToString()))</td>
+    
+
+    <td>@Html.TextBoxFor(model => model.Turno_Hora_Desde, new { @class = "s", onkeydown = "return false;", data_role = "timepicker", data_interval = "30", data_min = "06:00 AM", data_bind = "events: {change:startChange}, min : minDesde, max: maxDesde" })
+        @Html.ValidationMessageFor(model => model.Turno_Hora_Desde)</td>
+    <td>@Html.TextBoxFor(model => model.Turno_Hora_Hasta, new { @class = "", onkeydown = "return false;", data_role = "timepicker", data_min = "06:30 AM", data_max = "09:30 PM", data_bind = "events: {change:endChange}, min : minHasta, max: maxHasta" })
+        @Html.ValidationMessageFor(model => model.Turno_Hora_Hasta)</td>
+    <td>@Html.EditorFor(model => model.Turno_Cantidad_Publicadores, "IntegerEditor")
+        @Html.ValidationMessageFor(model => model.Turno_Cantidad_Publicadores)</td>
+</tr>
+
+@Html.HiddenFor(x => x.Horario_Secuencia)
+@Html.HiddenFor(x => x.Horario_Turno_Secuencia)
+

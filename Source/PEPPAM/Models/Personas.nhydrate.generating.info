@@ -1,0 +1,18 @@
+<configuration GeneratedVersion="122">
+  <excludeList>
+    <item>nHydrate.Generator.BaseWeb.BaseWebProjectGenerator</item>
+    <item>nHydrate.Generator.Datasite.DatasiteProjectGenerator</item>
+    <item>nHydrate.Generator.DataTransfer.DataTransferProjectGenerator</item>
+    <item>nHydrate.Generator.EFDAL.EFDALProjectGenerator</item>
+    <item>nHydrate.Generator.EFDAL.Interfaces.EFDALInterfaceProjectGenerator</item>
+    <item>nHydrate.Generator.EFDAL.Mocks.EFDALMockProjectGenerator</item>
+    <item>nHydrate.Generator.Models.ModelsProjectGenerator</item>
+    <item>nHydrate.Generator.SQLInstaller.DatabaseProjectGenerator</item>
+    <item>nHydrate.Generator.XSDSchema.XSDProjectGenerator</item>
+    <item>nHydrate.Generator.MySQLInstaller.DatabaseProjectGenerator</item>
+  </excludeList>
+  <generatedModuleList />
+  <tableFacadeSettings />
+  <columnFacadeSettings />
+  <lastLoadTime>0</lastLoadTime>
+</configuration>

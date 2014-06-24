@@ -1,0 +1,124 @@
+﻿@using System.Web.UI.WebControls
+@using OSIS.PEPPAM.Mvc.UI
+@model OSIS.PEPPAM.Mvc.Models.PersonaRegistro
+
+@{
+    ViewBag.Title = "Registro";
+}
+
+
+
+@using (Html.BeginForm("Registro", "Account", FormMethod.Post, new { id = "Registro" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h2>@Funcionality.GetDescription("TITULO_Registro_Hermanos", "TITULO_Registro_Hermanos", true)</h2>
+        <hr />
+        @Html.ValidationSummary(true)
+
+
+
+        <div >
+
+            <label class="control-label ">@Funcionality.GetDescription("Persona_Nombres", "Persona_Nombres", true) </label>
+            <div class="">
+                @Html.EditorFor(model => model.Persona_Nombres)
+                @Html.ValidationMessageFor(model => model.Persona_Nombres)
+            </div>
+        </div>
+
+        <div >
+
+            <label class="control-label ">@Funcionality.GetDescription("Persona_Apellidos", "Persona_Apellidos", true) </label>
+            <div class="">
+                @Html.EditorFor(model => model.Persona_Apellidos)
+                @Html.ValidationMessageFor(model => model.Persona_Apellidos)
+            </div>
+        </div>
+
+        <div >
+
+            <label class="control-label ">@Funcionality.GetDescription("Persona_Sexo", "Persona_Sexo", true) </label>
+            <div class="">
+                <label>@Html.RadioButtonFor(model => model.Persona_Sexo, "M", new { @class = " ", }) Masculino</label>
+                <label>@Html.RadioButtonFor(model => model.Persona_Sexo, "F", new { @class = " ", }) Femenino</label>
+
+                @Html.ValidationMessageFor(model => model.Persona_Sexo)
+            </div>
+        </div>
+
+        <div >
+
+            <label class="control-label ">@Funcionality.GetDescription("Persona_Correo", "Persona_Correo", true) </label>
+            <div class="">
+                @Html.EditorFor(model => model.Persona_Correo)
+                @Html.ValidationMessageFor(model => model.Persona_Correo)
+            </div>
+        </div>
+
+        <div >
+
+            <label class="control-label ">@Funcionality.GetDescription("Persona_Clave", "Persona_Clave", true) </label>
+            <div class="">
+                @Html.PasswordFor(model => model.Persona_Clave, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Persona_Clave)
+            </div>
+        </div>
+
+        <div >
+
+            <label class="control-label ">@Funcionality.GetDescription("Persona_Clave_Comparacion", "Persona_Clave_Comparacion", true) </label>
+            <div class="">
+                @Html.PasswordFor(model => model.Persona_Clave_Comparacion, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Persona_Clave_Comparacion)
+            </div>
+        </div>
+
+        @*<div >
+
+                <label class="control-label ">@Funcionality.GetDescription("Congregacion_Secuencia", "Congregacion_Secuencia", true) </label>
+                <div class="">
+                    @Html.DropDownListFor(model => model.Congregacion_Secuencia, new SelectList(Model.CongregacionList, "Congregacion_Secuencia", "EntityDisplayName", Model.Congregacion_Secuencia), new { @class = "form-control" })
+
+                    @Html.ValidationMessageFor(model => model.Congregacion_Secuencia)
+                </div>
+            </div>*@
+
+        <div >
+
+            <label class="control-label ">@Funcionality.GetDescription("Congregacion_Secuencia", "Congregacion_Secuencia", true) </label>
+            <div class="">
+                @Html.TextBoxFor(model => model.Congregacion_Nombre, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Congregacion_Nombre)
+            </div>
+        </div>
+        <hr />
+        @Html.Raw(Messages.GetOrSetMensaje("TITULO_REGISTRO_RESPONDER_PREGUNTA"))
+       @Html.HiddenFor(model => model.Respuesta_Correcta)
+        <div >
+            <div class="">
+            </div>
+            <div class="">
+                @Html.Raw(Model.Pregunta_Descripcion)
+            </div>
+            <div class="">
+            </div>
+            <div class="">
+                @foreach (var respuesta in Model.Respuestas)
+                {
+                    <div>@Html.RadioButtonFor(model => model.Respuesta_Secuencia, respuesta.Respuesta_Secuencia2, new { @class = " ", }) @respuesta.Respuesta_Descripcion</div>
+                    
+                }
+                @Html.ValidationMessageFor(model => model.Respuesta_Secuencia)
+            </div>
+        </div>
+        
+        <div style="margin-top: 20px">
+            <div class="">
+                <input type="submit" value="Registrarme" class="Btn blue" />
+            </div>
+        </div>
+        </div>
+}
+

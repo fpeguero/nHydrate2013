@@ -1,0 +1,15 @@
+﻿@model OSIS.PEPPAM.Mvc.Models.Horario_Turno_Dias_TransModel
+
+
+<ul >
+    <li> @Html.CheckBoxFor(x => x.IsSelected)
+    <strong> @Model.DiasCata.Dia_Descripcion</strong></>
+</ul>
+@Html.HiddenFor(x => x.Horario_Turno_Secuencia)
+@Html.HiddenFor(x => x.Dia_Secuencia)
+
+@Html.HiddenFor(x => x.Registro_Estado)
+@Html.HiddenFor(x => x.Registro_Fecha)
+@Html.HiddenFor(x => x.Registro_Usuario)
+@Html.HiddenFor(x => x.Turno_Fecha)
+@Html.HiddenFor(x => x.Turno_Estudios_Iniciado_Cantidad)

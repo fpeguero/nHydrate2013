@@ -1,0 +1,157 @@
+﻿@{
+    string cultureISO = new System.Globalization.CultureInfo(Culture).TwoLetterISOLanguageName;
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Images/favicon.ico")" rel="shortcut icon" type="image/x-icon" />
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/Peppam")
+    @Styles.Render("~/Content/MultiSelect")
+    <link href="@Url.Content("~/Scripts/Notificacion-messages/notification-messages.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Scripts/kendoui.2014.1.416/styles/web/kendo.common-bootstrap.core.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Scripts/kendoui.2014.1.416/styles/web/kendo.bootstrap.css")" rel="stylesheet" type="text/css" />
+    
+
+</head>
+<body>
+    @*<div class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                       Html.Partial("_Menu")
+                    </ul>
+                    <div class="navbar-text navbar-right">
+                        @Html.Partial("_LoginPartial")
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        </div>*@
+
+    <div id="main_menu">
+        <div class="content">
+            <h2><a href="#" class="logo">@Html.ActionLink(Resources.Shared.AppName, "Index", "Home", null, new { @class = "logo" })</a></h2>
+            <!-- LOGIN OPTIONS -->
+            @if (User.Identity.IsAuthenticated)
+            {
+                @Html.Partial("_Menu")
+            }
+            <ul id="nav" class="login">
+                @if (!User.Identity.IsAuthenticated)
+                {
+                    <li><a href="@Url.Action("Login","Account")">Iniciar Sesión</a></li>
+                    <li><a href="@Url.Action("Registro","Account")">Crear cuenta</a></li>
+                }
+                else
+                {
+                    @Html.Partial("_LoginPartial")
+                }
+            </ul>
+            <!-- END LOGIN OPTIONS -->
+        </div>
+    </div>
+
+    <div id="wrapper" class="content">
+        @*<div id="sidebar-wrapper">
+                @Html.Partial("_AdminMenu")
+            </div>*@
+
+        <style>
+           #wrapper {
+               padding-left: 0px;
+           }
+        </style>
+
+        <div id="page-content-wrapper">
+            <div class="page-content inset">
+
+
+                @if (TempData.ContainsKey("UserMessage"))
+                {
+                    <div class="alert alert-warning">
+                        @TempData["UserMessage"]
+                    </div>
+                }
+                @if (TempData.ContainsKey("ErrorValidateMessage"))
+                {
+                    <div class="alert alert-danger">
+                        @TempData["ErrorValidateMessage"]
+                    </div>
+                }
+                @if (TempData.ContainsKey("SuccessMessage"))
+                {
+                    <div class="alert alert-success">
+                        @TempData["SuccessMessage"]
+                    </div>
+                }
+                @RenderBody()
+
+                <hr />
+                <footer>
+                    <div id="language" class="pull-right">
+                        @*@Html.Partial("_ChooseCulture")*@
+                    </div>
+                    <p>&copy; @DateTime.Now.Year - @Resources.Shared.AppName</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    @{
+        string errorPage = Url.Action("Error", "Home");
+        string culture = new System.Globalization.CultureInfo(Culture).ToString();
+    }
+
+    @Scripts.Render("~/bundles/jquery")
+    <script src="@Url.Content("~/Scripts/kendoui.2014.1.416/js/kendo.core.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/kendoui.2014.1.416/js/kendo.ui.core.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/kendoui.2014.1.416/js/kendo.window.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/kendoui.2014.1.416/js/kendo.timezones.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/kendoui.2014.1.416/js/kendo.timepicker.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/kendoui.2014.1.416/js/kendo.datepicker.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/kendoui.2014.1.416/js/kendo.datetimepicker.js")" type="text/javascript"></script>
+    
+    @Scripts.Render("~/bundles/datatables")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/localize-" + cultureISO)
+    @Scripts.Render("~/bundles/common")
+    @Scripts.Render("~/bundles/MultiSelect")
+    @Scripts.Render("~/Content/Peppam/js")
+    <script src="@Url.Content("~/Scripts/Notificacion-messages/notification-messages.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.bpopup.min.js")" type="text/javascript"></script>
+    
+    @*<script src="@Url.Content("~/Scripts/kendoui.2014.1.416/kendo.all.min.js")" type="text/javascript"></script>*@
+
+  
+
+    <script type="text/javascript">
+        errorPage = "@errorPage";
+        $(document).ready(function () {
+            var data = "@culture";
+            Globalize.culture(data);
+        });
+        
+    </script>
+    @RenderSection("scripts", required: false)
+    
+    @if (TempData.ContainsKey("ShowMessage"))
+    {
+        <div class="@TempData["ShowMessageCss"] message">
+            <h3>@TempData["ShowMessageHeader"]</h3>
+            <p>@TempData["ShowMessage"]</p>
+        </div>
+    }
+</body>
+</html>

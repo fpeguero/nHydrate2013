@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadarcSolutionConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <AutomaticSCCCheckOut>true</AutomaticSCCCheckOut>
+  <BasePath>C:\nHydrate2013\trunk\Source\PEPPAM</BasePath>
+  <ModelPath>C:\nHydrate2013\trunk\Source\PEPPAM\DomainModeling\Models</ModelPath>
+  <OverwriteCustomCode>false</OverwriteCustomCode>
+  <GenerateOnBuild>true</GenerateOnBuild>
+  <GenerateToExcludedFolder>false</GenerateToExcludedFolder>
+  <LastGenerationTimestamp>0</LastGenerationTimestamp>
+</RadarcSolutionConfig>

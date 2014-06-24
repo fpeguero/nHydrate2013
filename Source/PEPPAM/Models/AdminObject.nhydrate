@@ -1,0 +1,740 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<nHydrateModel dslVersion="5.2.0.126" Id="9267e443-7359-4f59-9a34-3a9a8803fb1d" companyName="OSIS" projectName="PEPPAM" maxPrecedenceOrder="2" modelVersion="5.1.2.115" diagramVisibility="Function, StoredProcedure, View" supportedPlatforms="SQLServer" auditColumns="AAEAAAD/////AQAAAAAAAAAMAgAAAFFuSHlkcmF0ZS5Ec2wsIFZlcnNpb249NS4yLjAuMTI3LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWUwYzU2MzQ2ZWRjNWEzNGIEAQAAAJ4BU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuTGlzdGAxW1tuSHlkcmF0ZS5Ec2wuTXlDdXN0b21Db2RlLkF1ZGl0Q29sdW1ucywgbkh5ZHJhdGUuRHNsLCBWZXJzaW9uPTUuMi4wLjEyNywgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1lMGM1NjM0NmVkYzVhMzRiXV0DAAAABl9pdGVtcwVfc2l6ZQhfdmVyc2lvbgQAAChuSHlkcmF0ZS5Ec2wuTXlDdXN0b21Db2RlLkF1ZGl0Q29sdW1uc1tdAgAAAAgICQMAAAAAAAAAAAAAAAcDAAAAAAEAAAAAAAAABCZuSHlkcmF0ZS5Ec2wuTXlDdXN0b21Db2RlLkF1ZGl0Q29sdW1ucwIAAAAL">
+  <entities>
+    <entity Id="7825323e-5474-44f1-af37-f9d0bfd487d9" name="Sistemas_Descripciones_Trans" allowCreateAudit="false" allowModifyAudit="false" allowTimestamp="false" schema="dbo">
+      <fields>
+        <entityHasFields Id="95903c69-9f8f-4ebe-ac4a-f0072735e49c">
+          <field Id="033157d7-6bd3-407e-b4d1-36cbe4100b44" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Objeto_Codigo" nullable="false" isIndexed="true" isUnique="true" length="150" min="NaN" max="NaN" isPrimaryKey="true" scale="0" sortOrder="1" isCollectionKey="true" />
+        </entityHasFields>
+        <entityHasFields Id="bfc1f725-59e7-485f-a05b-9e853ecf4f8e">
+          <field Id="cfadead8-cfc4-47b6-885d-ad9d0aa6702d" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Objeto_Sub_Codigo" nullable="false" isIndexed="true" isUnique="true" length="150" min="NaN" max="NaN" isPrimaryKey="true" scale="0" sortOrder="2" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="6733557c-2c4b-4229-a52b-75c10fcb9cc7">
+          <field Id="afbde56f-0cad-4772-83c2-cc22bbc0b20a" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Objeto_Sub_Descripcion" nullable="false" length="250" min="NaN" max="NaN" scale="0" sortOrder="3" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="2e09c4cf-72b4-4c39-9e7d-b673aacdb9f1">
+          <field Id="46f490ca-28e3-49d4-9cb1-a2d80ef9f106" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Objeto_Sub_Explicacion" nullable="false" length="5000" min="NaN" max="NaN" scale="0" sortOrder="4" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="3efc1304-2acc-42d1-98f0-6ac4c5ca3d9d">
+          <field Id="fd631332-e306-4021-b899-a5288812fbbc" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Objeto_Sub_Datagrid_Orden" nullable="false" dataType="Int" length="4" min="NaN" max="NaN" scale="0" sortOrder="5" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="2f410c2c-ddbd-48b2-b22d-3fd8d7acc547">
+          <field Id="9a06959f-8ecb-4e95-87ca-50e704f91d4b" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Objeto_Sub_Datagrid_Mostrar" nullable="false" dataType="Char" default="S" length="1" min="NaN" max="NaN" scale="0" sortOrder="6" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="2e65f5d4-26ee-45a5-b966-c331552dd02b">
+          <field Id="75b5e0eb-54a3-44c6-9d0b-5acc53576d02" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Objeto_Sub_Editar_Orden" nullable="false" dataType="Int" length="4" min="NaN" max="NaN" scale="0" sortOrder="7" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="95866817-5c7a-41c4-8a25-5b69ebabc19a">
+          <field Id="a811187d-018b-4a2f-9ce6-362a9ccf0bc6" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Objeto_Sub_Editar_Mostrar" nullable="false" dataType="Char" default="S" length="1" min="NaN" max="NaN" scale="0" sortOrder="8" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="fea0dd74-b357-4e08-859f-851d9ec0e729">
+          <field Id="dc7cea10-e080-454f-8c1c-5bc79baf7d91" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Objeto_Sub_Detalle_Orden" nullable="false" dataType="Int" length="4" min="NaN" max="NaN" scale="0" sortOrder="9" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="83c47f62-a042-4284-aced-72004c4bb8c4">
+          <field Id="02a8c838-e681-44fd-9230-dccfa13e5d6c" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Objeto_Sub_Detalle_Mostrar" nullable="false" dataType="Char" default="S" length="1" min="NaN" max="NaN" scale="0" sortOrder="10" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="d53f8602-dd21-46a7-995d-1f0d314db896">
+          <field Id="9ab88154-99fb-4b37-b6bd-eeaecf517ec2" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Estado" nullable="false" dataType="Char" length="1" min="NaN" max="NaN" scale="0" sortOrder="11" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="ae29bd48-12c6-45fa-9014-2e276eb77105">
+          <field Id="6acf1e06-26d6-4d27-906a-177dd1d79fd4" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Fecha" nullable="false" dataType="DateTime" length="8" min="NaN" max="NaN" scale="0" sortOrder="12" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="eb8c563c-534a-4d7f-8ada-a2c2592ac8f9">
+          <field Id="9403f42b-4d79-4328-afd2-d13daf9575c5" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Usuario" nullable="false" min="NaN" max="NaN" scale="0" sortOrder="13" isCollectionKey="false" />
+        </entityHasFields>
+      </fields>
+      <indexes>
+        <entityHasIndexes Id="866433d1-94fc-40fc-9cc6-724146c8c51e">
+          <index Id="a35e6e44-9653-4d86-bdc7-425a90aeeea6" parentEntityID="7825323e-5474-44f1-af37-f9d0bfd487d9" isUnique="true" indexType="PrimaryKey" importedName="PK_Sistemas_Descripciones_Trans" clustered="true">
+            <indexColumns>
+              <indexHasIndexColumns Id="bb9fd37a-1e25-4a86-8464-5fc489525c1b">
+                <indexColumn Id="94953916-2c77-430f-bed9-0559f821e9ca" fieldID="033157d7-6bd3-407e-b4d1-36cbe4100b44" sortOrder="1" />
+              </indexHasIndexColumns>
+              <indexHasIndexColumns Id="1a128f9d-c7e2-413e-a0b2-2fca8e1ffc4c">
+                <indexColumn Id="6618235f-a36a-459f-b24e-41852b5fe189" fieldID="cfadead8-cfc4-47b6-885d-ad9d0aa6702d" sortOrder="2" />
+              </indexHasIndexColumns>
+            </indexColumns>
+          </index>
+        </entityHasIndexes>
+      </indexes>
+      <method>
+        <entityHasMethod Id="fc6a1773-31f6-472d-b20b-1888ec4158bc">
+          <methods Id="a8331e5b-e2f3-44d6-94ab-fce25de65ac0" name="Objecto_Codigo" parameters="AAEAAAD/////AQAAAAAAAAAMAgAAAFFuSHlkcmF0ZS5Ec2wsIFZlcnNpb249NS4yLjAuMTI3LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWUwYzU2MzQ2ZWRjNWEzNGIEAQAAAKIBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuTGlzdGAxW1tuSHlkcmF0ZS5Ec2wuTXlDdXN0b21Db2RlLk1ldGhvZFBhcmFtZXRlcnMsIG5IeWRyYXRlLkRzbCwgVmVyc2lvbj01LjIuMC4xMjcsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49ZTBjNTYzNDZlZGM1YTM0Yl1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24EAAAsbkh5ZHJhdGUuRHNsLk15Q3VzdG9tQ29kZS5NZXRob2RQYXJhbWV0ZXJzW10CAAAACAgJAwAAAAAAAAAAAAAABwMAAAAAAQAAAAAAAAAEKm5IeWRyYXRlLkRzbC5NeUN1c3RvbUNvZGUuTWV0aG9kUGFyYW1ldGVycwIAAAAL" customImplementation="false" bodySql="LOAD (string ObjectoCodigo) WHERE Objeto_Codigo = @ObjectoCodigo" />
+        </entityHasMethod>
+      </method>
+    </entity>
+    <entity Id="68fd85cf-7339-4510-9f5c-ddf1473d85e2" name="Sistemas_Funcionalidades_Acciones_Cata" allowCreateAudit="false" allowModifyAudit="false" allowTimestamp="false" schema="dbo">
+      <childEntities>
+        <entityHasEntities Id="f83f4861-930b-432a-b735-5356fe8a1620" roleName="FK_Sistemas_Funcionalidades_Acciones_Trans_Sistemas_Funcionalidades_Acciones_Cata" importData="1703677117" importedConstraintName="FK_Sistemas_Funcionalidades_Acciones_Trans_Sistemas_Funcionalidades_Acciones_Cata">
+          <entityMoniker name="/9267e443-7359-4f59-9a34-3a9a8803fb1d/Sistemas_Funcionalidades_Acciones_Trans" />
+        </entityHasEntities>
+      </childEntities>
+      <fields>
+        <entityHasFields Id="03fef06e-cd65-4723-89d5-47df0ea1cf11">
+          <field Id="46dd174c-cab2-470c-a033-219f06295164" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Funcionalidad_Accion_Numero" nullable="false" dataType="Int" identity="Database" isIndexed="true" isUnique="true" length="4" min="NaN" max="NaN" isPrimaryKey="true" scale="0" sortOrder="1" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="85f5bc31-8750-44c3-a9f2-56fc9b8fe37b">
+          <field Id="e26fbdb2-5f91-4e94-9115-477a22d4ea82" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Funcionalidad_Accion_Tipo_Secuencia" dataType="Int" length="4" min="NaN" max="NaN" scale="0" sortOrder="2" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="03947f54-744b-4429-b94c-211d4d3e25f5">
+          <field Id="95aeba2b-f500-4965-95c2-e104f5a40c37" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Funcionalidad_Accion_Codigo" nullable="false" min="NaN" max="NaN" scale="0" sortOrder="3" isCollectionKey="true" />
+        </entityHasFields>
+        <entityHasFields Id="6341ae45-7a6b-47a1-a5a3-626c00e70e23">
+          <field Id="170f82e8-2742-4c4e-831a-35b0c3f35277" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Funcionalidad_Accion_Descripcion" nullable="false" length="150" min="NaN" max="NaN" scale="0" sortOrder="4" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="f3686ea7-8759-433d-b7cb-27fe31afbb53">
+          <field Id="0a185503-b7b9-4e32-850e-971a3828d9ae" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Funcionalidad_Accion_Explicacion" nullable="false" length="500" min="NaN" max="NaN" scale="0" sortOrder="5" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="ac2e65a8-2dac-4057-984a-8807c16a3c54">
+          <field Id="f442f3f8-7393-487b-b17b-773a5fb577ba" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Funcionalidad_Accion_Icono_Small" min="NaN" max="NaN" scale="0" sortOrder="6" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="fd6ccf44-9dbe-41c0-b322-37310f5ea2ae">
+          <field Id="c7f0fa72-6321-4cb5-96f7-eba2c19c2d54" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Funcionalidad_Accion_Icono_Large" min="NaN" max="NaN" scale="0" sortOrder="7" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="aa18873e-1b0c-49dc-8027-017d3c2eebbd">
+          <field Id="c1eeb627-7e58-46e2-b5f7-a2b446d5eb52" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Funcionalidad_Accion_Css" nullable="false" length="100" min="NaN" max="NaN" scale="0" sortOrder="8" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="291e1f67-b000-404f-a717-a74a26431d64">
+          <field Id="61399218-1bba-47b1-b0ca-1a1ab6320510" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Funcionalidad_Accion_Toolbar" nullable="false" dataType="Char" default="S" length="1" min="NaN" max="NaN" scale="0" sortOrder="9" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="e261353c-5b47-4797-bc6b-064344108ea4">
+          <field Id="453c05d6-afdd-4f0b-b808-8df38b8082a0" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Funcionalidad_Accion_Menu" nullable="false" dataType="Char" default="S" length="1" min="NaN" max="NaN" scale="0" sortOrder="10" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="ac365a6e-25ea-4e9e-9b96-e63862fc9074">
+          <field Id="e3bf7acf-bd9c-4d4e-8f9e-162859c1c253" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Funcionalidad_Accion_Permiso_Descripcion" min="NaN" max="NaN" scale="0" sortOrder="11" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="2dc27124-a9b9-40f4-8b00-e70cdf00f959">
+          <field Id="b39e8bcb-0408-4df4-8cd6-fe29532b1542" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Funcionalidad_Accion_Permiso_Necesita" dataType="Char" length="1" min="NaN" max="NaN" scale="0" sortOrder="12" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="dd82cb64-cef3-40b3-a364-9e7ebaca607f">
+          <field Id="35b86b35-2d72-4bde-acad-763f0ef19e6c" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Estado" nullable="false" dataType="Char" default="A" length="1" min="NaN" max="NaN" scale="0" sortOrder="13" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="ce3999f7-33f5-4574-8e5f-f7cf2a66560e">
+          <field Id="bcbb2336-7c92-4b01-829b-cbd7e7fa0f00" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Fecha" nullable="false" dataType="DateTime" default="getdate" length="8" min="NaN" max="NaN" scale="0" sortOrder="14" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="fa5fd476-aa3d-41e4-a627-aab6341481d1">
+          <field Id="c6d4f8d9-8a91-4986-92f2-40392072ec91" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Usuario" nullable="false" length="150" min="NaN" max="NaN" scale="0" sortOrder="15" isCollectionKey="false" />
+        </entityHasFields>
+      </fields>
+      <indexes>
+        <entityHasIndexes Id="65ceeef3-5f3d-47ec-b86e-b6fd52de6dce">
+          <index Id="12d53ec4-1ca4-4fcb-90f6-3e2b9c86b0e7" parentEntityID="68fd85cf-7339-4510-9f5c-ddf1473d85e2" isUnique="true" indexType="PrimaryKey" importedName="PK_1Sistemas_Funcionalidades_Acciones_Cata" clustered="true">
+            <indexColumns>
+              <indexHasIndexColumns Id="7d4f84cc-4295-4199-a7fc-f0c64968fe6f">
+                <indexColumn Id="a2e3e428-1c7d-4ce3-a81e-3daa496a775e" fieldID="46dd174c-cab2-470c-a033-219f06295164" sortOrder="1" />
+              </indexHasIndexColumns>
+            </indexColumns>
+          </index>
+        </entityHasIndexes>
+      </indexes>
+      <method>
+        <entityHasMethod Id="ec3fce72-a9ac-4dc3-a9fd-407ac2376c30">
+          <methods Id="a6aeb701-6115-4a68-ab1d-68bccf8fc285" name="Load_Funcionalidad" parameters="AAEAAAD/////AQAAAAAAAAAMAgAAAFFuSHlkcmF0ZS5Ec2wsIFZlcnNpb249NS4yLjAuMTI3LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWUwYzU2MzQ2ZWRjNWEzNGIEAQAAAKIBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuTGlzdGAxW1tuSHlkcmF0ZS5Ec2wuTXlDdXN0b21Db2RlLk1ldGhvZFBhcmFtZXRlcnMsIG5IeWRyYXRlLkRzbCwgVmVyc2lvbj01LjIuMC4xMjcsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49ZTBjNTYzNDZlZGM1YTM0Yl1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24EAAAsbkh5ZHJhdGUuRHNsLk15Q3VzdG9tQ29kZS5NZXRob2RQYXJhbWV0ZXJzW10CAAAACAgJAwAAAAAAAAAAAAAABwMAAAAAAQAAAAAAAAAEKm5IeWRyYXRlLkRzbC5NeUN1c3RvbUNvZGUuTWV0aG9kUGFyYW1ldGVycwIAAAAL" customImplementation="false" bodySql="LOAD (int funcionalidadNumero) WHERE Funcionalidades.Funcionalidad.Funcionalidad_Numero = @funcionalidadNumero" />
+        </entityHasMethod>
+      </method>
+      <navigationProperties>
+        <entityHasNavigationProperties Id="83fd363b-b68a-4f1b-87ef-d338bd1adf10">
+          <navigationProperty Id="e252c851-5b91-4639-b285-ed7204c353c2" name="Funcionalidades" sourceEntity="Sistemas_Funcionalidades_Acciones_Cata" targetEntity="Sistemas_Funcionalidades_Acciones_Trans" sourceFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAABtGdW5jaW9uYWxpZGFkX0FjY2lvbl9OdW1lcm8NAws=" targetFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAABtGdW5jaW9uYWxpZGFkX0FjY2lvbl9OdW1lcm8NAws=" asociation="FK_Sistemas_Funcionalidades_Acciones_Trans_Sistemas_Funcionalidades_Acciones_Cata" returnType="List&lt;Sistemas_Funcionalidades_Acciones_Trans&gt;" />
+        </entityHasNavigationProperties>
+        <entityHasNavigationProperties Id="ffbe2b50-5aff-48ec-a1aa-3d9deeb3a0ea">
+          <navigationProperty Id="7c7afe83-9ada-41f8-88fd-9aea57d72e74" name="Accion_Tipo" sourceEntity="Sistemas_Funcionalidades_Acciones_Cata" targetEntity="Sistemas_Funcionalidades_Acciones_Tipo_Cata" sourceFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAACNGdW5jaW9uYWxpZGFkX0FjY2lvbl9UaXBvX1NlY3VlbmNpYQ0DCw==" targetFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAACNGdW5jaW9uYWxpZGFkX0FjY2lvbl9UaXBvX1NlY3VlbmNpYQ0DCw==" asociation="FK_Sistemas_Funcionalidades_Acciones_Cata_Sistemas_Funcionalidades_Acciones_Tipo_Cata" returnType="Sistemas_Funcionalidades_Acciones_Tipo_Cata" />
+        </entityHasNavigationProperties>
+      </navigationProperties>
+    </entity>
+    <entity Id="c85a308e-b6d9-4c38-9737-82c567f90b6c" name="Sistemas_Funcionalidades_Acciones_Tipo_Cata" allowCreateAudit="false" allowModifyAudit="false" allowTimestamp="false" schema="dbo">
+      <childEntities>
+        <entityHasEntities Id="dd1b301b-0d5b-4142-ba29-40ed85fab991" roleName="FK_Sistemas_Funcionalidades_Acciones_Cata_Sistemas_Funcionalidades_Acciones_Tipo_Cata" importData="1687677060" importedConstraintName="FK_Sistemas_Funcionalidades_Acciones_Cata_Sistemas_Funcionalidades_Acciones_Tipo_Cata">
+          <entityMoniker name="/9267e443-7359-4f59-9a34-3a9a8803fb1d/Sistemas_Funcionalidades_Acciones_Cata" />
+        </entityHasEntities>
+      </childEntities>
+      <fields>
+        <entityHasFields Id="b8a26595-8c45-40b5-9d21-21c002a1e477">
+          <field Id="21c7494f-3268-4679-850c-41b6ae2feffd" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Funcionalidad_Accion_Tipo_Secuencia" nullable="false" dataType="Int" identity="Database" isIndexed="true" isUnique="true" length="4" min="NaN" max="NaN" isPrimaryKey="true" scale="0" sortOrder="1" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="603c6d05-5aed-4f39-86e6-b3d1b52593d6">
+          <field Id="6c33663a-d80a-43f0-b20e-887dbcc07cf9" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Funcionalidad_Accion_Tipo_Descripcion" nullable="false" min="NaN" max="NaN" scale="0" sortOrder="2" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="363b64da-8ed0-4b85-9692-79b006aa0d39">
+          <field Id="ee5e4f91-2312-47bf-819b-cf4f0bf9d290" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Funcionalidad_Accion_Tipo_Explicacion" nullable="false" length="500" min="NaN" max="NaN" scale="0" sortOrder="3" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="34dd522f-471d-4d84-b465-1f9fed5bc425">
+          <field Id="90c7a0b9-1c5c-480e-b219-b6fe90f5226f" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Estado" nullable="false" dataType="Char" default="A" length="1" min="NaN" max="NaN" scale="0" sortOrder="4" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="8abbee4d-97b1-4a93-83e2-3de04a010d59">
+          <field Id="4e12de76-3426-49ae-ae86-03c529981645" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Fecha" nullable="false" dataType="DateTime" default="getdate" length="8" min="NaN" max="NaN" scale="0" sortOrder="5" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="6862cc4b-2d21-435b-b196-b20465f0bc22">
+          <field Id="5fa7dbf0-6f11-4759-a887-7ccebd48f523" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Usuario" nullable="false" length="150" min="NaN" max="NaN" scale="0" sortOrder="6" isCollectionKey="false" />
+        </entityHasFields>
+      </fields>
+      <indexes>
+        <entityHasIndexes Id="8cf1e378-611b-43d1-8fa7-a5e18d00fd41">
+          <index Id="1fa387ea-61d3-4d14-99c8-0a2d2edc1467" parentEntityID="c85a308e-b6d9-4c38-9737-82c567f90b6c" isUnique="true" indexType="PrimaryKey" importedName="1PK_Sistemas_Funcionalidades_Acciones_Tipo_Cata" clustered="true">
+            <indexColumns>
+              <indexHasIndexColumns Id="b90978da-10b0-4236-a057-d22d760b5879">
+                <indexColumn Id="6337ec35-f80f-4cf4-8386-029ed2c36bf1" fieldID="21c7494f-3268-4679-850c-41b6ae2feffd" sortOrder="1" />
+              </indexHasIndexColumns>
+            </indexColumns>
+          </index>
+        </entityHasIndexes>
+      </indexes>
+      <navigationProperties>
+        <entityHasNavigationProperties Id="a0ada63b-08df-46f1-abac-326d8099b3b5">
+          <navigationProperty Id="e2d7c755-3d92-46e2-9db3-77aef401e2a5" name="Acciones" sourceEntity="Sistemas_Funcionalidades_Acciones_Tipo_Cata" targetEntity="Sistemas_Funcionalidades_Acciones_Cata" sourceFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAACNGdW5jaW9uYWxpZGFkX0FjY2lvbl9UaXBvX1NlY3VlbmNpYQ0DCw==" targetFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAACNGdW5jaW9uYWxpZGFkX0FjY2lvbl9UaXBvX1NlY3VlbmNpYQ0DCw==" asociation="FK_Sistemas_Funcionalidades_Acciones_Cata_Sistemas_Funcionalidades_Acciones_Tipo_Cata" returnType="List&lt;Sistemas_Funcionalidades_Acciones_Cata&gt;" />
+        </entityHasNavigationProperties>
+      </navigationProperties>
+    </entity>
+    <entity Id="a25149df-65b1-4a0b-97d1-eecea63c5d6e" name="Sistemas_Funcionalidades_Acciones_Trans" allowCreateAudit="false" allowModifyAudit="false" allowTimestamp="false" schema="dbo">
+      <childEntities>
+        <entityHasEntities Id="2119a544-ddaf-4495-9ff3-f6fd4d23d25f" roleName="FK_Roles_Funcionalidad_Acciones_Trans_Sistemas_Funcionalidades_Acciones_Trans" importData="1124199055" importedConstraintName="FK_Roles_Funcionalidad_Acciones_Trans_Sistemas_Funcionalidades_Acciones_Trans">
+          <entityMoniker name="/9267e443-7359-4f59-9a34-3a9a8803fb1d/Roles_Funcionalidad_Acciones_Trans" />
+        </entityHasEntities>
+      </childEntities>
+      <fields>
+        <entityHasFields Id="e2b4aa6b-3d29-456e-9910-a5c86d49476e">
+          <field Id="3290b932-c482-414a-bc81-eaa7bd4ba67f" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Funcionalidad_Numero" nullable="false" dataType="Int" isIndexed="true" isUnique="true" length="4" min="NaN" max="NaN" isPrimaryKey="true" scale="0" sortOrder="1" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="d1b5c508-036d-468b-a7e4-ab7acf61279f">
+          <field Id="5154fb04-1b38-427e-94f9-5337dd2162f6" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Funcionalidad_Accion_Numero" nullable="false" dataType="Int" isIndexed="true" isUnique="true" length="4" min="NaN" max="NaN" isPrimaryKey="true" scale="0" sortOrder="2" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="9dedef04-e969-430a-a991-f59bfb58cda0">
+          <field Id="c4e5bc46-9391-40f1-8a5c-512e090cd043" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Funcionalidad_Numero_Url" dataType="Int" length="4" min="NaN" max="NaN" scale="0" sortOrder="3" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="7eec0ab3-b32f-4669-82cb-e42d4cf59321">
+          <field Id="c269b356-9a72-45cf-8186-c187b518c7d5" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Estado" nullable="false" dataType="Char" length="1" min="NaN" max="NaN" scale="0" sortOrder="4" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="f334475b-cbb8-4b32-b750-fee2699a875d">
+          <field Id="ba0ba25d-30ef-4144-b1ee-0882144004b9" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Fecha" nullable="false" dataType="DateTime" length="8" min="NaN" max="NaN" scale="0" sortOrder="5" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="140be272-db4c-4eac-a74f-f238636e7fc1">
+          <field Id="8fcc3b24-f8f2-401b-bfc0-475fbcd25b13" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Usuario" nullable="false" length="150" min="NaN" max="NaN" scale="0" sortOrder="6" isCollectionKey="false" />
+        </entityHasFields>
+      </fields>
+      <indexes>
+        <entityHasIndexes Id="f751b3e9-917b-472d-9b9c-b0f97215d011">
+          <index Id="f115fe71-7f5b-4ab8-ab34-f7a7bb06feeb" parentEntityID="a25149df-65b1-4a0b-97d1-eecea63c5d6e" isUnique="true" indexType="PrimaryKey" importedName="PK_Sistemas_Funcionalidades_Acciones_Trans_1" clustered="true">
+            <indexColumns>
+              <indexHasIndexColumns Id="faf83a9c-c19d-4b72-aad4-feb950b56412">
+                <indexColumn Id="22b9fc5f-fdc4-4cec-a99e-c3a8f026d329" fieldID="3290b932-c482-414a-bc81-eaa7bd4ba67f" sortOrder="1" />
+              </indexHasIndexColumns>
+              <indexHasIndexColumns Id="636282ba-1ca7-41f6-bfaf-43c82329aee8">
+                <indexColumn Id="e66d520e-1128-4337-ad3f-aa911ee58535" fieldID="5154fb04-1b38-427e-94f9-5337dd2162f6" sortOrder="2" />
+              </indexHasIndexColumns>
+            </indexColumns>
+          </index>
+        </entityHasIndexes>
+      </indexes>
+      <navigationProperties>
+        <entityHasNavigationProperties Id="e46b4e27-7b38-44a7-9dbc-4e6a5622e147">
+          <navigationProperty Id="1de6128d-aae5-4524-9d1f-4990ab772be7" name="Accion" sourceEntity="Sistemas_Funcionalidades_Acciones_Trans" targetEntity="Sistemas_Funcionalidades_Acciones_Cata" sourceFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAABtGdW5jaW9uYWxpZGFkX0FjY2lvbl9OdW1lcm8NAws=" targetFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAABtGdW5jaW9uYWxpZGFkX0FjY2lvbl9OdW1lcm8NAws=" asociation="FK_Sistemas_Funcionalidades_Acciones_Trans_Sistemas_Funcionalidades_Acciones_Cata" returnType="Sistemas_Funcionalidades_Acciones_Cata" />
+        </entityHasNavigationProperties>
+        <entityHasNavigationProperties Id="6d4582ec-d6f5-48f6-adad-8463acd1975d">
+          <navigationProperty Id="b6af6361-0057-4c23-ac77-4f1176fb8be4" name="Funcionalidad" sourceEntity="Sistemas_Funcionalidades_Acciones_Trans" targetEntity="Sistemas_Funcionalidades_Master" sourceFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAABRGdW5jaW9uYWxpZGFkX051bWVybw0DCw==" targetFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAABRGdW5jaW9uYWxpZGFkX051bWVybw0DCw==" asociation="FK_Sistemas_Funcionalidades_Acciones_Trans_Sistemas_Funcionalidades_Master" returnType="Sistemas_Funcionalidades_Master" />
+        </entityHasNavigationProperties>
+        <entityHasNavigationProperties Id="18d2ebd6-b342-49f6-aa0f-95e5f971903a">
+          <navigationProperty Id="44187392-ba9e-47d4-972b-f3cd1c754502" name="Funcionalidad_Url" sourceEntity="Sistemas_Funcionalidades_Acciones_Trans" targetEntity="Sistemas_Funcionalidades_Master" sourceFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAABhGdW5jaW9uYWxpZGFkX051bWVyb19VcmwNAws=" targetFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAABRGdW5jaW9uYWxpZGFkX051bWVybw0DCw==" asociation="FK_Sistemas_Funcionalidades_Acciones_Trans_Sistemas_Funcionalidades_Master" returnType="Sistemas_Funcionalidades_Master" />
+        </entityHasNavigationProperties>
+        <entityHasNavigationProperties Id="a7add280-8d98-46dd-9dfd-2100deb80395">
+          <navigationProperty Id="74c1427f-1b9f-4469-8b71-812374f5b15e" name="Roles_Funcionalidad_Acciones_Trans" sourceEntity="Sistemas_Funcionalidades_Acciones_Trans" targetEntity="Roles_Funcionalidad_Acciones_Trans" sourceFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAgAAAAIAAAARAgAAAAQAAAAGAwAAABRGdW5jaW9uYWxpZGFkX051bWVybwYEAAAAG0Z1bmNpb25hbGlkYWRfQWNjaW9uX051bWVybw0CCw==" targetFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAgAAAAIAAAARAgAAAAQAAAAGAwAAABRGdW5jaW9uYWxpZGFkX051bWVybwYEAAAAG0Z1bmNpb25hbGlkYWRfQWNjaW9uX051bWVybw0CCw==" asociation="FK_Roles_Funcionalidad_Acciones_Trans_Sistemas_Funcionalidades_Acciones_Trans" returnType="List&lt;Roles_Funcionalidad_Acciones_Trans&gt;" />
+        </entityHasNavigationProperties>
+      </navigationProperties>
+    </entity>
+    <entity Id="67243002-54c6-4ab1-8608-9c7633c76630" name="Sistemas_Funcionalidades_Master" allowCreateAudit="false" allowModifyAudit="false" allowTimestamp="false" schema="dbo">
+      <childEntities>
+        <entityHasEntities Id="7443c158-b8c8-4fce-bd9d-564c3363232e" roleName="FK_Sistemas_Funcionalidades_Acciones_Trans_Sistemas_Funcionalidades_Master" importedConstraintName="FK_Sistemas_Funcionalidades_Acciones_Trans_Sistemas_Funcionalidades_Master">
+          <entityMoniker name="/9267e443-7359-4f59-9a34-3a9a8803fb1d/Sistemas_Funcionalidades_Acciones_Trans" />
+        </entityHasEntities>
+        <entityHasEntities Id="1f1e2d14-f313-497a-a451-bbf37fa570f5" roleName="FK_Sistemas_Funcionalidades_Acciones_Trans_Sistemas_Funcionalidades_Master1" importData="967674495" importedConstraintName="FK_Sistemas_Funcionalidades_Acciones_Trans_Sistemas_Funcionalidades_Master1">
+          <entityMoniker name="/9267e443-7359-4f59-9a34-3a9a8803fb1d/Sistemas_Funcionalidades_Acciones_Trans" />
+        </entityHasEntities>
+      </childEntities>
+      <fields>
+        <entityHasFields Id="edc39b52-32f1-43d3-a147-c08fd71c88b9">
+          <field Id="d5f9f667-a0bc-451c-ad6f-bb731f038e4f" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Funcionalidad_Numero" nullable="false" dataType="Int" identity="Database" isIndexed="true" isUnique="true" length="4" min="NaN" max="NaN" isPrimaryKey="true" scale="0" sortOrder="1" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="252edd00-33d9-4720-8a49-b573c967b1db">
+          <field Id="b9fa69fa-245b-404a-80c6-6f9b5dc80d07" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Modulo_Numero" nullable="false" dataType="Int" length="4" min="NaN" max="NaN" scale="0" sortOrder="2" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="e83132fb-97bb-4ecd-9943-919ef56f0f0f">
+          <field Id="65dce854-add1-41da-b195-a7e84743da0f" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Funcionalidad_Codigo" nullable="false" length="150" min="NaN" max="NaN" scale="0" sortOrder="3" isCollectionKey="true" />
+        </entityHasFields>
+        <entityHasFields Id="88244a1c-27ee-4b6a-abad-91dd6a374f7b">
+          <field Id="6397f1fa-416e-4f2f-b51c-ffdadba1201e" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Funcionalidad_Nombre" nullable="false" length="150" min="NaN" max="NaN" scale="0" sortOrder="4" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="98f1aa73-82c3-4c98-b13d-7bdfbf6a876c">
+          <field Id="d746e784-65dd-4c89-9351-c10b4933366c" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Funcionalidad_Descripcion" nullable="false" length="500" min="NaN" max="NaN" scale="0" sortOrder="5" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="70aace10-993b-435d-bb98-1d53182596e3">
+          <field Id="849b5fee-fb94-4e68-b376-a40a8392a5e1" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Funcionalidad_Explicacion" nullable="false" length="8000" min="NaN" max="NaN" scale="0" sortOrder="6" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="42e3dfeb-8dab-4ef0-8185-ccc2c1df400f">
+          <field Id="2b7c13a8-c66e-4441-8df7-82d895d8d31d" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Funcionalidad_Url" nullable="false" length="150" min="NaN" max="NaN" scale="0" sortOrder="7" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="7c477d34-15b8-40ea-902a-d73cce703e95">
+          <field Id="506838ef-a274-413f-b4c2-cc13ff6d9714" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Estado" nullable="false" dataType="Char" default="A" length="1" min="NaN" max="NaN" scale="0" sortOrder="8" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="a7e0d4f7-fea2-4427-a017-412f03387ffd">
+          <field Id="df601e88-0a64-4bea-8a88-334e47d1ef6c" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Fecha" nullable="false" dataType="DateTime" default="getdate" length="8" min="NaN" max="NaN" scale="0" sortOrder="9" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="4a73ce1e-5679-4806-a26d-5eba712ae28d">
+          <field Id="c9b4b2c4-a8ff-4f7b-b180-d3a28b0c7e1a" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Usuario" nullable="false" length="150" min="NaN" max="NaN" scale="0" sortOrder="10" isCollectionKey="false" />
+        </entityHasFields>
+      </fields>
+      <indexes>
+        <entityHasIndexes Id="2e50682b-8772-4e59-b7ea-139ae6504859">
+          <index Id="8cc7ba5b-4044-4c62-9e05-94bcd3fada09" parentEntityID="67243002-54c6-4ab1-8608-9c7633c76630" isUnique="true" indexType="PrimaryKey" importedName="PK_Sistemas_Funcionalidades_Master" clustered="true">
+            <indexColumns>
+              <indexHasIndexColumns Id="d2ec217c-65cf-4193-8dd7-ae0c842f8dea">
+                <indexColumn Id="6b772863-1e82-4e3a-965d-51a8ede0c4b1" fieldID="d5f9f667-a0bc-451c-ad6f-bb731f038e4f" sortOrder="1" />
+              </indexHasIndexColumns>
+            </indexColumns>
+          </index>
+        </entityHasIndexes>
+      </indexes>
+      <navigationProperties>
+        <entityHasNavigationProperties Id="416bd0a9-e7f7-417c-8504-e10752845d90">
+          <navigationProperty Id="5583b97a-1a9b-4079-80f8-5c24d9a40f97" name="Acciones" sourceEntity="Sistemas_Funcionalidades_Master" targetEntity="Sistemas_Funcionalidades_Acciones_Trans" sourceFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAABRGdW5jaW9uYWxpZGFkX051bWVybw0DCw==" targetFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAABRGdW5jaW9uYWxpZGFkX051bWVybw0DCw==" asociation="FK_Sistemas_Funcionalidades_Acciones_Trans_Sistemas_Funcionalidades_Master" returnType="List&lt;Sistemas_Funcionalidades_Acciones_Trans&gt;" />
+        </entityHasNavigationProperties>
+        <entityHasNavigationProperties Id="01d13b55-cb2e-4122-b4de-8734ffbc2725">
+          <navigationProperty Id="d2959912-89ca-4e8f-9a7c-20be155a0497" name="Acciones_Url" sourceEntity="Sistemas_Funcionalidades_Master" targetEntity="Sistemas_Funcionalidades_Acciones_Trans" sourceFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAABRGdW5jaW9uYWxpZGFkX051bWVybw0DCw==" targetFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAABhGdW5jaW9uYWxpZGFkX051bWVyb19VcmwNAws=" asociation="FK_Sistemas_Funcionalidades_Acciones_Trans_Sistemas_Funcionalidades_Master" returnType="List&lt;Sistemas_Funcionalidades_Acciones_Trans&gt;" />
+        </entityHasNavigationProperties>
+        <entityHasNavigationProperties Id="9e7a7087-7699-4ef3-afa7-86fc88e60a86">
+          <navigationProperty Id="1c6c1b33-8ba6-4970-82be-0d87557ab5c6" name="Modulo" sourceEntity="Sistemas_Funcionalidades_Master" targetEntity="Sistemas_Modulos_Master" sourceFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAAA1Nb2R1bG9fTnVtZXJvDQML" targetFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAAA1Nb2R1bG9fTnVtZXJvDQML" asociation="FK_Sistemas_Funcionalidades_Master_Sistemas_Modulos_Master" returnType="Sistemas_Modulos_Master" />
+        </entityHasNavigationProperties>
+      </navigationProperties>
+    </entity>
+    <entity Id="885de18d-f125-400a-a118-a46c9496bef3" name="Sistemas_Mensaje_Trans" allowCreateAudit="false" allowModifyAudit="false" allowTimestamp="false" schema="dbo">
+      <fields>
+        <entityHasFields Id="c30c2575-f73b-46be-a76d-453fde3e537c">
+          <field Id="c7ab6690-e537-474d-b7ff-1ccb3aaab034" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Mensaje_Codigo" nullable="false" isIndexed="true" isUnique="true" length="150" min="NaN" max="NaN" isPrimaryKey="true" scale="0" sortOrder="1" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="dae75a34-8193-47a3-86a7-8d4e55c02049">
+          <field Id="6fabe868-30b2-433e-9b2f-3b1e61fffb62" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Mensaje_Descripcion" nullable="false" length="500" min="NaN" max="NaN" scale="0" sortOrder="2" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="e4de1742-5677-4193-b0f6-b6dee352329d">
+          <field Id="cafb3116-3564-4b5c-aa71-e7e6142115c4" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Estado" nullable="false" dataType="Char" default="A" length="1" min="NaN" max="NaN" scale="0" sortOrder="3" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="46b47ef9-0c3e-40b3-ab0b-f277158c46ea">
+          <field Id="3dd94094-f1aa-4ec8-95eb-b8989f3c8b96" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Fecha" nullable="false" dataType="DateTime" default="getdate" length="8" min="NaN" max="NaN" scale="0" sortOrder="4" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="8c19171b-b30f-484b-8fb8-f844f5686707">
+          <field Id="3d6ddeff-b68c-45ec-bded-1ba6308395b2" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Usuario" nullable="false" length="150" min="NaN" max="NaN" scale="0" sortOrder="5" isCollectionKey="false" />
+        </entityHasFields>
+      </fields>
+      <indexes>
+        <entityHasIndexes Id="a53239bb-501a-4757-9ca4-175238fdfb10">
+          <index Id="43761ac7-fe8c-4034-8ded-f3d1f3f15b90" parentEntityID="885de18d-f125-400a-a118-a46c9496bef3" isUnique="true" indexType="PrimaryKey" importedName="PK_Sistemas_Mensaje_Trans" clustered="true">
+            <indexColumns>
+              <indexHasIndexColumns Id="cbb3dbfc-82fe-4a71-a141-42b97a958c79">
+                <indexColumn Id="fa5dc2b9-8c3a-466e-ada4-f2c2fdddbe1d" fieldID="c7ab6690-e537-474d-b7ff-1ccb3aaab034" sortOrder="1" />
+              </indexHasIndexColumns>
+            </indexColumns>
+          </index>
+        </entityHasIndexes>
+      </indexes>
+    </entity>
+    <entity Id="33d45e98-aa96-42bc-b6f4-b89decf22b39" name="Sistemas_Modulos_Master" allowCreateAudit="false" allowModifyAudit="false" allowTimestamp="false" schema="dbo">
+      <childEntities>
+        <entityHasEntities Id="504d1784-4025-4f98-8ef5-c4db0a0724ea" roleName="FK_Sistemas_Funcionalidades_Master_Sistemas_Modulos_Master" importData="855674096" importedConstraintName="FK_Sistemas_Funcionalidades_Master_Sistemas_Modulos_Master">
+          <entityMoniker name="/9267e443-7359-4f59-9a34-3a9a8803fb1d/Sistemas_Funcionalidades_Master" />
+        </entityHasEntities>
+      </childEntities>
+      <fields>
+        <entityHasFields Id="9926d997-681d-4439-bbe1-708640e85ff3">
+          <field Id="8a21a18b-817e-41c8-9aa6-7f41527e31ab" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Modulo_Numero" nullable="false" dataType="Int" identity="Database" isIndexed="true" isUnique="true" length="4" min="NaN" max="NaN" isPrimaryKey="true" scale="0" sortOrder="1" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="aa87de8a-d556-44e4-860a-72745831628b">
+          <field Id="e8b6d71e-b792-474a-90e1-a4d99403ec6e" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Modulo_Nombre" nullable="false" length="150" min="NaN" max="NaN" scale="0" sortOrder="2" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="72e921f0-4fa9-421c-b30f-043d2ca25efe">
+          <field Id="59d74444-4d42-48be-9d16-b89c629e61fc" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Modulo_Descripcion" nullable="false" length="500" min="NaN" max="NaN" scale="0" sortOrder="3" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="10d0f2f9-ab16-42f1-b0a7-828df0c64359">
+          <field Id="505e89b1-a8ec-4bee-abfd-bddb77bec681" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Modulo_Explicacion" nullable="false" length="8000" min="NaN" max="NaN" scale="0" sortOrder="4" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="ee390469-ff5d-4776-9d31-24824daa50f6">
+          <field Id="3ce35776-d44e-4a17-b003-9945c0485285" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Modulo_Url" nullable="false" length="150" min="NaN" max="NaN" scale="0" sortOrder="5" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="2cf6adf8-80dd-4209-8eeb-abc3ebe64a20">
+          <field Id="7ed3bdaf-2cca-4dc1-9bee-546f42bb87f6" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Modulo_Icon" length="150" min="NaN" max="NaN" scale="0" sortOrder="6" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="097212e1-f96e-4ca9-9718-7078a03d320d">
+          <field Id="6f4ea6ab-8575-49d4-a260-977c2fedec2b" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Estado" nullable="false" dataType="Char" default="A" length="1" min="NaN" max="NaN" scale="0" sortOrder="7" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="e83746b6-0fda-4469-9ba5-2f5b72f19477">
+          <field Id="a76eae35-d69f-4a69-84be-50b70b0cf089" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Fecha" nullable="false" dataType="DateTime" default="getdate" length="8" min="NaN" max="NaN" scale="0" sortOrder="8" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="6d32d017-bde1-4175-8dd6-b932a5708f82">
+          <field Id="874f74a5-e822-473e-9188-9ed8a156e636" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Usuario" nullable="false" length="150" min="NaN" max="NaN" scale="0" sortOrder="9" isCollectionKey="false" />
+        </entityHasFields>
+      </fields>
+      <indexes>
+        <entityHasIndexes Id="72a0bece-c9a3-4e68-a615-522209017321">
+          <index Id="fef0873c-ddc2-497a-a08f-c0ad252ce9d7" parentEntityID="33d45e98-aa96-42bc-b6f4-b89decf22b39" isUnique="true" indexType="PrimaryKey" importedName="PK_Sistemas_Modulos_Master" clustered="true">
+            <indexColumns>
+              <indexHasIndexColumns Id="645c1b6b-5365-408f-9173-302dadc90691">
+                <indexColumn Id="aa5e6ada-a598-414d-ac72-f67e3767eb09" fieldID="8a21a18b-817e-41c8-9aa6-7f41527e31ab" sortOrder="1" />
+              </indexHasIndexColumns>
+            </indexColumns>
+          </index>
+        </entityHasIndexes>
+      </indexes>
+      <method>
+        <entityHasMethod Id="4a2badb7-0171-4c94-9575-4c02d7436049">
+          <methods Id="27143ca9-022d-45d7-8640-6a52bea58cf5" name="Load_Persona" returnType="Proc_Persona_Modulos" parameters="AAEAAAD/////AQAAAAAAAAAMAgAAAFFuSHlkcmF0ZS5Ec2wsIFZlcnNpb249NS4yLjAuMTI3LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWUwYzU2MzQ2ZWRjNWEzNGIEAQAAAKIBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuTGlzdGAxW1tuSHlkcmF0ZS5Ec2wuTXlDdXN0b21Db2RlLk1ldGhvZFBhcmFtZXRlcnMsIG5IeWRyYXRlLkRzbCwgVmVyc2lvbj01LjIuMC4xMjcsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49ZTBjNTYzNDZlZGM1YTM0Yl1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24EAAAsbkh5ZHJhdGUuRHNsLk15Q3VzdG9tQ29kZS5NZXRob2RQYXJhbWV0ZXJzW10CAAAACAgJAwAAAAAAAAAAAAAABwMAAAAAAQAAAAAAAAAEKm5IeWRyYXRlLkRzbC5NeUN1c3RvbUNvZGUuTWV0aG9kUGFyYW1ldGVycwIAAAAL" storedProcedure="Proc_Persona_Modulos" customImplementation="false" returnCollectionType="List" />
+        </entityHasMethod>
+      </method>
+      <navigationProperties>
+        <entityHasNavigationProperties Id="3250c4a6-7a58-4992-b91c-7dcf7f54b50e">
+          <navigationProperty Id="3b115dfe-06da-4951-933a-fbb0eaf18696" name="Funcionalidades" sourceEntity="Sistemas_Modulos_Master" targetEntity="Sistemas_Funcionalidades_Master" sourceFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAAA1Nb2R1bG9fTnVtZXJvDQML" targetFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAAA1Nb2R1bG9fTnVtZXJvDQML" asociation="FK_Sistemas_Funcionalidades_Master_Sistemas_Modulos_Master" returnType="List&lt;Sistemas_Funcionalidades_Master&gt;" />
+        </entityHasNavigationProperties>
+      </navigationProperties>
+    </entity>
+    <entity Id="a1e132b8-9c30-4c7f-92be-2aecb03af107" name="Persona_Roles_Trans" allowCreateAudit="false" allowModifyAudit="false" allowTimestamp="false" schema="dbo">
+      <fields>
+        <entityHasFields Id="5661b9a4-af0e-4ee7-b88a-249788b77d6f">
+          <field Id="a47a8654-1198-4a5b-97ab-f8cc14edfae2" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Persona_Secuencia" nullable="false" dataType="Int" isIndexed="true" isUnique="true" length="4" min="NaN" max="NaN" isPrimaryKey="true" scale="0" sortOrder="1" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="1adbc157-570d-485b-955c-04d9188909c2">
+          <field Id="2c3eee7c-9b8f-4985-9345-d6b3b16ca5b7" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Role_Numero" nullable="false" dataType="Int" isIndexed="true" isUnique="true" length="4" min="NaN" max="NaN" isPrimaryKey="true" scale="0" sortOrder="2" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="26186c28-5a74-4ceb-8f64-88b2b20726cb">
+          <field Id="e7d58461-a931-4be9-b1e4-ae6692006a47" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Estado" nullable="false" dataType="Char" length="1" min="NaN" max="NaN" scale="0" sortOrder="3" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="aa0e8b9c-216c-4da0-813d-c7b9954d2ed2">
+          <field Id="a78b4f6e-ab48-4d1b-80ca-19075642d243" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Fecha" nullable="false" dataType="DateTime" length="8" min="NaN" max="NaN" scale="0" sortOrder="4" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="59f1ef1c-a98d-4ab7-87b3-3dafcfc45790">
+          <field Id="c686af4c-0ec9-440f-b029-344cf151f8bb" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Usuario" nullable="false" min="NaN" max="NaN" scale="0" sortOrder="5" isCollectionKey="false" />
+        </entityHasFields>
+      </fields>
+      <indexes>
+        <entityHasIndexes Id="94e01ff9-ba3e-48a0-8a25-29c348b5bd87">
+          <index Id="ce80516b-af9e-4be6-9a7e-c6596a7914b1" parentEntityID="a1e132b8-9c30-4c7f-92be-2aecb03af107" isUnique="true" indexType="PrimaryKey" importedName="PK_Persona_Roles_Trans" clustered="true">
+            <indexColumns>
+              <indexHasIndexColumns Id="939f3533-9db8-4707-966c-7213411e4600">
+                <indexColumn Id="96e70d89-b30e-458c-99b2-43c1c9ee2964" fieldID="a47a8654-1198-4a5b-97ab-f8cc14edfae2" sortOrder="1" />
+              </indexHasIndexColumns>
+              <indexHasIndexColumns Id="9bec700c-1711-4fc0-b20e-5c4a83d60b54">
+                <indexColumn Id="1c6fbf63-63a8-4d97-80f3-1afd7986b2f3" fieldID="2c3eee7c-9b8f-4985-9345-d6b3b16ca5b7" sortOrder="2" />
+              </indexHasIndexColumns>
+            </indexColumns>
+          </index>
+        </entityHasIndexes>
+      </indexes>
+      <navigationProperties>
+        <entityHasNavigationProperties Id="9ed056f6-7c91-4852-ac81-406dd222b1dd">
+          <navigationProperty Id="cd9475e1-8364-4aa2-ad31-7db22a2e67fe" name="Personas_Master" sourceEntity="Persona_Roles_Trans" targetEntity="Personas_Master" sourceFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAABFQZXJzb25hX1NlY3VlbmNpYQ0DCw==" targetFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAABFQZXJzb25hX1NlY3VlbmNpYQ0DCw==" asociation="FK_Persona_Roles_Trans_Personas_Master" returnType="Personas_Master" />
+        </entityHasNavigationProperties>
+        <entityHasNavigationProperties Id="1a97fa8f-7538-4754-bbcb-e912b4ef56ef">
+          <navigationProperty Id="0d2b5ce7-99b7-4881-ae35-01dbada4c38d" name="Roles_Cata" sourceEntity="Persona_Roles_Trans" targetEntity="Roles_Cata" sourceFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAAAtSb2xlX051bWVybw0DCw==" targetFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAAAtSb2xlX051bWVybw0DCw==" asociation="FK_Persona_Roles_Trans_Roles_Cata" returnType="Roles_Cata" />
+        </entityHasNavigationProperties>
+      </navigationProperties>
+    </entity>
+    <entity Id="bdf146e1-4d37-4d29-a524-b57d08314d3d" name="Roles_Cata" allowCreateAudit="false" allowModifyAudit="false" allowTimestamp="false" schema="dbo">
+      <childEntities>
+        <entityHasEntities Id="2bdbda4e-7d90-4700-8606-cdcb67d4aa94" roleName="FK_Persona_Roles_Trans_Roles_Cata" importData="932198371" importedConstraintName="FK_Persona_Roles_Trans_Roles_Cata">
+          <entityMoniker name="/9267e443-7359-4f59-9a34-3a9a8803fb1d/Persona_Roles_Trans" />
+        </entityHasEntities>
+        <entityHasEntities Id="c8241d72-a73d-46c6-b127-0abbfc1f7c30" roleName="FK_Roles_Funcionalidad_Acciones_Trans_Roles_Cata" importData="1108198998" importedConstraintName="FK_Roles_Funcionalidad_Acciones_Trans_Roles_Cata">
+          <entityMoniker name="/9267e443-7359-4f59-9a34-3a9a8803fb1d/Roles_Funcionalidad_Acciones_Trans" />
+        </entityHasEntities>
+      </childEntities>
+      <fields>
+        <entityHasFields Id="bfe6b3cf-b982-481b-a231-0ca9604cf139">
+          <field Id="9fa2c33e-8880-43f0-98e6-f69391ba1284" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Role_Numero" nullable="false" dataType="Int" identity="Database" isIndexed="true" isUnique="true" length="4" min="NaN" max="NaN" isPrimaryKey="true" scale="0" sortOrder="1" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="cb1e1813-f91a-4e65-a05c-68f0c8a7bf4d">
+          <field Id="70ede70e-3f86-4e3b-a64d-a27983e68c67" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Role_Nombre" nullable="false" min="NaN" max="NaN" scale="0" sortOrder="2" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="e5f18e9f-aafe-43b5-ada9-00954ba431e7">
+          <field Id="53e771ed-ac5e-451d-9928-986e06dca196" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Role_Descripcion" nullable="false" length="1500" min="NaN" max="NaN" scale="0" sortOrder="3" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="1399acbe-0601-4770-a2e6-0d72cb9f33ce">
+          <field Id="5df24014-9822-4793-8200-3f9c0344f2d5" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Estado" nullable="false" dataType="Char" length="1" min="NaN" max="NaN" scale="0" sortOrder="4" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="470df6ca-d0ba-45a9-8161-04969a122bef">
+          <field Id="1ed32e86-f737-4add-b2ba-1577798f4876" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Fecha" nullable="false" dataType="DateTime" length="8" min="NaN" max="NaN" scale="0" sortOrder="5" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="4ed7eeef-9bf2-448d-87e1-b0f351053699">
+          <field Id="19a27d52-2237-440c-b7b2-f5bf762bef47" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Usuario" nullable="false" min="NaN" max="NaN" scale="0" sortOrder="6" isCollectionKey="false" />
+        </entityHasFields>
+      </fields>
+      <indexes>
+        <entityHasIndexes Id="abe14c14-c7a5-4e49-afe8-df3d40f6af3f">
+          <index Id="6e0b9d41-0bdb-4f5e-b28f-ab3dc4f8c007" parentEntityID="bdf146e1-4d37-4d29-a524-b57d08314d3d" isUnique="true" indexType="PrimaryKey" importedName="PK_Roles_Cata" clustered="true">
+            <indexColumns>
+              <indexHasIndexColumns Id="18b926cf-45e4-46c0-9dd4-d042f34e9f9d">
+                <indexColumn Id="c9b8b25c-6aa4-41c8-9434-8ac17feb4a2d" fieldID="9fa2c33e-8880-43f0-98e6-f69391ba1284" sortOrder="1" />
+              </indexHasIndexColumns>
+            </indexColumns>
+          </index>
+        </entityHasIndexes>
+      </indexes>
+      <navigationProperties>
+        <entityHasNavigationProperties Id="e36f1041-c7b4-4bb3-8dfd-39717a6ccbb1">
+          <navigationProperty Id="1a1d37a4-8533-4ca3-9582-ac2ee1f57416" name="Persona_Roles_Trans" sourceEntity="Roles_Cata" targetEntity="Persona_Roles_Trans" sourceFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAAAtSb2xlX051bWVybw0DCw==" targetFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAAAtSb2xlX051bWVybw0DCw==" asociation="FK_Persona_Roles_Trans_Roles_Cata" returnType="List&lt;Persona_Roles_Trans&gt;" />
+        </entityHasNavigationProperties>
+        <entityHasNavigationProperties Id="c3705a2d-be15-468e-a721-ddc55c822067">
+          <navigationProperty Id="bf23223d-22ff-4784-a98c-729aee7a4d8c" name="Roles_Funcionalidad_Acciones_Trans" sourceEntity="Roles_Cata" targetEntity="Roles_Funcionalidad_Acciones_Trans" sourceFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAAAtSb2xlX051bWVybw0DCw==" targetFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAAAtSb2xlX051bWVybw0DCw==" asociation="FK_Roles_Funcionalidad_Acciones_Trans_Roles_Cata" returnType="List&lt;Roles_Funcionalidad_Acciones_Trans&gt;" />
+        </entityHasNavigationProperties>
+      </navigationProperties>
+    </entity>
+    <entity Id="fd65ded9-4037-4da2-9f6d-ca1572766258" name="Roles_Funcionalidad_Acciones_Trans" allowCreateAudit="false" allowModifyAudit="false" allowTimestamp="false" schema="dbo">
+      <fields>
+        <entityHasFields Id="30dd1011-0b7c-4f20-bfbf-c4315d470c79">
+          <field Id="c5147241-d3d0-48e8-ab8e-95122910df9e" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Role_Numero" nullable="false" dataType="Int" isIndexed="true" isUnique="true" length="4" min="NaN" max="NaN" isPrimaryKey="true" scale="0" sortOrder="1" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="d940423a-9ec7-4374-b6e9-174961b50586">
+          <field Id="b12b2d22-8a03-4902-bebc-3e7316eb41c4" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Funcionalidad_Numero" nullable="false" dataType="Int" isIndexed="true" isUnique="true" length="4" min="NaN" max="NaN" isPrimaryKey="true" scale="0" sortOrder="2" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="5df83893-762c-43b3-b07f-80833a6198e0">
+          <field Id="04cdf96a-dcad-4e2c-9b9d-90cd3922dfb2" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Funcionalidad_Accion_Numero" nullable="false" dataType="Int" isIndexed="true" isUnique="true" length="4" min="NaN" max="NaN" isPrimaryKey="true" scale="0" sortOrder="3" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="66016d55-dbfd-463a-8b11-4c719ab53aae">
+          <field Id="86d07df7-8369-4e57-9c37-932048d49a37" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Estado" nullable="false" dataType="Char" length="1" min="NaN" max="NaN" scale="0" sortOrder="4" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="890e715c-4e3a-4624-86db-a21961d3097f">
+          <field Id="ff7bd484-e5a7-49b9-845b-742d178a6297" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Fecha" nullable="false" dataType="DateTime" length="8" min="NaN" max="NaN" scale="0" sortOrder="5" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="23167d5d-8e3d-47a9-8914-59972c9ded3a">
+          <field Id="93167320-e453-4668-bbfb-80c8bb9b9155" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Usuario" nullable="false" length="150" min="NaN" max="NaN" scale="0" sortOrder="6" isCollectionKey="false" />
+        </entityHasFields>
+      </fields>
+      <indexes>
+        <entityHasIndexes Id="1e503842-d798-45bc-948c-02ceb418599e">
+          <index Id="66ddb9aa-e7af-4548-a4ac-180db3e5b755" parentEntityID="fd65ded9-4037-4da2-9f6d-ca1572766258" isUnique="true" indexType="PrimaryKey" importedName="PK_Roles_Funcionalidad_Acciones_Trans" clustered="true">
+            <indexColumns>
+              <indexHasIndexColumns Id="07760fd9-21a1-4a3e-acb2-07bb6f05e458">
+                <indexColumn Id="0a5796ea-ef94-4c8f-8ebe-6d4222da3437" fieldID="c5147241-d3d0-48e8-ab8e-95122910df9e" sortOrder="1" />
+              </indexHasIndexColumns>
+              <indexHasIndexColumns Id="9aa458e5-dd2f-4bcc-ab07-f5f6f091ebd6">
+                <indexColumn Id="3afc3ebf-60f4-4997-99b2-3c37a95ca6fe" fieldID="b12b2d22-8a03-4902-bebc-3e7316eb41c4" sortOrder="2" />
+              </indexHasIndexColumns>
+              <indexHasIndexColumns Id="c9683e77-eb2c-4c57-a760-a16dc2b6e750">
+                <indexColumn Id="0613cca7-b99b-415d-839d-acea5a7fc977" fieldID="04cdf96a-dcad-4e2c-9b9d-90cd3922dfb2" sortOrder="3" />
+              </indexHasIndexColumns>
+            </indexColumns>
+          </index>
+        </entityHasIndexes>
+      </indexes>
+      <method>
+        <entityHasMethod Id="9286ad32-99d7-4e6b-a984-e9f05a434637">
+          <methods Id="95f5e861-dfdc-450f-986c-ac04a17c5e66" name="Load_Funcionalidad_Acciones" returnType="Proc_Roles_Funcionalidad_Acciones" parameters="AAEAAAD/////AQAAAAAAAAAMAgAAAFFuSHlkcmF0ZS5Ec2wsIFZlcnNpb249NS4yLjAuMTI3LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWUwYzU2MzQ2ZWRjNWEzNGIEAQAAAKIBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuTGlzdGAxW1tuSHlkcmF0ZS5Ec2wuTXlDdXN0b21Db2RlLk1ldGhvZFBhcmFtZXRlcnMsIG5IeWRyYXRlLkRzbCwgVmVyc2lvbj01LjIuMC4xMjcsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49ZTBjNTYzNDZlZGM1YTM0Yl1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24EAAAsbkh5ZHJhdGUuRHNsLk15Q3VzdG9tQ29kZS5NZXRob2RQYXJhbWV0ZXJzW10CAAAACAgJAwAAAAAAAAAAAAAABwMAAAAAAQAAAAAAAAAEKm5IeWRyYXRlLkRzbC5NeUN1c3RvbUNvZGUuTWV0aG9kUGFyYW1ldGVycwIAAAAL" storedProcedure="Proc_Roles_Funcionalidad_Acciones" customImplementation="false" returnCollectionType="List" />
+        </entityHasMethod>
+      </method>
+      <navigationProperties>
+        <entityHasNavigationProperties Id="a1a213c4-9735-4112-9f84-b86c7b323040">
+          <navigationProperty Id="c215ae2c-5d07-48f1-8e29-9654ee824fcf" name="Sistemas_Funcionalidades_Acciones_Trans" sourceEntity="Roles_Funcionalidad_Acciones_Trans" targetEntity="Sistemas_Funcionalidades_Acciones_Trans" sourceFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAgAAAAIAAAARAgAAAAQAAAAGAwAAABRGdW5jaW9uYWxpZGFkX051bWVybwYEAAAAG0Z1bmNpb25hbGlkYWRfQWNjaW9uX051bWVybw0CCw==" targetFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAgAAAAIAAAARAgAAAAQAAAAGAwAAABRGdW5jaW9uYWxpZGFkX051bWVybwYEAAAAG0Z1bmNpb25hbGlkYWRfQWNjaW9uX051bWVybw0CCw==" asociation="FK_Roles_Funcionalidad_Acciones_Trans_Sistemas_Funcionalidades_Acciones_Trans" returnType="Sistemas_Funcionalidades_Acciones_Trans" />
+        </entityHasNavigationProperties>
+        <entityHasNavigationProperties Id="bfa35373-11b3-4051-aef3-73940cc7fce5">
+          <navigationProperty Id="23e34e33-8047-49b0-b972-c88fcd887c6f" name="Roles_Cata" sourceEntity="Roles_Funcionalidad_Acciones_Trans" targetEntity="Roles_Cata" sourceFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAAAtSb2xlX051bWVybw0DCw==" targetFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAAAtSb2xlX051bWVybw0DCw==" asociation="FK_Roles_Funcionalidad_Acciones_Trans_Roles_Cata" returnType="Roles_Cata" />
+        </entityHasNavigationProperties>
+      </navigationProperties>
+    </entity>
+    <entity Id="bb6d1b24-dd80-49d8-8263-387b9fae7275" name="Personas_Master" allowCreateAudit="false" allowModifyAudit="false" allowTimestamp="false" schema="dbo">
+      <childEntities>
+        <entityHasEntities Id="378be185-fde6-4ed2-ae49-677d3797c2b4" roleName="FK_Persona_Roles_Trans_Personas_Master" importData="948198428" importedConstraintName="FK_Persona_Roles_Trans_Personas_Master">
+          <entityMoniker name="/9267e443-7359-4f59-9a34-3a9a8803fb1d/Persona_Roles_Trans" />
+        </entityHasEntities>
+      </childEntities>
+      <fields>
+        <entityHasFields Id="5cc33c5b-cf13-4c3d-87d5-9f69c3f6500c">
+          <field Id="4925cf87-f233-4715-98dc-8097be2346c1" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Persona_Secuencia" nullable="false" dataType="Int" identity="Database" isIndexed="true" isUnique="true" length="4" min="NaN" max="NaN" isPrimaryKey="true" scale="0" sortOrder="1" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="03c07bc9-ae89-4af4-b558-dbc9b6bf7dc3">
+          <field Id="529b52b0-10cf-47ea-897f-9d673e4619b6" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Congregacion_Secuencia" nullable="false" dataType="Int" length="4" min="NaN" max="NaN" scale="0" sortOrder="2" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="88ec7f7e-5774-4064-ac12-ce798ccaf4a4">
+          <field Id="9e07e824-a0d8-40b5-b2fe-737b98401ecf" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Persona_Tipo_Secuencia" nullable="false" dataType="Int" default="1" length="4" min="NaN" max="NaN" scale="0" sortOrder="3" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="1f551c68-6ec5-4323-beab-1db28a26b6da">
+          <field Id="b5c7faae-ba8a-42fa-8450-72856595b09d" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Persona_Nombres" nullable="false" min="NaN" max="NaN" scale="0" sortOrder="4" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="ea940ab6-07c4-4575-bbbc-3981b980ffa0">
+          <field Id="b1c52a32-d314-4a44-a94b-1ea527deadd8" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Persona_Apellidos" nullable="false" min="NaN" max="NaN" scale="0" sortOrder="5" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="505b0f7b-91e1-40dc-b477-7f965ef34b02">
+          <field Id="6320bfda-0e13-4561-869a-9f70fbc7ca2b" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Persona_Conyuge_Apellido" nullable="false" min="NaN" max="NaN" scale="0" sortOrder="6" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="c148eef7-3150-4759-805b-5e81ba1bd87f">
+          <field Id="741829f9-f71a-49bf-a0b7-b246a3b50eac" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Persona_Sexo" nullable="false" dataType="NChar" length="1" min="NaN" max="NaN" scale="0" sortOrder="7" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="56b8d36e-074a-4e89-8444-b6f6dcfe4fe4">
+          <field Id="5c910e35-e97a-4aa0-a6df-5b832bbd15da" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Persona_Correo" nullable="false" min="NaN" max="NaN" scale="0" sortOrder="8" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="7e531287-6801-4f3d-bbb5-1817a5ebec21">
+          <field Id="66d492f6-925c-4308-8724-f64b84c97b54" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Persona_Clave" nullable="false" min="NaN" max="NaN" scale="0" sortOrder="9" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="857deca6-5490-42b4-9f03-48eb5216658a">
+          <field Id="f5a40882-35cc-4f1c-bb2c-db9c209f77e6" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Persona_Verificacion_Numero" nullable="false" min="NaN" max="NaN" scale="0" sortOrder="10" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="6d5b6fbd-6b76-43b4-a067-093ade096e2d">
+          <field Id="a33ead43-bc1a-4f77-ab75-4ede9cb9ce26" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Estado" nullable="false" dataType="Char" length="1" min="NaN" max="NaN" scale="0" sortOrder="11" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="06089f8c-8448-4726-9ba6-cf3748d5403d">
+          <field Id="d5824470-4aa6-452f-a0b1-e93db8f7e955" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Fecha" nullable="false" dataType="DateTime" length="8" min="NaN" max="NaN" scale="0" sortOrder="12" isCollectionKey="false" />
+        </entityHasFields>
+        <entityHasFields Id="129d0976-adc2-4a62-b5e3-2598b25515e4">
+          <field Id="2296655b-4617-40f7-bc85-180fafde4bd3" required="false" notEqual="false" equal="false" isLength="false" lessThan="false" lessThanOrEqual="false" greaterThan="false" greaterThanOrEqual="false" regularExpressionValidator="false" emailValidator="false" urlValidator="false" dataTypeCheck="false" between="false" startsWith="false" endsWith="false" contains="false" creditCard="false" phone="false" date="false" numeric="false" alphanumeric="false" fileType="false" custom="false" name="Registro_Usuario" nullable="false" min="NaN" max="NaN" scale="0" sortOrder="13" isCollectionKey="false" />
+        </entityHasFields>
+      </fields>
+      <indexes>
+        <entityHasIndexes Id="e23cf91e-a8f6-4122-b3ff-c144afd88c92">
+          <index Id="c93deb0d-4d72-4ab1-ae2d-7f9c3e31ec1a" parentEntityID="bb6d1b24-dd80-49d8-8263-387b9fae7275" isUnique="true" indexType="PrimaryKey" importedName="PK_Personas_Master" clustered="true">
+            <indexColumns>
+              <indexHasIndexColumns Id="9a781ac3-56d3-47c6-9794-c503c1167278">
+                <indexColumn Id="ad474ade-1572-47e0-b1f4-33d64780ea63" fieldID="4925cf87-f233-4715-98dc-8097be2346c1" sortOrder="1" />
+              </indexHasIndexColumns>
+            </indexColumns>
+          </index>
+        </entityHasIndexes>
+      </indexes>
+      <navigationProperties>
+        <entityHasNavigationProperties Id="eccb773e-7d6c-47a0-aa37-cbde4ccaa2dd">
+          <navigationProperty Id="b7b1562f-e1e6-46f3-b516-e22a22f21bfb" name="Persona_Roles_Trans" sourceEntity="Personas_Master" targetEntity="Persona_Roles_Trans" sourceFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAABFQZXJzb25hX1NlY3VlbmNpYQ0DCw==" targetFields="AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAAAQAAAAEAAAARAgAAAAQAAAAGAwAAABFQZXJzb25hX1NlY3VlbmNpYQ0DCw==" asociation="FK_Persona_Roles_Trans_Personas_Master" returnType="List&lt;Persona_Roles_Trans&gt;" />
+        </entityHasNavigationProperties>
+      </navigationProperties>
+    </entity>
+  </entities>
+  <storedProcedures>
+    <nHydrateModelHasStoredProcedures Id="2b652729-b070-441e-ba67-292adbb95a26">
+      <storedProcedure Id="ee359af2-4fd1-4c77-b264-3dc372092c35" sQL="Select Distinct&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;c.Funcionalidad_Numero,&#xD;&#xA;&#x9;&#x9;&#x9;c.Modulo_Numero,&#xD;&#xA;&#x9;&#x9;&#x9;c.Funcionalidad_Codigo,&#xD;&#xA;&#x9;&#x9;&#x9;c.Funcionalidad_Nombre,&#xD;&#xA;&#x9;&#x9;&#x9;c.Funcionalidad_Descripcion,&#xD;&#xA;&#x9;&#x9;&#x9;c.Funcionalidad_Explicacion,&#xD;&#xA;&#x9;&#x9;&#x9;c.Funcionalidad_Url,&#xD;&#xA;&#x9;&#x9;&#x9;d.Funcionalidad_Accion_Numero,&#xD;&#xA;&#x9;&#x9;&#x9;d.Funcionalidad_Accion_Tipo_Secuencia,&#xD;&#xA;&#x9;&#x9;&#x9;d.Funcionalidad_Accion_Codigo,&#xD;&#xA;&#x9;&#x9;&#x9;d.Funcionalidad_Accion_Descripcion,&#xD;&#xA;&#x9;&#x9;&#x9;d.Funcionalidad_Accion_Explicacion,&#xD;&#xA;&#x9;&#x9;&#x9;d.Funcionalidad_Accion_Icono_Small,&#xD;&#xA;&#x9;&#x9;&#x9;d.Funcionalidad_Accion_Icono_Large,&#xD;&#xA;&#x9;&#x9;&#x9;d.Funcionalidad_Accion_Css,&#xD;&#xA;&#x9;&#x9;&#x9;d.Funcionalidad_Accion_Toolbar,&#xD;&#xA;&#x9;&#x9;&#x9;d.Funcionalidad_Accion_Menu,&#xD;&#xA;&#x9;&#x9;&#x9;d.Funcionalidad_Accion_Permiso_Descripcion,&#xD;&#xA;&#x9;&#x9;&#x9;d.Funcionalidad_Accion_Permiso_Necesita&#xD;&#xA;&#x9; From Roles_Funcionalidad_Acciones_Trans a&#xD;&#xA;&#x9;   &#xD;&#xA;&#x9;   Inner Join Sistemas_Funcionalidades_Acciones_Trans b&#xD;&#xA;&#x9;     On   a.Funcionalidad_Numero = b.Funcionalidad_Numero&#xD;&#xA;&#x9;      And a.Funcionalidad_Accion_Numero = b.Funcionalidad_Accion_Numero&#xD;&#xA;&#x9;   &#xD;&#xA;&#x9;   Inner Join Sistemas_Funcionalidades_Master c&#xD;&#xA;&#x9;       On b.Funcionalidad_Numero = c.Funcionalidad_Numero&#xD;&#xA;&#x9;   &#xD;&#xA;&#x9;   Inner Join Sistemas_Funcionalidades_Acciones_Cata d&#xD;&#xA;&#x9;       On d.Funcionalidad_Accion_Numero = b.Funcionalidad_Accion_Numero&#xD;&#xA;&#x9; Where &#xD;&#xA;&#x9;&#x9;&#x9;  a.Role_Numero  = @Role_Numero&#xD;&#xA;&#x9;&#x9;&#x9;  And (@Funcionalidad_Numero = 0 OR  a.Funcionalidad_Numero = @Funcionalidad_Numero)&#xD;&#xA;&#x9;&#x9;&#x9;  And  (@Funcionalidad_Accion_Numero = 0 OR a.Funcionalidad_Accion_Numero = @Funcionalidad_Accion_Numero)" name="Proc_Roles_Funcionalidad_Acciones" schema="dbo" databaseObjectName="Proc_Roles_Funcionalidad_Acciones" precedenceOrder="1" className="Proc_Roles_Funcionalidad_Acciones">
+        <fields>
+          <storedProcedureHasFields Id="ea5fecb5-303e-4284-b15d-cb26ff6ba57e">
+            <storedProcedureField Id="aae07cfd-3de7-4095-86f7-c8c77b9625f3" name="Funcionalidad_Numero" dataType="Int" length="8000" scale="0" />
+          </storedProcedureHasFields>
+          <storedProcedureHasFields Id="efdbb386-96a0-40b5-81b1-34c5d21efba0">
+            <storedProcedureField Id="8377f041-3f4c-4970-b951-c37ee421779b" name="Modulo_Numero" dataType="Int" length="8000" scale="0" />
+          </storedProcedureHasFields>
+          <storedProcedureHasFields Id="85883a4a-8434-44ce-a270-b52a25055c06">
+            <storedProcedureField Id="76698406-9e59-4da3-93ae-daa6ca9b03e3" name="Funcionalidad_Codigo" scale="0" />
+          </storedProcedureHasFields>
+          <storedProcedureHasFields Id="d24ff5f0-4e4a-44dd-8a05-aaaea1aa49c3">
+            <storedProcedureField Id="b2c6d576-d1bb-47d4-a1a9-69e62ffdca17" name="Funcionalidad_Nombre" scale="0" />
+          </storedProcedureHasFields>
+          <storedProcedureHasFields Id="fbaca6c8-d498-4307-9782-4185a1bdcf95">
+            <storedProcedureField Id="fc1a3737-b653-485c-9c2c-c28c2c3b5290" name="Funcionalidad_Descripcion" scale="0" />
+          </storedProcedureHasFields>
+          <storedProcedureHasFields Id="ae8a170d-c3ff-48bb-9413-3354462e28de">
+            <storedProcedureField Id="6f53da22-dc67-442b-99bf-c3fa178add4f" name="Funcionalidad_Explicacion" scale="0" />
+          </storedProcedureHasFields>
+          <storedProcedureHasFields Id="88fc8090-79ff-4c24-a96a-b33e1b7cfd0d">
+            <storedProcedureField Id="e97b930f-dcd2-4db1-8698-b40ea53f3411" name="Funcionalidad_Url" scale="0" />
+          </storedProcedureHasFields>
+          <storedProcedureHasFields Id="b13bbb14-b754-4aad-80f8-7a78d60e8066">
+            <storedProcedureField Id="324a89b5-eec3-480c-b205-4245ff201fd8" name="Funcionalidad_Accion_Numero" dataType="Int" length="8000" scale="0" />
+          </storedProcedureHasFields>
+          <storedProcedureHasFields Id="1246281a-aa3e-4725-aaab-fab511ec9701">
+            <storedProcedureField Id="ba52dd2e-4b42-4a82-b04c-480381a597f9" name="Funcionalidad_Accion_Tipo_Secuencia" dataType="Int" length="8000" scale="0" />
+          </storedProcedureHasFields>
+          <storedProcedureHasFields Id="f366ee81-ffa6-4e23-bfa3-e3f04c05dcf7">
+            <storedProcedureField Id="e7b4dd7e-f2a1-419c-b120-d18ffc7b5a39" name="Funcionalidad_Accion_Codigo" scale="0" />
+          </storedProcedureHasFields>
+          <storedProcedureHasFields Id="4ceac70c-31b1-4578-ad38-b103f9572730">
+            <storedProcedureField Id="82c42c6b-0646-4713-accb-49fcb754caa1" name="Funcionalidad_Accion_Descripcion" scale="0" />
+          </storedProcedureHasFields>
+          <storedProcedureHasFields Id="882da3e7-0bf3-4cb5-9caf-a56a3469e1a6">
+            <storedProcedureField Id="f337c2a4-6e9a-43a5-9c72-dd4186c04de8" name="Funcionalidad_Accion_Explicacion" scale="0" />
+          </storedProcedureHasFields>
+          <storedProcedureHasFields Id="00ec20c0-4b20-4846-bb8c-bfe8620ac676">
+            <storedProcedureField Id="116c4c4b-19f0-41f3-b909-16aadd93df36" name="Funcionalidad_Accion_Icono_Small" scale="0" />
+          </storedProcedureHasFields>
+          <storedProcedureHasFields Id="60824935-0a96-4a0e-8105-d77818a8b343">
+            <storedProcedureField Id="4b464644-011d-4e4b-a1ed-eb63efee503d" name="Funcionalidad_Accion_Icono_Large" scale="0" />
+          </storedProcedureHasFields>
+          <storedProcedureHasFields Id="6ae8aedc-f5aa-40a1-879b-4372c3766de2">
+            <storedProcedureField Id="4dbe83b3-a2c5-4c70-a9bc-8042219cef20" name="Funcionalidad_Accion_Css" scale="0" />
+          </storedProcedureHasFields>
+          <storedProcedureHasFields Id="d9c903ad-23d7-41ae-a8ac-0c2f6e5db828">
+            <storedProcedureField Id="6bed4a38-6a14-4804-8333-12370719dd33" name="Funcionalidad_Accion_Toolbar" scale="0" />
+          </storedProcedureHasFields>
+          <storedProcedureHasFields Id="8ed48ca5-5f68-4d8d-a76a-67fc88fd059d">
+            <storedProcedureField Id="5a49f32a-7408-49db-80c2-f36c42b37638" name="Funcionalidad_Accion_Menu" scale="0" />
+          </storedProcedureHasFields>
+          <storedProcedureHasFields Id="edf64ddd-cfe7-4288-81e8-6a1d250605d7">
+            <storedProcedureField Id="5f6daaf0-1376-4da7-8d2c-ca129812a30f" name="Funcionalidad_Accion_Permiso_Descripcion" scale="0" />
+          </storedProcedureHasFields>
+          <storedProcedureHasFields Id="e485e1f8-f8a7-4f5f-a7be-659732b13b82">
+            <storedProcedureField Id="0b4afcd3-76af-475d-ac88-1fc67068ff73" name="Funcionalidad_Accion_Permiso_Necesita" scale="0" />
+          </storedProcedureHasFields>
+        </fields>
+        <parameters>
+          <storedProcedureHasParameters Id="3e57a1bc-169e-443f-a5b1-f3ff5731d3a0">
+            <storedProcedureParameter Id="58f9b33e-e1a1-45ad-a3c0-2ab5db335c4e" name="Funcionalidad_Accion_Numero" dataType="Int" length="4" scale="0" sortOrder="1" />
+          </storedProcedureHasParameters>
+          <storedProcedureHasParameters Id="8babe402-245b-4f63-8f66-da70c92a2a4b">
+            <storedProcedureParameter Id="e35e1d98-6aee-4063-9e0b-3b2e34c995fb" name="Funcionalidad_Numero" dataType="Int" length="4" scale="0" sortOrder="2" />
+          </storedProcedureHasParameters>
+          <storedProcedureHasParameters Id="ea4a15c1-f6f0-4093-83c1-c9360e1b5e79">
+            <storedProcedureParameter Id="a2b0c7fe-8a0d-433a-9d2b-e7d8d75d2e03" name="Role_Numero" dataType="Int" length="4" scale="0" sortOrder="3" />
+          </storedProcedureHasParameters>
+        </parameters>
+      </storedProcedure>
+    </nHydrateModelHasStoredProcedures>
+    <nHydrateModelHasStoredProcedures Id="964134da-d10d-484c-a5bb-1042efb2fe21">
+      <storedProcedure Id="c20c0932-4cf9-4f59-88d7-89d66cbab084" sQL="Select Distinct&#xD;&#xA;&#x9;&#x9;&#x9;a.Modulo_Numero,&#xD;&#xA;&#x9;&#x9;&#x9;a.Modulo_Nombre,&#xD;&#xA;&#x9;&#x9;&#x9;a.Modulo_Descripcion,&#xD;&#xA;&#x9;&#x9;&#x9;a.Modulo_Explicacion,&#xD;&#xA;&#x9;&#x9;&#x9;a.Modulo_Url,&#xD;&#xA;&#x9;&#x9;&#x9;a.Modulo_Icon,&#xD;&#xA;&#x9;&#x9;&#x9;a.Modulo_Permiso_Descripcion&#xD;&#xA;&#x9;&#x9;From Sistemas_Modulos_Master a&#xD;&#xA;&#x9;&#x9;  &#xD;&#xA;&#x9;&#x9;  Inner Join Sistemas_Funcionalidades_Master b&#xD;&#xA;&#x9;&#x9;    On a.Modulo_Numero = b.Modulo_Numero&#xD;&#xA;&#x9;&#x9;  &#xD;&#xA;&#x9;&#x9;  Inner Join Sistemas_Funcionalidades_Acciones_Trans c&#xD;&#xA;&#x9;&#x9;    On b.Funcionalidad_Numero = c.Funcionalidad_Numero&#xD;&#xA;&#x9;&#x9;    &#xD;&#xA;&#x9;&#x9;  Inner Join Roles_Funcionalidad_Acciones_Trans d&#xD;&#xA;&#x9;&#x9;    On c.Funcionalidad_Numero = d.Funcionalidad_Numero&#xD;&#xA;&#x9;&#x9;&#x9; And c.Funcionalidad_Accion_Numero = d.Funcionalidad_Accion_Numero&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;  Inner Join Roles_Cata e&#xD;&#xA;&#x9;&#x9;    On e.Role_Numero = d.Role_Numero&#xD;&#xA;&#x9;&#x9;    &#xD;&#xA;&#x9;&#x9;  Inner Join Persona_Roles_Trans f&#xD;&#xA;&#x9;&#x9;    On f.Role_Numero = e.Role_Numero&#xD;&#xA;&#x9;&#x9;    &#xD;&#xA;&#x9;&#x9;Where f.Persona_Secuencia = @Persona_Secuencia" name="Proc_Persona_Modulos" schema="dbo" databaseObjectName="Proc_Persona_Modulos" precedenceOrder="2" className="Proc_Persona_Modulos">
+        <fields>
+          <storedProcedureHasFields Id="8db6f1e8-73f8-46fb-8e19-f141189b7a14">
+            <storedProcedureField Id="c715c77d-3401-4a23-8cf1-1225276d3be8" name="Modulo_Numero" dataType="Int" length="8000" scale="0" />
+          </storedProcedureHasFields>
+          <storedProcedureHasFields Id="409a49a7-39e6-4f5f-a6f4-bf783651f8b1">
+            <storedProcedureField Id="94b67c1c-d9a0-4e6f-a400-a840af7bf51b" name="Modulo_Nombre" scale="0" />
+          </storedProcedureHasFields>
+          <storedProcedureHasFields Id="e029a223-4fde-4ba9-88b8-e937c0a60539">
+            <storedProcedureField Id="c9a129a6-a635-45de-931a-cceec93fe3b9" name="Modulo_Descripcion" scale="0" />
+          </storedProcedureHasFields>
+          <storedProcedureHasFields Id="29368c67-0d92-49fb-b154-0350ef1cab16">
+            <storedProcedureField Id="ce78985d-e483-4c1f-96d2-f9cf2e813481" name="Modulo_Explicacion" scale="0" />
+          </storedProcedureHasFields>
+          <storedProcedureHasFields Id="e5977d69-c02e-44e4-b226-0a5f526f9d92">
+            <storedProcedureField Id="b9b87cd7-f18c-4c62-8eeb-195b11f955d3" name="Modulo_Url" scale="0" />
+          </storedProcedureHasFields>
+          <storedProcedureHasFields Id="50c89944-766a-4fbd-9236-a52de996917b">
+            <storedProcedureField Id="2f5936cb-a460-4f0a-94cf-f3e372f72097" name="Modulo_Icon" scale="0" />
+          </storedProcedureHasFields>
+          <storedProcedureHasFields Id="77178f26-7ad8-43f3-975d-dbd846a262f6">
+            <storedProcedureField Id="0332862e-92b6-4ce4-97e4-1fa106f3fa2d" name="Modulo_Permiso_Descripcion" scale="0" />
+          </storedProcedureHasFields>
+        </fields>
+        <parameters>
+          <storedProcedureHasParameters Id="785ad904-d88e-483b-8849-630a51452520">
+            <storedProcedureParameter Id="a302134a-a96e-4a8d-8e6a-09b5d90a98fa" name="Persona_Secuencia" dataType="Int" length="4" scale="0" sortOrder="1" />
+          </storedProcedureHasParameters>
+        </parameters>
+      </storedProcedure>
+    </nHydrateModelHasStoredProcedures>
+  </storedProcedures>
+  <relationFields>
+    <nHydrateModelHasRelationFields Id="f711e691-773e-41f9-b12e-cc011d28d7ec">
+      <relationField Id="65a73cdb-8d1e-4ec3-80fd-d72c9f579e48" sourceFieldId="46dd174c-cab2-470c-a033-219f06295164" targetFieldId="5154fb04-1b38-427e-94f9-5337dd2162f6" relationID="f83f4861-930b-432a-b735-5356fe8a1620" />
+    </nHydrateModelHasRelationFields>
+    <nHydrateModelHasRelationFields Id="01b8d598-6892-42d1-bca3-e95cf3d4cd75">
+      <relationField Id="2802fc48-7d28-4edc-84ac-6c39ea10e793" sourceFieldId="21c7494f-3268-4679-850c-41b6ae2feffd" targetFieldId="e26fbdb2-5f91-4e94-9115-477a22d4ea82" relationID="dd1b301b-0d5b-4142-ba29-40ed85fab991" />
+    </nHydrateModelHasRelationFields>
+    <nHydrateModelHasRelationFields Id="f70764d5-6309-47c7-89c6-3dfc7ca73e34">
+      <relationField Id="92468166-f12d-4349-bfc7-97b0ae2e199d" sourceFieldId="d5f9f667-a0bc-451c-ad6f-bb731f038e4f" targetFieldId="3290b932-c482-414a-bc81-eaa7bd4ba67f" relationID="7443c158-b8c8-4fce-bd9d-564c3363232e" />
+    </nHydrateModelHasRelationFields>
+    <nHydrateModelHasRelationFields Id="d8455993-e63b-4515-a3dc-67bc09a2f755">
+      <relationField Id="cbf6de54-dd84-4f17-87c2-f47279b3e2d6" sourceFieldId="d5f9f667-a0bc-451c-ad6f-bb731f038e4f" targetFieldId="c4e5bc46-9391-40f1-8a5c-512e090cd043" relationID="1f1e2d14-f313-497a-a451-bbf37fa570f5" />
+    </nHydrateModelHasRelationFields>
+    <nHydrateModelHasRelationFields Id="b4245420-725e-4d13-bee8-792b6d33079d">
+      <relationField Id="c609af5c-1be5-4bcc-afec-53ad509cfe5d" sourceFieldId="8a21a18b-817e-41c8-9aa6-7f41527e31ab" targetFieldId="b9fa69fa-245b-404a-80c6-6f9b5dc80d07" relationID="504d1784-4025-4f98-8ef5-c4db0a0724ea" />
+    </nHydrateModelHasRelationFields>
+    <nHydrateModelHasRelationFields Id="b7b0789a-c354-446d-bf93-ceb273e5a5b8">
+      <relationField Id="aaaa1074-67f8-476e-9e23-b071a379d3d2" sourceFieldId="9fa2c33e-8880-43f0-98e6-f69391ba1284" targetFieldId="2c3eee7c-9b8f-4985-9345-d6b3b16ca5b7" relationID="2bdbda4e-7d90-4700-8606-cdcb67d4aa94" />
+    </nHydrateModelHasRelationFields>
+    <nHydrateModelHasRelationFields Id="cad11dbe-31ec-4e2b-9ad9-bc03edc4a0a3">
+      <relationField Id="dc946ec9-0596-42ee-b86d-64857cd8c3e3" sourceFieldId="9fa2c33e-8880-43f0-98e6-f69391ba1284" targetFieldId="c5147241-d3d0-48e8-ab8e-95122910df9e" relationID="c8241d72-a73d-46c6-b127-0abbfc1f7c30" />
+    </nHydrateModelHasRelationFields>
+    <nHydrateModelHasRelationFields Id="23929f59-9a07-48f7-9180-4f85a79a92c6">
+      <relationField Id="8fea4e20-f208-4e86-9291-77912602bdc1" sourceFieldId="3290b932-c482-414a-bc81-eaa7bd4ba67f" targetFieldId="b12b2d22-8a03-4902-bebc-3e7316eb41c4" relationID="2119a544-ddaf-4495-9ff3-f6fd4d23d25f" />
+    </nHydrateModelHasRelationFields>
+    <nHydrateModelHasRelationFields Id="65e54b5e-a579-4a4d-bec7-db78e8c68f51">
+      <relationField Id="6ff709b8-5621-4b4c-990b-029a3fe44171" sourceFieldId="5154fb04-1b38-427e-94f9-5337dd2162f6" targetFieldId="04cdf96a-dcad-4e2c-9b9d-90cd3922dfb2" relationID="2119a544-ddaf-4495-9ff3-f6fd4d23d25f" />
+    </nHydrateModelHasRelationFields>
+    <nHydrateModelHasRelationFields Id="c67ddc16-56e9-43ec-b2ef-674c96dfe8a9">
+      <relationField Id="9bd7279a-e19c-4d84-9b48-d65c1da3fe5c" sourceFieldId="4925cf87-f233-4715-98dc-8097be2346c1" targetFieldId="a47a8654-1198-4a5b-97ab-f8cc14edfae2" relationID="378be185-fde6-4ed2-ae49-677d3797c2b4" />
+    </nHydrateModelHasRelationFields>
+  </relationFields>
+</nHydrateModel>

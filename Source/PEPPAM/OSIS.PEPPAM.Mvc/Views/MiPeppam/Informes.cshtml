@@ -1,0 +1,71 @@
+﻿@{
+@model List<Proc_Persona_InformesModel>
+        }
+
+@using System.Web.UI.WebControls
+@using Mvc.Core.UI
+@using OSIS.PEPPAM.Mvc.UI
+
+@{
+    IFuncionality uiObject = new Funcionality().GetFuncionality("MI_PEPPAM_INFORMES");
+
+    ViewBag.Title = Resources.Shared.AppName + " - " + uiObject.Name;
+    string twoLettersCulture = new System.Globalization.CultureInfo(Culture).TwoLetterISOLanguageName;
+    string decimalSeparator = new System.Globalization.CultureInfo(Culture).NumberFormat.NumberDecimalSeparator;
+    string groupSeparator = new System.Globalization.CultureInfo(Culture).NumberFormat.NumberGroupSeparator;
+    var dictinary = new Dictionary<int, int>();
+    dictinary.Add(4, 117);
+}
+@Html.Partial("_Funcionalidades", dictinary)
+
+<div class="form">
+    <h2>@uiObject.Name</h2>
+    <h5>@uiObject.Description</h5>
+    <hr />
+    <div class="row">
+        <div class="col-xs-12">
+
+            @foreach (var informe in Model.Select(x => new {x.Turno_Descripcion, x.Turno_Fecha, x.Dia_Descripcion, x.Turno_Hora_Desde, x.Turno_Hora_Hasta, x.Horario_Turno_Secuencia, x.Dia_Secuencia}).Distinct())
+            {
+                
+<h3> @Convert.ToDateTime(informe.Turno_Fecha).ToString("D") - @informe.Turno_Descripcion (  @informe.Turno_Hora_Desde - @informe.Turno_Hora_Hasta)</h3>
+                  
+                            var informe1 = informe;
+                  
+        
+                    <table class="table-bordered table">
+                        <thead>
+                            <td>Publicación / Idiomas </td>
+                            
+                            
+                            @foreach (var idioma in Model.Where(x => x.Horario_Turno_Secuencia == informe1.Horario_Turno_Secuencia && x.Dia_Secuencia == informe1.Dia_Secuencia ).Select(x => new {x.Idioma_Numero, x.Idioma_Descripcion, x.Idioma_Orden}).Distinct().OrderBy(x => x.Idioma_Orden))
+                                {
+                                <td>@idioma.Idioma_Descripcion</td>
+                                }
+                            
+                        </thead>
+                       
+                        @foreach (var publicacion in Model.Where(x => x.Horario_Turno_Secuencia == informe1.Horario_Turno_Secuencia && x.Dia_Secuencia == informe1.Dia_Secuencia).Select(x => new {x.Publicacion_Numero, x.Publicacion_Descripcion, x.Publicacion_Orden}).Distinct().OrderBy(x => x.Publicacion_Orden))
+                        {
+                            <tr>
+                                
+                                @{
+                                    var publicacion1 = publicacion;
+                                }
+                                <td>@publicacion1.Publicacion_Descripcion</td>
+                                @foreach (var idioma in Model.Where(x => x.Horario_Turno_Secuencia == informe1.Horario_Turno_Secuencia && x.Dia_Secuencia == informe1.Dia_Secuencia && x.Publicacion_Numero == publicacion1.Publicacion_Numero).Select(x => new {x.Idioma_Numero, x.Idioma_Descripcion, x.Idioma_Orden, x.Publicacion_Cantidad}).Distinct().OrderBy(x => x.Idioma_Orden))
+                                {
+                                    <td>@idioma.Publicacion_Cantidad</td>
+                                }
+
+                            </tr>
+                        }
+                    </table>
+
+               
+            }
+
+        </div>
+    </div>
+
+</div>

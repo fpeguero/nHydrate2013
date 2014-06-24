@@ -1,0 +1,725 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DC7010EF-169B-4503-8F6C-9E584FAC8F13}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OSIS.PEPPAM.SQLDAL</RootNamespace>
+    <AssemblyName>OSIS.PEPPAM.SQLDAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\OSIS.PEPPAM.SQLDAL.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CodeFluent.Runtime">
+      <HintPath>..\..\..\..\..\Program Files (x86)\SoftFluent\CodeFluent\Modeler\CodeFluent.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="nHydrate.EFCore, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\nHydrate.EFCore.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Globals.cs" />
+    <Compile Include="Globals.Generated.cs">
+      <DependentUpon>Globals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Circuitos_Cata.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Circuitos_Cata.Generated.cs">
+      <DependentUpon>Circuitos_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Circuitos_CataCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Circuitos_CataCollection.Generated.cs">
+      <DependentUpon>Circuitos_CataCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Congregaciones_Master.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Congregaciones_Master.Generated.cs">
+      <DependentUpon>Congregaciones_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Congregaciones_MasterCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Congregaciones_MasterCollection.Generated.cs">
+      <DependentUpon>Congregaciones_MasterCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Contacto_Tipo_Cata.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Contacto_Tipo_Cata.Generated.cs">
+      <DependentUpon>Contacto_Tipo_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Contacto_Tipo_CataCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Contacto_Tipo_CataCollection.Generated.cs">
+      <DependentUpon>Contacto_Tipo_CataCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Dias_Cata.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Dias_Cata.Generated.cs">
+      <DependentUpon>Dias_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Dias_CataCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Dias_CataCollection.Generated.cs">
+      <DependentUpon>Dias_CataCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Documentos_Master.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Documentos_Master.Generated.cs">
+      <DependentUpon>Documentos_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Documentos_MasterCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Documentos_MasterCollection.Generated.cs">
+      <DependentUpon>Documentos_MasterCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Documentos_Objetivos_Trans.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Documentos_Objetivos_Trans.Generated.cs">
+      <DependentUpon>Documentos_Objetivos_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Documentos_Objetivos_TransCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Documentos_Objetivos_TransCollection.Generated.cs">
+      <DependentUpon>Documentos_Objetivos_TransCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Experiencias_Master.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Experiencias_Master.Generated.cs">
+      <DependentUpon>Experiencias_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Experiencias_MasterCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Experiencias_MasterCollection.Generated.cs">
+      <DependentUpon>Experiencias_MasterCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Horarios_Master.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Horarios_Master.Generated.cs">
+      <DependentUpon>Horarios_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Horarios_MasterCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Horarios_MasterCollection.Generated.cs">
+      <DependentUpon>Horarios_MasterCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Horario_Semanas_Cata.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Horario_Semanas_Cata.Generated.cs">
+      <DependentUpon>Horario_Semanas_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Horario_Semanas_CataCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Horario_Semanas_CataCollection.Generated.cs">
+      <DependentUpon>Horario_Semanas_CataCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Horario_Trans.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Horario_Trans.Generated.cs">
+      <DependentUpon>Horario_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Horario_TransCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Horario_TransCollection.Generated.cs">
+      <DependentUpon>Horario_TransCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Horario_Turno_Dias_Trans.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Horario_Turno_Dias_Trans.Generated.cs">
+      <DependentUpon>Horario_Turno_Dias_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Horario_Turno_Dias_TransCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Horario_Turno_Dias_TransCollection.Generated.cs">
+      <DependentUpon>Horario_Turno_Dias_TransCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Horario_Turno_Informe_Trans.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Horario_Turno_Informe_Trans.Generated.cs">
+      <DependentUpon>Horario_Turno_Informe_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Horario_Turno_Informe_TransCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Horario_Turno_Informe_TransCollection.Generated.cs">
+      <DependentUpon>Horario_Turno_Informe_TransCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Horario_Turno_Trans.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Horario_Turno_Trans.Generated.cs">
+      <DependentUpon>Horario_Turno_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Horario_Turno_TransCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Horario_Turno_TransCollection.Generated.cs">
+      <DependentUpon>Horario_Turno_TransCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Horas_Cata.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Horas_Cata.Generated.cs">
+      <DependentUpon>Horas_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Horas_CataCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Horas_CataCollection.Generated.cs">
+      <DependentUpon>Horas_CataCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Idiomas_Cata.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Idiomas_Cata.Generated.cs">
+      <DependentUpon>Idiomas_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Idiomas_CataCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Idiomas_CataCollection.Generated.cs">
+      <DependentUpon>Idiomas_CataCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Notificaciones_Master.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Notificaciones_Master.Generated.cs">
+      <DependentUpon>Notificaciones_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Notificaciones_MasterCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Notificaciones_MasterCollection.Generated.cs">
+      <DependentUpon>Notificaciones_MasterCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Notificaciones_Objetivo_Trans.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Notificaciones_Objetivo_Trans.Generated.cs">
+      <DependentUpon>Notificaciones_Objetivo_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Notificaciones_Objetivo_TransCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Notificaciones_Objetivo_TransCollection.Generated.cs">
+      <DependentUpon>Notificaciones_Objetivo_TransCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Notificaciones_Personas_Trans.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Notificaciones_Personas_Trans.Generated.cs">
+      <DependentUpon>Notificaciones_Personas_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Notificaciones_Personas_TransCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Notificaciones_Personas_TransCollection.Generated.cs">
+      <DependentUpon>Notificaciones_Personas_TransCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Notificaciones_Prioridades_Cata.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Notificaciones_Prioridades_Cata.Generated.cs">
+      <DependentUpon>Notificaciones_Prioridades_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Notificaciones_Prioridades_CataCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Notificaciones_Prioridades_CataCollection.Generated.cs">
+      <DependentUpon>Notificaciones_Prioridades_CataCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Parametros_Trans.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Parametros_Trans.Generated.cs">
+      <DependentUpon>Parametros_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Parametros_TransCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Parametros_TransCollection.Generated.cs">
+      <DependentUpon>Parametros_TransCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Personas_Diponibilidad.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Personas_Diponibilidad.Generated.cs">
+      <DependentUpon>Personas_Diponibilidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Personas_DiponibilidadCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Personas_DiponibilidadCollection.Generated.cs">
+      <DependentUpon>Personas_DiponibilidadCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Personas_Master.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Personas_Master.Generated.cs">
+      <DependentUpon>Personas_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Personas_MasterCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Personas_MasterCollection.Generated.cs">
+      <DependentUpon>Personas_MasterCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Personas_Notificaciones_Trans.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Personas_Notificaciones_Trans.Generated.cs">
+      <DependentUpon>Personas_Notificaciones_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Personas_Notificaciones_TransCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Personas_Notificaciones_TransCollection.Generated.cs">
+      <DependentUpon>Personas_Notificaciones_TransCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Personas_Tipos_Trans.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Personas_Tipos_Trans.Generated.cs">
+      <DependentUpon>Personas_Tipos_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Personas_Tipos_TransCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Personas_Tipos_TransCollection.Generated.cs">
+      <DependentUpon>Personas_Tipos_TransCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Personas_Tipo_Cata.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Personas_Tipo_Cata.Generated.cs">
+      <DependentUpon>Personas_Tipo_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Personas_Tipo_CataCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Personas_Tipo_CataCollection.Generated.cs">
+      <DependentUpon>Personas_Tipo_CataCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Personas_Turnos_Trans.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Personas_Turnos_Trans.Generated.cs">
+      <DependentUpon>Personas_Turnos_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Personas_Turnos_TransCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Personas_Turnos_TransCollection.Generated.cs">
+      <DependentUpon>Personas_Turnos_TransCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Persona_Contactos_Trans.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Persona_Contactos_Trans.Generated.cs">
+      <DependentUpon>Persona_Contactos_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Persona_Contactos_TransCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Persona_Contactos_TransCollection.Generated.cs">
+      <DependentUpon>Persona_Contactos_TransCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Persona_Estado_Cata.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Persona_Estado_Cata.Generated.cs">
+      <DependentUpon>Persona_Estado_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Persona_Estado_CataCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Persona_Estado_CataCollection.Generated.cs">
+      <DependentUpon>Persona_Estado_CataCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Persona_Roles_Trans.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Persona_Roles_Trans.Generated.cs">
+      <DependentUpon>Persona_Roles_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Persona_Roles_TransCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Persona_Roles_TransCollection.Generated.cs">
+      <DependentUpon>Persona_Roles_TransCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Correo_Enviado_Hoy.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Correo_Enviado_Hoy.Generated.cs">
+      <DependentUpon>Proc_Correo_Enviado_Hoy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Experiencias_Paging.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Experiencias_Paging.Generated.cs">
+      <DependentUpon>Proc_Experiencias_Paging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Horarios_Ruta.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Horarios_Ruta.Generated.cs">
+      <DependentUpon>Proc_Horarios_Ruta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Horarios_Turnos.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Horarios_Turnos.Generated.cs">
+      <DependentUpon>Proc_Horarios_Turnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Horarios_Turnos_Dias.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Horarios_Turnos_Dias.Generated.cs">
+      <DependentUpon>Proc_Horarios_Turnos_Dias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Horario_Trans_Custom_Paging.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Horario_Trans_Custom_Paging.Generated.cs">
+      <DependentUpon>Proc_Horario_Trans_Custom_Paging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Horario_Turno_Dias_LOAD_Puesto_Horario.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Horario_Turno_Dias_LOAD_Puesto_Horario.Generated.cs">
+      <DependentUpon>Proc_Horario_Turno_Dias_LOAD_Puesto_Horario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Informes_Faltantes.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Informes_Faltantes.Generated.cs">
+      <DependentUpon>Proc_Informes_Faltantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Mis_Turnos_Predicacion.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Mis_Turnos_Predicacion.Generated.cs">
+      <DependentUpon>Proc_Mis_Turnos_Predicacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Notificaciones_Actualizar.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Notificaciones_Actualizar.Generated.cs">
+      <DependentUpon>Proc_Notificaciones_Actualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Notificaciones_Registrar.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Notificaciones_Registrar.Generated.cs">
+      <DependentUpon>Proc_Notificaciones_Registrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Permisos_Roles_Funcionalidad.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Permisos_Roles_Funcionalidad.Generated.cs">
+      <DependentUpon>Proc_Permisos_Roles_Funcionalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Personas_Descripciones.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Personas_Descripciones.Generated.cs">
+      <DependentUpon>Proc_Personas_Descripciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Personas_Role.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Personas_Role.Generated.cs">
+      <DependentUpon>Proc_Personas_Role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Personas_Tipo_Consulta.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Personas_Tipo_Consulta.Generated.cs">
+      <DependentUpon>Proc_Personas_Tipo_Consulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Personas_Turnos.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Personas_Turnos.Generated.cs">
+      <DependentUpon>Proc_Personas_Turnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Persona_Documentos.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Persona_Documentos.Generated.cs">
+      <DependentUpon>Proc_Persona_Documentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Persona_Funcionalidades.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Persona_Funcionalidades.Generated.cs">
+      <DependentUpon>Proc_Persona_Funcionalidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Persona_Funcionalidades_Acciones.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Persona_Funcionalidades_Acciones.Generated.cs">
+      <DependentUpon>Proc_Persona_Funcionalidades_Acciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Persona_Informes.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Persona_Informes.Generated.cs">
+      <DependentUpon>Proc_Persona_Informes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Persona_Modulos.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Persona_Modulos.Generated.cs">
+      <DependentUpon>Proc_Persona_Modulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Persona_Notificaciones.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Persona_Notificaciones.Generated.cs">
+      <DependentUpon>Proc_Persona_Notificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Persona_Participacion.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Persona_Participacion.Generated.cs">
+      <DependentUpon>Proc_Persona_Participacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Persona_Rutas_Horarios.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Persona_Rutas_Horarios.Generated.cs">
+      <DependentUpon>Proc_Persona_Rutas_Horarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Persona_Turnos.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Persona_Turnos.Generated.cs">
+      <DependentUpon>Proc_Persona_Turnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Persona_Turnos_Informes.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Persona_Turnos_Informes.Generated.cs">
+      <DependentUpon>Proc_Persona_Turnos_Informes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Persona_Turnos_Pasados.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Persona_Turnos_Pasados.Generated.cs">
+      <DependentUpon>Proc_Persona_Turnos_Pasados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Persona_Turnos_Validar.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Persona_Turnos_Validar.Generated.cs">
+      <DependentUpon>Proc_Persona_Turnos_Validar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Puestos_Hombres_Clave_Faltantes.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Puestos_Hombres_Clave_Faltantes.Generated.cs">
+      <DependentUpon>Proc_Puestos_Hombres_Clave_Faltantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Puestos_Horario_Turnos_Faltantes.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Puestos_Horario_Turnos_Faltantes.Generated.cs">
+      <DependentUpon>Proc_Puestos_Horario_Turnos_Faltantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Puestos_Horario_Turnos_Faltantes_Notificacion.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Puestos_Horario_Turnos_Faltantes_Notificacion.Generated.cs">
+      <DependentUpon>Proc_Puestos_Horario_Turnos_Faltantes_Notificacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Puesto_Horarios.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Puesto_Horarios.Generated.cs">
+      <DependentUpon>Proc_Puesto_Horarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Puesto_Horarios_Pesonas.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Puesto_Horarios_Pesonas.Generated.cs">
+      <DependentUpon>Proc_Puesto_Horarios_Pesonas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Registro_Pregunta_Respuestas.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Registro_Pregunta_Respuestas.Generated.cs">
+      <DependentUpon>Proc_Registro_Pregunta_Respuestas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Reporte_General.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Reporte_General.Generated.cs">
+      <DependentUpon>Proc_Reporte_General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Reporte_Publicaciones_Idioma.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Reporte_Publicaciones_Idioma.Generated.cs">
+      <DependentUpon>Proc_Reporte_Publicaciones_Idioma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Roles_Funcionalidad_Acciones.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Roles_Funcionalidad_Acciones.Generated.cs">
+      <DependentUpon>Proc_Roles_Funcionalidad_Acciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Rutas_Relacionados_Descripcion.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Rutas_Relacionados_Descripcion.Generated.cs">
+      <DependentUpon>Proc_Rutas_Relacionados_Descripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Seguridad_Funcionalidades.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Seguridad_Funcionalidades.Generated.cs">
+      <DependentUpon>Proc_Seguridad_Funcionalidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Seguridad_Modulos.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Seguridad_Modulos.Generated.cs">
+      <DependentUpon>Proc_Seguridad_Modulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Seguridad_Modulos_Funcionalidades.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Seguridad_Modulos_Funcionalidades.Generated.cs">
+      <DependentUpon>Proc_Seguridad_Modulos_Funcionalidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Semanas_Abrir_Horarios.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Semanas_Abrir_Horarios.Generated.cs">
+      <DependentUpon>Proc_Semanas_Abrir_Horarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Slides.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Slides.Generated.cs">
+      <DependentUpon>Proc_Slides.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Turnos_Disponibles.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Proc_Turnos_Disponibles.Generated.cs">
+      <DependentUpon>Proc_Turnos_Disponibles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Publicaciones_Cata.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Publicaciones_Cata.Generated.cs">
+      <DependentUpon>Publicaciones_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Publicaciones_CataCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Publicaciones_CataCollection.Generated.cs">
+      <DependentUpon>Publicaciones_CataCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Registro_Preguntas_Cata.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Registro_Preguntas_Cata.Generated.cs">
+      <DependentUpon>Registro_Preguntas_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Registro_Preguntas_CataCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Registro_Preguntas_CataCollection.Generated.cs">
+      <DependentUpon>Registro_Preguntas_CataCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Registro_Pregunta_Respuestas_Trans.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Registro_Pregunta_Respuestas_Trans.Generated.cs">
+      <DependentUpon>Registro_Pregunta_Respuestas_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Registro_Pregunta_Respuestas_TransCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Registro_Pregunta_Respuestas_TransCollection.Generated.cs">
+      <DependentUpon>Registro_Pregunta_Respuestas_TransCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Registro_Respuestas_Cata.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Registro_Respuestas_Cata.Generated.cs">
+      <DependentUpon>Registro_Respuestas_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Registro_Respuestas_CataCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Registro_Respuestas_CataCollection.Generated.cs">
+      <DependentUpon>Registro_Respuestas_CataCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Registro_Respueta_Categorias_Cata.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Registro_Respueta_Categorias_Cata.Generated.cs">
+      <DependentUpon>Registro_Respueta_Categorias_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Registro_Respueta_Categorias_CataCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Registro_Respueta_Categorias_CataCollection.Generated.cs">
+      <DependentUpon>Registro_Respueta_Categorias_CataCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Roles_Cata.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Roles_Cata.Generated.cs">
+      <DependentUpon>Roles_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Roles_CataCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Roles_CataCollection.Generated.cs">
+      <DependentUpon>Roles_CataCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Roles_Funcionalidad_Acciones_Trans.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Roles_Funcionalidad_Acciones_Trans.Generated.cs">
+      <DependentUpon>Roles_Funcionalidad_Acciones_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Roles_Funcionalidad_Acciones_TransCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Roles_Funcionalidad_Acciones_TransCollection.Generated.cs">
+      <DependentUpon>Roles_Funcionalidad_Acciones_TransCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Roles_Niveles_Cata.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Roles_Niveles_Cata.Generated.cs">
+      <DependentUpon>Roles_Niveles_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Roles_Niveles_CataCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Roles_Niveles_CataCollection.Generated.cs">
+      <DependentUpon>Roles_Niveles_CataCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Rutas_Master.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Rutas_Master.Generated.cs">
+      <DependentUpon>Rutas_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Rutas_MasterCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Rutas_MasterCollection.Generated.cs">
+      <DependentUpon>Rutas_MasterCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Correos_Cata.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Correos_Cata.Generated.cs">
+      <DependentUpon>Sistemas_Correos_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Correos_CataCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Correos_CataCollection.Generated.cs">
+      <DependentUpon>Sistemas_Correos_CataCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Descripciones_Trans.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Descripciones_Trans.Generated.cs">
+      <DependentUpon>Sistemas_Descripciones_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Descripciones_TransCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Descripciones_TransCollection.Generated.cs">
+      <DependentUpon>Sistemas_Descripciones_TransCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Funcionalidades_Acciones_Cata.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Funcionalidades_Acciones_Cata.Generated.cs">
+      <DependentUpon>Sistemas_Funcionalidades_Acciones_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Funcionalidades_Acciones_CataCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Funcionalidades_Acciones_CataCollection.Generated.cs">
+      <DependentUpon>Sistemas_Funcionalidades_Acciones_CataCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Funcionalidades_Acciones_Tipo_Cata.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Funcionalidades_Acciones_Tipo_Cata.Generated.cs">
+      <DependentUpon>Sistemas_Funcionalidades_Acciones_Tipo_Cata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Funcionalidades_Acciones_Tipo_CataCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Funcionalidades_Acciones_Tipo_CataCollection.Generated.cs">
+      <DependentUpon>Sistemas_Funcionalidades_Acciones_Tipo_CataCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Funcionalidades_Acciones_Trans.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Funcionalidades_Acciones_Trans.Generated.cs">
+      <DependentUpon>Sistemas_Funcionalidades_Acciones_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Funcionalidades_Acciones_TransCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Funcionalidades_Acciones_TransCollection.Generated.cs">
+      <DependentUpon>Sistemas_Funcionalidades_Acciones_TransCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Funcionalidades_Master.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Funcionalidades_Master.Generated.cs">
+      <DependentUpon>Sistemas_Funcionalidades_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Funcionalidades_MasterCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Funcionalidades_MasterCollection.Generated.cs">
+      <DependentUpon>Sistemas_Funcionalidades_MasterCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Mensaje_Trans.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Mensaje_Trans.Generated.cs">
+      <DependentUpon>Sistemas_Mensaje_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Mensaje_TransCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Mensaje_TransCollection.Generated.cs">
+      <DependentUpon>Sistemas_Mensaje_TransCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Modulos_Master.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Modulos_Master.Generated.cs">
+      <DependentUpon>Sistemas_Modulos_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Modulos_MasterCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Modulos_MasterCollection.Generated.cs">
+      <DependentUpon>Sistemas_Modulos_MasterCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Slides_Master.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Slides_Master.Generated.cs">
+      <DependentUpon>Sistemas_Slides_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Slides_MasterCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistemas_Slides_MasterCollection.Generated.cs">
+      <DependentUpon>Sistemas_Slides_MasterCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistema_Correos_Enviado_Trans.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistema_Correos_Enviado_Trans.Generated.cs">
+      <DependentUpon>Sistema_Correos_Enviado_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistema_Correos_Enviado_TransCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Sistema_Correos_Enviado_TransCollection.Generated.cs">
+      <DependentUpon>Sistema_Correos_Enviado_TransCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Turnos_Dias_Trans.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Turnos_Dias_Trans.Generated.cs">
+      <DependentUpon>Turnos_Dias_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Turnos_Dias_TransCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Turnos_Dias_TransCollection.Generated.cs">
+      <DependentUpon>Turnos_Dias_TransCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Turnos_Master.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Turnos_Master.Generated.cs">
+      <DependentUpon>Turnos_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Turnos_MasterCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Turnos_MasterCollection.Generated.cs">
+      <DependentUpon>Turnos_MasterCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Zonas_Encargados_Trans.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Zonas_Encargados_Trans.Generated.cs">
+      <DependentUpon>Zonas_Encargados_Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Zonas_Encargados_TransCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Zonas_Encargados_TransCollection.Generated.cs">
+      <DependentUpon>Zonas_Encargados_TransCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Zonas_Master.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Zonas_Master.Generated.cs">
+      <DependentUpon>Zonas_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Zonas_MasterCollection.cs" />
+    <Compile Include="OSIS\PEPPAM\SQLDAL\Zonas_MasterCollection.Generated.cs">
+      <DependentUpon>Zonas_MasterCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQLHelper\LinqSQLParser.cs" />
+    <Compile Include="SQLHelper\LinqSQLParser.Generated.cs">
+      <DependentUpon>LinqSQLParser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_cf_rt.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SQL\AllSql.sql" />
+    <Content Include="SQL\Circuitos_Cata.sql" />
+    <Content Include="SQL\Congregaciones_Master.sql" />
+    <Content Include="SQL\Contacto_Tipo_Cata.sql" />
+    <Content Include="SQL\Dias_Cata.sql" />
+    <Content Include="SQL\Documentos_Master.sql" />
+    <Content Include="SQL\Documentos_Objetivos_Trans.sql" />
+    <Content Include="SQL\Experiencias_Master.sql" />
+    <Content Include="SQL\Horarios_Master.sql" />
+    <Content Include="SQL\Horario_Semanas_Cata.sql" />
+    <Content Include="SQL\Horario_Trans.sql" />
+    <Content Include="SQL\Horario_Turno_Dias_Trans.sql" />
+    <Content Include="SQL\Horario_Turno_Informe_Trans.sql" />
+    <Content Include="SQL\Horario_Turno_Trans.sql" />
+    <Content Include="SQL\Horas_Cata.sql" />
+    <Content Include="SQL\Idiomas_Cata.sql" />
+    <Content Include="SQL\Notificaciones_Master.sql" />
+    <Content Include="SQL\Notificaciones_Objetivo_Trans.sql" />
+    <Content Include="SQL\Notificaciones_Personas_Trans.sql" />
+    <Content Include="SQL\Notificaciones_Prioridades_Cata.sql" />
+    <Content Include="SQL\Parametros_Trans.sql" />
+    <Content Include="SQL\Personas_Diponibilidad.sql" />
+    <Content Include="SQL\Personas_Master.sql" />
+    <Content Include="SQL\Personas_Notificaciones_Trans.sql" />
+    <Content Include="SQL\Personas_Tipos_Trans.sql" />
+    <Content Include="SQL\Personas_Tipo_Cata.sql" />
+    <Content Include="SQL\Personas_Turnos_Trans.sql" />
+    <Content Include="SQL\Persona_Contactos_Trans.sql" />
+    <Content Include="SQL\Persona_Estado_Cata.sql" />
+    <Content Include="SQL\Persona_Roles_Trans.sql" />
+    <Content Include="SQL\Publicaciones_Cata.sql" />
+    <Content Include="SQL\Registro_Preguntas_Cata.sql" />
+    <Content Include="SQL\Registro_Pregunta_Respuestas_Trans.sql" />
+    <Content Include="SQL\Registro_Respuestas_Cata.sql" />
+    <Content Include="SQL\Registro_Respueta_Categorias_Cata.sql" />
+    <Content Include="SQL\Roles_Cata.sql" />
+    <Content Include="SQL\Roles_Funcionalidad_Acciones_Trans.sql" />
+    <Content Include="SQL\Roles_Niveles_Cata.sql" />
+    <Content Include="SQL\Rutas_Master.sql" />
+    <Content Include="SQL\Sistemas_Descripciones_Trans.sql" />
+    <Content Include="SQL\Sistemas_Funcionalidades_Acciones_Cata.sql" />
+    <Content Include="SQL\Sistemas_Funcionalidades_Acciones_Tipo_Cata.sql" />
+    <Content Include="SQL\Sistemas_Funcionalidades_Acciones_Trans.sql" />
+    <Content Include="SQL\Sistemas_Funcionalidades_Master.sql" />
+    <Content Include="SQL\Sistemas_Mensaje_Trans.sql" />
+    <Content Include="SQL\Sistemas_Modulos_Master.sql" />
+    <Content Include="SQL\Sistemas_Slides_Master.sql" />
+    <Content Include="SQL\Turnos_Dias_Trans.sql" />
+    <Content Include="SQL\Turnos_Master.sql" />
+    <Content Include="SQL\Zonas_Encargados_Trans.sql" />
+    <Content Include="SQL\Zonas_Master.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+			 Other similar extension points exist, see Microsoft.Common.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetDir)$(TargetName).*" "$(SolutionDir)Bin\"</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>if not exist "$(SolutionDir)bin" mkdir "$(SolutionDir)bin"
+attrib -r "$(SolutionDir)Bin\*.*"</PreBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,127 @@
+﻿@{
+
+    @model OSIS.PEPPAM.Mvc.Controllers.Calendario.CalendarioModel
+}
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+        </div>
+    </div>
+</div>
+
+<div id="divCalendario" >
+    @Html.Partial("Calendario", Model)
+</div>
+@section scripts
+{
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // $('#myModal').modal('show');
+            //Dropdownlist Selectedchange event
+            $(document).on("change", "#Ruta_Secuencia", function () {
+                $("#Horario_Secuencia").empty();
+                $.ajax({
+                    // type: 'POST',
+                    url: '@Url.Action("LoadHorarios")', // we are calling json method
+                    dataType: 'json',
+                    data: { rutaSecuencia: $("#Ruta_Secuencia").val() },
+                    success: function(states) {
+                        // states contains the JSON formatted list
+                        // of states passed from the controller
+                        $.each(states, function(i, state) {
+                            $("#Horario_Secuencia").append('<option value="' + state.Value + '">' + state.Text + '</option>');
+                        }); // here we are adding option for States
+
+                        //alert($("#Horario_Secuencia").val());
+                        $("#Dias_CataForm").submit();
+                    },
+                    error: function(ex) {
+                        alert('Failed to retrieve states.' + ex);
+                    }
+                });
+                return false;
+            })
+            $("#Horario_Secuencia").change(function() {
+                $("#Dias_CataForm").submit();
+            });
+        });
+        //////////////////////////////////
+        //////////////////////////////////
+
+
+        //cel days
+        $(document).on("click", ".mydays > a", function(evt) {
+            evt.preventDefault();
+            var url = $(this).attr("href");
+
+            $.ajax({
+                url: url,
+                type: 'GET',
+                success: function(data) {
+                    //alert(data);
+                    $('.modal-content').html(data);
+                    $('#myModal').modal('show');
+                }
+            });
+        });
+
+
+        $(document).on("submit", "#addturnos", function(evt) {
+            evt.preventDefault();
+            var self = $(this);
+            var url = self.attr('action');
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: self.serialize(),
+                success: function (data) {
+
+                    //$('#myModal').modal('hide');
+                    //$('#divCalendario').html(data);
+
+                    $('#divCalendario').html(data);
+
+                    //if (data == 'Ok') {
+                    //    $('#myModal').modal('hide');
+                    //    // ReloadPage();
+                    //    //location.reload(false);
+                    //} else {
+                    //    $('.modal-content').html(data);
+                    //    //$('#myModal').html(data);
+                    //}
+                },
+                complete: function() {
+                    // ReloadPage();
+                    $('#myModal').modal('hide');
+                   
+                }
+            });
+        });
+
+        //id="wrapper-content"
+        function ReloadPage() {
+            var puesto = $("#Ruta_Secuencia").val();
+            var semana = $("#Horario_Secuencia").val();
+
+            var url = '@Url.Action("Index")' + '?Ruta_Secuencia=puesto&Horario_Secuencia=semana';
+            url = url.replace("puesto", puesto);
+            url = url.replace("semana", semana);
+
+            location.href = url;
+
+            //$.ajax({
+            //    url: url,
+            //    success: function(data1) {
+            //        $('#wrapper-content').html(data1);
+            //    }
+            //});
+
+        }
+
+
+    </script>
+}

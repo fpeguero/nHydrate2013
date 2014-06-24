@@ -1,0 +1,39 @@
+﻿@using Mvc.Core.UI
+@using OSIS.PEPPAM.Mvc.UI
+@model Experiencias_MasterModel
+
+@{
+    
+    IFuncionality uiObject = new Funcionality().GetFuncionality("ADD_COMENTARIO_EXPERIENCIA");
+    ViewBag.Title = Resources.Shared.AppName + " - " + uiObject.Name;
+}
+
+<h2>@uiObject.Name</h2>
+<hr/>
+    <h5>@uiObject.Description</h5>
+    <div class="entity-form-container">
+        @using (Html.BeginForm("AddComentario", "Experiencias_Master", FormMethod.Post, new { id = "Experiencias_ComentarioForm", role = "form", @class = "form-horizontal" }))
+        {
+            @Html.ValidationSummary(true)
+            
+             @Html.HiddenFor(model => model.Experiencia_Secuencia)
+                <div class="form-field-group">
+                    <div class="editor ">
+                        @Html.TextAreaFor(model => model.Experiencia_Nota, new {@class ="form-control"})
+                        @Html.ValidationMessageFor(model => model.Experiencia_Nota)
+                    </div>
+                </div>
+
+            
+                @*<div class="form-field-group">
+                    <label class="control-label "></label>
+                    <div class="editor ">
+                        <button id="btnAddComentario" class="btn btn-default btn-sm save-button" title="@uiObject.GetAction("Save").Help"><span class="glyphicon glyphicon-ok"></span>@uiObject.GetAction("Save").Description</button>
+                    </div>
+                </div>*@
+            
+        }
+    </div>
+
+
+

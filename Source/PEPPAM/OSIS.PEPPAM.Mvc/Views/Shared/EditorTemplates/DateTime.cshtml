@@ -1,0 +1,13 @@
+@model DateTime?
+@{
+    string twoLettersCulture = new System.Globalization.CultureInfo(Culture).TwoLetterISOLanguageName;
+    string defaultValue = "";
+    if(Model!=null && Model.Value != DateTime.MinValue)
+    {
+        defaultValue = Model.Value.ToString(twoLettersCulture == "en" ? "MM/dd/yyyy" : "dd/MM/yyyy");
+    }
+}
+<div class="input-group date">
+    @Html.TextBox("", defaultValue, new {@class = "form-control datetime-editor"})
+    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+</div>

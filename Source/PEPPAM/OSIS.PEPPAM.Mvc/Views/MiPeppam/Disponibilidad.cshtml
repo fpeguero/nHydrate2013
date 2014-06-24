@@ -1,0 +1,44 @@
+﻿@model DisponibilidadModel
+@using Mvc.Core.UI
+@using OSIS.PEPPAM.Mvc.UI
+
+@{
+    IFuncionality uiObject = new Funcionality().GetFuncionality("MI_PEPPAM_DISPONIBILIDAD");
+
+    ViewBag.Title = Resources.Shared.AppName + " - " + uiObject.Name;
+    string twoLettersCulture = new System.Globalization.CultureInfo(Culture).TwoLetterISOLanguageName;
+    string decimalSeparator = new System.Globalization.CultureInfo(Culture).NumberFormat.NumberDecimalSeparator;
+    string groupSeparator = new System.Globalization.CultureInfo(Culture).NumberFormat.NumberGroupSeparator;
+    var dictinary = new Dictionary<int, int>();
+    dictinary.Add(2, 116);
+}
+@Html.Partial("_Funcionalidades", dictinary)
+
+<div class="form">
+    <h2>@uiObject.Name</h2>
+    <h5>@uiObject.Description</h5>
+    <hr />
+    <div class="row">
+        <div class="col-xs-12">
+           
+            @using (Html.BeginForm("SaveDisponibilidad", "MiPeppam", FormMethod.Post, new { id = "Horas_CataForm", role = "form", @class = "form-horizontal" }))
+            {
+                <div class="form-commands-container">
+                    <button class="btn  btn-primary btn-sm save-button" title="@uiObject.GetAction("Update")"><span class="glyphicon glyphicon-ok"></span>@uiObject.GetAction("Update").Description</button>
+                </div>
+
+    <div class="row">
+        @Html.EditorFor(model => Model.Dias)
+    </div>
+
+            }
+            
+        </div>
+    </div>
+    
+</div>
+
+@section scripts
+{
+   
+} 

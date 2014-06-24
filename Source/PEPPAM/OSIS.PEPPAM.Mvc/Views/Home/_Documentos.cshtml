@@ -1,0 +1,7 @@
+﻿@using Mvc.Core.Security
+
+
+@foreach (var documento in Documentos_MasterModel.PersonaDocumentos(((IPrincipal) User).UsuarioNumero))
+{
+<li><a href="@Url.Content("~/UploadFiles/Documentos/" + documento.Documento_Archivo_Nombre)" target="_blank" class="gray">@documento.Documento_Nombre<strong> (DESCARGAR)</strong></a></li>    
+}

@@ -1,0 +1,10 @@
+﻿@model OSIS.PEPPAM.Mvc.Models.DiasModel
+<ul>
+    <li>
+        @Html.CheckBoxFor(x => x.IsSelected)
+        <strong> @Model.Dia_Descripcion</strong></>
+</ul>
+
+@Html.HiddenFor(x => x.Dia_Secuencia)
+@Html.HiddenFor(x => x.Dia_Orden)
+@Html.HiddenFor(x => x.Dia_Descripcion)

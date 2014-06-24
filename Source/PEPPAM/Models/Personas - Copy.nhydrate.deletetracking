@@ -1,0 +1,8 @@
+<root>
+  <tables>
+    <table>PersonasTiposTrans</table>
+  </tables>
+  <views />
+  <storedprocedures />
+  <functions />
+</root>

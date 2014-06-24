@@ -1,0 +1,21 @@
+@model bool?
+@{
+    if (ViewData.ModelMetadata.IsNullableValueType)
+    {
+        @Html.DropDownListFor(m => m,
+            new List<SelectListItem>()
+            {
+                new SelectListItem() {Text = @Resources.Shared.NotSet, Value = "", Selected = (Model == null || !Model.HasValue)},
+                new SelectListItem() {Text = @Resources.Shared.Yes, Value = "true", Selected = (Model != null && Model.HasValue && Model.Value)},
+                new SelectListItem() {Text = @Resources.Shared.No, Value = "false", Selected = (Model != null && Model.HasValue && !Model.Value)}
+            },
+            new {@class = "form-control"}
+            )
+    }
+    else
+    {
+        <div class="checkbox">
+            @Html.CheckBox("", Model.GetValueOrDefault())
+        </div>
+    }
+}

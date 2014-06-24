@@ -1,0 +1,48 @@
+﻿@{
+    @model System.Collections.Generic.List<OSIS.PEPPAM.Mvc.Models.Proc_Persona_NotificacionesModel>
+}
+@using Mvc.Core.UI
+@using OSIS.PEPPAM.Mvc.UI
+
+@{
+    IFuncionality uiObject = new Funcionality().GetFuncionality("MI_PEPPAM_NOTIFICACIONES");
+
+    ViewBag.Title = Resources.Shared.AppName + " - " + uiObject.Name;
+    var dictinary = new Dictionary<int, int>();
+    dictinary.Add(2, 119);
+}
+@Html.Partial("_Funcionalidades", dictinary)
+
+<div class="form">
+    <h2>@uiObject.Name</h2>
+    <h5>@uiObject.Description</h5>
+
+    <div class="row">
+        
+        @foreach (var notificacion in Model.OrderBy(x => x.Registro_Fecha.Value))
+           {
+               <div class="col-xs-12 bs-example">
+                   <div class="">
+                       @notificacion.Registro_Fecha.Value.ToString("D")
+                   </div>
+                   <div class="row">
+                       <div class="col-xs-8">
+                           <strong>@notificacion.Notificacion_Descripcion</strong> 
+                       </div>
+                       <div class="col-xs-4">
+                           @notificacion.Prioridad_Descripcion
+                       </div>
+                   </div>
+                   <div class="row">
+                       <div class="col-xs-12">
+                           @notificacion.Notificacion_Mensaje
+                       </div>
+                   </div>
+               </div>
+           }
+
+
+
+    </div>
+
+</div>

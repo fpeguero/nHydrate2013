@@ -1,0 +1,63 @@
+﻿@using Mvc.Core.UI
+@using OSIS.PEPPAM.Mvc.UI
+@model OSIS.PEPPAM.Mvc.Models.Horario_Turno_TransModel
+
+@{
+    IFuncionality uiObject = new Funcionality().GetFuncionality("HORARIOS_TURNOS");
+    string twoLettersCulture = new System.Globalization.CultureInfo(Culture).TwoLetterISOLanguageName;
+    string decimalSeparator = new System.Globalization.CultureInfo(Culture).NumberFormat.NumberDecimalSeparator;
+    string groupSeparator = new System.Globalization.CultureInfo(Culture).NumberFormat.NumberGroupSeparator;
+}
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 class="modal-title">@Model.Turno_Descripcion <small>(@Model.Turno_Hora_Desde - @Model.Turno_Hora_Hasta)</small></h4>
+</div>
+
+
+
+
+@using (Html.BeginForm("CancelarTurno", "Horario_Trans", FormMethod.Post, new { id = "Horario_TransFormCancelar", role = "form", @class = "form-horizontal" }))
+{
+    <div class="modal-body">
+        <div class="row">
+            <div class="form-field-group">
+                <label class="control-label col-sm-3 col-lg-4">@uiObject.GetField("Turno_Dia_Razon_Cancelacion").Description</label>
+                <div class="editor col-sm-7 col-lg-8">
+                    @Html.TextAreaFor(model => model.Turno_Dia_Razon_Cancelacion, new { @class = "form-control input-lg" })
+                    @Html.ValidationMessageFor(model => model.Turno_Dia_Razon_Cancelacion)
+                </div>
+            </div>
+            <div class="form-field-group">
+                <label class="control-label col-sm-3 col-lg-4">@uiObject.GetField("Turno_DiaS_Cancelacion").Description</label>
+                <div class="editor col-sm-7 col-lg-8">
+                    @Html.ValidationMessageFor(model => model.DiasSelect)
+                    @Html.EditorFor(model => model.HorarioTurnoDiasTrans)
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-default cerrarmodal">Cerrar</button>
+            <input type="submit" value="Cerrar Turno" id="btnCancelar" name="btnCancelar" class="btn btn-sm btn-danger" />
+        </div>
+
+        @Html.HiddenFor(model => model.Horario_Turno_Secuencia)
+        @Html.HiddenFor(model => model.Horario_Secuencia)
+        
+        @Html.HiddenFor(model => model.Turno_Descripcion)
+        @Html.HiddenFor(model => model.Turno_Hora_Desde)
+        @Html.HiddenFor(model => model.Turno_Hora_Hasta)
+        @Html.HiddenFor(model => model.Turno_Cantidad_Publicadores)
+        @*@Html.HiddenFor(model => model.Registro_Estado)
+        @Html.HiddenFor(model => model.Registro_Fecha)
+        @Html.HiddenFor(model => model.Registro_Usuario)
+        @Html.HiddenFor(model => model.Turno_Hora_Desde)
+        @Html.HiddenFor(model => model.Turno_Hora_Hasta)*@
+
+    </div>
+
+
+}
+
+
+

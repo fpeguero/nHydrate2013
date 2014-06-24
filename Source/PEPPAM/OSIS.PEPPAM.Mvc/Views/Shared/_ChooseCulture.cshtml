@@ -1,0 +1,26 @@
+@{
+    var langs = new Dictionary<string, string>()
+    {
+        { "English", "en" },
+        { "Español", "es" }
+    };
+    var currentAction = (string)ViewContext.RouteData.Values["action"];
+    var newAction = currentAction == "Edit" || currentAction == "Details" ? "Index" : currentAction;
+    var currentCulture = new System.Globalization.CultureInfo(Culture).TwoLetterISOLanguageName;
+}
+<label for="culture">@Resources.Shared.CurrentLanguage</label>
+@Html.DropDownList("culture", new SelectList(langs, "Value", "Key", currentCulture))
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#culture").val('@currentCulture');
+        $("#culture").change(function () {
+            var culture = this.value;
+            if (culture == "en") {
+                document.location = "@Url.Action(newAction, new { lang = "en" })";
+            } else if (culture == "es") {
+                document.location = "@Url.Action(newAction, new { lang = "es" })";
+            }
+        });
+    });
+</script>

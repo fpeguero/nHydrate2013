@@ -1,0 +1,5 @@
+@model Nullable<DateTime>
+@if (Model.HasValue)
+{
+    @Model.Value.ToShortTimeString()
+}

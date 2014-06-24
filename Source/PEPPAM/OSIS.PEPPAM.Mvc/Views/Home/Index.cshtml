@@ -1,0 +1,131 @@
+@using FluentValidation.Resources
+@using Messages = OSIS.PEPPAM.Mvc.UI.Messages
+@{
+    ViewBag.Title = Resources.Index.Title;
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+<style>
+    .inset {
+        padding: 0px; 
+    }
+</style>
+
+@foreach (var slide in Sistemas_Slides_MasterModel.LoadSlides())
+{
+    var content = "content" + slide.Slide_Secuencia;
+    if (!string.IsNullOrEmpty(slide.Slide_Image_Abajo) && slide.Slide_Image_Abajo != "N/E")
+    {
+
+        <style>
+            @content {
+                background: #82807a url('@Url.Content("~/UploadFiles/Slides/" + slide.Slide_Image_Abajo)') no-repeat right;
+            }
+        </style>
+    }
+}
+
+<!-- Slider -->
+    <div id="wowslider-container1">
+        <div class="ws_images">
+            <ul>
+                @Html.Partial("_slides")
+                @*<li>
+                    <img src="@Url.Content("~/Content/peppam/images/slide/slide1.png")" alt="" id="" title="" />
+                    <div class="description ed">
+                        ddddd
+                        
+                    </div>
+
+                </li>
+                <li>
+                    <img src="@Url.Content("~/Content/peppam/images/slide/slide3.jpg")" alt="" id="" title="" />
+                    <div class="description">
+                        asdfkalsdjfklajsdfkljasldkfjlasdkf
+                    </div>
+                </li>
+                <li>
+                    <img src="@Url.Content("~/Content/peppam/images/slide/slide2.jpg")" alt="" id="" title="" />
+                    <div class="description">
+                        asdfkalsdjfklajsdfkljasldkfjlasdkf
+                    </div>
+                </li>*@
+            </ul>
+        </div>
+        <div id="footer-slide">
+            @Messages.GetOrSetMensaje("TITULO_SLIDE")
+            <div class="togglecontrol">
+                <a href="#" id="open-description">
+                    <label class="open">Abrir <span></span></label>
+                    <label class="close" style="display: none">Cerrar <span></span></label>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- END Slider -->
+    <div id="informations">
+        <div class="content">
+            <div class="column">
+                <!-- Avisos -->
+                <h2 class="ribbon blue"><img src="@Url.Content("~/Content/peppam/images/horn.png")" alt="" />Avisos Importantes</h2>
+                <ul class="blueBullet">
+                    @Html.Partial("_AvisosNotificaciones")
+                    @*<li>Se han habilitado nuevas semanas en los diferentes puestos y rutas de predicación.</li>
+                    <li>Favor enviar sus informes de colocaciones a tiempo.</li>
+                    <li>Asegúrese de llamar a los hermanos de su turno para confirmar su asistencia.</li>*@
+                </ul>
+            </div>
+            <!-- Horarios -->
+            <div class="column middle">
+                <h2 class="ribbon green"><img src="@Url.Content("~/Content/peppam/images/clock.png")" alt="" />Horarios disponibles></h2>
+                <ul class="greenBullet">
+                    @Html.Partial("_TurnosDisponibles")
+                    @*<li><a href="#" class="gray blink">10 turnos disponibles en el puesto Buhoneros. <strong>CLICK AQUÍ</strong></a></li>
+    <li><a href="#" class="gray">2 turnos disponibles en el puesto Bella Vista Mall. <strong>CLICK AQUÍ</strong></a></li>
+    <li><a href="#" class="gray">5 turnos disponibles en el puesto móvil de la Churchill. <strong>CLICK AQUÍ</strong></a></li>*@
+                </ul>
+            </div>
+            <!-- Documentos -->
+            <div class="column last">
+                <h2 class="ribbon brown"><img src="@Url.Content("~/Content/peppam/images/document.png")" alt="" />Documentos></h2>
+                <ul class="brownBullet">
+                    @Html.Partial("_Documentos")
+                    @*<li><a href="#" class="gray">Instrucciones Adicionales <strong>DESCARGAR</strong></a></li>*@
+                </ul>
+            </div>
+
+            
+        </div>
+    </div>
+
+
+    @section scripts
+{
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                $('#open-description').click(function () {
+                    $('.description').slideToggle();
+                });
+
+                setTimeout(Refresh, 5000);
+            });
+            
+            function Refresh() {
+                
+                $.ajax({
+                    url: '@Url.Action("TurnosDisponibles")',
+                    success: function (data, textStatus, XMLHttpRequest) {
+                        $("#divTurnosdisponibles").hide().html(data).fadeIn('slow');
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                    }
+                });
+
+                setTimeout(Refresh, 3000);
+            }
+
+
+
+        </script>
+    }
