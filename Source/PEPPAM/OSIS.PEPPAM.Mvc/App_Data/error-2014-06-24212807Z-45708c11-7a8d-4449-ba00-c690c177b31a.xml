@@ -1,0 +1,213 @@
+﻿<error errorId="45708c11-7a8d-4449-ba00-c690c177b31a" application="/LM/W3SVC/1/ROOT/PEPPAM" host="DTI_GTE_GIS" type="System.InvalidCastException" message="Unable to cast object of type 'System.Security.Principal.WindowsPrincipal' to type 'Mvc.Core.Security.IPrincipal'." source="App_Web__menu.cshtml.639c3968.6yccj6al" detail="System.InvalidCastException: Unable to cast object of type 'System.Security.Principal.WindowsPrincipal' to type 'Mvc.Core.Security.IPrincipal'.&#xD;&#xA;   at ASP._Page_Views_Shared__Menu_cshtml.Execute() in c:\nHydrate2013\trunk\Source\PEPPAM\OSIS.PEPPAM.Mvc\Views\Shared\_Menu.cshtml:line 16&#xD;&#xA;   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)&#xD;&#xA;   at System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)&#xD;&#xA;   at ASP._Page_Views_Shared__Layout_cshtml.Execute() in c:\nHydrate2013\trunk\Source\PEPPAM\OSIS.PEPPAM.Mvc\Views\Shared\_Layout.cshtml:line 30&#xD;&#xA;   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)&#xD;&#xA;   at System.Web.WebPages.WebPageBase.RenderSurrounding(String partialViewName, Action`1 body)&#xD;&#xA;   at System.Web.WebPages.WebPageBase.PopContext()&#xD;&#xA;   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass1e.&lt;BeginInvokeAction&gt;b__1b(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;BeginExecuteCore&gt;b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;BeginProcessRequest&gt;b__4(IAsyncResult asyncResult, ProcessRequestState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="SSRL\f.peguero" time="2014-06-24T21:28:07.4202077Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip,deflate,sdch&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.8,es;q=0.6&#xD;&#xA;HTTP_AUTHORIZATION:Negotiate oXcwdaADCgEBoloEWE5UTE1TU1AAAwAAAAAAAABYAAAAAAAAAFgAAAAAAAAAWAAAAAAAAABYAAAAAAAAAFgAAAAAAAAAWAAAABXCiOIGAbEdAAAAD8IlKBK7NFVYcq70MZpxfV+jEgQQAQAAAPUXp1AtIpqEAAAAAA==&#xD;&#xA;HTTP_COOKIE:AJSTAT_ok_times=1; aejqtheme=ui-lightness; Orchrd-=%7B%22Exp-N42-Media%22%3A%22open%22%2C%22Exp-N42-Settings%22%3A%22open%22%7D; smartstore.customer=661b64e7-e854-410f-933e-a7b5c3444000; WebStoreAdminAuth=9FE1F7022D69E1E66CC2E7041FD519AA4C72895AF6A7379843273520488C5A647D27D51186C5DD13D6A6DDEEAB405ED4A35829D61C0F306DDE478CAE1E23B9AC8AA0B7F8443C108E38E7A1AB0F07A290CAAB47BFAC38025FD42DFC9DA1C7CD9A; __utma=1.1066828335.1398433797.1398433797.1398433797.1; __utmz=1.1398433797.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); .ASPXANONYMOUS=ofvMOSiXzwEkAAAANTY3NDA3MjYtNGE0NC00ZGY4LWE0MGEtMDFiODNhODNhNjNjH6vMf7c7Grio2RYE3Lri95BESriOZLnYMH-DHZ-S0jY1; __atuvc=7%7C17%2C0%7C18%2C5%7C19; Nop.customer=2c8320ab-aaf9-4dc0-8170-0f1fa476d06a; glimpsePolicy=; ASP.NET_SessionId=c2yjgau3chsk4l34bzy5bg4z&#xD;&#xA;HTTP_HOST:localhost&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip,deflate,sdch&#xD;&#xA;Accept-Language: en-US,en;q=0.8,es;q=0.6&#xD;&#xA;Authorization: Negotiate oXcwdaADCgEBoloEWE5UTE1TU1AAAwAAAAAAAABYAAAAAAAAAFgAAAAAAAAAWAAAAAAAAABYAAAAAAAAAFgAAAAAAAAAWAAAABXCiOIGAbEdAAAAD8IlKBK7NFVYcq70MZpxfV+jEgQQAQAAAPUXp1AtIpqEAAAAAA==&#xD;&#xA;Cookie: AJSTAT_ok_times=1; aejqtheme=ui-lightness; Orchrd-=%7B%22Exp-N42-Media%22%3A%22open%22%2C%22Exp-N42-Settings%22%3A%22open%22%7D; smartstore.customer=661b64e7-e854-410f-933e-a7b5c3444000; WebStoreAdminAuth=9FE1F7022D69E1E66CC2E7041FD519AA4C72895AF6A7379843273520488C5A647D27D51186C5DD13D6A6DDEEAB405ED4A35829D61C0F306DDE478CAE1E23B9AC8AA0B7F8443C108E38E7A1AB0F07A290CAAB47BFAC38025FD42DFC9DA1C7CD9A; __utma=1.1066828335.1398433797.1398433797.1398433797.1; __utmz=1.1398433797.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); .ASPXANONYMOUS=ofvMOSiXzwEkAAAANTY3NDA3MjYtNGE0NC00ZGY4LWE0MGEtMDFiODNhODNhNjNjH6vMf7c7Grio2RYE3Lri95BESriOZLnYMH-DHZ-S0jY1; __atuvc=7%7C17%2C0%7C18%2C5%7C19; Nop.customer=2c8320ab-aaf9-4dc0-8170-0f1fa476d06a; glimpsePolicy=; ASP.NET_SessionId=c2yjgau3chsk4l34bzy5bg4z&#xD;&#xA;Host: localhost&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/1/ROOT/PEPPAM" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\nHydrate2013\trunk\Source\PEPPAM\OSIS.PEPPAM.Mvc\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Negotiate" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="SSRL\f.peguero" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="SSRL\f.peguero" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="1" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/1" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/PEPPAM/Account/login" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\nHydrate2013\trunk\Source\PEPPAM\OSIS.PEPPAM.Mvc\Account\login" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="ReturnUrl=%2fPEPPAM%2f" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="5781" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/PEPPAM/Account/login" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="80" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/7.5" />
+    </item>
+    <item name="URL">
+      <value string="/PEPPAM/Account/login" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip,deflate,sdch" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.8,es;q=0.6" />
+    </item>
+    <item name="HTTP_AUTHORIZATION">
+      <value string="Negotiate oXcwdaADCgEBoloEWE5UTE1TU1AAAwAAAAAAAABYAAAAAAAAAFgAAAAAAAAAWAAAAAAAAABYAAAAAAAAAFgAAAAAAAAAWAAAABXCiOIGAbEdAAAAD8IlKBK7NFVYcq70MZpxfV+jEgQQAQAAAPUXp1AtIpqEAAAAAA==" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="AJSTAT_ok_times=1; aejqtheme=ui-lightness; Orchrd-=%7B%22Exp-N42-Media%22%3A%22open%22%2C%22Exp-N42-Settings%22%3A%22open%22%7D; smartstore.customer=661b64e7-e854-410f-933e-a7b5c3444000; WebStoreAdminAuth=9FE1F7022D69E1E66CC2E7041FD519AA4C72895AF6A7379843273520488C5A647D27D51186C5DD13D6A6DDEEAB405ED4A35829D61C0F306DDE478CAE1E23B9AC8AA0B7F8443C108E38E7A1AB0F07A290CAAB47BFAC38025FD42DFC9DA1C7CD9A; __utma=1.1066828335.1398433797.1398433797.1398433797.1; __utmz=1.1398433797.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); .ASPXANONYMOUS=ofvMOSiXzwEkAAAANTY3NDA3MjYtNGE0NC00ZGY4LWE0MGEtMDFiODNhODNhNjNjH6vMf7c7Grio2RYE3Lri95BESriOZLnYMH-DHZ-S0jY1; __atuvc=7%7C17%2C0%7C18%2C5%7C19; Nop.customer=2c8320ab-aaf9-4dc0-8170-0f1fa476d06a; glimpsePolicy=; ASP.NET_SessionId=c2yjgau3chsk4l34bzy5bg4z" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36" />
+    </item>
+    <item name="IS_LOGIN_PAGE">
+      <value string="1" />
+    </item>
+  </serverVariables>
+  <queryString>
+    <item name="ReturnUrl">
+      <value string="/PEPPAM/" />
+    </item>
+  </queryString>
+  <cookies>
+    <item name="AJSTAT_ok_times">
+      <value string="1" />
+    </item>
+    <item name="aejqtheme">
+      <value string="ui-lightness" />
+    </item>
+    <item name="Orchrd-">
+      <value string="%7B%22Exp-N42-Media%22%3A%22open%22%2C%22Exp-N42-Settings%22%3A%22open%22%7D" />
+    </item>
+    <item name="smartstore.customer">
+      <value string="661b64e7-e854-410f-933e-a7b5c3444000" />
+    </item>
+    <item name="WebStoreAdminAuth">
+      <value string="9FE1F7022D69E1E66CC2E7041FD519AA4C72895AF6A7379843273520488C5A647D27D51186C5DD13D6A6DDEEAB405ED4A35829D61C0F306DDE478CAE1E23B9AC8AA0B7F8443C108E38E7A1AB0F07A290CAAB47BFAC38025FD42DFC9DA1C7CD9A" />
+    </item>
+    <item name="__utma">
+      <value string="1.1066828335.1398433797.1398433797.1398433797.1" />
+    </item>
+    <item name="__utmz">
+      <value string="1.1398433797.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)" />
+    </item>
+    <item name=".ASPXANONYMOUS">
+      <value string="ofvMOSiXzwEkAAAANTY3NDA3MjYtNGE0NC00ZGY4LWE0MGEtMDFiODNhODNhNjNjH6vMf7c7Grio2RYE3Lri95BESriOZLnYMH-DHZ-S0jY1" />
+    </item>
+    <item name="__atuvc">
+      <value string="7%7C17%2C0%7C18%2C5%7C19" />
+    </item>
+    <item name="Nop.customer">
+      <value string="2c8320ab-aaf9-4dc0-8170-0f1fa476d06a" />
+    </item>
+    <item name="glimpsePolicy">
+      <value string="" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="c2yjgau3chsk4l34bzy5bg4z" />
+    </item>
+    <item name="peppam">
+      <value string="" />
+    </item>
+    <item name="__RequestVerificationToken_L1BFUFBBTQ2">
+      <value string="AEYxAj_uy0XYnubrntdVjLQ0ACYHpAaQi8q9ymF0bZcZHXG6FcigE7V362YCSDNnYqaUYT7xl6h5G2mP8f4NG5HnKuvZMerKR9u3V_yIkSc1" />
+    </item>
+    <item name="__LastErrorId">
+      <value string="800000003c3c261418bc9c10" />
+      <value string="800000003c3c261418bc9c11" />
+    </item>
+  </cookies>
+</error>
